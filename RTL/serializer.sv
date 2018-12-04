@@ -16,7 +16,7 @@ module serializer #(parameter int unsigned C_WIDTH = 2)
 	(
     input  logic                    clk_i,                             // Clock
     input  logic                    rst_ni,                            // Asynchronous reset active low
-    input logic [C_WIDTH-1:0]       input_stream,                       // input stream that has to be serialized
+    input  logic [C_WIDTH-1:0]      input_stream,                      // input stream that has to be serialized
     output logic                    output_stream                      // output stream that is searlized
     );
 
