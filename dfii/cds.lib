@@ -1,0 +1,5 @@
+INCLUDE $GF_PDK_HOME/DesignEnv/VirtuosoOA/setup/$BEOL_STACK.cds.lib
+DEFINE io_gppr_45rfsoi_t18_mv10_mv18_avt_pl /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/oa.dz/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl
+DEFINE sc9_soi12s0_base_hvt /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/oa.dz/sc9_soi12s0_base_hvt
+DEFINE sc9_soi12s0_base_svt /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/oa.dz/sc9_soi12s0_base_svt
+DEFINE sc9_soi12s0_base_uvt /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/oa.dz/sc9_soi12s0_base_uvt

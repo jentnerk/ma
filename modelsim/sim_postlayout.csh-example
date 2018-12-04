@@ -1,0 +1,23 @@
+#!/bin/tcsh -f
+
+# sample script to run gatelevel simulation with sdf timings  
+#
+# >>> Adapt it for your design !!! <<<  (see README)
+#
+
+set DIR=".."
+set VER=10.6b
+set LIB=gate
+
+
+vsim-$VER -t 1ps -lib $LIB \
+          -L sc7mc_cmos28slp_base_lvt_c34_vlog \
+          -sdftyp Inst_mut=${DIR}/innovus/out/chip.sdf.gz +sdf_verbose \
+          -v2k_int_delays +no_glitch_msg\
+          tb_chip
+
+# use:
+#
+#   vsim-10.6b -help 
+#
+# to see available options

@@ -1,0 +1,9 @@
+*drcRulesFile: $GF_PDK_HOME/DRC/Calibre/45rfsoi.drc.cal
+*drcRunDir: ../calibre/drc
+*drcLayoutPaths: ../dfii/
+*drcLayoutGetFromViewer: 0
+*drcResultsFile: %l.drc.results
+*drcSummaryFile: %l.drc.summary
+*cmnRunMT: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0

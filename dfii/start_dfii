@@ -1,0 +1,54 @@
+#! /bin/csh -f
+
+# v0.1b - muheim - Mon Aug 27 16:34:21 CEST 2018
+#  - add virtuoso 6.17
+# v0.1 - muheim - Fri Sep 16 10:54:03 CEST 2016
+#  - copy from gf22 v0.1, use the v6 icfii
+
+
+## set the relevant env for dfii and calibre
+source ../.setPDK.csh
+
+# If you wont change e setting overwrite the default settings in local file "setPDKcustem.csh" 
+if (-f ./../setPDKcustem.csh) then
+  source ./../setPDKcustem.csh
+  echo "load local PDK seting file 'setPDKcustem.csh'"
+endif 
+
+## the variables to be set
+setenv CDS_Netlisting_Mode "Analog"
+
+#  setenv CDS_LOAD_ENV CWD
+#
+#          CWD:  loads only the ./.cdsenv
+#        False: loads neither ~/.cdsenv nor ./.cdsenv
+#       addCWD: loads ~/.cdsenv , then load ./.cdsenv
+#  CWDElseHome: loads ./.cdsenv if it exists, or ~/.cdsenv , if it exists
+setenv CDS_LOAD_ENV "CWDElseHome"
+
+# This variable is used to make sure that the case is preserved
+# when VHDL files are read by Verilog In. Otherwise there is sometimes
+# a discrepancy between the VHDL file and the later resulting Verilog netlist
+#setenv CDS_ALT_NMP match
+
+## Determine the tool to startup 
+switch ($1)
+  case 616:
+     set CDS = "cds_ic6-16.140 virtuoso"
+     breaksw
+  case 617:
+     set CDS = "cds_ic-6.17.704 virtuoso"
+     breaksw
+  case xterm
+     set CDS = "cds_ic6-16.140 xterm"
+     breaksw
+
+## this is the command that runs as default, it can be adjusted to whatever you
+## please
+default:
+     set CDS = "cds_ic6-16.140 virtuoso"
+     breaksw
+endsw  
+
+##echo "Starting $CDS icfb"
+$CDS 

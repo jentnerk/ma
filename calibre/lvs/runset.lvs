@@ -1,0 +1,21 @@
+*lvsRulesFile: $GF_PDK_HOME/LVS/Calibre/45rfsoi.lvs.cal
+*lvsRunDir: ../calibre/lvs
+*lvsLayoutPaths: %l.calibre.gds
+*lvsLayoutPrimary: %l
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: %l.src.net
+*lvsSourcePrimary: %l
+*lvsSourceGetFromViewer: 1
+*lvsReportFile: %l.lvs.report
+*lvsSpiceFile: %l.lay.net
+# *lvsPowerNames: VDD?
+# *lvsGroundNames: VSS?
+*lvsRecognizeGates: NONE
+*lvsIsolateShorts: 1
+*lvsRunERC: 0
+# *lvsIncludeFiles: lvs_options.txt lvs_labels.txt
+*lvsTemplate_ES: %l.lay.net
+*cmnShowOptions: 1
+*cmnRunMT: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0

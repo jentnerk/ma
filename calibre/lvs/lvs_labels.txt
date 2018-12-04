@@ -1,0 +1,7 @@
+// The following label is to create a port on the substrata.
+//   For the digital it is needed "bulk!" for the analog "sub!".
+//   If this both are combined, possible only on label is needed and have to be
+//   connected, by example a spies snippet.
+//     *.CONNECT bulk! sub!
+
+LAYOUT TEXT "bulk!" 0 0 61 31

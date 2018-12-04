@@ -1,0 +1,447 @@
+Dec 04 15:51:36   -------------------------------------------------------------------------------------
+Dec 04 15:51:36   -- gf45soi v0.1
+Dec 04 15:51:36   -- call: gf45soi 
+Dec 04 15:51:36   -------------------------------------------------------------------------------------
+Dec 04 15:51:38   load db/config from /usr/pack/designkits-1.0-ma/startup/db/software.ascii
+Dec 04 15:51:38   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/db/kit.ascii
+Dec 04 15:51:38   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii
+Dec 04 15:51:39   copy /usr/pack/gf-45soi-kgf/dz/dz_tools/.svn_setup_gf45soi.csh to ./.svn_setup_gf45soi.csh
+Dec 04 15:51:39   copy /usr/pack/gf-45soi-kgf/dz/dz_tools/.gen_gitignore.pl to ./.gen_gitignore.pl
+Dec 04 15:51:39   copy /usr/pack/gf-45soi-kgf/dz/pdk/8LM_3Mx_1Cx_1Ux_2Ox_LD__V1.1_0.2/.setPDK.csh to ./.setPDK.csh
+Dec 04 15:51:39   create directory technology
+Dec 04 15:51:39   create directory technology/lib
+Dec 04 15:51:39   create directory technology/db
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib
+Dec 04 15:51:39   create link ./technology/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m55c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m55c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m55c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m55c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m55c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m55c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m55c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m55c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p60v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p60v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p95v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p95v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_125c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_125c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_m40c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_m40c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p50v_25c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p50v_25c.lib
+Dec 04 15:51:39   create link ./technology/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db
+Dec 04 15:51:39   create link ./technology/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m55c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m55c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m55c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m55c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m55c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m55c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m55c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m55c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p60v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p60v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p95v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p95v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_125c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_125c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_m40c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_m40c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p50v_25c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p50v_25c.db
+Dec 04 15:51:39   create link ./technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db
+Dec 04 15:51:39   create directory docs
+Dec 04 15:51:39   create link ./docs/SOI_For_Designers_May_2010_GF.pdf -> /usr/pack/gf-45soi-kgf/gf/doc/SOI_For_Designers_May_2010_GF.pdf
+Dec 04 15:51:39   create link ./docs/d21719_Errata_GF_45RFSOI_20180412_v1.0.pdf -> /usr/pack/gf-45soi-kgf/dz/docs/d21719_Errata_GF_45RFSOI_20180412_v1.0.pdf
+Dec 04 15:51:39   create link ./docs/PlaceRoute_Innovus -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/PlaceRoute_Innovus
+Dec 04 15:51:39   create link ./docs/45RFSOI_V1.1_0.0.pdf -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/45RFSOI_V1.1_0.0.pdf
+Dec 04 15:51:39   create link ./docs/45RFSOI.esd_ref_guide.pdf -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/45RFSOI.esd_ref_guide.pdf
+Dec 04 15:51:39   create link ./docs/45RFSOI.model_guide.pdf -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/45RFSOI.model_guide.pdf
+Dec 04 15:51:39   create link ./docs/DesignEnv_ADS -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/DesignEnv_ADS
+Dec 04 15:51:39   create link ./docs/DesignEnv_VirtuosoOA -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/DesignEnv_VirtuosoOA
+Dec 04 15:51:39   create link ./docs/Models_ADS -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/Models_ADS
+Dec 04 15:51:39   create link ./docs/Models_Spectre -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/Models_Spectre
+Dec 04 15:51:39   create link ./docs/45RFSOI.CalibreDRC.rel_notes.pdf -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/DRC/Calibre/doc/45RFSOI.CalibreDRC.rel_notes.pdf
+Dec 04 15:51:39   create link ./docs/45RFSOI.CalibreLVS.rel_notes.pdf -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/LVS/Calibre/doc/45RFSOI.CalibreLVS.rel_notes.pdf
+Dec 04 15:51:39   create link ./docs/PEX_QRC -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/PEX_QRC
+Dec 04 15:51:39   create link ./docs/PEX_xRC -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/doc/PEX_xRC
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_hvt_databook.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/doc/sc9_soi12s0_base_hvt_databook.pdf
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_hvt_userguide.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/doc/sc9_soi12s0_base_hvt_userguide.pdf
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_svt_databook.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/doc/sc9_soi12s0_base_svt_databook.pdf
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_svt_userguide.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/doc/sc9_soi12s0_base_svt_userguide.pdf
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_uvt_databook.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/doc/sc9_soi12s0_base_uvt_databook.pdf
+Dec 04 15:51:39   create link ./docs/sc9_soi12s0_base_uvt_userguide.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/doc/sc9_soi12s0_base_uvt_userguide.pdf
+Dec 04 15:51:39   create link ./docs/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_databook.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/doc/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_databook.pdf
+Dec 04 15:51:39   create link ./docs/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_userguide.pdf -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/doc/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_userguide.pdf
+Dec 04 15:51:39   create directory sourcecode
+Dec 04 15:51:39   create directory sourcecode/pcellSKILL
+Dec 04 15:51:39   create directory modelsim
+Dec 04 15:51:39   create directory simvectors
+Dec 04 15:51:40   copy modelsim/R0uVGxdYrM (generated data dumped to tempfile) to ./modelsim/modelsim.ini
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/modelsim/10.6b/compile_gate.csh-example to ./modelsim/compile_gate.csh-example
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/modelsim/10.6b/compile_rtl.csh-example to ./modelsim/compile_rtl.csh-example
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/modelsim/10.6b/README to ./modelsim/README
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/modelsim/10.6b/sim_postlayout.csh-example to ./modelsim/sim_postlayout.csh-example
+Dec 04 15:51:40   create modelsim working library modelsim/work
+Dec 04 15:51:40   create directory synopsys
+Dec 04 15:51:40   create directory synopsys/DDC
+Dec 04 15:51:40   create directory synopsys/WORK
+Dec 04 15:51:40   create directory synopsys/scripts
+Dec 04 15:51:40   create directory synopsys/netlists
+Dec 04 15:51:40   create directory synopsys/reports
+Dec 04 15:51:40   copy synopsys/AhrdROkTbQ (generated data dumped to tempfile) to ./synopsys/.synopsys_dc.setup
+Dec 04 15:51:40   create directory synopsys/alib
+Dec 04 15:51:40   create directory synopsys/alib/alib-52
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db.alib
+Dec 04 15:51:40   create link synopsys/alib/alib-52/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.db.alib -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/synopsys.dz/alib-52/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs.db.alib
+Dec 04 15:51:40   create directory tetramax
+Dec 04 15:51:40   create directory tetramax/scripts
+Dec 04 15:51:40   create directory tetramax/reports
+Dec 04 15:51:40   create directory tetramax/pattern
+Dec 04 15:51:40   copy tetramax/scripts/DxiHiFSOSr (generated data dumped to tempfile) to ./tetramax/scripts/read_lib.tcl
+Dec 04 15:51:40   create directory tmp
+Dec 04 15:51:40   create directory innovus
+Dec 04 15:51:40   create directory innovus/reports
+Dec 04 15:51:40   create directory innovus/src
+Dec 04 15:51:40   create directory innovus/src/sample
+Dec 04 15:51:40   create directory innovus/scripts
+Dec 04 15:51:40   create directory innovus/save
+Dec 04 15:51:40   create directory innovus/out
+Dec 04 15:51:40   create directory technology/lef
+Dec 04 15:51:40   create directory technology/cl
+Dec 04 15:51:40   create directory technology/cpf
+Dec 04 15:51:40   create directory technology/qrc
+Dec 04 15:51:40   create link ./technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.0_1.1/PlaceRoute/Innovus/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef
+Dec 04 15:51:40   create link ./technology/lef/sc9_soi12s0_base_hvt.lef -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lef/sc9_soi12s0_base_hvt.lef
+Dec 04 15:51:40   create link ./technology/lef/sc9_soi12s0_base_svt.lef -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lef/sc9_soi12s0_base_svt.lef
+Dec 04 15:51:40   create link ./technology/lef/sc9_soi12s0_base_uvt.lef -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lef/sc9_soi12s0_base_uvt.lef
+Dec 04 15:51:40   create link ./technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef
+Dec 04 15:51:40   create link ./technology/cl/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c.cl -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/voltagestorm/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c.cl
+Dec 04 15:51:40   create link ./technology/cl/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c.cl -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/voltagestorm/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c.cl
+Dec 04 15:51:40   create link ./technology/cl/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c.cl -> /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/voltagestorm/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c.cl
+Dec 04 15:51:40   create link ./technology/qrc/Func2Cmax -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/Func2Cmax
+Dec 04 15:51:40   create link ./technology/qrc/Func2Cmin -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/Func2Cmin
+Dec 04 15:51:40   create link ./technology/qrc/FuncCmax -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/FuncCmax
+Dec 04 15:51:40   create link ./technology/qrc/FuncCmin -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/FuncCmin
+Dec 04 15:51:40   create link ./technology/qrc/FuncRCmax -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/FuncRCmax
+Dec 04 15:51:40   create link ./technology/qrc/FuncRCmin -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/FuncRCmin
+Dec 04 15:51:40   create link ./technology/qrc/nominal -> /usr/pack/gf-45soi-kgf/dz/../gf/45RFSOI-RF/V1.1_0.2/PEX/QRC/tcad/8LM_3Mx_1Cx_1Ux_2Ox_LD/nominal
+Dec 04 15:51:40   create link ./technology/tech.map -> /usr/pack/gf-45soi-kgf/dz/../arm/gf/45rfsoi/arm_tech/r0p0/lef/8LM_3Mx_1Cx_1Ux_2Ox_LD/tech.map
+Dec 04 15:51:40   copy innovus/src/sample/pW2brCGLuy (generated data dumped to tempfile) to ./innovus/src/sample/chip.globals
+Dec 04 15:51:40   copy innovus/src/sample/yLMFwpbDch (generated data dumped to tempfile) to ./innovus/src/sample/mmmc.view.tcl
+Dec 04 15:51:40   copy innovus/scripts/tDNnSjMIWA (generated data dumped to tempfile) to ./innovus/scripts/exportall.tcl
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/enc.tcl to ./innovus/enc.tcl
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/checkdesign.tcl to ./innovus/scripts/checkdesign.tcl
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/special_cell_setting.tcl to ./innovus/scripts/special_cell_setting.tcl
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/chip.ccopt.spec to ./innovus/src/sample/chip.ccopt.spec
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/mmmc_functional.sdc to ./innovus/src/sample/mmmc_functional.sdc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/mmmc_shared.sdc to ./innovus/src/sample/mmmc_shared.sdc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/mmmc_test.sdc to ./innovus/src/sample/mmmc_test.sdc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/innovus/17/chip.cpf to ./innovus/src/sample/chip.cpf
+Dec 04 15:51:40   create directory calibre
+Dec 04 15:51:40   create directory calibre/drc
+Dec 04 15:51:40   create directory calibre/lvs
+Dec 04 15:51:40   create directory calibre/pex
+Dec 04 15:51:40   create directory calibre/.init
+Dec 04 15:51:40   create directory dfii
+Dec 04 15:51:40   create directory dfii/.init
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/2017.4/start_calibre to ./calibre/start_calibre
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/8LM_3Mx_1Cx_1Ux_2Ox_LD/gf45soi.layerprops to ./calibre/.init/gf45soi.layerprops
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/8LM_3Mx_1Cx_1Ux_2Ox_LD/runset.drc to ./calibre/drc/runset.drc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/2017.4/verilog2spice to ./calibre/lvs/verilog2spice
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/lvs_labels.txt to ./calibre/lvs/lvs_labels.txt
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/2017.4/.simrc to ./calibre/lvs/.simrc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/8LM_3Mx_1Cx_1Ux_2Ox_LD/runset.lvs to ./calibre/lvs/runset.lvs
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/2017.4/dfii/loadCalibreInteractive.il to ./dfii/.init/loadCalibreInteractive.il
+Dec 04 15:51:40   copy calibre/lvs/kTJYDdm1SU (generated data dumped to tempfile) to ./calibre/lvs/verilog.inc
+Dec 04 15:51:40   copy calibre/lvs/8zXJ34gfVI (generated data dumped to tempfile) to ./calibre/lvs/spice.inc
+Dec 04 15:51:40   copy calibre/lvs/HTtPiZT8hf (generated data dumped to tempfile) to ./calibre/lvs/lvs_options.txt
+Dec 04 15:51:40   create directory dfii/ExpressPCellCache
+Dec 04 15:51:40   copy dfii/a98MI6VwKK (generated data dumped to tempfile) to ./dfii/cds.lib
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/dfii/6__gf-pdk/.cdsinit to ./dfii/.cdsinit
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/dfii/6/start_dfii to ./dfii/start_dfii
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/calibre/2017.4/.simrc to ./dfii/.simrc
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/dfii/6__gf-pdk/loadKit.il to ./dfii/.init/loadKit.il
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/../vpg/eos30/cds/config/eosPhotonicsLayoutMenu.il to ./dfii/.init/eosPhotonicsLayoutMenu.il
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/../vpg/eos30/cds/config/eosPhotonicsLayoutUtilityFunctions.il to ./dfii/.init/eosPhotonicsLayoutUtilityFunctions.il
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/../vpg/eos30/cds/config/leBindKeys.il to ./dfii/.init/leBindKeys.il
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/../vpg/eos30/cds/config/schBindKeys.il to ./dfii/.init/schBindKeys.il
+Dec 04 15:51:40   copy /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii to .cockpitrc
+Dec 04 15:51:40   copy /home/msc18h28/kpeRuS3WQQ (generated data dumped to tempfile) to /home/msc18h28/.cockpit_loc.gf45soi

@@ -1,0 +1,144 @@
+; v0.3 - <muheim@ee.ethz.ch> - Mon May  7 14:51:16 CEST 2018
+;  - move the read of the global variable 'gfPdkHome' from the "loadKit.il".
+;    this makse it indipendens of the order the ".il" files are read.
+;
+; v0.2 - <kgf@ee.ethz.ch> - Thu Oct  6 11:47:38 CEST 2016
+;  - added another customization file dfii/libInit.il 
+;    that will be loaded if present, in addition to all the files under dfii/.init
+;
+; v0.1 - <muheim@ee.ethz.ch> - Mon Oct  3 14:21:10 CEST 2016
+;   - copy from ../6
+;     add the phonic things
+
+;-------------------------------------------------------------------------------
+;
+; Required environment setting to enable CDF look-up and callbacks.
+; Alternately, this environment variable can be set in the UNIX shell, or
+; defined in your shell initialization file: .cshrc, .profile, etc.
+;
+;setShellEnvVar("CDS_Netlisting_Mode=Analog")
+;cdsSetNetlistMode()
+  ; try wiout when not working mabe add in the startdfii
+
+
+;-------------------------------------------------------------------------------
+;   Read the global variable gfPdkHome ponting to the installation path.
+
+if( gfPdkHome = getShellEnvVar("GF_PDK_HOME") then
+  printf("Environment variable GF_PDK_HOME set to %s\n" gfPdkHome)
+else
+  warn("Environment variable GF_PDK_HOME variable not set!")
+  warn("GF_PDK_HOME must be set to top level PDK directory")
+  warn("PDK procedures and libraries will not be loaded!")
+)
+
+
+;-------------------------------------------------------------------------------
+printf("DZ: BEGIN OF LOCAL CUSTOMIZATION LOADING\n")
+
+ 
+
+let( ( localLibPath dirFiles dirFile )
+
+  localLibPath = "./.init/"
+
+  dirFiles = getDirFiles(localLibPath)
+
+  foreach( dirFile dirFiles
+    if( rexMatchp( "[.]il$" dirFile ) then
+        load( strcat( localLibPath dirFile ) )
+        printf( "  load: '%s'\n" strcat( localLibPath dirFile ) )
+    else
+        ;printf( "  not a skill file '%s'\n" strcat( localLibPath dirFile ) )
+    )
+  );foreach
+);let
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; User local custumization
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; you can add your own customizations by adding them to the
+;; file 
+;;
+;;   .init/libInit.il
+;;
+;;  kgf - luca wanted this specific location, it is easier
+;;
+;; This file will *not* be managed by cockpit, and so it will
+;; not change when you update 
+
+  if( isFile( "./libInit.il" ) then
+      load( "./libInit.il" )
+  else
+      printf( "No user customization file ./libInit.il found\n" )
+  )
+
+printf("DZ: END OF LOCAL CUSTOMIZATION LOADING\n")
+
+;-------------------------------------------------------------------------------
+printf("PDK: BEGIN OF CUSTOMIZATION\n")
+
+
+/* PDK customization */
+;;ciwMenuInit()
+;;_stacktrace = 7
+
+/* Skill commands for user customization */
+;;hiSetFilterOptions(t t t t t t t)                 /* Log filter options      */
+;;hiGetCIWindow()->displayMouseBinding = t
+;;hiGetCIWindow()->scrollBars = t                   /* Turn on scroll bars     */
+;;hiGetCIWindow()->infix = nil                      /* Turn off infix          */
+;;hiGetCIWindow()->displayMouseBinding = t
+;;hiSetUndoLimit(10)                                /* Allow 10 undos          */
+;;hiSetMultiClickTime(500)                          /* Set double click=500    */
+;;hiFormApply( hiSysProps )
+;;
+;;leSetEnv("modalCommands" t)
+;;leSetEnv("displayRefPoint" t)
+;;leSetEnv("autoSetRefPoint" nil)
+;;leSetEnv("gravityOn" t)
+;;leSetEnv("gravityType" list("centerline" "edge" "vertex" "end"))
+;;leSetEnv("gravityAperture" 3.0)
+;;leSetEnv("gravityDepth" 20)
+;;leSetEnv("flattenMode" "one level")
+;;leSetEnv("flattenPCells" t)
+
+;;
+;;   The global variable ibmPdkPath must be customized to your installation path.
+;;   This variable may be used by PDK SKILL procedures.  Please update.
+;;   The DPL ibmPdk is defined in the ibmPdkProcs context file.  If this file is
+;;   not loaded please uncomment the following line:
+;;   ibmPdk = list()
+;;
+;;   The ibmPdkProcs.cxt file registers Cadence trigger functions for all editors.
+;;   This will place the banner, PDK, on each edit session and set in the file
+;;   $GF_PDK_HOME/DesignEnv/VirtuosoOA/libs/45RFSOI/ibmPdkMenu.def
+;;   PDK trigger functions are
+;;       ibmPdkCreateMenuSym           for symbol editors.
+;;       ibmPdkCreateMenuSch           for schematic editors.
+;;       ibmPdkCreateMenuLe            for layout and extract editors.
+;;
+;;   If the PDK trigger functions are unregistered by the customer site, the
+;;   PDK banner may be placed by issuing the procedure ibmPdkAddMenu().
+;;   This function is bound to the PF11 key, or the "Stop" key on the SUN5
+;;   keyboard.
+
+
+;;gfPdkHome=
+  ;; is set on top
+
+cond(
+  ( index(getVersion() "6.1")
+    loadContext(strcat(gfPdkHome "/DesignEnv/VirtuosoOA/context/ibmPdkProcs610.cxt"))
+    hiRegTimer("ibmPdkInit()" 1))
+  ( t
+    warn("ibmPdkProcs file not loaded. Only version IC6.1.x supported.\n"))
+);cond
+
+;load(strcat(gfPdkHome "/DesignEnv/VirtuosoOA/setup/ibmPdkBindkeys.il"))
+;;Uncomment below for CDS-like bindkeys
+;;load(strcat(gfPdkHome "/DesignEnv/VirtuosoOA/setup/ibmPdkBindkeysCDS.il"))
+
+printf("PDK: END OF CUSTOMIZATION\n")
+

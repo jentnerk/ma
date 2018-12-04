@@ -1,0 +1,40 @@
+#! /bin/csh -f
+
+# v0.1 - <muheim@ee.ethz.ch> - Fri Sep 16 09:55:54 CEST 2016
+#  - copy from gf22 v0.1 
+
+## set the relevant env for dfii and calibre
+source ../.setPDK.csh
+
+# Calibre default runsets
+setenv MGC_CALIBRE_DRC_RUNSET_FILE "../calibre/drc/runset.drc"
+setenv MGC_CALIBRE_LVS_RUNSET_FILE "../calibre/lvs/runset.lvs"
+# setenv MGC_CALIBRE_PEX_RUNSET_FILE "../calibre/pex/runset.pex"
+
+# If you wont change e setting overwrite the default settings in local file "setPDKcustem.csh" 
+if (-f ./../setPDKcustem.csh) then
+  source ./../setPDKcustem.csh
+  echo "load local PDK seting file 'setPDKcustem.csh'"
+endif 
+
+
+## Determine the tool to startup 
+switch ($1)
+  case 2017.4
+     set CALIBRE = "calibre-2017.4 calibredrv -dl .init/gf45soi.layerprops"
+     breaksw
+  case 2018.2
+     set CALIBRE = "calibre-2018.2 calibredrv -dl .init/gf45soi.layerprops"
+     breaksw
+  case xterm 
+     set CALIBRE = "xterm" 
+     breaksw
+## this is the command that runs as default, it can be adjusted to whatever you
+## please
+default:
+     set CALIBRE = "calibre-2017.4 calibredrv -dl .init/gf45soi.layerprops"
+     breaksw
+endsw  
+
+##echo "Starting $CALIBRE"
+$CALIBRE

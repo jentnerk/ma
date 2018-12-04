@@ -1,0 +1,53 @@
+#!/bin/csh -f
+
+# v0.2 - <muheim@ee.ethz.ch> - Tue Jun  5 13:39:49 CEST 2018
+#  - add the version of calibre
+# v0.1a - <muheim@ee.ethz.ch> - Fri Sep 16 09:55:01 CEST 2016
+#  - copy from tsmc40 v0.1a
+
+if ( $#argv == 2 ) then
+
+
+   calibre-2017.4 v2lvs -l ./verilog.inc \
+                 -s ./spice.inc \
+                 -s0 VSS \
+                 -s1 VDD \
+                 -sn \
+                 -b \
+                 -w 4 \
+                 -v $1 \
+                 -o $2 |& tee verilog2spice.log | grep -v -e "Warning: Unsupported compiler directive" \
+			                                                    -e "Warning: Multiple declarations of module udp_" \
+			                                                    -e "Warning: Multiple declarations of module ipicg_" \
+								                                          -e "Warning: Duplicate port/net" \
+								                                          -e "Second declaration ignored" \
+                                                          -e "Warning: Module instantiation .* has pin mismatches"
+   echo ""
+   echo    "Warnings:"
+   echo -n "    Unsupported compiler directive :  "
+   grep -c -e "Warning: Unsupported compiler directive" verilog2spice.log 
+   echo -n "    Multiple declarations of module udp_XXXX :  "
+   grep -c -e "Warning: Multiple declarations of module udp_" verilog2spice.log 
+   echo -n "    Multiple declarations of module ipicg_XXXX : "
+   grep -c -e "Warning: Multiple declarations of module ipicg_" verilog2spice.log 
+   echo -n "    Duplicate port/net :  "
+   grep -c -e "Warning: Duplicate port/net" verilog2spice.log 
+   echo -n "    Module instantiation XXXX has pin mismatches :  "
+   grep -c -e "Second declaration ignored" verilog2spice.log 
+   echo ""
+   echo "The output is filtered, check the log file verilog2spice.log for details."
+   echo ""
+   
+else
+
+   set wrapper_name=$0
+   echo ""
+   echo "Usage: $wrapper_name:t <netlist.v> <netlist.spi>"
+   echo ""
+   echo "       Converts verilog netlist to spice format,"
+   echo "       logfile is 'verilog2spice.log'"
+   echo ""
+   echo ""
+   exit 1
+
+endif
