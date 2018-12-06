@@ -3,7 +3,7 @@
 # Example script for compiling RTL sourcecode
 
 set VER=10.6b
-set LIB=work
+set LIB=WORK
 
 
 if (-e $LIB) then
