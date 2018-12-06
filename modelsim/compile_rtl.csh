@@ -20,10 +20,3 @@ vlog-${VER}  -work ${LIB} ../RTL/Serializer.v
 vlog-${VER}  -sv -work ${LIB} ../RTL/serializer_tb.sv
 
 
-# use a command like 
-#
-   vsim-${VER} -lib rtl serializer_tb
-#
-# to simulate
-
-
