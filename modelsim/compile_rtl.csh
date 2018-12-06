@@ -17,7 +17,7 @@ vlog-${VER}  -v -work ${LIB} ../RTL/Toplevel_serializer.v
 vlog-${VER}  -v -work ${LIB} ../RTL/Serializer.v
 
 # testbench 
-vlog-${VER}  -sv -work ${LIB} ../rtl/serializer_tb.sv
+vlog-${VER}  -sv -work ${LIB} ../RTL/serializer_tb.sv
 
 
 # use a command like 
