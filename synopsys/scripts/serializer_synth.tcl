@@ -43,5 +43,6 @@ foreach MAXDELAY {10} {
   #set_optimize_registers true -designs [get_designs div_two_wrapped]
 
   compile_ultra
+}
 
 
