@@ -244,8 +244,8 @@ endmodule
         // -----------------------------------------------
         // Applies all 64 bit stimulies to the DUT except rst_ni
         task ApplyStimuli(Stimulus st);
-            cb.operand_a   <= st.stimulus_a;
-            cb.operand_b   <= st.stimulus_b;
+            cb.data1_i   <= st.stimulus_a;
+            cb.data2_i   <= st.stimulus_b;
         endtask : ApplyStimuli
 
         // Sets all stimulies to the DUT to default
