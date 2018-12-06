@@ -13,16 +13,17 @@ endif
 vlib-${VER} $LIB
 
 # compile sourcecode
-vcom-${VER}  -work ${LIB} -check_synthesis ../sourcecode/a.vhd
-vcom-${VER}  -work ${LIB} -check_synthesis ../sourcecode/b.vhd
+vcom-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Toplevel_serializer.v
+vcom-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Serializer.v
 
 # testbench (note no -check_synthesis)
-vcom-${VER}  -work ${LIB} ../sourcecode/tb_util.vhd
-vcom-${VER}  -work ${LIB} ../sourcecode/b_tb.vhd
+vcom-${VER}  -sv -work ${LIB} ../rtl/serializer_tb.sv
 
 
 # use a command like 
 #
-#   vsim-${VER} -lib rtl aes_multi_tb
+   vsim-${VER} -lib rtl serializer_tb
 #
 # to simulate
+
+
