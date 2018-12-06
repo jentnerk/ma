@@ -1,9 +1,9 @@
 module TopLevel(
   input clk,
   input reset,
-  input data1,
-  input data2,
-  output data);
+  input data1_i,
+  input data2_i,
+  output data_o);
 
 Clock_divider Clock_divider ( 
       .io_clkB        (clkB),
@@ -11,13 +11,13 @@ Clock_divider Clock_divider (
       .reset          (reset));
 
 Serializer Serializer (
-      .io_clkA        (clk),
+      .io_clkA        (clkB),
       .io_rstA        (reset),
-      .io_clkB        (clkB),
+      .io_clkB        (clk),
       .io_rstB        (reset),
-      .io_dataIn1     (data1),
-      .io_dataIn2     (data2),
-      .io_dataOut     (data));
+      .io_dataIn1     (data1_i),
+      .io_dataIn2     (data2_i),
+      .io_dataOut     (data_o));
 endmodule
 
 
