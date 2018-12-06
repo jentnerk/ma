@@ -177,7 +177,7 @@ endmodule
         // Can use the ## operator to delay execution by a specified number of clocking events / clock cycles
         initial begin
             // Declare the Stimulus Objects
-            Stimulus #(1) stim;
+            Stimulus stim;
 
             automatic longint counter = 0;  // For printing during long simulations
 
@@ -220,7 +220,7 @@ endmodule
         // --------------------------------------------------
         // Tests for specified inputs
         // --------------------------------------------------
-        task automatic TestSerializer(Stimulus #(1) st, logic a = 1'b1, logic b = 1'b0);
+        task automatic TestSerializer(Stimulus st, logic a = 1'b1, logic b = 1'b0);
             $display("--------------------------------------------------\n",
                      "Test Serializer with:\ndata1: %d\ndata2: %d\nExpected:  ", a, b, {a,b});
 
@@ -243,7 +243,7 @@ endmodule
         // Helper Methods to apply stimulies to the DUT
         // -----------------------------------------------
         // Applies all 64 bit stimulies to the DUT except rst_ni
-        task ApplyStimuli(Stimulus #(1) st);
+        task ApplyStimuli(Stimulus st);
             cb.operand_a   <= st.stimulus_a;
             cb.operand_b   <= st.stimulus_b;
         endtask : ApplyStimuli
