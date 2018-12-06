@@ -3,7 +3,7 @@
 # Example script for compiling RTL sourcecode
 
 set VER=10.6b
-set LIB=creatdir
+set LIB=rtl
 
 
 if (-e $LIB) then
@@ -22,7 +22,7 @@ vlog-${VER}  -sv -work ${LIB} ../RTL/serializer_tb.sv
 
 # use a command like 
 #
-   #vsim-${VER} -lib rtl serializer_tb
+   vsim-${VER} -lib rtl serializer_tb
 #
 # to simulate
 
