@@ -13,11 +13,11 @@ endif
 vlib-${VER} $LIB
 
 # compile sourcecode
-vcom-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Toplevel_serializer.v
-vcom-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Serializer.v
+vlog-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Toplevel_serializer.v
+vlog-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Serializer.v
 
 # testbench (note no -check_synthesis)
-vcom-${VER}  -sv -work ${LIB} ../rtl/serializer_tb.sv
+vlog-${VER}  -sv -work ${LIB} ../rtl/serializer_tb.sv
 
 
 # use a command like 
