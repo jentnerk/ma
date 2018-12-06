@@ -12,14 +12,11 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -lib rtl serializer_tb 
-# Start time: 11:21:49 on Dec 06,2018
+# vsim -lib rtl -voptargs="+acc" serializer_tb 
+# Start time: 15:10:39 on Dec 06,2018
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit serializer_tb.
-#         Searched libraries:
-#             work
-#             rtl
+# ** Error: ../RTL/Toplevel_serializer.v(8): Module 'Clock_divider' is not defined.
 # Optimization failed
 # Error loading design
-# End time: 11:21:50 on Dec 06,2018, Elapsed time: 0:00:01
+# End time: 15:10:41 on Dec 06,2018, Elapsed time: 0:00:02
 # Errors: 1, Warnings: 0
