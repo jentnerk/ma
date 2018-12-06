@@ -214,68 +214,9 @@ endmodule
 
                 stim.print_rounds();
             end
-/*
-            // Randomized Testing
-            if(TESTRAND) begin
-                $display("//////////////////////////////////////////////////\n",
-                         "--------------------------------------------------\n",
-                         "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS*32),
-                         "--------------------------------------------------");
-                for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
 
-                    for (int i = 1; i <= 32; i++) begin
-                        assert(rFuOp.randomize());
-                        if(         rFuOp.randFuOp == DIV)   begin
-                            RandTestDIV(stim_64, 2*i, 2*i);
-                            //stim_64.print_stimuli_sign();
-
-                        end else if(rFuOp.randFuOp == REM)   begin
-                            RandTestREM(stim_64, 2*i, 2*i);
-                            //stim_64.print_stimuli_sign();
-
-                        end else if(rFuOp.randFuOp == DIVU)  begin
-                            RandTestDIVU(stim_64, 2*i, 2*i);
-                            //stim_64.print_stimuli();
-
-                        end else if(rFuOp.randFuOp == REMU)  begin
-                            RandTestREMU(stim_64, 2*i, 2*i);
-                            //stim_64.print_stimuli();
-
-                        end else if(rFuOp.randFuOp == DIVW)  begin
-                            RandTestDIVW(stim_32, i, i);
-                            //stim_32.print_stimuli_sign();
-
-                        end else if(rFuOp.randFuOp == REMW)  begin
-                            RandTestREMW(stim_32, i, i);
-                            //stim_32.print_stimuli_sign();
-
-                        end else if(rFuOp.randFuOp == DIVUW) begin
-                            RandTestDIVUW(stim_32, i, i);
-                            //stim_32.print_stimuli();
-
-                        end else if(rFuOp.randFuOp == REMUW) begin
-                            RandTestREMUW(stim_32, i, i);
-                            //stim_32.print_stimuli();
-
-                        end else $error("random Fu_Op was not in range.");
-
-                        repeat(rFuOp.rCycles) @(cb); // Wait 0 to 10 rounds before applying next test
-                        @(cb iff cb.div_ready_o == 1);
-                    end
-                    if(counter >= 10000) begin
-                        counter = 0;
-                        $display("100'000 times 32 cases tested.\n",);
-                    end
-                    counter++;
-                end
-
-                stim_64.print_rounds();
-                stim_32.print_rounds();
-            end
-
-            
-*/
-
+            stim.print_all_rounds();
+        end
         // --------------------------------------------------
         // Tests for specified inputs
         // --------------------------------------------------
@@ -297,33 +238,6 @@ endmodule
             $display("Result:    %d\n", cb.result,
                      "--------------------------------------------------");
         endtask : TestSerializer
-
-
-
-        // --------------------------------------------------
-        // Randomized Tests for division 64 bit
-        // --------------------------------------------------
-        task automatic RandTestDIV(Stimulus #(64) st, int count_a = 64, int count_b = 64);
-            int bound_a;
-            int bound_b;
-
-            bound_a = $urandom_range(0,count_a);
-            bound_b = $urandom_range(0,count_b);
-
-            assert(st.randomize() with {$countones(stimulus_a) == bound_a; $countones(stimulus_b) == bound_b;});
-
-            ApplyStimuli_64(st, DIV);
-            //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
-            @(cb); //wait one cycle
-            ClearStimuli();
-            @(posedge cb.div_valid_o);
-            st.check_div(cb.result);
-            st.check_trans_id(cb.div_trans_id_o);
-        endtask : RandTestDIV
-
-
-
-
 
         // -----------------------------------------------
         // Helper Methods to apply stimulies to the DUT
@@ -356,12 +270,6 @@ endmodule
         .data2_i            (data2_i),   // operand b in (rs2)
         .data_o             (data_o)   // result out
     );
-
-
-    // Instance the test program - not required, because the progam will be instanced implicitly.
-    test_div T1 ();
-
-    */
 
 
 endmodule
