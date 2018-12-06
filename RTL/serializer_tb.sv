@@ -214,7 +214,7 @@ endmodule
 
                 stim.print_rounds();
             end
-
+/*
             // Randomized Testing
             if(TESTRAND) begin
                 $display("//////////////////////////////////////////////////\n",
@@ -274,7 +274,7 @@ endmodule
             end
 
             
-
+*/
 
         // --------------------------------------------------
         // Tests for specified inputs
