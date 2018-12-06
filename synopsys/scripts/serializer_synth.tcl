@@ -8,14 +8,14 @@ exec rm -rf WORK/*
 # ------------------------------------------------------------------------------
 # Analyze Design
 # ------------------------------------------------------------------------------
-analyze -library WORK -format verilog {/home/msc18h28/ma/rtl/Serializer.v /home/msc18h28/ma/rtl/Clock_divider.v /home/msc18h28/ma/rtl/Toplevel_serializer.v}
+analyze -library WORK -format verilog {/home/msc18h28/ma/RTL/Serializer.v /home/msc18h28/ma/RTL/Clock_divider.v /home/msc18h28/ma/RTL/Toplevel_serializer.v}
 
-set TOP_ENTITY {Serializer}
+set TOP_ENTITY {TopLevel}
 
 # ------------------------------------------------------------------------------
 # Elaborate Design
 # ------------------------------------------------------------------------------
-puts "> elaborate Serializer"
+puts "> elaborate TopLevel"
 elaborate $TOP_ENTITY -architecture verilog -library DEFAULT -update
 #write -f ddc -o DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 
@@ -27,8 +27,8 @@ foreach MAXDELAY {10} {
   puts "---------------------------------------------------------"
   puts ""
 
-  remove_design -design
-  read_ddc DDC/${TOP_ENTITY}_${NAME}_elab.ddc
+  #remove_design -design
+  #read_ddc DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 
   create_clock clk_i -period ${MAXDELAY}
   #set_max_delay ${MAXDELAY} -from [all_inputs] -to [all_outputs]
