@@ -30,7 +30,7 @@ foreach MAXDELAY {10} {
   #remove_design -design
   #read_ddc DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 
-  create_clock clk_i -period ${MAXDELAY}
+  create_clock clk -period ${MAXDELAY}
   #set_max_delay ${MAXDELAY} -from [all_inputs] -to [all_outputs]
 
   # All inputs are the pads
