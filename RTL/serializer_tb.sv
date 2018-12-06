@@ -14,31 +14,6 @@ module serializer_tb;
     //localparam longint unsigned RANDOM_ROUNDS = 1000;   // # of randomized test rounds
 
 
-/*
-module TopLevel(
-  input clk,
-  input reset,
-  input data1_i,
-  input data2_i,
-  output data_o);
-
-Clock_divider Clock_divider ( 
-      .io_clkB        (clkB),
-      .clk            (clk),
-      .reset          (reset));
-
-Serializer Serializer (
-      .io_clkA        (clkB),
-      .io_rstA        (reset),
-      .io_clkB        (clk),
-      .io_rstB        (reset),
-      .io_dataIn1     (data1_i),
-      .io_dataIn2     (data2_i),
-      .io_dataOut     (data_o));
-endmodule
-
-
-*/
 
     // ---------------------------------
     // inputs to the DUT
@@ -135,7 +110,6 @@ endmodule
         //Statistics how many checks were performed until this function was called
         function void print_rounds();
             $display("--------------------------------------------------\n",
-                     "(Operator width: %d Bit)\n", WIDTH,
                      "%d of %d Checks were successful\n", passed, checks,
                      "--------------------------------------------------");
             allchecks = allchecks + checks;
@@ -147,7 +121,6 @@ endmodule
         function void print_all_rounds();
             $display("//////////////////////////////////////////////////\n",
                      "--------------------------------------------------\n",
-                     "(Operator width: %d)\n", WIDTH,
                      "After %d Checks\n", allchecks,
                      "      %d were successfull!\n", allpassed,
                      "--------------------------------------------------");
