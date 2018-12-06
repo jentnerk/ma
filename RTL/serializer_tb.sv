@@ -234,8 +234,8 @@ endmodule
             ClearStimuli();
             //handshake formalities
             //@(posedge cb.div_valid_o);
-            st.check_serializer(cb.result);
-            $display("Result:    %d\n", cb.result,
+            st.check_serializer(cb.data_o);
+            $display("Result:    %d\n", cb.data_o,
                      "--------------------------------------------------");
         endtask : TestSerializer
 
