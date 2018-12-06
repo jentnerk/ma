@@ -13,10 +13,10 @@ endif
 vlib-${VER} $LIB
 
 # compile sourcecode
-vlog-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Toplevel_serializer.v
-vlog-${VER}  -v -work ${LIB} -check_synthesis ../RTL/Serializer.v
+vlog-${VER}  -v -work ${LIB} ../RTL/Toplevel_serializer.v
+vlog-${VER}  -v -work ${LIB} ../RTL/Serializer.v
 
-# testbench (note no -check_synthesis)
+# testbench 
 vlog-${VER}  -sv -work ${LIB} ../rtl/serializer_tb.sv
 
 
