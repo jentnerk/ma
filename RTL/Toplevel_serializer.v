@@ -5,12 +5,12 @@ module TopLevel(
   input data2,
   output data);
 
-clock_divider Clock_divider ( 
+Clock_divider Clock_divider ( 
       .io_clkB        (clkB),
       .clk            (clk),
       .reset          (reset));
 
-serializer Serializer (
+Serializer Serializer (
       .io_clkA        (clk),
       .io_rstA        (reset),
       .io_clkB        (clkB),
