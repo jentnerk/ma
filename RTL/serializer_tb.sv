@@ -139,7 +139,7 @@ module serializer_tb;
             // specify skew (how many time units away from clock event a signal is sampled or driven)
             // input (sample) skew is implicitly negative
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
-            output negedge reset;
+            output  posedge reset;
             output data1_i, data2_i;
             input data_o;
         endclocking
@@ -169,7 +169,6 @@ module serializer_tb;
             repeat(5) @(cb);
 
             cb.reset <= 1;
-
             repeat(5) @(cb);
 
             // ------------------------------
