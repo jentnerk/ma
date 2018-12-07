@@ -17,22 +17,22 @@ o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.6b;65
+R0
 vClock_divider
-!s110 1544112039
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
 !i10b 1
 !s100 obZ<fGo0h1F_g[X_GUmFX1
 Ic]E6:1YhMJ68TSd8VEn1h2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 Z3 w1544026973
 8/home/msc18h28/ma/RTL/Clock_divider.v
 F/home/msc18h28/ma/RTL/Clock_divider.v
 L0 6
 Z4 OL;L;10.6b;65
-r1
-!s85 0
-31
-!s108 1544112039.000000
+!s108 1544167638.000000
 !s107 /home/msc18h28/ma/RTL/Clock_divider.v|
 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/Clock_divider.v|
 !i113 0
@@ -40,21 +40,20 @@ Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 n@clock_divider
 vSerializer
-!s110 1544112058
+R2
+r1
+!s85 0
+31
 !i10b 1
 !s100 Tl=cQSZf^Ql^1:RaU6]YW3
 I@2XZb;^E_cgUB0V;EoI1;1
-R2
 R0
 R3
 8/home/msc18h28/ma/RTL/Serializer.v
 F/home/msc18h28/ma/RTL/Serializer.v
 L0 6
 R4
-r1
-!s85 0
-31
-!s108 1544112057.000000
+!s108 1544167579.000000
 !s107 /home/msc18h28/ma/RTL/Serializer.v|
 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/Serializer.v|
 !i113 0
@@ -63,11 +62,13 @@ R1
 n@serializer
 vserializer_tb
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1544112528
+R2
+r1
+!s85 0
+31
 !i10b 1
 !s100 CZYId<Xe`lKRV0mEKUE`81
 IY?_QK3aWQ0eY>QcL:Dm@T3
-R2
 !s105 serializer_tb_sv_unit
 S1
 R0
@@ -76,31 +77,27 @@ w1544112501
 F/home/msc18h28/ma/RTL/serializer_tb.sv
 L0 5
 R4
-r1
-!s85 0
-31
-!s108 1544112528.000000
+!s108 1544167666.000000
 !s107 /home/msc18h28/ma/RTL/serializer_tb.sv|
 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/serializer_tb.sv|
 !i113 0
 R5
 R1
 vTopLevel
-!s110 1544112336
+R2
+r1
+!s85 0
+31
 !i10b 1
 !s100 270?]JSCn=:b7mlNZJU991
 I[0iN;f^@hN4g=@lo8kP^Y1
-R2
 R0
 w1544090627
 8/home/msc18h28/ma/RTL/Toplevel_serializer.v
 F/home/msc18h28/ma/RTL/Toplevel_serializer.v
 L0 1
 R4
-r1
-!s85 0
-31
-!s108 1544112335.000000
+!s108 1544167502.000000
 !s107 /home/msc18h28/ma/RTL/Toplevel_serializer.v|
 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/Toplevel_serializer.v|
 !i113 0

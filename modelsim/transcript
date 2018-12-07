@@ -12,98 +12,86 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlib work
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 17:00:13 on Dec 06,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
-# 
-# Top level modules:
-# 	serializer_tb
-# End time: 17:00:14 on Dec 06,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 17:00:39 on Dec 06,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v 
-# -- Compiling module Clock_divider
-# 
-# Top level modules:
-# 	Clock_divider
-# End time: 17:00:39 on Dec 06,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 17:00:57 on Dec 06,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v 
-# -- Compiling module Serializer
-# 
-# Top level modules:
-# 	Serializer
-# End time: 17:00:58 on Dec 06,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim work.serializer_tb
-# vsim work.serializer_tb 
-# Start time: 17:02:55 on Dec 06,2018
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /home/msc18h28/ma/RTL/serializer_tb.sv(265): Module 'TopLevel' is not defined.
-# Optimization failed
-# Error loading design
-# End time: 17:02:57 on Dec 06,2018, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 0
-# Load canceled
 vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Toplevel_serializer.v
 # QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 17:05:35 on Dec 06,2018
+# Start time: 08:25:02 on Dec 07,2018
 # vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Toplevel_serializer.v 
 # -- Compiling module TopLevel
 # 
 # Top level modules:
 # 	TopLevel
-# End time: 17:05:36 on Dec 06,2018, Elapsed time: 0:00:01
+# End time: 08:25:03 on Dec 07,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.serializer_tb
-# vsim work.serializer_tb 
-# Start time: 17:06:18 on Dec 06,2018
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): (vopt-7063) /home/msc18h28/ma/RTL/serializer_tb.sv(138): Failed to find 'WIDTH' in hierarchical name '/WIDTH'.
-# Optimization failed
-# Error loading design
-# End time: 17:06:18 on Dec 06,2018, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 08:26:19 on Dec 07,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v 
+# -- Compiling module Serializer
+# 
+# Top level modules:
+# 	Serializer
+# End time: 08:26:19 on Dec 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 08:27:18 on Dec 07,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v 
+# -- Compiling module Clock_divider
+# 
+# Top level modules:
+# 	Clock_divider
+# End time: 08:27:18 on Dec 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
 # QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 17:08:48 on Dec 06,2018
+# Start time: 08:27:46 on Dec 07,2018
 # vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
 # -- Compiling module serializer_tb
 # -- Compiling program test_div
 # 
 # Top level modules:
 # 	serializer_tb
-# End time: 17:08:48 on Dec 06,2018, Elapsed time: 0:00:00
+# End time: 08:27:46 on Dec 07,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.serializer_tb
-# vsim work.serializer_tb 
-# Start time: 17:09:02 on Dec 06,2018
-# ** Note: (vsim-3812) Design is being optimized...
+vsim work.serializer_tb -novopt
+# vsim work.serializer_tb -novopt 
+# Start time: 08:28:49 on Dec 07,2018
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/msc18h28/ma/modelsim/work.serializer_tb
 # Loading sv_std.std
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-add wave -position end  sim:/serializer_tb/CLOCK_PERIOD
-add wave -position end  sim:/serializer_tb/data_o
-add wave -position end  sim:/serializer_tb/test_div/cb/data_o
-add wave -position end  sim:/serializer_tb/test_div/cb/data1_i
-add wave -position end  sim:/serializer_tb/test_div/cb/data2_i
-add wave -position end  sim:/serializer_tb/test_div/cb/reset
-add wave -position end  sim:/serializer_tb/test_div/cb/cb_event
-# A time value could not be extracted from the current line
+# Loading work.serializer_tb
+# Refreshing /home/msc18h28/ma/modelsim/work.TopLevel
+# Loading work.TopLevel
+# Refreshing /home/msc18h28/ma/modelsim/work.Clock_divider
+# Loading work.Clock_divider
+# Refreshing /home/msc18h28/ma/modelsim/work.Serializer
+# Loading work.Serializer
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_clkA
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_rstA
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_clkB
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_rstB
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataIn1
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataIn2
+add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataOut
+add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_reg1
+add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_reg2
+add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_output_clkA
+add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkB_buf0
+add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkB_buf1
+add wave -position end  sim:/serializer_tb/dut/Clock_divider/io_clkB
+add wave -position end  sim:/serializer_tb/dut/Clock_divider/clk
+add wave -position end  sim:/serializer_tb/dut/Clock_divider/clkB
+add wave -position end  sim:/serializer_tb/dut/Clock_divider/reset
+add wave -position insertpoint  \
+cb \
+sim:/serializer_tb/test_div/cb/data_o \
+sim:/serializer_tb/test_div/cb/data1_i \
+sim:/serializer_tb/test_div/cb/data2_i \
+sim:/serializer_tb/test_div/cb/reset \
+sim:/serializer_tb/test_div/cb/cb_event
+# (vish-4014) No objects found matching 'cb'.
 restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-run 50ns
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 run 1000ns
 # //////////////////////////////////////////////////
 # --------------------------------------------------
@@ -128,5 +116,38 @@ run 1000ns
 #    Time: 105 ns  Iteration: 2  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
-# End time: 17:14:49 on Dec 06,2018, Elapsed time: 0:05:47
-# Errors: 0, Warnings: 0
+# Causality operation skipped due to absence of debug database file
+add wave -position end  sim:/serializer_tb/dut/clk
+add wave -position end  sim:/serializer_tb/dut/reset
+add wave -position end  sim:/serializer_tb/dut/data1_i
+add wave -position end  sim:/serializer_tb/dut/data2_i
+add wave -position end  sim:/serializer_tb/dut/data_o
+add wave -position end  sim:/serializer_tb/dut/clkB
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/msc18h28/ma/modelsim/wave.do
+restart 
+restart -f
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+run -all
+# //////////////////////////////////////////////////
+# --------------------------------------------------
+# Testing Serializer
+# --------------------------------------------------
+# --------------------------------------------------
+# Test Serializer with:
+# data1: 1
+# data2: 0
+# Expected:  2
+# Result:    0
+# --------------------------------------------------
+# --------------------------------------------------
+#                     1 of                     1 Checks were successful
+# --------------------------------------------------
+# //////////////////////////////////////////////////
+# --------------------------------------------------
+# After                     1 Checks
+#                           1 were successfull!
+# --------------------------------------------------
+# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
+#    Time: 105 ns  Iteration: 2  Instance: /serializer_tb/test_div
+# 1
+# Simulation stop requested.
