@@ -165,10 +165,10 @@ module serializer_tb;
             // Test Reset
             // --------------------------
             // Will be applied on negedge of clock!
-            cb.reset <= 0;
+            cb.reset <= 1;
             repeat(5) @(cb);
 
-            cb.reset <= 1;
+            cb.reset <= 0;
             repeat(5) @(cb);
 
             // ------------------------------
