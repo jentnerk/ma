@@ -228,8 +228,8 @@ module serializer_tb;
         // Randomized Tests
         // --------------------------------------------------
         task automatic RandTest(Stimulus st);
-            st.stimulus_a=$rand;
-            st.stimulus_b=$rand;
+            st.stimulus_a=$random;
+            st.stimulus_b=$random;
             ApplyStimuli(st);
             @(cb); //wait one cycle
             ClearStimuli();
