@@ -9,7 +9,7 @@ module serializer_tb;
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
 
     // activate and deactive different tests
-    localparam logic TESTRAND  = 1'b0; // Enable testing of random inputs
+    localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
     localparam logic TESTKNOWN = 1'b1; // Enable testing if next request is in next cycle after taking one
     localparam longint unsigned RANDOM_ROUNDS = 10;   // # of randomized test rounds
 
