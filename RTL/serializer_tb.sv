@@ -195,7 +195,7 @@ module serializer_tb;
                          "--------------------------------------------------");
                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
                         RandTest(stim);
-                        //repeat(rFuOp.rCycles) @(cb); // Wait 0 to 10 rounds before applying next test
+                        @(cb); @(cb);@(cb);// Wait 3 rounds before applying next test
                         //@(cb iff cb.div_ready_o == 1);
                 end
             end
@@ -235,7 +235,6 @@ module serializer_tb;
             bound_b = $urandom_range(0,1);
 
             ApplyStimuli(st);
-            //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
             @(cb); //wait one cycle
             ClearStimuli();
             st.check_serializer(cb.data_o);
