@@ -239,7 +239,7 @@ module serializer_tb;
             @(cb); //wait one cycle
             ClearStimuli();
             st.check_serializer(cb.data_o);
-        endtask : RandTestDIV
+        endtask : RandTest
 
         // -----------------------------------------------
         // Helper Methods to apply stimulies to the DUT
