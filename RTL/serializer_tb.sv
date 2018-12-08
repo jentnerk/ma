@@ -11,7 +11,7 @@ module serializer_tb;
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b0; // Enable testing of random inputs
     localparam logic TESTKNOWN = 1'b1; // Enable testing if next request is in next cycle after taking one
-    //localparam longint unsigned RANDOM_ROUNDS = 1000;   // # of randomized test rounds
+    localparam longint unsigned RANDOM_ROUNDS = 10;   // # of randomized test rounds
 
 
 
@@ -88,7 +88,7 @@ module serializer_tb;
         // -----------------------------------------------
 
         function void check_serializer(logic result);
-            logic signed expected;
+            logic expected;
                 expected = {stimulus_a,stimulus_b};
 
             checks++;
@@ -187,6 +187,18 @@ module serializer_tb;
                 stim.print_rounds();
             end
 
+                        // Randomized Testing
+            if(TESTRAND) begin
+                $display("//////////////////////////////////////////////////\n",
+                         "--------------------------------------------------\n",
+                         "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
+                         "--------------------------------------------------");
+                for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
+                        RandTest(stim);
+                        //repeat(rFuOp.rCycles) @(cb); // Wait 0 to 10 rounds before applying next test
+                        //@(cb iff cb.div_ready_o == 1);
+                end
+
             stim.print_all_rounds();
         end
         // --------------------------------------------------
@@ -202,7 +214,7 @@ module serializer_tb;
 
             ApplyStimuli(st);
             //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
-            @(cb); //wait one cycle
+            //@(cb); //wait one cycle
             ClearStimuli();
             //handshake formalities
             //@(posedge cb.div_valid_o);
@@ -210,6 +222,23 @@ module serializer_tb;
             $display("Result:    %d\n", cb.data_o,
                      "--------------------------------------------------");
         endtask : TestSerializer
+
+        // --------------------------------------------------
+        // Randomized Tests
+        // --------------------------------------------------
+        task automatic RandTest(Stimulus st);
+            int bound_a;
+            int bound_b;
+
+            bound_a = $urandom_range(0,1);
+            bound_b = $urandom_range(0,1);
+
+            ApplyStimuli(st);
+            //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
+            @(cb); //wait one cycle
+            ClearStimuli();
+            st.check_serializer(cb.result);
+        endtask : RandTestDIV
 
         // -----------------------------------------------
         // Helper Methods to apply stimulies to the DUT
