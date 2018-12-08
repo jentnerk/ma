@@ -22,5 +22,3 @@ vlib-${VER} $LIB
 
 # compile the testbench
 	vlog -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-q
-qq
