@@ -11,6 +11,7 @@ set LIB=rtl
 if (-e $LIB) then
   rm -rf $LIB 
 endif
+
 vlib-${VER} $LIB
 
 # compile the RTL

@@ -198,6 +198,7 @@ module serializer_tb;
                         //repeat(rFuOp.rCycles) @(cb); // Wait 0 to 10 rounds before applying next test
                         //@(cb iff cb.div_ready_o == 1);
                 end
+            end
 
             stim.print_all_rounds();
         end
