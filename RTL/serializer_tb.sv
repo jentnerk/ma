@@ -205,7 +205,7 @@ module serializer_tb;
         // --------------------------------------------------
         // Tests for specified inputs
         // --------------------------------------------------
-        task automatic TestSerializer(Stimulus st, logic a = 1'b1, logic b = 1'b0);
+        task automatic TestSerializer(Stimulus st, logic a, logic b);
             $display("--------------------------------------------------\n",
                      "Test Serializer with:\ndata1: %d\ndata2: %d\nExpected:  ", a, b, {a,b});
 
@@ -228,12 +228,8 @@ module serializer_tb;
         // Randomized Tests
         // --------------------------------------------------
         task automatic RandTest(Stimulus st);
-            int bound_a;
-            int bound_b;
-
-            bound_a = $urandom_range(0,1);
-            bound_b = $urandom_range(0,1);
-
+            st.stimulus_a=$rand;
+            st.stimulus_b=$rand;
             ApplyStimuli(st);
             @(cb); //wait one cycle
             ClearStimuli();
