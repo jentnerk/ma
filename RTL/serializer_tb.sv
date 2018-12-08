@@ -238,7 +238,7 @@ module serializer_tb;
             //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
             @(cb); //wait one cycle
             ClearStimuli();
-            st.check_serializer(cb.result);
+            st.check_serializer(cb.data_o);
         endtask : RandTestDIV
 
         // -----------------------------------------------
