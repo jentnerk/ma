@@ -12,86 +12,20 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Toplevel_serializer.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 08:25:02 on Dec 07,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Toplevel_serializer.v 
-# -- Compiling module TopLevel
-# 
-# Top level modules:
-# 	TopLevel
-# End time: 08:25:03 on Dec 07,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 08:26:19 on Dec 07,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Serializer.v 
-# -- Compiling module Serializer
-# 
-# Top level modules:
-# 	Serializer
-# End time: 08:26:19 on Dec 07,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 08:27:18 on Dec 07,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v 
-# -- Compiling module Clock_divider
-# 
-# Top level modules:
-# 	Clock_divider
-# End time: 08:27:18 on Dec 07,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 08:27:46 on Dec 07,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
-# 
-# Top level modules:
-# 	serializer_tb
-# End time: 08:27:46 on Dec 07,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.serializer_tb -novopt
-# vsim work.serializer_tb -novopt 
-# Start time: 08:28:49 on Dec 07,2018
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /home/msc18h28/ma/modelsim/work.serializer_tb
+# vsim -lib work -voptargs="+acc" serializer_tb 
+# Start time: 08:32:15 on Dec 10,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
-# Loading work.serializer_tb
-# Refreshing /home/msc18h28/ma/modelsim/work.TopLevel
-# Loading work.TopLevel
-# Refreshing /home/msc18h28/ma/modelsim/work.Clock_divider
-# Loading work.Clock_divider
-# Refreshing /home/msc18h28/ma/modelsim/work.Serializer
-# Loading work.Serializer
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_clkA
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_rstA
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_clkB
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_rstB
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataIn1
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataIn2
-add wave -position end  sim:/serializer_tb/dut/Serializer/io_dataOut
-add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_reg1
-add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_reg2
-add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkA_output_clkA
-add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkB_buf0
-add wave -position end  sim:/serializer_tb/dut/Serializer/area_clkB_buf1
-add wave -position end  sim:/serializer_tb/dut/Clock_divider/io_clkB
-add wave -position end  sim:/serializer_tb/dut/Clock_divider/clk
-add wave -position end  sim:/serializer_tb/dut/Clock_divider/clkB
-add wave -position end  sim:/serializer_tb/dut/Clock_divider/reset
-add wave -position insertpoint  \
-cb \
-sim:/serializer_tb/test_div/cb/data_o \
-sim:/serializer_tb/test_div/cb/data1_i \
-sim:/serializer_tb/test_div/cb/data2_i \
-sim:/serializer_tb/test_div/cb/reset \
-sim:/serializer_tb/test_div/cb/cb_event
-# (vish-4014) No objects found matching 'cb'.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading work.serializer_tb(fast)
+# Loading work.TopLevel(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer(fast)
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.serializer_tb(fast)
+# Loading work.TopLevel(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer(fast)
 run 1000ns
 # //////////////////////////////////////////////////
 # --------------------------------------------------
@@ -109,25 +43,56 @@ run 1000ns
 # --------------------------------------------------
 # //////////////////////////////////////////////////
 # --------------------------------------------------
+# Testing Randomized with                   10 Stimuli
+# --------------------------------------------------
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 0
+# Operand_b: 1
+# Result:   0
+# Expected: 1
+#    Time: 105 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 1
+# Result:   0
+# Expected: 1
+#    Time: 145 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 225 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 385 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 425 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# //////////////////////////////////////////////////
+# --------------------------------------------------
 # After                     1 Checks
 #                           1 were successfull!
 # --------------------------------------------------
 # ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 105 ns  Iteration: 2  Instance: /serializer_tb/test_div
+#    Time: 495 ns  Iteration: 3  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
-# Causality operation skipped due to absence of debug database file
-add wave -position end  sim:/serializer_tb/dut/clk
-add wave -position end  sim:/serializer_tb/dut/reset
-add wave -position end  sim:/serializer_tb/dut/data1_i
-add wave -position end  sim:/serializer_tb/dut/data2_i
-add wave -position end  sim:/serializer_tb/dut/data_o
-add wave -position end  sim:/serializer_tb/dut/clkB
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/msc18h28/ma/modelsim/wave.do
-restart 
+do wave.do
+run 1000ns
 restart -f
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-run -all
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.serializer_tb(fast)
+# Loading work.TopLevel(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer(fast)
+run 1000ns
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
@@ -144,10 +109,45 @@ run -all
 # --------------------------------------------------
 # //////////////////////////////////////////////////
 # --------------------------------------------------
+# Testing Randomized with                   10 Stimuli
+# --------------------------------------------------
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 0
+# Operand_b: 1
+# Result:   0
+# Expected: 1
+#    Time: 105 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 1
+# Result:   0
+# Expected: 1
+#    Time: 145 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 225 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 385 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   1
+# Expected: 0
+#    Time: 425 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# //////////////////////////////////////////////////
+# --------------------------------------------------
 # After                     1 Checks
 #                           1 were successfull!
 # --------------------------------------------------
 # ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 105 ns  Iteration: 2  Instance: /serializer_tb/test_div
+#    Time: 495 ns  Iteration: 3  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/msc18h28/ma/modelsim/wave.do

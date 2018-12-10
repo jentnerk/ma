@@ -2,4 +2,4 @@
 
 
 # start modelsim (taken from modelsim gui)
-vsim work.serializer_tb -voptargs=+acc &
+vsim-10.6b -lib work -voptargs=+acc serializer_tb
