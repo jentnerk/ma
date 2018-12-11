@@ -118,24 +118,13 @@ module serializer_tb;
                          stimulus_a, stimulus_b);
         endfunction : print_stimuli
 
-        //Statistics how many checks were performed until this function was called
-        function void print_rounds();
-            $display("--------------------------------------------------\n",
-                     "%d of %d Checks were successful\n", passed, checks,
-                     "--------------------------------------------------");
-            allchecks = allchecks + checks;
-            allpassed = allpassed + passed;
-            checks = 0;
-            passed = 0;
-        endfunction : print_rounds
-
-        function void print_all_rounds();
+        function void pass_statistic();
             $display("//////////////////////////////////////////////////\n",
                      "--------------------------------------------------\n",
-                     "After %d Checks\n", allchecks,
-                     "      %d were successfull!\n", allpassed,
+                     "After %d Checks\n", checks,
+                     "      %d were successfull!\n", passed,
                      "--------------------------------------------------");
-        endfunction : print_all_rounds
+        endfunction : pass_statistic
 
     endclass : Stimulus
 
@@ -194,9 +183,9 @@ module serializer_tb;
 
 
                 TestSerializer(stim, 1'b1,  1'b0);
-                repeat(1) @(cb); //wait 2 cycles before applying the next stimulus
+                repeat(1) @(cb); //wait 1 cycles before applying the next stimulus
 
-                stim.print_rounds();
+                stim.pass_statistic();
             end
 
                         // Randomized Testing
@@ -207,11 +196,11 @@ module serializer_tb;
                          "--------------------------------------------------");
                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
                         RandTest(stim);
-                        repeat(1) @(cb); // Wait 2 rounds before applying next test
+                        repeat(1) @(cb); // Wait 1 rounds before applying next test
                 end
             end
 
-            stim.print_all_rounds();
+            stim.pass_statistic();
         end
         // --------------------------------------------------
         // Tests for specified inputs
@@ -228,15 +217,11 @@ module serializer_tb;
             //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
             @(cb); @(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
-            //handshake formalities
-            //@(posedge cb.div_valid_o);
+            //wait two cycles for the result to appear at the output
             @(cb); @(cb);
             st.check_serializer_a(cb.data_o);
             @(cb);
-            st.check_serializer_a(cb.data_o);
-
-            $display("Result:    %d\n", cb.data_o,
-                     "--------------------------------------------------");
+            st.check_serializer_b(cb.data_o);
         endtask : TestSerializer
 
         // --------------------------------------------------
