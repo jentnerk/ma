@@ -16,9 +16,9 @@ module Serializer (
   reg  area_clkA_output_clkA;
   reg  area_clkB_reg_out;
   always @ (*) begin
-    area_clkA_output_clkA = area_clkA_reg1;
+    area_clkA_output_clkA = area_clkA_reg2;
     if(io_clkA)begin
-      area_clkA_output_clkA = area_clkA_reg2;
+      area_clkA_output_clkA = area_clkA_reg1;
     end
   end
 

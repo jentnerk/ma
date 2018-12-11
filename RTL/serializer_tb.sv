@@ -87,16 +87,27 @@ module serializer_tb;
         // Functions for checking the outputs of the DUT
         // -----------------------------------------------
 
-        function void check_serializer(logic [1:0] result);
-            logic [1:0] expected;
-                expected = {stimulus_a,stimulus_b};
+        function void check_serializer_a(logic result);
+            logic expected;
+                expected = {stimulus_a};
 
             checks++;
 
             Check_serializer: assert (expected == result) passed++;
                                 else $error("%m: Failed!!!!!!!\nOperand_a: %d\nOperand_b: %d\nResult:   %d\nExpected: %d",
                                             stimulus_a, stimulus_b, result, expected);
-        endfunction : check_serializer
+        endfunction : check_serializer_a
+
+        function void check_serializer_b(logic result);
+            logic expected;
+                expected = {stimulus_b};
+
+            checks++;
+
+            Check_serializer: assert (expected == result) passed++;
+                                else $error("%m: Failed!!!!!!!\nOperand_a: %d\nOperand_b: %d\nResult:   %d\nExpected: %d",
+                                            stimulus_a, stimulus_b, result, expected);
+        endfunction : check_serializer_a
 
         // ----------------------
         // Print Functions
@@ -219,6 +230,7 @@ module serializer_tb;
             ClearStimuli();
             //handshake formalities
             //@(posedge cb.div_valid_o);
+            @(cb);
             st.check_serializer(cb.data_o);
             $display("Result:    %d\n", cb.data_o,
                      "--------------------------------------------------");
@@ -233,7 +245,9 @@ module serializer_tb;
             ApplyStimuli(st);
             @(cb);@(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
-            st.check_serializer(cb.data_o);
+            st.check_serializer_a(cb.data_o);
+            @(cb);
+            st.check_serializer_b(cb.data_o);
         endtask : RandTest
 
         // -----------------------------------------------
