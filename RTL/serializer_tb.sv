@@ -182,7 +182,7 @@ module serializer_tb;
                          "--------------------------------------------------");
 
 
-                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0); @(cb);@(cb),@(cb);@(cb); //wait four cycles before applying the next stimulus
 
                 stim.print_rounds();
             end
@@ -195,7 +195,7 @@ module serializer_tb;
                          "--------------------------------------------------");
                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
                         RandTest(stim);
-                        @(cb); @(cb);@(cb);// Wait 3 rounds before applying next test
+                        @(cb); @(cb);@(cb);@(cb);// Wait 4 rounds before applying next test
                         //@(cb iff cb.div_ready_o == 1);
                 end
             end
