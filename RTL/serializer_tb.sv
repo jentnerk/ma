@@ -107,7 +107,7 @@ module serializer_tb;
             Check_serializer: assert (expected == result) passed++;
                                 else $error("%m: Failed!!!!!!!\nOperand_a: %d\nOperand_b: %d\nResult:   %d\nExpected: %d",
                                             stimulus_a, stimulus_b, result, expected);
-        endfunction : check_serializer_a
+        endfunction : check_serializer_b
 
         // ----------------------
         // Print Functions
