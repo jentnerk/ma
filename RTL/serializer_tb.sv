@@ -231,7 +231,7 @@ module serializer_tb;
             st.stimulus_a=$random;
             st.stimulus_b=$random;
             ApplyStimuli(st);
-            @(cb); //wait one cycle
+            @(cb);@(cb); //wait one cycle
             ClearStimuli();
             st.check_serializer(cb.data_o);
         endtask : RandTest
