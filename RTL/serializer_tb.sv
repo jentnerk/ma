@@ -218,7 +218,7 @@ module serializer_tb;
         // --------------------------------------------------
         task automatic TestSerializer(Stimulus st, logic a, logic b);
             $display("--------------------------------------------------\n",
-                     "Test Serializer with:\ndata1: %d\ndata2: %d\nExpected:  ", a, b, {a,b});
+                     "Test Serializer with:\ndata1: %d\ndata2: %d", a, b);
 
             st.randomize();
             st.set_stimulus_a(a);
@@ -230,9 +230,9 @@ module serializer_tb;
             ClearStimuli();
             //handshake formalities
             //@(posedge cb.div_valid_o);
-            @(cb);
+            @(posedge cb);
             st.check_serializer_a(cb.data_o);
-            @(cb);
+            @(posedge cb);
             st.check_serializer_a(cb.data_o);
 
             $display("Result:    %d\n", cb.data_o,
@@ -248,9 +248,9 @@ module serializer_tb;
             ApplyStimuli(st);
             @(cb);@(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
-            @(cb);
+            @(posedge cb);
             st.check_serializer_a(cb.data_o);
-            @(cb);
+            @(posedge cb);
             st.check_serializer_b(cb.data_o);
         endtask : RandTest
 
