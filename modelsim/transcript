@@ -13,86 +13,17 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -lib work -voptargs="+acc" serializer_tb 
-# Start time: 08:32:15 on Dec 10,2018
+# Start time: 12:03:18 on Dec 11,2018
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.serializer_tb(fast)
 # Loading work.TopLevel(fast)
 # Loading work.Clock_divider(fast)
 # Loading work.Serializer(fast)
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run 1000ns
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# Expected:  2
-# Result:    0
-# --------------------------------------------------
-# --------------------------------------------------
-#                     1 of                     1 Checks were successful
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 0
-# Operand_b: 1
-# Result:   0
-# Expected: 1
-#    Time: 105 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 1
-# Result:   0
-# Expected: 1
-#    Time: 145 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 225 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 385 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 425 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     1 Checks
-#                           1 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 495 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
+do wave
+# Cannot open macro file: wave
 do wave.do
 run 1000ns
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run 1000ns
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
@@ -102,52 +33,83 @@ run 1000ns
 # data1: 1
 # data2: 0
 # Expected:  2
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   0
+# Expected: 2
+#    Time: 120 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
 # Result:    0
 # --------------------------------------------------
 # --------------------------------------------------
-#                     1 of                     1 Checks were successful
+#                     0 of                     1 Checks were successful
 # --------------------------------------------------
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Randomized with                   10 Stimuli
 # --------------------------------------------------
 # ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 1
+# Result:   0
+# Expected: 3
+#    Time: 190 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 1
+# Result:   0
+# Expected: 3
+#    Time: 240 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   0
+# Expected: 2
+#    Time: 290 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 1
+# Result:   0
+# Expected: 3
+#    Time: 340 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
 # Operand_a: 0
 # Operand_b: 1
 # Result:   0
 # Expected: 1
-#    Time: 105 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+#    Time: 390 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   0
+# Expected: 2
+#    Time: 440 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   0
+# Expected: 2
+#    Time: 490 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
+# Operand_a: 1
+# Operand_b: 0
+# Result:   0
+# Expected: 2
+#    Time: 540 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
 # ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
 # Operand_a: 1
 # Operand_b: 1
 # Result:   0
-# Expected: 1
-#    Time: 145 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 225 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 385 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
-# ** Error: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer: Failed!!!!!!!
-# Operand_a: 1
-# Operand_b: 0
-# Result:   1
-# Expected: 0
-#    Time: 425 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
+# Expected: 3
+#    Time: 590 ns  Scope: serializer_tb.Stimulus.Stimulus__1.check_serializer.Check_serializer File: /home/msc18h28/ma/RTL/serializer_tb.sv Line: 97
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # After                     1 Checks
-#                           1 were successfull!
+#                           0 were successfull!
 # --------------------------------------------------
 # ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 495 ns  Iteration: 3  Instance: /serializer_tb/test_div
+#    Time: 620 ns  Iteration: 2  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/msc18h28/ma/modelsim/wave.do
+# End time: 12:08:06 on Dec 11,2018, Elapsed time: 0:04:48
+# Errors: 11, Warnings: 0

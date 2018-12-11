@@ -87,8 +87,8 @@ module serializer_tb;
         // Functions for checking the outputs of the DUT
         // -----------------------------------------------
 
-        function void check_serializer(logic result);
-            logic expected;
+        function void check_serializer(logic [1:0] result);
+            logic [1:0] expected;
                 expected = {stimulus_a,stimulus_b};
 
             checks++;
@@ -215,7 +215,7 @@ module serializer_tb;
 
             ApplyStimuli(st);
             //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
-            //@(cb); //wait one cycle
+            @(cb); @(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
             //handshake formalities
             //@(posedge cb.div_valid_o);
@@ -231,7 +231,7 @@ module serializer_tb;
             st.stimulus_a=$random;
             st.stimulus_b=$random;
             ApplyStimuli(st);
-            @(cb);@(cb); //wait one cycle
+            @(cb);@(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
             st.check_serializer(cb.data_o);
         endtask : RandTest

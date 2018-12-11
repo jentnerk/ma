@@ -11,9 +11,9 @@ add wave -noupdate -expand -group clock_divider /serializer_tb/dut/Clock_divider
 add wave -noupdate -expand -group clock_divider /serializer_tb/dut/Clock_divider/reset
 add wave -noupdate -expand -group clock_divider /serializer_tb/dut/Clock_divider/clkB
 add wave -noupdate /serializer_tb/dut/Serializer/io_dataOut
-add wave -noupdate -expand -group serializer -color Red -itemcolor Red /serializer_tb/dut/Serializer/io_clkA
+add wave -noupdate -expand -group serializer -color Red /serializer_tb/dut/Serializer/io_clkA
 add wave -noupdate -expand -group serializer /serializer_tb/dut/Serializer/io_rstA
-add wave -noupdate -expand -group serializer -color Red -itemcolor Red /serializer_tb/dut/Serializer/io_clkB
+add wave -noupdate -expand -group serializer -color Red /serializer_tb/dut/Serializer/io_clkB
 add wave -noupdate -expand -group serializer /serializer_tb/dut/Serializer/io_rstB
 add wave -noupdate -expand -group serializer -color Orchid /serializer_tb/dut/Serializer/io_dataIn1
 add wave -noupdate -expand -group serializer -color Orchid /serializer_tb/dut/Serializer/io_dataIn2
@@ -39,4 +39,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {191 ns} {419 ns}
+WaveRestoreZoom {279 ns} {507 ns}
