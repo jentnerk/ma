@@ -139,7 +139,7 @@ module serializer_tb;
             // specify skew (how many time units away from clock event a signal is sampled or driven)
             // input (sample) skew is implicitly negative
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
-            output  posedge reset;
+            output  negedge reset;
             output data1_i, data2_i;
             input data_o;
         endclocking
@@ -182,7 +182,8 @@ module serializer_tb;
                          "--------------------------------------------------");
 
 
-                TestSerializer(stim, 1'b1,  1'b0); @(cb);@(cb),@(cb);@(cb); //wait four cycles before applying the next stimulus
+                TestSerializer(stim, 1'b1,  1'b0);
+                repeat(4) @(cb); //wait four cycles before applying the next stimulus
 
                 stim.print_rounds();
             end
@@ -195,8 +196,7 @@ module serializer_tb;
                          "--------------------------------------------------");
                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
                         RandTest(stim);
-                        @(cb); @(cb);@(cb);@(cb);// Wait 4 rounds before applying next test
-                        //@(cb iff cb.div_ready_o == 1);
+                        repeat(4) @(cb); // Wait 4 rounds before applying next test
                 end
             end
 
