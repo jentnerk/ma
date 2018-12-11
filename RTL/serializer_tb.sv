@@ -231,7 +231,10 @@ module serializer_tb;
             //handshake formalities
             //@(posedge cb.div_valid_o);
             @(cb);
-            st.check_serializer(cb.data_o);
+            st.check_serializer_a(cb.data_o);
+            @(cb);
+            st.check_serializer_a(cb.data_o);
+
             $display("Result:    %d\n", cb.data_o,
                      "--------------------------------------------------");
         endtask : TestSerializer
@@ -245,6 +248,7 @@ module serializer_tb;
             ApplyStimuli(st);
             @(cb);@(cb); //wait two cycles to imitate the slow clock
             ClearStimuli();
+            @(cb);
             st.check_serializer_a(cb.data_o);
             @(cb);
             st.check_serializer_b(cb.data_o);
