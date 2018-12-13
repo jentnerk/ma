@@ -12,617 +12,400 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -lib work -voptargs="+acc" serializer_tb 
-# Start time: 09:28:09 on Dec 12,2018
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading sv_std.std
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-do wave.do
-run 1000ns
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                    22 Checks
-#                          22 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 755 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run -all
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                    22 Checks
-#                          22 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 755 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v
 # QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 09:35:56 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
+# Start time: 16:11:01 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/Clock_divider.v 
+# -- Compiling module Clock_divider
+# 
+# Top level modules:
+# 	Clock_divider
+# End time: 16:11:02 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:11:04 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:11:04 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:11:06 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv 
 # -- Compiling module serializer_tb
 # -- Compiling program test_div
 # 
 # Top level modules:
 # 	serializer_tb
-# End time: 09:35:56 on Dec 12,2018, Elapsed time: 0:00:00
+# End time: 16:11:06 on Dec 13,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim -lib work -voptargs=+acc work.serializer_tb
-# End time: 09:36:11 on Dec 12,2018, Elapsed time: 0:08:02
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/toplevel.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:11:10 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/toplevel.sv 
+# -- Compiling module toplevel_from
+# 
+# Top level modules:
+# 	toplevel_from
+# End time: 16:11:10 on Dec 13,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -lib work -voptargs="+acc" work.serializer_tb 
-# Start time: 09:36:11 on Dec 12,2018
+vsim work.serializer_tb -voptargs=+acc
+# vsim work.serializer_tb -voptargs="+acc" 
+# Start time: 16:11:33 on Dec 13,2018
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
+# Loading work.toplevel_from(fast)
 # Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run -all
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                  100 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                   202 Checks
-#                         202 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 6155 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-do wave.do
-run -all
-# Break key hit
-# Break in Module Clock_divider at /home/msc18h28/ma/RTL/Clock_divider.v line 12
-break\
-qq
-# wrong # args: should be "break"
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run -all
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                  100 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                   202 Checks
-#                         202 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(122)
-#    Time: 6155 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/serializer_from.sv(45): [PCDPC] - Port size (1) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM/genblk1/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
 # QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 09:47:37 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# ** Error: /home/msc18h28/ma/RTL/serializer_tb.sv(70): (vlog-2730) Undefined variable: 'allchecks'.
-# ** Error: /home/msc18h28/ma/RTL/serializer_tb.sv(71): (vlog-2730) Undefined variable: 'allpassed'.
-# -- Compiling program test_div
-# ** Error: /home/msc18h28/ma/RTL/serializer_tb.sv(70): (vlog-2110) Illegal reference to net "allchecks".
-# ** Error: /home/msc18h28/ma/RTL/serializer_tb.sv(71): (vlog-2110) Illegal reference to net "allpassed".
-# End time: 09:47:37 on Dec 12,2018, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 09:47:54 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
+# Start time: 16:12:29 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
 # 
 # Top level modules:
-# 	serializer_tb
-# End time: 09:47:54 on Dec 12,2018, Elapsed time: 0:00:00
+# 	--none--
+# End time: 16:12:29 on Dec 13,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-vsim -lib work -voptargs=+acc work.serializer_tb
-# End time: 09:48:18 on Dec 12,2018, Elapsed time: 0:12:07
-# Errors: 5, Warnings: 0
-# vsim -lib work -voptargs="+acc" work.serializer_tb 
-# Start time: 09:48:18 on Dec 12,2018
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading sv_std.std
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run -all
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                    22 Checks
-#                          22 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 755 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-do wave.do
-run -all
-# Break key hit
-# Break in Module serializer_tb at /home/msc18h28/ma/RTL/serializer_tb.sv line 35
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-run -all
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                    22 Checks
-#                          22 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 755 ns  Iteration: 3  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 11:19:39 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
-# 
-# Top level modules:
-# 	serializer_tb
-# End time: 11:19:40 on Dec 12,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim -lib work -voptargs=+acc work.serializer_tb
-# End time: 11:19:57 on Dec 12,2018, Elapsed time: 1:31:39
-# Errors: 0, Warnings: 0
-# vsim -lib work -voptargs="+acc" work.serializer_tb 
-# Start time: 11:19:57 on Dec 12,2018
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-do wave.do
-restart -f;run -all;
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 355 ns  Iteration: 4  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-# Causality operation skipped due to absence of debug database file
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 11:25:54 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
-# 
-# Top level modules:
-# 	serializer_tb
-# End time: 11:25:54 on Dec 12,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -lib work -voptargs=+acc work.serializer_tb
-# End time: 11:25:58 on Dec 12,2018, Elapsed time: 0:06:01
+vsim work.serializer_tb -voptargs=+acc
+# End time: 16:12:33 on Dec 13,2018, Elapsed time: 0:01:00
 # Errors: 0, Warnings: 1
-# vsim -lib work -voptargs="+acc" work.serializer_tb 
-# Start time: 11:25:58 on Dec 12,2018
+# vsim work.serializer_tb -voptargs="+acc" 
+# Start time: 16:12:33 on Dec 13,2018
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
+# Loading work.toplevel_from(fast)
 # Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+do wave2.do
 restart -f;run -all;
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
+# Loading work.toplevel_from(fast)
 # Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
 # --------------------------------------------------
 # --------------------------------------------------
 # Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
+# data1: 65280
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # After                     0 Checks
 #                           0 were successfull!
 # --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     0 Checks
-#                           0 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 435 ns  Iteration: 4  Instance: /serializer_tb/test_div
+# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb_FROM.sv(100)
+#    Time: 2825 ns  Iteration: 3  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
-do wave.do
-restart -f;run -all;
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
-# Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Serializer
-# --------------------------------------------------
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     0 Checks
-#                           0 were successfull!
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     0 Checks
-#                           0 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 435 ns  Iteration: 4  Instance: /serializer_tb/test_div
-# 1
-# Simulation stop requested.
-vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv
 # QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 11:27:35 on Dec 12,2018
-# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb.sv 
+# Start time: 16:15:57 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv 
 # -- Compiling module serializer_tb
 # -- Compiling program test_div
 # 
 # Top level modules:
 # 	serializer_tb
-# End time: 11:27:35 on Dec 12,2018, Elapsed time: 0:00:00
+# End time: 16:15:57 on Dec 13,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim -lib work -voptargs=+acc work.serializer_tb
-# End time: 11:27:40 on Dec 12,2018, Elapsed time: 0:01:42
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:16:05 on Dec 13,2018, Elapsed time: 0:03:32
 # Errors: 0, Warnings: 0
-# vsim -lib work -voptargs="+acc" work.serializer_tb 
-# Start time: 11:27:40 on Dec 12,2018
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:16:05 on Dec 13,2018
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
+# Loading work.toplevel_from(fast)
 # Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
-do wave.do
-restart -f;run -all;
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+do wave2.do
+restart -f
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading work.serializer_tb(fast)
-# Loading work.TopLevel(fast)
+# Loading work.toplevel_from(fast)
 # Loading work.Clock_divider(fast)
-# Loading work.Serializer(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+run -all
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
 # --------------------------------------------------
 # --------------------------------------------------
 # Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 0
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 0
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
-# --------------------------------------------------
-# Test Serializer with:
-# data1: 1
-# data2: 1
+# data1: 65280
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # After                     0 Checks
 #                           0 were successfull!
 # --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# Testing Randomized with                   10 Stimuli
-# --------------------------------------------------
-# //////////////////////////////////////////////////
-# --------------------------------------------------
-# After                     0 Checks
-#                           0 were successfull!
-# --------------------------------------------------
-# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb.sv(116)
-#    Time: 795 ns  Iteration: 4  Instance: /serializer_tb/test_div
+# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb_FROM.sv(100)
+#    Time: 2745 ns  Iteration: 3  Instance: /serializer_tb/test_div
 # 1
 # Simulation stop requested.
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/msc18h28/ma/modelsim/wave.do
-# End time: 16:58:13 on Dec 12,2018, Elapsed time: 5:30:33
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:23:33 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:23:34 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:23:40 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv 
+# -- Compiling module serializer_tb
+# -- Compiling program test_div
+# 
+# Top level modules:
+# 	serializer_tb
+# End time: 16:23:40 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:23:49 on Dec 13,2018, Elapsed time: 0:07:44
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:23:49 on Dec 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/toplevel.sv(23): [PCDPC] - Port size (4) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:24:15 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:24:15 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:24:19 on Dec 13,2018, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:24:19 on Dec 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/toplevel.sv(23): [PCDPC] - Port size (4) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:24:35 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# ** Error: /home/msc18h28/ma/RTL/serializer_from.sv(45): An expression for a parameter actual for the module instance ('Serializer_FROM') is not constant.  Parameter expressions must be constant.
+# End time: 16:24:35 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/pack/modelsim-10.6b-kgf/questasim/linux_x86_64/vlog failed.
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:24:52 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:24:52 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:24:55 on Dec 13,2018, Elapsed time: 0:00:36
+# Errors: 2, Warnings: 1
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:24:55 on Dec 13,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/toplevel.sv(23): [PCDPC] - Port size (4) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:25:39 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:25:39 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:25:41 on Dec 13,2018, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:25:41 on Dec 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/toplevel.sv(23): [PCDPC] - Port size (4) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/serializer_from.sv(45): [PCDPC] - Port size (5) does not match connection size (4) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM/genblk1/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/serializer_from.sv(45): [PCDPC] - Port size (6) does not match connection size (5) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM/genblk1/Serializer_FROM/genblk1/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/serializer_from.sv(45): [PCDPC] - Port size (7) does not match connection size (6) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM/genblk1/Serializer_FROM/genblk1/Serializer_FROM/genblk1/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:27:13 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:27:14 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:27:34 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv 
+# -- Compiling module serializer_tb
+# -- Compiling program test_div
+# 
+# Top level modules:
+# 	serializer_tb
+# End time: 16:27:34 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:27:38 on Dec 13,2018, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:27:38 on Dec 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# ** Warning: (vsim-3015) /home/msc18h28/ma/RTL/toplevel.sv(23): [PCDPC] - Port size (4) does not match connection size (3) for port 'io_clk'. The port definition is at: /home/msc18h28/ma/RTL/serializer_from.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /serializer_tb/dut/Serializer_FROM File: /home/msc18h28/ma/RTL/serializer_from.sv
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/toplevel.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:28:35 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/toplevel.sv 
+# -- Compiling module toplevel_from
+# 
+# Top level modules:
+# 	toplevel_from
+# End time: 16:28:35 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:28:48 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_from.sv 
+# -- Compiling module Serializer_FROM
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:28:48 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv
+# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
+# Start time: 16:29:01 on Dec 13,2018
+# vlog -reportprogress 300 -work work /home/msc18h28/ma/RTL/serializer_tb_FROM.sv 
+# -- Compiling module serializer_tb
+# -- Compiling program test_div
+# 
+# Top level modules:
+# 	serializer_tb
+# End time: 16:29:01 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.serializer_tb
+# End time: 16:29:05 on Dec 13,2018, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.serializer_tb 
+# Start time: 16:29:05 on Dec 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+do wave2.do
+restart -f; run -all;
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel_from(fast)
+# Loading work.Clock_divider(fast)
+# Loading work.Serializer_FROM(fast__3)
+# Loading work.Serializer_FROM(fast__2)
+# Loading work.Serializer_FROM(fast__1)
+# Loading work.Serializer_FROM(fast)
+# //////////////////////////////////////////////////
+# --------------------------------------------------
+# Testing Serializer
+# --------------------------------------------------
+# --------------------------------------------------
+# Test Serializer with:
+# data1: 65280
+# //////////////////////////////////////////////////
+# --------------------------------------------------
+# After                     0 Checks
+#                           0 were successfull!
+# --------------------------------------------------
+# ** Note: implicit $finish from program    : /home/msc18h28/ma/RTL/serializer_tb_FROM.sv(100)
+#    Time: 2745 ns  Iteration: 3  Instance: /serializer_tb/test_div
+# 1
+# Simulation stop requested.
+# End time: 16:33:32 on Dec 13,2018, Elapsed time: 0:04:27
 # Errors: 0, Warnings: 0
