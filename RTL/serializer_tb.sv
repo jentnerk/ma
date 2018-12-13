@@ -4,16 +4,14 @@
 
 module serializer_tb;
 
-    //
+    // constants
     timeunit 1ns;
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam logic TESTKNOWN = 1'b1; // Enable testing if next request is in next cycle after taking one
-    localparam longint unsigned RANDOM_ROUNDS = 10;   // # of randomized test rounds
-
-
+    localparam longint unsigned RANDOM_ROUNDS = 10;   // # of randomized test
+    localparam logic TESTKNOWN = 1'b1; // Enable testing of two specific stimuli
 
     // ---------------------------------
     // inputs to the DUT
@@ -60,8 +58,6 @@ module serializer_tb;
 
         local longint checks; // Bookkeeping for how many tests were done
         local longint passed;
-        local longint allchecks;
-        local longint allpassed;
 
         // -----------------
         // Constructor
@@ -71,8 +67,6 @@ module serializer_tb;
             stimulus_b = b;
             checks     = 0;
             passed     = 0;
-            allchecks  = 0;
-            allpassed  = 0;
         endfunction : new
 
         function void set_stimulus_a(logic a);
@@ -138,6 +132,8 @@ module serializer_tb;
         clocking cb @(posedge clk);
             // specify skew (how many time units away from clock event a signal is sampled or driven)
             // input (sample) skew is implicitly negative
+            // the following line means: after positive clockedge, only after 2ns will the rest of the models signal change
+            // the data_o will be read 1ns before the active clock edge of the next cycle            
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
             output  negedge reset;
             output data1_i, data2_i;
@@ -151,15 +147,12 @@ module serializer_tb;
         initial begin
             // Declare the Stimulus Objects
             Stimulus stim;
-
-            automatic longint counter = 0;  // For printing during long simulations
-
             stim = new;
 
             //Set all inputs to the DUT at the beginning
-            reset      = '0;
+            reset    = '0;
             data1_i  = '0;
-            data2_i = '0;
+            data2_i  = '0;
 
             // --------------------------
             // Test Reset
@@ -181,14 +174,39 @@ module serializer_tb;
                          "Testing Serializer\n",
                          "--------------------------------------------------");
 
-
+                //here you can insert your specified stimuli
                 TestSerializer(stim, 1'b1,  1'b0);
-                repeat(1) @(cb); //wait 1 cycles before applying the next stimulus
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b1,  1'b0);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b0,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                TestSerializer(stim, 1'b1,  1'b1);
+                //wait 1 cycle before applying the next stimulus
 
-                stim.pass_statistic();
+            //print how many tests have passed
+            stim.pass_statistic();
             end
 
-                        // Randomized Testing
+            // Randomized Testing
             if(TESTRAND) begin
                 $display("//////////////////////////////////////////////////\n",
                          "--------------------------------------------------\n",
@@ -196,12 +214,14 @@ module serializer_tb;
                          "--------------------------------------------------");
                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
                         RandTest(stim);
-                        repeat(1) @(cb); // Wait 1 rounds before applying next test
+                       // repeat(1) @(cb); // Wait 1 round before applying next test
                 end
             end
-
+            
+            //print how many tests have passed
             stim.pass_statistic();
         end
+
         // --------------------------------------------------
         // Tests for specified inputs
         // --------------------------------------------------
@@ -216,13 +236,13 @@ module serializer_tb;
             ApplyStimuli(st);
             //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
             @(cb); @(cb); //wait two cycles to imitate the slow clock
-            ClearStimuli();
+        /*    ClearStimuli();
             //wait two cycles for the result to appear at the output
             @(cb); @(cb);
             st.check_serializer_a(cb.data_o);
             @(cb);
             st.check_serializer_b(cb.data_o);
-        endtask : TestSerializer
+     */   endtask : TestSerializer
 
         // --------------------------------------------------
         // Randomized Tests
@@ -232,17 +252,17 @@ module serializer_tb;
             st.stimulus_b=$random;
             ApplyStimuli(st);
             @(cb);@(cb); //wait two cycles to imitate the slow clock
-            ClearStimuli();
+   /*         ClearStimuli();
             @(cb);@(cb);
             st.check_serializer_a(cb.data_o);
             @(cb);
             st.check_serializer_b(cb.data_o);
-        endtask : RandTest
+     */   endtask : RandTest
 
         // -----------------------------------------------
-        // Helper Methods to apply stimulies to the DUT
+        // Apply and Clear Stimuli Methods
         // -----------------------------------------------
-        // Applies all 64 bit stimulies to the DUT except rst_ni
+        // Applies stimuli to the DUT except reset
         task ApplyStimuli(Stimulus st);
             cb.data1_i   <= st.stimulus_a;
             cb.data2_i   <= st.stimulus_b;
@@ -259,7 +279,7 @@ module serializer_tb;
 
 
     // -----------------------------------
-    // Instatce DUT - Device Under Test
+    // Instance DUT - Device Under Test
     // -----------------------------------
 
     TopLevel dut

@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version N-2017.09 for linux64 -- Aug 17, 2017
-#@ # Date:   Thu Dec  6 08:44:45 2018
+#@ # Date:   Wed Dec 12 11:36:44 2018
 #@ # Run by: msc18h28@badile12.ee.ethz.ch
 #@ 
 
@@ -43087,12 +43087,14 @@ gui_start
 #@ 
 #@ # -- End source /usr/pack/synopsys-2017.09-kgf/syn/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
+ls
+do scripts/serializer_synth.tcl
 source scripts/serializer_synth.tcl
 #@ # -- Starting source scripts/serializer_synth.tcl
 
 #@ 
 #@ 
-#@ set NAME {4-Dec-18}
+#@ set NAME {12-Dec-18}
 #@ 
 #@ remove_design -all
 #@ exec rm -rf WORK/*
@@ -43142,4 +43144,4 @@ source scripts/serializer_synth.tcl
 
 change_selection [get_s TopLevel]
 change_selection [get_s TopLevel]
-write -hierarchy -format ddc -output /home/msc18h28/ma/synopsys/first_synthesized_design.ddc
+change_selection 

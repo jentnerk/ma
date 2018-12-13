@@ -9,10 +9,10 @@ z2
 cModel Technology
 Z0 d/home/msc18h28/ma/modelsim
 T_opt
-!s110 1544526200
-V[n?DRf7WC;2UIA?G0a6T33
+!s110 1544610460
+V=A@HWB@eJ4ASHU@KfSMK_0
 Z1 04 13 4 work serializer_tb fast 0
-=1-6c626d24a094-5c0f9977-d6b1b-4d13
+=1-6c626d24a094-5c10e29c-1dbda-1cb3
 Z2 o-quiet -auto_acc_if_foreign -work work +acc
 Z3 tCvgOpt 0
 n@_opt
@@ -28,102 +28,102 @@ n@_opt1
 OL;O;10.7b_1;67
 R0
 T_opt2
-!s110 1544524998
-V9_lC`J[=Eg_3kHh5_CJ^21
+!s110 1544541567
+VSX7;Qz`Yb5iJfKE>OYn6d0
 R1
-=1-6c626d24a094-5c0f94c6-48cd9-4885
+=1-6c626d24a094-5c0fd57f-381d4-75a7
 R2
 R3
 n@_opt2
 R4
 R0
 vClock_divider
-Z5 !s110 1544526135
+!s110 1544603164
 !i10b 1
 !s100 9A@JO4Y=>ZI[;:?ngV@iZ1
 I:jSbi5h=3e@BELAThV]f;3
-Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z7 w1544026973
+w1544026973
 8/home/msc18h28/ma/RTL/Clock_divider.v
 F/home/msc18h28/ma/RTL/Clock_divider.v
 L0 6
-Z8 OL;L;10.7b_1;67
+Z6 OL;L;10.7b_1;67
 r1
 !s85 0
 31
-Z9 !s108 1544526135.000000
+Z7 !s108 1544603163.000000
 !s107 /home/msc18h28/ma/RTL/Clock_divider.v|
 !s90 -work|work|/home/msc18h28/ma/RTL/Clock_divider.v|
 !i113 0
-Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 n@clock_divider
 vSerializer
-R5
+Z9 !s110 1544603163
 !i10b 1
-!s100 3Ubf5oelj@T4__QcIN[K00
-ILaDMWSGzQhP:7W>UIZG5n0
-R6
+!s100 LNa>^HIN=W1F2BSGkoJL:1
+IEZ=PjL4TzQ;dg^P=_7f1i1
+R5
 R0
-R7
+w1544535110
 8/home/msc18h28/ma/RTL/Serializer.v
 F/home/msc18h28/ma/RTL/Serializer.v
 L0 6
-R8
+R6
 r1
 !s85 0
 31
-Z11 !s108 1544526134.000000
+R7
 !s107 /home/msc18h28/ma/RTL/Serializer.v|
 !s90 -work|work|/home/msc18h28/ma/RTL/Serializer.v|
 !i113 0
-R10
+R8
 R3
 n@serializer
 vserializer_tb
-DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
-R5
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1544610455
 !i10b 1
-!s100 YKzOV=RE`LAG78KWC?Rki0
-IzGeSAA]71e48e?iamO1L11
-R6
+!s100 EZK`zDH<i<R[B7lJz8[]g2
+ImaoGl7][^Z3@>[2JHa[i:3
+R5
 !s105 serializer_tb_sv_unit
 S1
 R0
-w1544526074
+w1544610451
 8/home/msc18h28/ma/RTL/serializer_tb.sv
 F/home/msc18h28/ma/RTL/serializer_tb.sv
 L0 5
-R8
+OL;L;10.6b;65
 r1
 !s85 0
 31
-R9
+!s108 1544610455.000000
 !s107 /home/msc18h28/ma/RTL/serializer_tb.sv|
-!s90 -work|work|/home/msc18h28/ma/RTL/serializer_tb.sv|
+!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/serializer_tb.sv|
 !i113 0
-R10
+R8
 R3
 vTopLevel
-!s110 1544526134
+R9
 !i10b 1
 !s100 Qke>eGJiK^fFmZ2cC9lHc0
 ICmV:LhVPjEF`TW51k8:_j0
-R6
+R5
 R0
 w1544090627
 8/home/msc18h28/ma/RTL/Toplevel_serializer.v
 F/home/msc18h28/ma/RTL/Toplevel_serializer.v
 L0 1
-R8
+R6
 r1
 !s85 0
 31
-R11
+R7
 !s107 /home/msc18h28/ma/RTL/Toplevel_serializer.v|
 !s90 -work|work|/home/msc18h28/ma/RTL/Toplevel_serializer.v|
 !i113 0
-R10
+R8
 R3
 n@top@level

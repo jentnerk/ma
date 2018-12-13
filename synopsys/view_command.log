@@ -22,6 +22,13 @@ Detected [rhel7.3i] setup
 Initializing...
 Loading Design Compiler Setup
 design_vision> 4.1
+design_vision> ls
+.		    WORK	 filenames.log		       scripts
+..		    alib	 first_synthesized_design.ddc  view_command.log
+.synopsys_dc.setup  command.log  netlists
+DDC		    default.svf  reports
+design_vision> do scripts/serializer_synth.tcl
+Error: unknown command 'do' (CMD-005)
 design_vision> source scripts/serializer_synth.tcl
 Running PRESTO HDLC
 Compiling source file /home/msc18h28/ma/RTL/Serializer.v
@@ -63,7 +70,7 @@ Presto compilation completed successfully.
 Information: Building the design 'Serializer'. (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer line 27 in file
+	in routine Serializer line 26 in file
 		'/home/msc18h28/ma/RTL/Serializer.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -73,14 +80,13 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine Serializer line 37 in file
+	in routine Serializer line 36 in file
 		'/home/msc18h28/ma/RTL/Serializer.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-| area_clkB_buf0_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-| area_clkB_buf1_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| area_clkB_reg_out_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
 Presto compilation completed successfully.
 
 ---------------------------------------------------------
@@ -89,7 +95,7 @@ Presto compilation completed successfully.
 ---------------------------------------------------------
 
 Information: Performing power optimization. (PWR-850)
-Alib files are up-to-date.
+Alib files are up-to-date.
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
@@ -178,47 +184,47 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:41      25.4      0.00       0.0       0.0                              0.2532
-    0:00:41      25.4      0.00       0.0       0.0                              0.2532
-    0:00:41      25.4      0.00       0.0       0.0                              0.2532
-    0:00:41      25.4      0.00       0.0       0.0                              0.2532
+    0:00:41      20.3      0.00       0.0       0.0                              0.2034
+    0:00:41      20.3      0.00       0.0       0.0                              0.2034
+    0:00:41      20.3      0.00       0.0       0.0                              0.2034
+    0:00:41      20.3      0.00       0.0       0.0                              0.2034
 
   Beginning WLM Backend Optimization
   --------------------------------------
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:47      25.4      0.00       0.0       0.0                              0.2504
-    0:00:47      25.4      0.00       0.0       0.0                              0.2504
-    0:00:47      25.4      0.00       0.0       0.0                              0.2504
-    0:00:47      25.4      0.00       0.0       0.0                              0.2504
-    0:00:50      25.4      0.00       0.0       0.0                              0.2504
-    0:00:50      25.4      0.00       0.0       0.0                              0.2504
-    0:00:50      25.4      0.00       0.0       0.0                              0.2504
-    0:00:50      25.4      0.00       0.0       0.0                              0.2504
-    0:00:54      25.4      0.00       0.0       0.0                              0.2504
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
+    0:00:47      20.3      0.00       0.0       0.0                              0.2006
+    0:00:47      20.3      0.00       0.0       0.0                              0.2006
+    0:00:47      20.3      0.00       0.0       0.0                              0.2006
+    0:00:47      20.3      0.00       0.0       0.0                              0.2006
+    0:00:50      20.3      0.00       0.0       0.0                              0.2006
+    0:00:50      20.3      0.00       0.0       0.0                              0.2006
+    0:00:50      20.3      0.00       0.0       0.0                              0.2006
+    0:00:50      20.3      0.00       0.0       0.0                              0.2006
+    0:00:54      20.3      0.00       0.0       0.0                              0.2006
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
+    0:00:54      20.3      0.00       0.0       0.0                              0.1957
 
 
   Beginning Design Rule Fixing  (min_capacitance)
@@ -228,12 +234,12 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:54      25.4      0.00       0.0       0.0                              0.2436
+    0:00:55      20.3      0.00       0.0       0.0                              0.1957
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
-    0:00:55      25.4      0.00       0.0       0.0                              0.2436
-    0:00:55      25.4      0.00       0.0       0.0                              0.2436
+    0:00:55      20.3      0.00       0.0       0.0                              0.1957
+    0:00:55      20.3      0.00       0.0       0.0                              0.1957
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -243,7 +249,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:55      25.4      0.00       0.0       0.0                              0.2436
+    0:00:55      20.3      0.00       0.0       0.0                              0.1957
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
@@ -254,53 +260,54 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 40)
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
-    0:00:55      25.4      0.00       0.0       0.0                              0.2407
-    0:00:55      25.4      0.00       0.0       0.0                              0.2407
-    0:00:55      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
+  Global Optimization (Phase 43)
+    0:00:55      20.3      0.00       0.0       0.0                              0.1929
+    0:00:55      20.3      0.00       0.0       0.0                              0.1929
+    0:00:55      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:56      25.4      0.00       0.0       0.0                              0.2407
-    0:00:57      25.4      0.00       0.0       0.0                              0.2407
-    0:00:57      25.4      0.00       0.0       0.0                              0.2407
-    0:00:57      25.4      0.00       0.0       0.0                              0.2407
-    0:00:57      25.4      0.00       0.0       0.0                              0.2407
+    0:00:56      20.3      0.00       0.0       0.0                              0.1929
+    0:00:57      20.3      0.00       0.0       0.0                              0.1929
+    0:00:57      20.3      0.00       0.0       0.0                              0.1929
+    0:00:57      20.3      0.00       0.0       0.0                              0.1929
+    0:00:57      20.3      0.00       0.0       0.0                              0.1929
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:59      25.4      0.00       0.0       0.0                              0.2407
-    0:00:59      25.4      0.00       0.0       0.0                              0.2407
-    0:00:59      25.4      0.00       0.0       0.0                              0.2407
-    0:00:59      25.4      0.00       0.0       0.0                              0.2407
-    0:01:02      25.4      0.00       0.0       0.0                              0.2407
-    0:01:02      25.4      0.00       0.0       0.0                              0.2407
-    0:01:02      25.4      0.00       0.0       0.0                              0.2407
-    0:01:02      25.4      0.00       0.0       0.0                              0.2407
-    0:01:06      25.4      0.00       0.0       0.0                              0.2407
-    0:01:06      25.4      0.00       0.0       0.0                              0.2407
-    0:01:06      25.4      0.00       0.0       0.0                              0.2407
-    0:01:06      25.4      0.00       0.0       0.0                              0.2407
+    0:00:59      20.3      0.00       0.0       0.0                              0.1929
+    0:00:59      20.3      0.00       0.0       0.0                              0.1929
+    0:00:59      20.3      0.00       0.0       0.0                              0.1929
+    0:00:59      20.3      0.00       0.0       0.0                              0.1929
+    0:01:02      20.3      0.00       0.0       0.0                              0.1929
+    0:01:02      20.3      0.00       0.0       0.0                              0.1929
+    0:01:02      20.3      0.00       0.0       0.0                              0.1929
+    0:01:02      20.3      0.00       0.0       0.0                              0.1929
+    0:01:06      20.3      0.00       0.0       0.0                              0.1929
+    0:01:06      20.3      0.00       0.0       0.0                              0.1929
+    0:01:06      20.3      0.00       0.0       0.0                              0.1929
+    0:01:06      20.3      0.00       0.0       0.0                              0.1929
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db'
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db'
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db'
@@ -320,6 +327,4 @@ Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9
 Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
 Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
 Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
-write -hierarchy -format ddc -output /home/msc18h28/ma/synopsys/first_synthesized_design.ddc
-Writing ddc file '/home/msc18h28/ma/synopsys/first_synthesized_design.ddc'.
-design_vision> design_vision> 
+design_vision> 
