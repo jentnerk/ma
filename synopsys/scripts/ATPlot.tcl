@@ -1,12 +1,12 @@
 
 
-set NAME {4-Dec-18}
+set NAME {14-Dec-18}
 
 
 
 ####################################################
 #---------------------------------------------------
-# radix 2 divider with different timing constraints
+# serializer with different timing constraints
 #---------------------------------------------------
 ####################################################
 
@@ -21,7 +21,7 @@ remove_design -all
 exec rm -rf WORK/*
 
 # Use all the CPU cores
-#set_host_options -max_cores 8
+set_host_options -max_cores 8
 
 
 # use worst case library
@@ -35,31 +35,22 @@ exec rm -rf WORK/*
 # ------------------------------------------------------------------------------
 # Analyze Design
 # ------------------------------------------------------------------------------
-analyze -library WORK -format sverilog {/home/msc18h28/ma/rtl/serializer.sv}
+analyze -library WORK -format sverilog {/home/msc18h28/ma/rtl/toplevel.sv}
 
-set TOP_ENTITY {serializer}
+set TOP_ENTITY {toplevel}
 
 
 # ------------------------------------------------------------------------------
 # Elaborate Design
 # ------------------------------------------------------------------------------
-puts "> elaborate serializer"
+puts "> elaborate toplevel"
 elaborate $TOP_ENTITY -architecture verilog -library DEFAULT -update
 write -f ddc -o DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 
 #-------------------------------------------------------------------------------
 #for different clocks
 #-------------------------------------------------------------------------------
-
-
-#foreach MAXDELAY {2.5} { 
-
-
 foreach MAXDELAY {10} {
-
-
-
-
 
   puts ""
   puts "---------------------------------------------------------"

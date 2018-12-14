@@ -9,184 +9,292 @@ z2
 cModel Technology
 Z0 d/home/msc18h28/ma/modelsim
 T_opt
-!s110 1544714945
-VRM91aS<IM?A5hDifhQkV20
-04 13 4 work serializer_tb fast 0
-=1-6c626d24a094-5c127ac1-69e5e-214c
-Z1 o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+!s110 1544803566
+VM]1HD75f<Y9lZSPFf=FTS0
+Z1 04 13 4 work serializer_tb fast 0
+=6-6c626d24a094-5c13d4ee-2dd39-1fcc
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-Z3 OL;O;10.6b;65
+Z4 OL;O;10.6b;65
 T_opt1
-!s110 1544711405
-VKzm0>^OmL5CPEJV3AoLOn0
-04 13 4 work toplevel_from fast 0
-=1-6c626d24a094-5c126cec-def13-130f
+!s110 1544803565
+VUbd8_ASVh=eb2n@i0e@mK1
 R1
+=1-6c626d24a094-5c13d4ed-1d509-23fc
 R2
-n@_opt1
 R3
+n@_opt1
+R4
 R0
 vClock_divider
-!s110 1544713862
+Z5 !s110 1544803559
 !i10b 1
-!s100 obZ<fGo0h1F_g[X_GUmFX1
-Ic]E6:1YhMJ68TSd8VEn1h2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 9A@JO4Y=>ZI[;:?ngV@iZ1
+I:jSbi5h=3e@BELAThV]f;3
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1544707950
 8/home/msc18h28/ma/RTL/Clock_divider.v
 F/home/msc18h28/ma/RTL/Clock_divider.v
 L0 6
-Z5 OL;L;10.6b;65
+Z7 OL;L;10.7b_1;67
 r1
 !s85 0
 31
-!s108 1544713861.000000
+Z8 !s108 1544803559.000000
 !s107 /home/msc18h28/ma/RTL/Clock_divider.v|
-!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/Clock_divider.v|
+!s90 -work|work|/home/msc18h28/ma/RTL/Clock_divider.v|
 !i113 0
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 n@clock_divider
-vSerializer
-Z7 !s110 1544603163
+vClock_divider_0
+Z10 !s110 1544793522
 !i10b 1
-!s100 LNa>^HIN=W1F2BSGkoJL:1
-IEZ=PjL4TzQ;dg^P=_7f1i1
-R4
-R0
-w1544535110
-8/home/msc18h28/ma/RTL/Serializer.v
-F/home/msc18h28/ma/RTL/Serializer.v
-L0 6
-Z8 OL;L;10.7b_1;67
-r1
-!s85 0
-31
-Z9 !s108 1544603163.000000
-!s107 /home/msc18h28/ma/RTL/Serializer.v|
-!s90 -work|work|/home/msc18h28/ma/RTL/Serializer.v|
-!i113 0
+!s100 VH@gM`LZPdf6Jc<0z[VFe0
+I[Y`=XMQ<]]ik2J8RMBo:=2
 R6
-R2
-n@serializer
-vSerializer_FROM
-Z10 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1544714928
-!i10b 1
-!s100 0E5Em_=UgQVA<60FVkT0`1
-I^CnS`EFzGV_68DMCVjjn:1
-R4
-!s105 serializer_from_sv_unit
-S1
 R0
-w1544714831
-8/home/msc18h28/ma/RTL/serializer_from.sv
-F/home/msc18h28/ma/RTL/serializer_from.sv
-L0 6
-R5
+Z11 w1544793349
+Z12 8/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
+Z13 F/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
+L0 38
+Z14 OL;L;10.6b;65
 r1
 !s85 0
 31
-!s108 1544714928.000000
-!s107 /home/msc18h28/ma/RTL/serializer_from.sv|
-!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/serializer_from.sv|
+Z15 !s108 1544793522.000000
+Z16 !s107 /home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
+Z17 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
 !i113 0
-R6
-R2
-n@serializer_@f@r@o@m
-vserializer_tb
-R10
-!s110 1544714941
-!i10b 1
-!s100 <>@SzYF`:WgbW4?0A1A2a1
-I[I_HJ63O2UEB:=c`EW@?R2
-R4
-!s105 serializer_tb_FROM_sv_unit
-S1
-R0
-w1544714148
-8/home/msc18h28/ma/RTL/serializer_tb_FROM.sv
-F/home/msc18h28/ma/RTL/serializer_tb_FROM.sv
-L0 5
-R5
-r1
-!s85 0
-31
-!s108 1544714941.000000
-!s107 /home/msc18h28/ma/RTL/serializer_tb_FROM.sv|
-!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/serializer_tb_FROM.sv|
-!i113 0
-R6
-R2
-vTopLevel
-R7
-!i10b 1
-!s100 Qke>eGJiK^fFmZ2cC9lHc0
-ICmV:LhVPjEF`TW51k8:_j0
-R4
-R0
-w1544090627
-8/home/msc18h28/ma/RTL/Toplevel_serializer.v
-F/home/msc18h28/ma/RTL/Toplevel_serializer.v
-L0 1
-R8
-r1
-!s85 0
-31
 R9
-!s107 /home/msc18h28/ma/RTL/Toplevel_serializer.v|
-!s90 -work|work|/home/msc18h28/ma/RTL/Toplevel_serializer.v|
-!i113 0
-R6
-R2
-n@top@level
-vtoplevel_from
+R3
+n@clock_divider_0
+vClock_divider_1
 R10
-!s110 1544714915
 !i10b 1
-!s100 a]]ijnl9cZz3^@f@G4FHk2
-IaN]3UO4ifh?MToD`A4RI=0
-R4
-Z11 !s105 toplevel_sv_unit
-S1
+!s100 00z57ciNl@T?b[6S=C0M]2
+IU^CO>Ml5_AX`fg0mIN<dC1
+R6
 R0
-w1544714894
-Z12 8/home/msc18h28/ma/RTL/toplevel.sv
-Z13 F/home/msc18h28/ma/RTL/toplevel.sv
-L0 5
-R5
-r1
-!s85 0
-31
-!s108 1544714915.000000
-Z14 !s107 /home/msc18h28/ma/RTL/toplevel.sv|
-Z15 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/RTL/toplevel.sv|
-!i113 0
-R6
-R2
-vtoplevel_from_to
-R10
-!s110 1544709298
-!i10b 1
-!s100 o5?M:ND=7EL1KQH_m0Xf?1
-IiShU2YXhK_@3zl2e3ZfkP1
-R4
 R11
-S1
-R0
-w1544709296
 R12
 R13
-L0 5
-R5
+L0 28
+R14
 r1
 !s85 0
 31
-!s108 1544709298.000000
-R14
 R15
+R16
+R17
 !i113 0
+R9
+R3
+n@clock_divider_1
+vClock_divider_2
+R10
+!i10b 1
+!s100 Q3mG<>Y0Og<<zPKk2HeO`3
+IfbKDoT>b^Xj_anSKPU_N21
 R6
-R2
+R0
+R11
+R12
+R13
+L0 18
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@clock_divider_2
+vClock_divider_3
+R10
+!i10b 1
+!s100 zb:5=3K`_WTBQ^?>GR@Xm3
+Ik89iZUGKM]mfOlL5ToXGU1
+R6
+R0
+R11
+R12
+R13
+L0 8
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@clock_divider_3
+vSerializer
+Z18 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+R5
+!i10b 1
+!s100 6m@BdO]H0RXO09=Da0af33
+IzFE2oXEfeR48Z3W0zHMCI2
+R6
+!s105 serializer_sv_unit
+S1
+R0
+w1544800890
+8/home/msc18h28/ma/RTL/serializer.sv
+F/home/msc18h28/ma/RTL/serializer.sv
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/msc18h28/ma/RTL/serializer.sv|
+!s90 -work|work|/home/msc18h28/ma/RTL/serializer.sv|
+!i113 0
+R9
+R3
+n@serializer
+vSerializer_FROM_00000002_00000004_00000003
+R10
+!i10b 1
+!s100 54VbPiTNE0?Ea:18SV1gJ0
+I[bO=lZXJLUCh6C6FiJJhc1
+R6
+R0
+R11
+R12
+R13
+L0 48
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@serializer_@f@r@o@m_00000002_00000004_00000003
+vSerializer_FROM_00000004_00000004_00000002
+R10
+!i10b 1
+!s100 ZQ>G0kW3Lj7ocXB^ETC:G3
+INN6][<iN5n@c4h2?FKVNZ2
+R6
+R0
+R11
+R12
+R13
+L0 67
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@serializer_@f@r@o@m_00000004_00000004_00000002
+vSerializer_FROM_00000008_00000004_00000001
+R10
+!i10b 1
+!s100 VEKJ7ah9V6>fZFonT9geb0
+IRO7<4QRnd0hgJRnOHaWhF1
+R6
+R0
+R11
+R12
+R13
+L0 96
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@serializer_@f@r@o@m_00000008_00000004_00000001
+vSerializer_FROM_00000010_00000004_0
+R10
+!i10b 1
+!s100 WG0l>RM`m2IR:aXFGPQ;W0
+I?Dk7>;@[IdMjX8azHmD3`3
+R6
+R0
+R11
+R12
+R13
+L0 137
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R3
+n@serializer_@f@r@o@m_00000010_00000004_0
+vserializer_tb
+R18
+!s110 1544803560
+!i10b 1
+!s100 9_1`7X0IEgaR^6>VNAL^K3
+IzP964I@XBG@>kX80R3hUT0
+R6
+!s105 serializer_tb_sv_unit
+S1
+R0
+w1544803553
+8/home/msc18h28/ma/RTL/serializer_tb.sv
+F/home/msc18h28/ma/RTL/serializer_tb.sv
+L0 5
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/msc18h28/ma/RTL/serializer_tb.sv|
+!s90 -work|work|/home/msc18h28/ma/RTL/serializer_tb.sv|
+!i113 0
+R9
+R3
+vtoplevel
+R18
+R5
+!i10b 1
+!s100 goeze^cGjlSD^mlD`oGjS3
+I8?LGZSca`ZLgj]l@j3Oa@2
+R6
+!s105 toplevel_sv_unit
+S1
+R0
+w1544803548
+8/home/msc18h28/ma/RTL/toplevel.sv
+F/home/msc18h28/ma/RTL/toplevel.sv
+L0 5
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/msc18h28/ma/RTL/toplevel.sv|
+!s90 -work|work|/home/msc18h28/ma/RTL/toplevel.sv|
+!i113 0
+R9
+R3

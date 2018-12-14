@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version N-2017.09 for linux64 -- Aug 17, 2017
-#@ # Date:   Wed Dec 12 11:36:44 2018
+#@ # Date:   Fri Dec 14 17:13:28 2018
 #@ # Run by: msc18h28@badile12.ee.ethz.ch
 #@ 
 
@@ -43087,14 +43087,12 @@ gui_start
 #@ 
 #@ # -- End source /usr/pack/synopsys-2017.09-kgf/syn/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-ls
-do scripts/serializer_synth.tcl
 source scripts/serializer_synth.tcl
 #@ # -- Starting source scripts/serializer_synth.tcl
 
 #@ 
 #@ 
-#@ set NAME {12-Dec-18}
+#@ set NAME {14-Dec-18}
 #@ 
 #@ remove_design -all
 #@ exec rm -rf WORK/*
@@ -43102,15 +43100,14 @@ source scripts/serializer_synth.tcl
 #@ # ------------------------------------------------------------------------------
 #@ # Analyze Design
 #@ # ------------------------------------------------------------------------------
-#@ analyze -library WORK -format verilog {/home/msc18h28/ma/RTL/Serializer.v /home/msc18h28/ma/RTL/Clock_divider.v /home/msc18h28/ma/RTL/Toplevel_serializer.v}
-#@ 
-#@ set TOP_ENTITY {TopLevel}
+#@ analyze -library WORK -format sverilog {/home/msc18h28/ma/RTL/toplevel.sv /home/msc18h28/ma/RTL/serializer.sv /home/msc18h28/ma/RTL/Clock_divider.v}
+#@ set TOP_ENTITY {toplevel}
 #@ 
 #@ # ------------------------------------------------------------------------------
 #@ # Elaborate Design
 #@ # ------------------------------------------------------------------------------
 #@ puts "> elaborate TopLevel"
-#@ elaborate $TOP_ENTITY -architecture verilog -library DEFAULT -update
+#@ elaborate $TOP_ENTITY
 #@ #write -f ddc -o DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 #@ 
 #@ foreach MAXDELAY {10} {
@@ -43136,12 +43133,19 @@ source scripts/serializer_synth.tcl
 #@   #moves the register to retime the design
 #@   #set_optimize_registers true -designs [get_designs div_two_wrapped]
 #@ 
-#@   compile_ultra
+#@   compile_ultra -no_autoungroup
 #@ }
 #@ 
 #@ 
 #@ # -- End source scripts/serializer_synth.tcl
 
-change_selection [get_s TopLevel]
-change_selection [get_s TopLevel]
-change_selection 
+change_selection [get_s toplevel]
+change_selection [get_s toplevel]
+change_selection [get_s Serializer]
+change_selection [get_s Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer]
+change_selection [get_s Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer]

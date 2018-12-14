@@ -1,6 +1,6 @@
 
 
-set NAME {12-Dec-18}
+set NAME {14-Dec-18}
 
 remove_design -all
 exec rm -rf WORK/*
@@ -8,15 +8,14 @@ exec rm -rf WORK/*
 # ------------------------------------------------------------------------------
 # Analyze Design
 # ------------------------------------------------------------------------------
-analyze -library WORK -format verilog {/home/msc18h28/ma/RTL/Serializer.v /home/msc18h28/ma/RTL/Clock_divider.v /home/msc18h28/ma/RTL/Toplevel_serializer.v}
-
-set TOP_ENTITY {TopLevel}
+analyze -library WORK -format sverilog {/home/msc18h28/ma/RTL/toplevel.sv /home/msc18h28/ma/RTL/serializer.sv /home/msc18h28/ma/RTL/Clock_divider.v}
+set TOP_ENTITY {toplevel}
 
 # ------------------------------------------------------------------------------
 # Elaborate Design
 # ------------------------------------------------------------------------------
 puts "> elaborate TopLevel"
-elaborate $TOP_ENTITY -architecture verilog -library DEFAULT -update
+elaborate $TOP_ENTITY
 #write -f ddc -o DDC/${TOP_ENTITY}_${NAME}_elab.ddc
 
 foreach MAXDELAY {10} {
@@ -42,7 +41,7 @@ foreach MAXDELAY {10} {
   #moves the register to retime the design
   #set_optimize_registers true -designs [get_designs div_two_wrapped]
 
-  compile_ultra
+  compile_ultra -no_autoungroup
 }
 
 

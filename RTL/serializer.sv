@@ -3,8 +3,8 @@
 // Component : Serializer
 
 
-module Serializer_FROM #(parameter int unsigned FROM, parameter int unsigned LOGFROM)(
-      input logic [LOGFROM:0]                   io_clk,
+module Serializer #(parameter int unsigned FROM, parameter int unsigned LOGFROM, parameter int unsigned COUNTER)(
+      input logic [LOGFROM-COUNTER:1]           io_clk,
       input logic                               io_rst,
       input logic [FROM-1:0]                    io_dataIn,
       output logic                              io_dataOut);
@@ -14,17 +14,14 @@ module Serializer_FROM #(parameter int unsigned FROM, parameter int unsigned LOG
     // ----------------------------------
     logic [FROM/2-1:0]          dataOut;
     logic [FROM-1:0]            reg_SP, reg_SN;
-    logic [LOGFROM:0]           clks;
 
-
-  assign clks = io_clk;
   assign reg_SN = io_dataIn;
   // MUX to serialize two inputs into one output
   //clkA is the slow clock and clkB is the fast clock
-  assign dataOut = (clks[LOGFROM]) ? reg_SP[FROM-1:FROM/2] : reg_SP[FROM/2-1:0];
+  assign dataOut = (io_clk[LOGFROM-COUNTER]) ? reg_SP[FROM-1:FROM/2] : reg_SP[FROM/2-1:0];
 
 //registers
-  always @ (posedge clks[LOGFROM] or posedge io_rst) begin
+  always @ (posedge io_clk[LOGFROM-COUNTER] or posedge io_rst) begin
     if (io_rst) begin
       reg_SP <= '0;
     end else begin
@@ -40,9 +37,11 @@ module Serializer_FROM #(parameter int unsigned FROM, parameter int unsigned LOG
         begin
           assign io_dataOut = dataOut;
         end
+      else 
+        begin
+          Serializer  #(FROM/2,LOGFROM,COUNTER+1) Serializer (.io_clk(io_clk[LOGFROM-(COUNTER+1):1]), .io_rst(io_rst), .io_dataIn(dataOut), .io_dataOut(io_dataOut));
+        end
 
-      else
-        Serializer_FROM  #(FROM/2,LOGFROM) Serializer_FROM (.io_clk(clks), .io_rst(io_rst), .io_dataIn(dataOut), .io_dataOut());
   endgenerate
 
 

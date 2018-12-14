@@ -263,9 +263,9 @@
 /usr/pack/synopsys-2017.09-kgf/syn/auxx/gui/common/table/table.tcl
 /usr/pack/synopsys-2017.09-kgf/syn/auxx/gui/common/table/table_internal.tcl
 /home/msc18h28/ma/synopsys/scripts/serializer_synth.tcl
-/home/msc18h28/ma/RTL/Serializer.v
+/home/msc18h28/ma/RTL/toplevel.sv
+/home/msc18h28/ma/RTL/serializer.sv
 /home/msc18h28/ma/RTL/Clock_divider.v
-/home/msc18h28/ma/RTL/Toplevel_serializer.v
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db
@@ -285,7 +285,6 @@
 /home/msc18h28/ma/synopsys/alib/alib-52/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db.alib
 /home/msc18h28/ma/synopsys/alib/alib-52/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db.alib
 /home/msc18h28/ma/synopsys/alib/alib-52/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db.alib
-/home/msc18h28/synopsys_cache_N-2017.09/DW01/DW01_NAND2/str/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns_844/element.ddc
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db
 /home/msc18h28/ma/technology/db/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db
