@@ -6,10 +6,13 @@ module shift_serializer #(parameter int unsigned FROM = 3)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,
-		input logic 			reset);
+		input logic 			reset,
+        input logic             valid_i,
+        output logic            valid_o
+        output logic            ready_o);
 
 	//Signal declarations	
-	logic 									LoadEn_S, shift_S, valid_i, ready_o, valid_o;
+	logic 									LoadEn_S, shift_S;
 	logic									Counter_SP, Counter_SN, CounterZero_S;
 	logic [FROM-1:0]						Reg_SP, Reg_SN;
 	enum logic [1:0] {READ, SHIFT}			State_SP, State_SN;
@@ -24,6 +27,7 @@ module shift_serializer #(parameter int unsigned FROM = 3)
     		State_SN 	= State_SP;
             ready_o     = 1'b0;
             LoadEn_S 	= 1'b0;
+            valid_o     = 1'b0;
 
     		//nondefault transitions and outputs
     		case (State_SP)

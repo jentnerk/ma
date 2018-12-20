@@ -142,15 +142,12 @@ module serializer_tb;
 
             // Declare the Stimulus Objects
             Stimulus #(FROM) stim;
-            Stimulus #(FROM) stim2;
             stim = new;
-            stim2 = new;
 
             //Set all inputs to the DUT at the beginning
             reset    = '0;
             data_i  = '0;
             valid_i = '0;
-
 
             // --------------------------
             // Test Reset
@@ -173,9 +170,8 @@ module serializer_tb;
                          "--------------------------------------------------\n",
                          "Testing Serializer\n",
                          "--------------------------------------------------");
-
                 //here you can insert your specified stimuli
-                TestSerializer(stim, 16'b11111010);
+                TestSerializer(stim, 3'b101);
 
             //print how many tests have passed
             stim.pass_statistic();
@@ -237,12 +233,9 @@ module serializer_tb;
                      "Test Serializer with:\ndata1: %b", a);
             // initialize the stimulus with the bitvector a
             st.set_stimulus(a);
-
             ApplyStimuli(st);
-            repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
             @(cb iff cb.ready_o == 0); // Clear them in next cycle if they have been eaten
             ClearStimuli();
-            repeat(FROM) @(cb);
             //check all the set stimuli individually
             for (int i = FROM; !(i==0); i--) begin
                 st.check_serializer(cb.data_o,i-1);
@@ -256,8 +249,7 @@ module serializer_tb;
         // -----------------------------------------------
         // Applies stimuli to the DUT except reset
         task ApplyStimuli(Stimulus #(FROM) st);
-//            $display("--------------------------------------------------\n",
-  //          "Applied stimulus: %b", st.stimulus);
+            cb.div_valid_i <= 1;
             cb.data_i   <= st.stimulus;
         endtask : ApplyStimuli
 
