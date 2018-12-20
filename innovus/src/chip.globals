@@ -1,0 +1,47 @@
+##########################################################################
+#  Title       : load design
+#  Project     : gf 45 dz flow
+##########################################################################
+#  File        : chip.globals
+#  Author      : Beat Muheim  <muheim@ee.ethz.ch>
+#  Company     : Microelectronics Design Center (DZ), ETH Zurich
+##########################################################################
+#  Description : It will read the netlist the cell abstraction and the 
+#                view definition file.
+#
+#                Perform:
+#                source <globals-file>
+#                init_design
+#
+#  Inputs      : ../synopsys/netlists/top.v src/chip.v lef src/chip.io src/mmmc.view.tcl
+#  Outputs     : 
+#  Rhesuses    : 
+##########################################################################
+#  Copyright (c) 2018 Microelectronics Design Center, ETH Zurich
+##########################################################################
+# v0.1 - <muheim@ee.ethz.ch> - Wed Jan 24 11:02:01 CET 2018
+#  - copy from tsmc28 v0.1
+##########################################################################
+
+set defHierChar {/}
+set init_verilog {../synopsys/netlists/top.v src/chip.v}
+set init_design_settop 0
+
+#set init_io_file  {src/chip.io}
+
+set init_lef_file {../technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef ../technology/lef/sc9_soi12s0_base_hvt.lef ../technology/lef/sc9_soi12s0_base_svt.lef ../technology/lef/sc9_soi12s0_base_uvt.lef ../technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef}
+
+set init_import_mode {-treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1 }
+
+set init_mmmc_file {./src/mmmc.view.tcl}
+
+# when the cpf is ust this is not needet
+#set init_pwr_net {VDD}
+#set init_gnd_net {VSS}
+
+# delaycal_use_default_delay_limit 1000
+#
+# Net default delay values are:
+#   Net delay: 1 ns
+#   Transition time: 0 ps
+#   Net load: 0.5 pF

@@ -2,16 +2,16 @@
 // Written by Kaja Jentner
 // Dec-2018
 
-module serializer_tb;
+module shift_serializer_tb;
     // constants
     //timeunit 1ns; //(activate for RTL simulation)
     //`timescale 1 ns / 1 ns; //(activate for gate level simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 3;
+    localparam int unsigned FROM = 100;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 5;   // # of randomized test
+    localparam longint unsigned RANDOM_ROUNDS = 100;   // # of randomized test
     localparam logic TESTKNOWN = 1'b1; // Enable testing of two specific stimuli
 
     // ---------------------------------
@@ -118,7 +118,7 @@ module serializer_tb;
     // -----------------------------------------------
     // Testbench
     // -----------------------------------------------
-    program test_div;
+    program test_serializer;
 
         // SystemVerilog "clocking block"
         // Clocking outputs are DUT inputs and vice versa
@@ -145,7 +145,7 @@ module serializer_tb;
             stim = new;
 
             //Set all inputs to the DUT at the beginning
-            reset    = '0;
+            reset   = '0;
             data_i  = '0;
             valid_i = '0;
 
@@ -171,7 +171,7 @@ module serializer_tb;
                          "Testing Serializer\n",
                          "--------------------------------------------------");
                 //here you can insert your specified stimuli
-                TestSerializer(stim, 3'b101);
+                TestSerializer(stim, 10'b1101001101);
 
             //print how many tests have passed
             stim.pass_statistic();
@@ -183,40 +183,18 @@ module serializer_tb;
                          "--------------------------------------------------\n",
                          "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
                          "--------------------------------------------------");
-                    //apply first stimulus
-                    stim.stimulus=$random;
-                    ApplyStimuli(stim);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
-
-
-
-                for (longint j = 0; j < RANDOM_ROUNDS/2; j++) begin
-             
-                    //apply stimulus 2
-                    stim2.stimulus = $random;
-                    ApplyStimuli(stim2);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
-
-                    //check first stimulus
-                    $display("--------------------------------------------------\n",
-                                            "Applied stimuli: %b", stim.stimulus);
-                    for (int i = FROM; !(i==0); i--) begin
-                        stim.check_serializer(cb.data_o,i-1);
-                        @(cb);           
-                    end
-
-                    //apply stimulus 3
-                    stim.stimulus = $random;
-                    ApplyStimuli(stim);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
-
-                    //check second stimulus
-                    $display("--------------------------------------------------\n",
-                                            "Applied stimuli: %b", stim2.stimulus);                    
-                    for (int i = FROM; !(i==0); i--) begin
-                        stim2.check_serializer(cb.data_o,i-1);
-                        @(cb);           
-                    end
+                for (longint j = 0; j < RANDOM_ROUNDS; j++) begin                
+                        stim.stimulus=$random;
+                        ApplyStimuli(stim);
+                            $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim.stimulus); 
+                        @(cb iff cb.ready_o == 0); // Clear them in next cycle if they have been eaten
+                        ClearStimuli();
+                        @(cb iff cb.valid_o == 1);
+                        for (int i = FROM; !(i==0); i--) begin
+                            stim.check_serializer(cb.data_o,i-1);
+                            @(cb);           
+                        end                    
                 end
             end
             
@@ -237,6 +215,7 @@ module serializer_tb;
             @(cb iff cb.ready_o == 0); // Clear them in next cycle if they have been eaten
             ClearStimuli();
             //check all the set stimuli individually
+            @(cb iff cb.valid_o == 1);
             for (int i = FROM; !(i==0); i--) begin
                 st.check_serializer(cb.data_o,i-1);
                 @(cb);           
@@ -249,7 +228,7 @@ module serializer_tb;
         // -----------------------------------------------
         // Applies stimuli to the DUT except reset
         task ApplyStimuli(Stimulus #(FROM) st);
-            cb.div_valid_i <= 1;
+            cb.valid_i <= 1;
             cb.data_i   <= st.stimulus;
         endtask : ApplyStimuli
 
@@ -271,7 +250,10 @@ module serializer_tb;
         .clk                (clk),   // Clock
         .reset              (reset),   // Asynchronous reset active low
         .data_i             (data_i),   // operand a in (rs1)
-        .data_o             (data_o)   // result out
+        .data_o             (data_o),   // result out
+        .valid_i            (valid_i),
+        .valid_o            (valid_o),
+        .ready_o            (ready_o)
     );
 
 

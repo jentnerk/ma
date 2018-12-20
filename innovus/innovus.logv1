@@ -1,0 +1,47 @@
+[12/20 16:50:46      0s] 
+[12/20 16:50:46      0s] Cadence Innovus(TM) Implementation System.
+[12/20 16:50:46      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[12/20 16:50:46      0s] 
+[12/20 16:50:46      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[12/20 16:50:46      0s] Options:	
+[12/20 16:50:46      0s] Date:		Thu Dec 20 16:50:46 2018
+[12/20 16:50:46      0s] Host:		badile12.ee.ethz.ch (x86_64 w/Linux 3.10.0-514.26.2.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU W3565 @ 3.20GHz 8192KB)
+[12/20 16:50:46      0s] OS:		CentOS Linux release 7.3.1611 (Core) 
+[12/20 16:50:46      0s] 
+[12/20 16:50:46      0s] License:
+[12/20 16:50:46      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[12/20 16:50:46      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[12/20 16:50:58     11s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[12/20 16:50:58     11s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[12/20 16:50:58     11s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[12/20 16:50:58     11s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[12/20 16:50:58     11s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[12/20 16:50:58     11s] @(#)CDS: CPE v17.11-s095
+[12/20 16:50:58     11s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[12/20 16:50:58     11s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[12/20 16:50:58     11s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[12/20 16:50:58     11s] @(#)CDS: RCDB 11.10
+[12/20 16:50:58     11s] --- Running on badile12.ee.ethz.ch (x86_64 w/Linux 3.10.0-514.26.2.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU W3565 @ 3.20GHz 8192KB) ---
+[12/20 16:50:58     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_14995_badile12.ee.ethz.ch_msc18h28_NI7VLz.
+
+[12/20 16:50:58     11s] Change the soft stacksize limit to 0.2%RAM (47 mbytes). Set global soft_stack_size_limit to change the value.
+[12/20 16:50:59     12s] Sourcing startup file ./enc.tcl
+[12/20 16:50:59     12s] <CMD> set_global report_timing_format {instance arc cell slew load delay arrival}
+[12/20 16:50:59     12s] <CMD> set_global timing_defer_mmmc_object_updates true
+[12/20 16:50:59     12s] <CMD> setDelayCalMode -siAware false
+[12/20 16:50:59     12s] <CMD> setDesignMode -process 45
+[12/20 16:50:59     12s] Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[12/20 16:50:59     12s] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[12/20 16:50:59     12s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[12/20 16:50:59     12s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[12/20 16:50:59     12s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[12/20 16:50:59     12s] Updating process node dependent CCOpt properties for the 45nm process node.
+[12/20 16:50:59     12s] <CMD> setNanoRouteMode -routeBottomRoutingLayer 2
+[12/20 16:50:59     12s] 
+[12/20 16:50:59     12s] **INFO:  MMMC transition support version v31-84 
+[12/20 16:50:59     12s] 
+[12/20 16:50:59     12s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[12/20 16:50:59     12s] <CMD> suppressMessage ENCEXT-2799
+[12/20 16:50:59     12s] <CMD> getDrawView
+[12/20 16:50:59     12s] <CMD> loadWorkspace -name Physical
+[12/20 16:50:59     12s] <CMD> win

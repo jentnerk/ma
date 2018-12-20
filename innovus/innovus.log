@@ -1,0 +1,79 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	
+Date:		Thu Dec 20 16:37:19 2018
+Host:		badile12.ee.ethz.ch (x86_64 w/Linux 3.10.0-514.26.2.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU W3565 @ 3.20GHz 8192KB)
+OS:		CentOS Linux release 7.3.1611 (Core) 
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (47 mbytes). Set global soft_stack_size_limit to change the value.
+Sourcing startup file ./enc.tcl
+<CMD> set_global report_timing_format {instance arc cell slew load delay arrival}
+<CMD> set_global timing_defer_mmmc_object_updates true
+<CMD> setDelayCalMode -siAware false
+<CMD> setDesignMode -process 45
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+Updating process node dependent CCOpt properties for the 45nm process node.
+<CMD> setNanoRouteMode -routeBottomRoutingLayer 2
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> set init_verilog ../synopsys/netlists/Serializer.v
+<CMD> init_design
+No LEF file provided, but timing lib is provided.
+Use timer mode.
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.38min, fe_real=1.17min, fe_mem=514.2M) ***
+#% Begin Load netlist data ... (date=12/20 16:38:29, mem=474.2M)
+*** Begin netlist parsing (mem=514.2M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../synopsys/netlists/Serializer.v'
+Module DFFRPQ_X0P5M_A9TS is not defined and will be treated as an empty module.
+Module INV_X0P8M_A9TS is not defined and will be treated as an empty module.
+Module AO22_X0P7M_A9TS is not defined and will be treated as an empty module.
+
+*** Memory Usage v#1 (Current mem = 517.176M, initial mem = 180.676M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=517.2M) ***
+#% End Load netlist data ... (date=12/20 16:38:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=477.4M, current mem=477.4M)
+Top level cell is toplevel.
+Hooked 0 DB cells to tlib cells.
+**WARN: (IMPDB-2504):	Cell 'AO22_X0P7M_A9TS' is instantiated in the Verilog netlist, but it is not defined in the library or design data.  Its pin directions may be derived incorrectly.  Provide the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Cell 'INV_X0P8M_A9TS' is instantiated in the Verilog netlist, but it is not defined in the library or design data.  Its pin directions may be derived incorrectly.  Provide the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Cell 'DFFRPQ_X0P5M_A9TS' is instantiated in the Verilog netlist, but it is not defined in the library or design data.  Its pin directions may be derived incorrectly.  Provide the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+3 empty module found.
+Starting recursive module instantiation check.
+No recursion found.
+Term dir updated for 0 vinsts of 3 cells.
+Building hierarchical netlist for Cell toplevel ...
+*** Netlist is unique.
+** info: there are 6 modules.
+** info: there are 0 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 539.098M, initial mem = 180.676M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restoreDesign -mmmc_file <viewDef.tcl> to add the timing setup information.
+Extraction setup Started 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSYT-7328          1  The design has been initialized in physi...
+WARNING   IMPDB-2504           3  Cell '%s' is instantiated in the Verilog...
+*** Message Summary: 4 warning(s), 0 error(s)
+

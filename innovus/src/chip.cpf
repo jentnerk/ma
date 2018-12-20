@@ -1,0 +1,93 @@
+##########################################################################
+#  Title      : Sample Common Power Format (cpf).file.
+#  Project    : gf 45 dz flow
+##########################################################################
+#  File       : chip.cpf
+#  Author     : Beat Muheim  <muheim@ee.ethz.ch>
+#  Company    : Microelectronics Design Center (DZ), ETH Zurich
+##########################################################################
+#  Description : Sample file to create the power intent of a design, 
+#                withe one default power domain,
+#                The power domain have do be linked to a delay corner withe
+#                'update_delay_corner' don in our case in to "mmmc.view.tcl".
+#
+#                Please note these are just for reference, adapt according
+#                to your design!
+#
+#                Perform:
+#                read_power_intent -cpf <cpf-file>
+#                commit_power_intent
+#
+#  Inputs      : 
+#  Outputs     : 
+#  Resources   :
+##########################################################################
+#  Copyright (c) 2018 Microelectronics Design Center, ETH Zurich
+##########################################################################
+# v0.1  - bm - Wed Jan 24 11:00:22 CET 2018
+#  - copy from tsmc28 v0.2 and adapt 
+##########################################################################
+
+#-------------------------------------------------------------------------------
+# setting
+#-------------------------------------------------------------------------------
+set_cpf_version 1.1
+set_hierarchy_separator "/"
+
+#include ../../technology/cpf/tcbn28hplbwp.cpf
+#..
+#include ../../technology/cpf/tphn28hplgv18.cpf
+
+#-------------------------------------------------------------------------------
+# design
+#-------------------------------------------------------------------------------
+set_design chip
+
+
+#-------------------------------------------------------------------------------
+# physical dmplementation
+#-------------------------------------------------------------------------------
+# create power domains
+create_power_domain -name PD_core -default
+create_power_domain -name PD_pad
+
+
+#set_instance pad_In_DI_15  -model PDDW08DGZ_H_G -domain_mapping {{PAD_GP_VDD_VSS PD_core} {PAD_GP_VDDPST_VSSPST PD_pad}}
+#  ..
+#set_instance pad_Clk_CI    -model PDDW08DGZ_V_G -domain_mapping {{PAD_GP_VDD_VSS PD_core} {PAD_GP_VDDPST_VSSPST PD_pad}}
+ 
+
+# declare power and ground nets
+create_power_nets  -nets VDD
+create_ground_nets -nets VSS
+update_power_domain -name PD_core -primary_power_net VDD -primary_ground_net VSS
+
+create_power_nets  -nets VDDPST
+create_ground_nets -nets VSSPST
+update_power_domain -name PD_pad -primary_power_net VDDPST -primary_ground_net VSSPST
+
+create_power_nets  -nets POC -internal 
+  # Power On Control Digital I/O Power Pad
+
+# create global connections
+create_global_connection -net POC  -pins POC
+
+
+# create nominal conditions
+create_nominal_condition -name 1V0 -state on  -voltage 1.0
+create_nominal_condition -name 1V8 -state on  -voltage 1.8
+
+# create power mode
+create_power_mode -name PM_default \
+                  -domain_conditions { PD_core@1V0 PD_pad@1V8 } \
+                  -default
+
+#-------------------------------------------------------------------------------
+# Rules
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+# 
+#-------------------------------------------------------------------------------
+end_design

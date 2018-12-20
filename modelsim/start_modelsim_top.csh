@@ -2,7 +2,7 @@
 
 
 # start modelsim (taken from modelsim gui)
-vsim-10.6b -lib work -voptargs=+acc serializer_tb;
+vsim-10.6b -lib work -voptargs=+acc shift_serializer_tb;
 
 #do wave2.do;
 

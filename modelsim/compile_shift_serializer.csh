@@ -18,4 +18,4 @@ vlib-${VER} $LIB
 	vlog -work work /home/msc18h28/ma/sourcecode/shift_serializer.sv
 
 # compile the testbench
-	vlog -work work /home/msc18h28/ma/sourcecode/serializer_tb.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/shift_serializer_tb.sv
