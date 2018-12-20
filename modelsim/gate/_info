@@ -8,224 +8,243 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/msc18h28/ma/modelsim
+T_opt
+!s110 1545227253
+V0FI3RRl4lZSFYk^oX`Q[P0
+Z1 04 13 4 work serializer_tb fast 0
+=1-6c626d24a094-5c1a4bf5-3cf6e-4305
+o-quiet -auto_acc_if_foreign -work gate -L sc9_soi12s0_base_hvt_vlog -L sc9_soi12s0_base_svt_vlog -L sc9_soi12s0_base_uvt_vlog -L io_gppr_soi12s0_t18_mv10_mv18_avt_pl_vlog -sdftyp toplevel=/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf -suppress 1948
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.6b;65
+R0
+T_opt1
+!s110 1545227670
+VLXOgni2InhU6T0A1OUleE0
+R1
+=1-6c626d24a094-5c1a4d96-3d979-4440
+o-quiet -auto_acc_if_foreign -work gate -L sc9_soi12s0_base_hvt_vlog -L sc9_soi12s0_base_svt_vlog -L sc9_soi12s0_base_uvt_vlog -L io_gppr_soi12s0_t18_mv10_mv18_avt_pl_vlog
+R2
+n@_opt1
+R3
 vClock_divider_0
-Z1 !s110 1545057635
+Z4 !s110 1545227244
 !i10b 1
 !s100 A<RiY:nO`kJca^k?E<1BC3
-Io:AIU_Bo43P>2h96i1S3[3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+IYQfGnN3@YoGQjPDOB9G2S2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1545055740
-Z4 8/home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v
-Z5 F/home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v
+Z6 w1545204525
+Z7 8/home/msc18h28/ma/synopsys/netlists/Serializer.v
+Z8 F/home/msc18h28/ma/synopsys/netlists/Serializer.v
 L0 164
-Z6 OL;L;10.6b;65
+Z9 OL;L;10.6b;65
 r1
 !s85 0
 31
-Z7 !s108 1545057635.000000
-Z8 !s107 /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v|
-Z9 !s90 -reportprogress|300|-work|gate|/home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v|
+Z10 !s108 1545227244.000000
+Z11 !s107 /home/msc18h28/ma/synopsys/netlists/Serializer.v|
+Z12 !s90 -work|gate|/home/msc18h28/ma/synopsys/netlists/Serializer.v|
 !i113 0
-Z10 o-work gate -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z11 tCvgOpt 0
+Z13 o-work gate -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 n@clock_divider_0
 vClock_divider_1
-R1
+R4
 !i10b 1
 !s100 6bzV5Sg8nPlenDnAzjo^g0
-IJVKg;ai8>Yj7:z[Ib7Vmh1
-R2
-R0
-R3
-R4
+I`JT97ZnIK:aQhMNFd@?C62
 R5
-L0 174
+R0
 R6
+R7
+R8
+L0 174
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@clock_divider_1
 vClock_divider_2
-R1
+R4
 !i10b 1
 !s100 Dg0:2P7aczllC;J_ddNeV3
-Ia[@B1Y@JaHfm2a0JRLYJF1
-R2
-R0
-R3
-R4
+IV?MMbBfbJE@WaGR^ec9bX0
 R5
-L0 184
+R0
 R6
+R7
+R8
+L0 184
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@clock_divider_2
 vClock_divider_3
-R1
+R4
 !i10b 1
 !s100 =oJdcEW^2fDiY<<m7OC@H1
-I=TY9U;M>gkHTbjgP;?h?L1
-R2
-R0
-R3
-R4
+IMb<3JGgS:a3bGFHjPRVb80
 R5
-L0 8
+R0
 R6
+R7
+R8
+L0 8
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@clock_divider_3
 vSerializer_00000002_00000004_00000003
-R1
+R4
 !i10b 1
 !s100 mQi3XJ6XOkDkhoPi^TH]d0
-Il=@g0^aUEh@nXHji_=2B>0
-R2
-R0
-R3
-R4
+Ii<l_M5AG`o`@aEijV6[F_3
 R5
-L0 18
+R0
 R6
+R7
+R8
+L0 18
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@serializer_00000002_00000004_00000003
 vSerializer_00000004_00000004_00000002
-R1
+R4
 !i10b 1
 !s100 B2cXf=l2j1NEK7HX50g^Y1
-I<5iZT<4l5zN77^X7:nim61
-R2
-R0
-R3
-R4
+I^b[90Al^mNF1XQGaVmPH?0
 R5
-L0 37
+R0
 R6
+R7
+R8
+L0 37
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@serializer_00000004_00000004_00000002
 vSerializer_00000008_00000004_00000001
-R1
+R4
 !i10b 1
 !s100 ]X4`;fCeOzh[N4NChObZ^3
-ICdVnJ[=Kf:eFX_3X_DX091
-R2
-R0
-R3
-R4
+I;Cdc7[T]TnijfZZAQYJhG1
 R5
-L0 64
+R0
 R6
+R7
+R8
+L0 64
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@serializer_00000008_00000004_00000001
 vSerializer_00000010_00000004_0
-R1
+R4
 !i10b 1
 !s100 gP6<GONc1?MKXnOYZPiiL0
-IX48_C37aVMeUWMU5@fPSh1
-R2
-R0
-R3
-R4
+InU@9?PfOof^ee?hU8H:eA2
 R5
-L0 105
+R0
 R6
+R7
+R8
+L0 105
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 n@serializer_00000010_00000004_0
 vserializer_tb
-DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1545057673
+DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+R4
 !i10b 1
-!s100 Nn1ENl[10T1R:893@4o:;0
-I3BJDiT^X3JFSjc1oLGI5R1
-R2
+!s100 C8naWM=;RJUL:Ch=zRBaA2
+I=?KEF1oekTPO^kej6=O>:3
+R5
 !s105 serializer_tb_sv_unit
 S1
 R0
-w1545052815
-8/home/msc18h28/ma/RTL/serializer_tb.sv
-F/home/msc18h28/ma/RTL/serializer_tb.sv
-L0 5
-R6
+w1545227223
+8/home/msc18h28/ma/sourcecode/serializer_tb.sv
+F/home/msc18h28/ma/sourcecode/serializer_tb.sv
+L0 7
+OL;L;10.7b_1;67
 r1
 !s85 0
 31
-!s108 1545057673.000000
-!s107 /home/msc18h28/ma/RTL/serializer_tb.sv|
-!s90 -reportprogress|300|-work|gate|/home/msc18h28/ma/RTL/serializer_tb.sv|
-!i113 0
 R10
-R11
+!s107 /home/msc18h28/ma/sourcecode/serializer_tb.sv|
+!s90 -work|gate|/home/msc18h28/ma/sourcecode/serializer_tb.sv|
+!i113 0
+R13
+R2
 vtoplevel
-R1
+R4
 !i10b 1
 !s100 zUFlM4_ehZM`e9^JL2>]S1
-IC2I:<O<0EVFCSQ5anmE4L1
-R2
-R0
-R3
-R4
+I_gXWfM4kg7z8eDd?dQ7Xj3
 R5
-L0 194
+R0
 R6
+R7
+R8
+L0 194
+R9
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2

@@ -1,0 +1,400 @@
+# vsim -t 1ps -lib gate -L /home/msc18h28/ma/technology/db/ -l io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db -v2k_int_delays "+no_glitch_msg" serializer_tb 
+# Start time: 14:11:02 on Dec 18,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(13): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(14): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(189): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(190): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(179): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(180): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(169): Module 'DFFRPQ_X1M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(170): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(27): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(29): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(31): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(33): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(48): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(50): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(52): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(54): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(56): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(57): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(59): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(77): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(79): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(81): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(83): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(85): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(87): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(89): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(91): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(93): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(94): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(96): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(98): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(100): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(118): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(120): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(122): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(124): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(126): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(128): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(130): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(132): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(134): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(136): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(138): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(140): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(142): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(144): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(146): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(148): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(150): Module 'INV_X0P8M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(151): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(152): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(153): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(154): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(155): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(156): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(158): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(159): Module 'AO22_X0P7M_A9TS' is not defined.
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library '/home/msc18h28/ma/technology/db/' at "/home/msc18h28/ma/technology/db/".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vopt-2669) Unable to find library '/home/msc18h28/ma/technology/db/'.
+# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer.v(211): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 14:11:02 on Dec 18,2018, Elapsed time: 0:00:00
+# Errors: 192, Warnings: 67

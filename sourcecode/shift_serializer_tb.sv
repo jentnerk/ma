@@ -4,9 +4,10 @@
 
 module serializer_tb;
     // constants
-    timeunit 1ns;
+    //timeunit 1ns; //(activate for RTL simulation)
+    //`timescale 1 ns / 1 ns; //(activate for gate level simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 16;
+    localparam int unsigned FROM = 3;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
@@ -19,11 +20,14 @@ module serializer_tb;
     logic clk = 0;
     logic reset;
     logic[FROM-1:0] data_i;
+    logic valid_i;
 
     // -------------------------------------
     // outputs from the DUT
     // -------------------------------------
     logic data_o;
+    logic ready_o;
+    logic valid_o;
 
     // ------------------
     // Clock generator
@@ -125,8 +129,8 @@ module serializer_tb;
             // the data_o will be read 1ns before the active clock edge of the next cycle
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
             output  negedge reset;
-            output data_i;
-            input data_o;
+            output data_i, valid_i;
+            input data_o, ready_o, valid_o;
         endclocking
 
         // ---------------------
@@ -145,6 +149,8 @@ module serializer_tb;
             //Set all inputs to the DUT at the beginning
             reset    = '0;
             data_i  = '0;
+            valid_i = '0;
+
 
             // --------------------------
             // Test Reset
@@ -233,8 +239,8 @@ module serializer_tb;
             st.set_stimulus(a);
 
             ApplyStimuli(st);
-            //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
             repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
+            @(cb iff cb.ready_o == 0); // Clear them in next cycle if they have been eaten
             ClearStimuli();
             repeat(FROM) @(cb);
             //check all the set stimuli individually
@@ -268,7 +274,7 @@ module serializer_tb;
     // Instance DUT - Device Under Test
     // -----------------------------------
 
-    toplevel dut
+    shift_serializer dut
     (
         .clk                (clk),   // Clock
         .reset              (reset),   // Asynchronous reset active low

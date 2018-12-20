@@ -12,98 +12,15 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlog -reportprogress 300 -work gate /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 15:40:35 on Dec 17,2018
-# vlog -reportprogress 300 -work gate /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v 
-# -- Compiling module Clock_divider_3
-# -- Compiling module Serializer_00000002_00000004_00000003
-# -- Compiling module Serializer_00000004_00000004_00000002
-# -- Compiling module Serializer_00000008_00000004_00000001
-# -- Compiling module Serializer_00000010_00000004_0
-# -- Compiling module Clock_divider_0
-# -- Compiling module Clock_divider_1
-# -- Compiling module Clock_divider_2
-# -- Compiling module toplevel
-# 
-# Top level modules:
-# 	toplevel
-# End time: 15:40:35 on Dec 17,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work gate /home/msc18h28/ma/RTL/serializer_tb.sv
-# QuestaSim-64 vlog 10.6b Compiler 2017.05 May 25 2017
-# Start time: 15:41:13 on Dec 17,2018
-# vlog -reportprogress 300 -work gate /home/msc18h28/ma/RTL/serializer_tb.sv 
-# -- Compiling module serializer_tb
-# -- Compiling program test_div
-# 
-# Top level modules:
-# 	serializer_tb
-# End time: 15:41:13 on Dec 17,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim gate.serializer_tb -sdfnoerror -sdfnowarn -L gate -sdftyp /toplevel=/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf
-# vsim gate.serializer_tb -sdfnoerror -sdfnowarn -L gate -sdftyp "/toplevel=/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf" 
-# Start time: 15:44:16 on Dec 17,2018
+# vsim -t 1ps -lib gate -L sc9_soi12s0_base_hvt_vlog -L sc9_soi12s0_base_svt_vlog -L sc9_soi12s0_base_uvt_vlog -L io_gppr_soi12s0_t18_mv10_mv18_avt_pl_vlog serializer_tb 
+# Start time: 14:54:30 on Dec 19,2018
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(13): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(14): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(189): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(190): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(179): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(180): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(169): Module 'DFFRPQ_X1M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(170): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(27): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(29): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(31): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(33): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(48): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(50): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(52): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(54): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(56): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(57): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(59): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(77): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(79): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(81): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(83): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(85): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(87): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(89): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(91): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(93): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(94): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(96): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(98): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(100): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(118): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(120): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(122): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(124): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(126): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(128): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(130): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(132): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(134): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(136): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(138): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(140): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(142): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(144): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(146): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(148): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(150): Module 'INV_X0P8M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(151): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(152): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(153): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(154): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(155): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(156): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(158): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(159): Module 'AO22_X0P7M_A9TS' is not defined.
-# ** Error: /home/msc18h28/ma/synopsys/netlists/Serializer_17-Dec-18_10ns.v(211): Module 'DFFRPQ_X0P5M_A9TS' is not defined.
-# Optimization failed
-# Error loading design
-# End time: 15:44:16 on Dec 17,2018, Elapsed time: 0:00:00
-# Errors: 58, Warnings: 0
+# Loading sv_std.std
+# Loading work.serializer_tb(fast)
+# Loading work.toplevel(fast)
+# Loading sc9_soi12s0_base_svt_vlog.DFFRPQ_X0P5M_A9TS(fast)
+# Loading sc9_soi12s0_base_svt_vlog.INV_X0P8M_A9TS(fast)
+# Loading sc9_soi12s0_base_svt_vlog.DFFRPQ_X1M_A9TS(fast)
+# Loading sc9_soi12s0_base_svt_vlog.AO22_X0P7M_A9TS(fast)
+# End time: 17:15:00 on Dec 19,2018, Elapsed time: 2:20:30
+# Errors: 0, Warnings: 0
