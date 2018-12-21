@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Dec 20 16:37:37 2018                
+#  Created on Fri Dec 21 09:34:37 2018                
 #                                                     
 #######################################################
 
@@ -23,5 +23,32 @@ suppressMessage ENCEXT-2799
 getDrawView
 loadWorkspace -name Physical
 win
+setMultiCpuUsage -localCpu max
+delete_ccopt_clock_tree_spec
+create_route_type -name default_route_type_leaf -bottom_preferred_layer 1 -top_preferred_layer 6
+delete_ccopt_clock_tree_spec
+create_ccopt_clock_tree -name clk -source Clk_CI
+set defHierChar /
+set init_verilog {../synopsys/netlists/top.v src/chip.v}
+set init_verilog {../synopsys/netlists/Serializer.v src/chip.v}
+set init_design_settop 0
+set init_lef_file {../technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef ../technology/lef/sc9_soi12s0_base_hvt.lef ../technology/lef/sc9_soi12s0_base_svt.lef ../technology/lef/sc9_soi12s0_base_uvt.lef ../technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef}
+setImportMode -treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1
+set init_import_mode {-treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1 }
+set init_mmmc_file ./src/mmmc.view.tcl
+delete_ccopt_clock_tree_spec
+create_ccopt_clock_tree -name clk -source Clk_CI
+create_ccopt_clock_tree -name clk -source Clk_CI
+save_global scripts/Load_design.globals
+set init_gnd_net VSS
+set init_lef_file {../technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef ../technology/lef/sc9_soi12s0_base_hvt.lef ../technology/lef/sc9_soi12s0_base_svt.lef ../technology/lef/sc9_soi12s0_base_uvt.lef ../technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef}
 set init_verilog ../synopsys/netlists/Serializer.v
+set init_top_cell toplevel
+set init_pwr_net VDD
 init_design
+gui_select -rect {-0.082 0.009 -0.304 -0.112}
+panPage 1 0
+gui_select -rect {-0.093 -0.034 0.212 0.009}
+init_design
+uiSetTool select
+uiSetTool select

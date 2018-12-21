@@ -24,7 +24,7 @@
 ##########################################################################
 
 set defHierChar {/}
-set init_verilog {../synopsys/netlists/top.v src/chip.v}
+set init_verilog {../synopsys/netlists/Serializer.v src/chip.v}
 set init_design_settop 0
 
 #set init_io_file  {src/chip.io}

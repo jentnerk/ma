@@ -21,7 +21,940 @@ Detected [rhel7.3i] setup
             or distribution of this software is strictly prohibited.
 Initializing...
 Loading Design Compiler Setup
-dc_shell> source ser[K[K[Kscripts/serializer_synth.tcl 
+dc_shell> source shif[K[K[K[Kscripts/shift_serializer_synth.tcl 
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            33            |    auto/auto     |
+===============================================
+Error:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:62: Array index out of bounds Reg_SP[98:0], valid bounds are [7:0]. (ELAB-298)
+*** Presto compilation terminated with 1 errors. ***
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'clk'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+Error: No files or designs were specified. (UID-22)
+Error: Cannot read file 'DDC/shift_serializer_elab.ddc'. (UID-58)
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: No files or designs were specified. (UID-22)
+Error: Current design is not defined. (UID-4)
+Error: grep: ./netlists/shift_serializer_synth.sdc: No such file or directory
+	Use error_info for more info. (CMD-013)
+Error: Current design is not defined. (UID-4)
+0
+dc_shell> 
+dc_shell> set NAME {}
+dc_shell> 
+dc_shell> remove_design -all
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'gtech'
+Removing library 'dw_foundation.sldb'
+Removing library 'standard.sldb'
+1
+dc_shell> exec rm -rf WORK/*
+dc_shell> 
+dc_shell> set CLK_PERIOD 0.65
+0.65
+dc_shell> set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25cdz_set_pvt [list $CELL_LIB $PAD_LIB]
+Error: wrong # args: should be "set varName ?newValue?"
+	Use error_info for more info. (CMD-013)
+dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25cdz_set_pvt [list $CELL_LIB $PAD_LIB][K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c[11G[Kdz_set_pvt [list $CELL_LIB $PAD_LIB]
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db
+dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+1
+dc_shell> set TOP_ENTITY {shift_serializer}
+shift_serializer
+dc_shell> set ENTITY {shift_serializer}
+shift_serializer
+dc_shell> elaborate $TOP_ENTITY
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            33            |    auto/auto     |
+===============================================
+Error:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:62: Array index out of bounds Reg_SP[28:0], valid bounds are [5:0]. (ELAB-298)
+*** Presto compilation terminated with 1 errors. ***
+0
+dc_shell> elaborate $TOP_ENTITY[11Gset ENTITY {shift_serializer}[15G[4@TOP_E[44G[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+1
+dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11G[Kanalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            33            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 25 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     shift_S_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 74 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  Latch inferred in design shift_serializer read with 'hdlin_check_no_latch' (ELAB-395)
+Warning:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:25: Netlist for always_comb block contains a latch. (ELAB-974)
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'shift_serializer'.
+1
+dc_shell> loadelaborate $TOP_ENTITY[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+1
+dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 75 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/msc18h28/ma/synopsys/shift_serializer.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'shift_serializer'.
+1
+dc_shell> create_clock clk -period $CLK_PERIOD
+1
+dc_shell> compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | N-2017.09-DWBB_201709.0 |     *     |
+| Licensed DW Building Blocks        | N-2017.09-DWBB_201709.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'shift_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design shift_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'shift_serializer'
+Information: The register 'State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'shift_serializer'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
+Information: The register 'Counter_SP_reg[6]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09     259.5      0.00       0.0       0.0                              8.4647
+    0:00:09     259.5      0.00       0.0       0.0                              8.4647
+    0:00:09     259.5      0.00       0.0       0.0                              8.4647
+    0:00:09     259.5      0.00       0.0       0.0                              8.4647
+Information: The register 'Counter_SP_reg[5]' is a constant and will be removed. (OPT-1206)
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:09     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+dc_shell> gui_start
+dc_shell> Current design is 'shift_serializer'.
+4.1
+Current design is 'shift_serializer'.
+dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
+dc_shell> f[Kreport_area
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:42:22 2018
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           36
+Number of nets:                           147
+Number of cells:                          114
+Number of combinational cells:             78
+Number of sequential cells:                36
+Number of macros/black boxes:               0
+Number of buf/inv:                         32
+Number of references:                      14
+
+Combinational area:                 87.381000
+Buf/Inv area:                       15.321600
+Noncombinational area:             163.749607
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   251.130607
+Total area:                 undefined
+1
+dc_shell> report_tiin[K[Kmin
+Error: ambiguous command 'report_timin' matched 3 commands:
+	(report_timing, report_timing_derate, report_timing_requirements) (CMD-006)
+dc_shell> report_r[Ktimi
+report_timing              report_timing_derate       report_timing_requirements 
+dc_shell> report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:42:34 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: State_SP_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Counter_SP_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  State_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)                0.0000     0.0000 r
+  State_SP_reg[0]/Q (DFFRPQ_X0P5M_A9TS)                 0.2105     0.2105 f
+  U153/Y (NOR2XB_X1M_A9TS)                              0.1746     0.3851 r
+  U82/Y (INV_X1M_A9TS)                                  0.0557     0.4408 f
+  U83/Y (NAND2_X0P5M_A9TS)                              0.0508     0.4917 r
+  U152/Y (NOR2_X0P7A_A9TS)                              0.0289     0.5206 f
+  U150/Y (AOI22_X0P7M_A9TS)                             0.0221     0.5426 r
+  U149/Y (NAND2_X0P5M_A9TS)                             0.0186     0.5612 f
+  Counter_SP_reg[1]/D (DFFRPQ_X0P5M_A9TS)               0.0000     0.5612 f
+  data arrival time                                                0.5612
+
+  clock clk (rise edge)                                 0.6500     0.6500
+  clock network delay (ideal)                           0.0000     0.6500
+  Counter_SP_reg[1]/CK (DFFRPQ_X0P5M_A9TS)              0.0000     0.6500 r
+  library setup time                                   -0.0127     0.6373
+  data required time                                               0.6373
+  --------------------------------------------------------------------------
+  data required time                                               0.6373
+  data arrival time                                               -0.5612
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0761
+
+
+1
+dc_shell> reppo[K[Kort_power
+report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
+dc_shell> report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:42:42 2018
+****************************************
+
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  = 314.4166 uW   (94%)
+  Net Switching Power  =  19.4011 uW    (6%)
+                         ---------
+Total Dynamic Power    = 333.8177 uW  (100%)
+
+Cell Leakage Power     =   7.8501 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.2970        7.6517e-03            5.5411            0.3102  (  90.78%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.7450e-02        1.1749e-02            2.3091        3.1509e-02  (   9.22%)
+--------------------------------------------------------------------------------------------------
+Total              0.3144 mW     1.9401e-02 mW         7.8501 uW         0.3417 mW
+1
+dc_shell> source scripts/shift_serializer_synth.tcl 
+Removing design 'shift_serializer'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 75 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'shift_serializer'.
+Writing ddc file 'DDC/shift_serializer_elab.ddc'.
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/shift_serializer_elab.ddc'.
+Loaded 1 design.
+Current design is 'shift_serializer'.
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'shift_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design shift_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'shift_serializer'
+Information: The register 'State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'shift_serializer'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+  Global Optimization (Phase 54)
+  Global Optimization (Phase 55)
+  Global Optimization (Phase 56)
+  Global Optimization (Phase 57)
+  Global Optimization (Phase 58)
+  Global Optimization (Phase 59)
+  Global Optimization (Phase 60)
+  Global Optimization (Phase 61)
+  Global Optimization (Phase 62)
+  Global Optimization (Phase 63)
+  Global Optimization (Phase 64)
+  Global Optimization (Phase 65)
+  Global Optimization (Phase 66)
+  Global Optimization (Phase 67)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     152.0      0.00       0.0       0.0                              4.9618
+    0:00:10     152.0      0.00       0.0       0.0                              4.9618
+    0:00:10     152.0      0.00       0.0       0.0                              4.9618
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+  Global Optimization (Phase 68)
+  Global Optimization (Phase 69)
+  Global Optimization (Phase 70)
+  Global Optimization (Phase 71)
+  Global Optimization (Phase 72)
+  Global Optimization (Phase 73)
+  Global Optimization (Phase 74)
+  Global Optimization (Phase 75)
+  Global Optimization (Phase 76)
+  Global Optimization (Phase 77)
+  Global Optimization (Phase 78)
+    0:00:10     151.5      0.00       0.0       0.0                              4.8792
+    0:00:10     151.5      0.00       0.0       0.0                              4.8792
+    0:00:10     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/shift_serializer.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/shift_serializer_synth.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+dc_shell> report_area
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:44:20 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           22
+Number of nets:                            90
+Number of cells:                           71
+Number of combinational cells:             49
+Number of sequential cells:                22
+Number of macros/black boxes:               0
+Number of buf/inv:                         18
+Number of references:                      11
+
+Combinational area:                 51.471000
+Buf/Inv area:                        8.618400
+Noncombinational area:             100.069204
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   151.540204
+Total area:                 undefined
+1
+dc_shell> report_a[Ktimi
+report_timing              report_timing_derate       report_timing_requirements 
+dc_shell> report_timing
+report_timing              report_timing_derate       report_timing_requirements 
+dc_shell> report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:44:29 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: State_SP_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Reg_SP_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  State_SP_reg_0_/CK (DFFRPQ_X0P5M_A9TS)                0.0000     0.0000 r
+  State_SP_reg_0_/Q (DFFRPQ_X0P5M_A9TS)                 0.1530     0.1530 f
+  U48/Y (NOR2_X0P7A_A9TS)                               0.1209     0.2739 r
+  U85/Y (AOI222_X0P7M_A9TS)                             0.0549     0.3288 f
+  U84/Y (INV_X0P8M_A9TS)                                0.0195     0.3482 r
+  Reg_SP_reg_1_/D (DFFRPQ_X0P5M_A9TS)                   0.0000     0.3482 r
+  data arrival time                                                0.3482
+
+  clock clk (rise edge)                                 0.6500     0.6500
+  clock network delay (ideal)                           0.0000     0.6500
+  Reg_SP_reg_1_/CK (DFFRPQ_X0P5M_A9TS)                  0.0000     0.6500 r
+  library setup time                                   -0.0263     0.6237
+  data required time                                               0.6237
+  --------------------------------------------------------------------------
+  data required time                                               0.6237
+  data arrival time                                               -0.3482
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.2754
+
+
+1
+dc_shell> report_powr[K
+report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
+dc_shell> report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : shift_serializer
+Version: N-2017.09
+Date   : Fri Dec 21 14:44:50 2018
+****************************************
+
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  = 187.4276 uW   (95%)
+  Net Switching Power  =  10.4978 uW    (5%)
+                         ---------
+Total Dynamic Power    = 197.9253 uW  (100%)
+
+Cell Leakage Power     =   4.7368 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.1792        3.8720e-03            3.3644            0.1865  (  92.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  8.2068e-03        6.6258e-03            1.3724        1.6205e-02  (   8.00%)
+--------------------------------------------------------------------------------------------------
+Total              0.1874 mW     1.0498e-02 mW         4.7368 uW         0.2027 mW
+1
+dc_shell> source scr[11Greport_power[18Gtiming[18Garea[K[11Gsource scripts/shift_serializer_synth.tcl[11Greport_area[K[11Gsource scripts/shift_serializer_synth.tcl[11Greport_area[Ktiming[18Gpower[K[11Gsource scr[Kipts/shift_serializer_synth.tcl [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kerializer_synth.tcl 
+Removing design 'shift_serializer'
+Removing design 'shift_serializer'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
 Running PRESTO HDLC
 Compiling source file /home/msc18h28/ma/sourcecode/toplevel.sv
 Compiling source file /home/msc18h28/ma/sourcecode/serializer.sv
@@ -61,10 +994,46 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel' with
-	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+	the parameters "32'h00000010,32'h00000004,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000002_00000001_0 line 24 in file
+	in routine Serializer_00000010_00000004_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000010_00000004_0' with
+	the parameters "32'h00000008,32'h00000004,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000004_00000001 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000004_00000001' with
+	the parameters "32'h00000004,32'h00000004,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000004_00000002 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000004_00000002' with
+	the parameters "32'h00000002,32'h00000004,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000004_00000003 line 24 in file
 		'/home/msc18h28/ma/sourcecode/serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -78,16 +1047,8 @@ Loaded 1 design.
 Current design is 'toplevel'.
 Information: Performing power optimization. (PWR-850)
 Alib files are up-to-date.
-Information: Evaluating DesignWare library utilization. (UISN-27)
-
-============================================================================
-| DesignWare Building Block Library  |         Version         | Available |
-============================================================================
-| Basic DW Building Blocks           | N-2017.09-DWBB_201709.0 |     *     |
-| Licensed DW Building Blocks        | N-2017.09-DWBB_201709.0 |     *     |
-============================================================================
-
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+Information: Uniquified 4 instances of design 'Clock_divider'. (OPT-1056)
   Simplifying Design 'toplevel'
 
 Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
@@ -101,9 +1062,12 @@ Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'Serializer_00000002_00000001_0'
+  Processing 'Serializer_00000010_00000004_0'
+  Processing 'Serializer_00000008_00000004_00000001'
   Processing 'toplevel'
-  Processing 'Clock_divider'
+  Processing 'Serializer_00000004_00000004_00000002'
+  Processing 'Serializer_00000002_00000004_00000003'
+  Processing 'Clock_divider_0'
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -192,33 +1156,33 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:08      20.8      0.00       0.0       0.0                              0.7446
-    0:00:08      20.8      0.00       0.0       0.0                              0.7446
-    0:00:08      20.8      0.00       0.0       0.0                              0.7446
-    0:00:08      20.8      0.00       0.0       0.0                              0.7446
+    0:00:09     188.2      0.00       0.0       0.0                              6.5429
+    0:00:09     188.2      0.00       0.0       0.0                              6.5429
+    0:00:09     188.2      0.00       0.0       0.0                              6.5429
+    0:00:09     188.2      0.00       0.0       0.0                              6.5429
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:08      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
+    0:00:09     188.2      0.00       0.0       0.0                              6.5429
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
 
 
   Beginning Design Rule Fixing  (min_capacitance)
@@ -228,12 +1192,12 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -243,7 +1207,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      20.8      0.00       0.0       0.0                              0.7384
+    0:00:10     188.2      0.00       0.0       0.0                              6.4998
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
@@ -255,42 +1219,42 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
   Global Optimization (Phase 43)
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:09      20.8      0.00       0.0       0.0                              0.7281
-    0:00:10      20.8      0.00       0.0       0.0                              0.7281
-    0:00:10      20.8      0.00       0.0       0.0                              0.7281
-    0:00:10      20.8      0.00       0.0       0.0                              0.7281
-    0:00:10      20.8      0.00       0.0       0.0                              0.7281
-    0:00:10      20.8      0.00       0.0       0.0                              0.7281
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+    0:00:11     188.2      0.00       0.0       0.0                              6.4956
+    0:00:11     188.2      0.00       0.0       0.0                              6.4956
+    0:00:11     188.2      0.00       0.0       0.0                              6.4956
+    0:00:11     188.2      0.00       0.0       0.0                              6.4956
+    0:00:11     188.2      0.00       0.0       0.0                              6.4956
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -308,60 +1272,9 @@ Information: Annotated 'cell' delays are assumed to include load delay. (UID-282
 Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 1
-dc_shell> gui_start
+dc_shell> gui_start 
 dc_shell> Current design is 'toplevel'.
-4.1
 Current design is 'toplevel'.
-dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
-dc_shell> repot[Krt_pat
-report_path_budget report_path_group  
-dc_shell> report_path_group 
- 
-****************************************
-Report : path_group
-Design : toplevel
-Version: N-2017.09
-Date   : Thu Dec 20 16:00:47 2018
-****************************************
-
-                        Critical
-Group Name    Weight    Range
---------------------------------------------------------------------------------
-**default**   1.00      0.00                 
-clk           1.00      0.00                 
-
-Path Group clk:
-	-to      clk
-
-1
-dc_shell> report_
-report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_gui_stroke_builtins                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
-report_annotated_delay                     report_bus                                 report_design                              report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
-report_annotated_transition                report_cache                               report_design_lib                          report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
-report_app_var                             report_case_analysis                       report_dft_clock_controller                report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
-report_area                                report_cell                                report_dft_clock_gating_configuration      report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
-report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
-report_attributes                          report_check_library_options               report_dft_configuration                   report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
-report_auto_ungroup                        report_clock                               report_dft_connect                         report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
-report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
-report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
-report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
-report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
-report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
-report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
-report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
-report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
-report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
-report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
-report_bsd_instruction                     report_constraints                         report_disable_timing                      report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
-report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_mw_lib                              report_qor                                 report_supply_net                          
-report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_name_rules                          report_qtm_model                           report_supply_port                         
-report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_names                               report_reference                           report_synlib                              
-report_buffer_tree                         report_datapath_gating                     report_gui_stroke_bindings                 report_net                                 report_resources                           report_synthetic                           
 dc_shell> report_tim
 report_timing              report_timing_derate       report_timing_requirements 
 dc_shell> report_timing
@@ -373,7 +1286,7 @@ Report : timing
         -max_paths 1
 Design : toplevel
 Version: N-2017.09
-Date   : Thu Dec 20 16:01:21 2018
+Date   : Fri Dec 21 14:46:25 2018
 ****************************************
 
 Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
@@ -393,1323 +1306,126 @@ Wire Load Model Mode: top
   genblk1_0__Clock_divider/clkB_reg/CK (DFFRPQ_X0P5M_A9TS)
                                                         0.0000     0.0000 r
   genblk1_0__Clock_divider/clkB_reg/Q (DFFRPQ_X0P5M_A9TS)
-                                                        0.1002     0.1002 f
-  genblk1_0__Clock_divider/io_clkB (Clock_divider)      0.0000     0.1002 f
-  Serializer/io_clk[1] (Serializer_00000002_00000001_0)
-                                                        0.0000     0.1002 f
-  Serializer/U4/Y (INV_X0P8M_A9TS)                      0.0153     0.1156 r
-  Serializer/U3/Y (AO22_X0P7M_A9TS)                     0.0381     0.1537 r
-  Serializer/io_dataOut (Serializer_00000002_00000001_0)
-                                                        0.0000     0.1537 r
-  dataOut_SP_reg/D (DFFRPQ_X0P5M_A9TS)                  0.0000     0.1537 r
-  data arrival time                                                0.1537
+                                                        0.1041     0.1041 f
+  genblk1_0__Clock_divider/io_clkB (Clock_divider_3)    0.0000     0.1041 f
+  Serializer/io_clk[1] (Serializer_00000010_00000004_0)
+                                                        0.0000     0.1041 f
+  Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000008_00000004_00000001)
+                                                        0.0000     0.1041 f
+  Serializer/genblk1_Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000004_00000004_00000002)
+                                                        0.0000     0.1041 f
+  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000002_00000004_00000003)
+                                                        0.0000     0.1041 f
+  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/U4/Y (INV_X0P8M_A9TS)
+                                                        0.0162     0.1203 r
+  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/U3/Y (AO22_X0P7M_A9TS)
+                                                        0.0385     0.1588 r
+  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/io_dataOut (Serializer_00000002_00000004_00000003)
+                                                        0.0000     0.1588 r
+  Serializer/genblk1_Serializer/genblk1_Serializer/io_dataOut (Serializer_00000004_00000004_00000002)
+                                                        0.0000     0.1588 r
+  Serializer/genblk1_Serializer/io_dataOut (Serializer_00000008_00000004_00000001)
+                                                        0.0000     0.1588 r
+  Serializer/io_dataOut (Serializer_00000010_00000004_0)
+                                                        0.0000     0.1588 r
+  dataOut_SP_reg/D (DFFRPQ_X0P5M_A9TS)                  0.0000     0.1588 r
+  data arrival time                                                0.1588
 
   clock clk (rise edge)                                 0.6500     0.6500
   clock network delay (ideal)                           0.0000     0.6500
   dataOut_SP_reg/CK (DFFRPQ_X0P5M_A9TS)                 0.0000     0.6500 r
-  library setup time                                   -0.0245     0.6255
-  data required time                                               0.6255
+  library setup time                                   -0.0246     0.6254
+  data required time                                               0.6254
   --------------------------------------------------------------------------
-  data required time                                               0.6255
-  data arrival time                                               -0.1537
+  data required time                                               0.6254
+  data arrival time                                               -0.1588
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.4718
+  slack (MET)                                                      0.4666
 
 
 1
-dc_shell> man rep
-replace_clock_gates                        report_buffer_tree                         report_design                              report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_model                          
-replace_synthetic                          report_buffer_tree_qor                     report_design_lib                          report_host_options                        report_opcond_inference                    report_saif                                report_test_point_configuration            
-report_annotated_check                     report_bus                                 report_dft_clock_controller                report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_element                  
-report_annotated_delay                     report_cache                               report_dft_clock_gating_configuration      report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_power_modes                    
-report_annotated_transition                report_capacitance_use_ccs_receiver_model  report_dft_clock_gating_pin                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_testability_configuration           
-report_app_var                             report_case_analysis                       report_dft_configuration                   report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_threshold_voltage_group             
-report_area                                report_cell                                report_dft_connect                         report_isolate_ports                       report_path_group                          report_scan_configuration                  report_timing                              
-report_attribute                           report_cell_mode                           report_dft_design                          report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing_derate                       
-report_auto_ungroup                        report_check_library_options               report_dft_drc_rules                       report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_requirements                 
-report_autofix_configuration               report_clock                               report_dft_drc_violations                  report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_use_accurate_delay_symbol    
-report_autofix_element                     report_clock_gating                        report_dft_equivalent_signals              report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
-report_bist_configuration                  report_clock_gating_check                  report_dft_insertion_configuration         report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
-report_block_abstraction                   report_clock_timing                        report_dft_location                        report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
-report_boundary_cell                       report_clock_tree                          report_dft_partition                       report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
-report_boundary_cell_io                    report_compile_options                     report_dft_power_control                   report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
-report_bsd_ac_port                         report_compile_spg_mode                    report_dft_signal                          report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
-report_bsd_buffers                         report_constraint                          report_direct_power_rail_tie               report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
-report_bsd_compliance                      report_cross_probing                       report_disable_timing                      report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
-report_bsd_configuration                   report_cross_probing_files                 report_dont_touch                          report_mw_lib                              report_qor                                 report_supply_net                          
-report_bsd_instruction                     report_crpr                                report_dp_smartgen_options                 report_name_rules                          report_qtm_model                           report_supply_port                         
-report_bsd_linkage_port                    report_datapath_gating                     report_fsm                                 report_names                               report_reference                           report_synlib                              
-report_bsd_patterns                        report_default_significant_digits          report_gui_stroke_bindings                 report_net                                 report_resources                           report_target_library_subset               
-report_bsd_power_up_reset                  report_delay_calculation                   report_gui_stroke_builtins                 report_net_fanout                          report_retention_cell                      report_test_assume                         
-dc_shell> man report_
-report_annotated_check                     report_buffer_tree_qor                     report_design                              report_gui_stroke_builtins                 report_net                                 report_reference                           report_supply_port                         
-report_annotated_delay                     report_bus                                 report_design_lib                          report_hierarchy                           report_net_fanout                          report_resources                           report_synlib                              
-report_annotated_transition                report_cache                               report_dft_clock_controller                report_host_options                        report_ocvm                                report_retention_cell                      report_target_library_subset               
-report_app_var                             report_capacitance_use_ccs_receiver_model  report_dft_clock_gating_configuration      report_ideal_network                       report_opcond_inference                    report_retention_clamp_cell                report_test_assume                         
-report_area                                report_case_analysis                       report_dft_clock_gating_pin                report_ieee_1500_configuration             report_operating_conditions                report_saif                                report_test_model                          
-report_attribute                           report_cell                                report_dft_configuration                   report_interclock_relation                 report_partitions                          report_scaling_lib_group                   report_test_point_configuration            
-report_auto_ungroup                        report_cell_mode                           report_dft_connect                         report_internal_loads                      report_pass_data                           report_scan_cell_set                       report_test_point_element                  
-report_autofix_configuration               report_check_library_options               report_dft_design                          report_isolate_ports                       report_path_budget                         report_scan_chain                          report_test_power_modes                    
-report_autofix_element                     report_clock                               report_dft_drc_rules                       report_isolation_cell                      report_path_group                          report_scan_compression_configuration      report_testability_configuration           
-report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_latch_loop_groups                   report_pin_map                             report_scan_configuration                  report_threshold_voltage_group             
-report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_level_shifter                       report_pin_name_synonym                    report_scan_group                          report_timing                              
-report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_lib                                 report_pipeline_scan_data_configuration    report_scan_link                           report_timing_derate                       
-report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_link_library_subset                 report_port                                report_scan_path                           report_timing_requirements                 
-report_bsd_ac_port                         report_compile_options                     report_dft_partition                       report_logicbist_configuration             report_power                               report_scan_register_type                  report_timing_use_accurate_delay_symbol    
-report_bsd_buffers                         report_compile_spg_mode                    report_dft_power_control                   report_min_pulse_width                     report_power_calculation                   report_scan_replacement                    report_top_implementation_options          
-report_bsd_compliance                      report_constraint                          report_dft_signal                          report_mode                                report_power_domain                        report_scan_skew_group                     report_transitive_fanin                    
-report_bsd_configuration                   report_cross_probing                       report_direct_power_rail_tie               report_multibit                            report_power_gating                        report_scan_state                          report_transitive_fanout                   
-report_bsd_instruction                     report_cross_probing_files                 report_disable_timing                      report_multibit_banking                    report_power_pin_info                      report_scan_suppress_toggling              report_units                               
-report_bsd_linkage_port                    report_crpr                                report_dont_touch                          report_mv_library_cells                    report_power_switch                        report_serialize_configuration             report_use_test_model                      
-report_bsd_patterns                        report_datapath_gating                     report_dp_smartgen_options                 report_mw_lib                              report_pst                                 report_size_only                           report_wire_load                           
-report_bsd_power_up_reset                  report_default_significant_digits          report_fsm                                 report_name_rules                          report_qor                                 report_streaming_compression_configuration report_wrapper_configuration               
-report_buffer_tree                         report_delay_calculation                   report_gui_stroke_bindings                 report_names                               report_qtm_model                           report_supply_net                          report_write_lib_mode                      
-dc_shell> man report_pat
-report_path_budget report_path_group  
-dc_shell> man report_path_group 
-2.  Synopsys Commands                                        Command Reference
-                               report_path_group
-
-NAME
-       report_path_group
-              Reports information about path groups in the current design.
-
-SYNTAX
-       status report_path_group
-               [-nosplit]
-               [-expanded]
-               [-scenarios scenario_list]
-
-ARGUMENTS
-       -nosplit
-              Prevents  line  splitting  and  facilitates  writing software to
-              extract information from the report output.  Most design  infor-
-              mation  is  listed in fixed-width columns.  When the information
-              for a given field exceeds  the  column  width,  the  next  field
-              begins on a new line, starting in the correct column.
-
-       -expanded
-              Expands the paths when reporting.
-
-       -scenarios scenario_list
-              Reports  path groups for the specified scenarios of a multi-sce-
-              nario design.  Inactive scenarios are  skipped  in  the  report.
-              Each scenario is reported separately.
-
-              If  you do not specify this option, only the current scenario is
-              reported.
-
-DESCRIPTION
-       The report_path_group command produces  a  report  showing  information
-       about  path  groups  in  the  current design.  The report includes path
-       groups automatically created by the  create_clock  command  and  groups
-       manually  created with the group_path command.  Path groups are used to
-       affect the calculation of maximum delay cost during optimization.   You
-       can display the cost of each group using the report_constraint command.
-
-       To remove all path groups in the current design, use  the  reset_design
-       command.   To  remove  certain  paths  from  their  current groups, use
-       group_path -default.
-
-   Multicorner-Multimode Support
-       By default, this command uses information from  the  current  scenario.
-       You can select different scenarios by using the -scenarios option.
-
-EXAMPLES
-       The following example reports all timing attributes set on the design:
-
-         prompt> report_path_group
-
-         ****************************************
-         Report : path_group
-         Design : counter
-         Version: 1998.01
-         Date   : Wed Jul  9 13:51:14 1997
-         ****************************************
-
-         Group Name    Weight    Range
-         ---------------------------------------------------------------
-         **default**   1.00      0.00
-         CLK           1.00      0.00
-         BLUE          1.00      5.00
-
-         Paths:
-         From             Through          To                  Group Name
-         ----------------------------------------------------------------
-         *                *                CLK                 CLK
-         Red_reg[5]       *                Blue_reg[5]         BLUE
-
-SEE ALSO
-       create_clock(2)
-       current_design(2)
-       group_path(2)
-       report_constraint(2)
-       reset_design(2)
-
-                            Version N-2017.09
-            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
-dc_shell> gui_start[K[K[K[K[K[K[K[K[Kreport_
-report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_gui_stroke_builtins                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
-report_annotated_delay                     report_bus                                 report_design                              report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
-report_annotated_transition                report_cache                               report_design_lib                          report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
-report_app_var                             report_case_analysis                       report_dft_clock_controller                report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
-report_area                                report_cell                                report_dft_clock_gating_configuration      report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
-report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
-report_attributes                          report_check_library_options               report_dft_configuration                   report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
-report_auto_ungroup                        report_clock                               report_dft_connect                         report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
-report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
-report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
-report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
-report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
-report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
-report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
-report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
-report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
-report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
-report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
-report_bsd_instruction                     report_constraints                         report_disable_timing                      report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
-report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_mw_lib                              report_qor                                 report_supply_net                          
-report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_name_rules                          report_qtm_model                           report_supply_port                         
-report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_names                               report_reference                           report_synlib                              
-report_buffer_tree                         report_datapath_gating                     report_gui_stroke_bindings                 report_net                                 report_resources                           report_synthetic                           
-dc_shell> report_ne[Kames
-Error: Default rules '' are not defined. (UIMG-16)
-0
-dc_shell> n[Kreport_net
+dc_shell> report_area 
  
 ****************************************
-Report : net
+Report : area
 Design : toplevel
 Version: N-2017.09
-Date   : Thu Dec 20 16:04:47 2018
+Date   : Fri Dec 21 14:46:49 2018
 ****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           79
+Number of nets:                           136
+Number of cells:                           66
+Number of combinational cells:             23
+Number of sequential cells:                35
+Number of macros/black boxes:               0
+Number of buf/inv:                          8
+Number of references:                       6
+
+Combinational area:                 28.967399
+Buf/Inv area:                        3.830400
+Noncombinational area:             159.201007
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   188.168406
+Total area:                 undefined
+1
+dc_shell> report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : toplevel
+Version: N-2017.09
+Date   : Fri Dec 21 14:47:12 2018
+****************************************
+
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
 
 
 Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
 Wire Load Model Mode: top
 
 
-Attributes:
-   dr - drc disabled
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
 
-Net
- Fanout    Fanin     Load      LoadUR    LoadUF    LoadLR    LoadLF    Resist    Pins      Attr
------------------------------------------------------------------------------------------------
-clk
-      2         1      0.0016    0.0016    0.0016    0.0016    0.0016    0.0000       3    dr
-clks_1_
-      5         1      0.0043    0.0043    0.0043    0.0043    0.0043    0.0000       6    
-dataOut_SN
-      1         1      0.0008    0.0008    0.0008    0.0008    0.0008    0.0000       2    
-data_i[0]
-      1         1      0.0008    0.0008    0.0008    0.0008    0.0008    0.0000       2    
-data_i[1]
-      1         1      0.0008    0.0008    0.0008    0.0008    0.0008    0.0000       2    
-data_o
-      1         1      0.0000    0.0000    0.0000    0.0000    0.0000    0.0000       2    
-reset
-      4         1      0.0068    0.0068    0.0055    0.0068    0.0055    0.0000       5    
------------------------------------------------------------------------------------------------
-Total 7 nets
-     15         7      0.0150    0.0150    0.0137    0.0150    0.0137    0.0000      22
-Maximum
-      5         1      0.0068    0.0068    0.0055    0.0068    0.0055    0.0000       6
-Average
- 2.1429    1.0000      0.0021    0.0021    0.0020    0.0021    0.0020    0.0000  3.1429
+
+  Cell Internal Power  =  29.2948 uW   (93%)
+  Net Switching Power  =   2.1835 uW    (7%)
+                         ---------
+Total Dynamic Power    =  31.4782 uW  (100%)
+
+Cell Leakage Power     =   5.9616 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.7554e-02        1.6963e-03            0.3129        1.9563e-02  (  52.25%)
+sequential     1.1076e-02            0.0000            4.8368        1.5913e-02  (  42.50%)
+combinational  6.6502e-04        4.8721e-04            0.8119        1.9641e-03  (   5.25%)
+--------------------------------------------------------------------------------------------------
+Total          2.9295e-02 mW     2.1835e-03 mW         5.9616 uW     3.7440e-02 mW
 1
-dc_shell> report set_[K[K[K[K[K[K[K[K[K[Kman set
-set                                     set_clock_latency                       set_dft_power_control                   set_ieee_1500_configuration             set_message_severity                    set_qtm_global_parameter                set_structure                           
-set_always_on_cell                      set_clock_sense                         set_dft_signal                          set_impl_priority                       set_min_capacitance                     set_qtm_port_drive                      set_svf                                 
-set_always_on_strategy                  set_clock_transition                    set_direct_power_rail_tie               set_implementation                      set_min_delay                           set_qtm_port_load                       set_switching_activity                  
-set_annotated_check                     set_clock_uncertainty                   set_disable_clock_gating_check          set_input_delay                         set_min_library                         set_qtm_technology                      set_switching_activity_profile          
-set_annotated_delay                     set_combinational_type                  set_disable_timing                      set_input_transition                    set_min_pulse_width                     set_query_rules                         set_synlib_dont_get_license             
-set_annotated_transition                set_compile_directives                  set_domain_supply_net                   set_isolate_ports                       set_minimize_tree_delay                 set_register_merging                    set_tap_elements                        
-set_app_var                             set_compile_partitions                  set_dont_retime                         set_isolation                           set_mode                                set_register_output_inversion           set_target_library_subset               
-set_attribute                           set_compile_spg_mode                    set_dont_touch                          set_isolation_cell                      set_model_drive                         set_register_replication                set_test_assume                         
-set_auto_disable_drc_nets               set_connection_class                    set_dont_touch_network                  set_isolation_control                   set_model_load                          set_register_type                       set_test_point_configuration            
-set_auto_ideal_nets                     set_context_margin                      set_dont_use                            set_latch_loop_breakers                 set_model_map_effort                    set_related_supply_net                  set_test_point_element                  
-set_autofix_configuration               set_cost_priority                       set_dp_int_round                        set_lbist_configuration                 set_multi_vth_constraint                set_replace_clock_gates                 set_test_power_modes                    
-set_autofix_element                     set_critical_range                      set_dp_smartgen_options                 set_leakage_optimization                set_multibit_options                    set_resistance                          set_testability_configuration           
-set_balance_registers                   set_current_command_mode                set_drive                               set_leakage_power_model                 set_multicycle_path                     set_resource_allocation                 set_timing_derate                       
-set_boundary_cell                       set_data_check                          set_driving_cell                        set_level_shifter                       set_mw_lib_reference                    set_retention                           set_timing_ranges                       
-set_boundary_cell_io                    set_datapath_gating_options             set_dynamic_optimization                set_level_shifter_cell                  set_mw_technology_file                  set_retention_cell                      set_top_implementation_options          
-set_boundary_optimization               set_datapath_optimization_effort        set_equal                               set_lib_attribute                       set_opcond_inference                    set_retention_control                   set_transform_for_retiming              
-set_bsd_ac_port                         set_default_drive                       set_equivalent                          set_libcell_dimensions                  set_operating_conditions                set_retention_control_pins              set_unconnected                         
-set_bsd_compliance                      set_default_driving_cell                set_false_path                          set_libpin_location                     set_opposite                            set_retention_elements                  set_ungroup                             
-set_bsd_configuration                   set_default_fanout_load                 set_fanout_load                         set_link_library_subset                 set_optimize_registers                  set_rtl_load                            set_unix_variable                       
-set_bsd_instruction                     set_default_input_delay                 set_fix_hold                            set_load                                set_output_clock_port_type              set_scaling_lib_group                   set_upf_query_options                   
-set_bsd_linkage_port                    set_default_load                        set_fix_multiple_port_nets              set_local_link_library                  set_output_delay                        set_scan_compression_configuration      set_user_attribute                      
-set_bsd_power_up_reset                  set_default_output_delay                set_flatten                             set_logic_dc                            set_partial_on_translation              set_scan_configuration                  set_user_budget                         
-set_case_analysis                       set_design_attributes                   set_fsm_encoding                        set_logic_one                           set_path_margin                         set_scan_element                        set_verification_priority               
-set_cell_degradation                    set_design_license                      set_fsm_encoding_style                  set_logic_zero                          set_pg_pin_model                        set_scan_group                          set_voltage                             
-set_cell_internal_power                 set_design_top                          set_fsm_minimize                        set_logicbist_configuration             set_pin_model                           set_scan_link                           set_voltage_model                       
-set_cell_mode                           set_dft_clock_controller                set_fsm_order                           set_map_only                            set_pin_name_synonym                    set_scan_path                           set_vsdc                                
-set_check_library_options               set_dft_clock_gating_configuration      set_fsm_preserve_state                  set_max_area                            set_pipeline_scan_data_configuration    set_scan_register_type                  set_wire_load                           
-set_cle_options                         set_dft_clock_gating_pin                set_fsm_state_vector                    set_max_capacitance                     set_port_attributes                     set_scan_replacement                    set_wire_load_min_block_size            
-set_clock_gate_latency                  set_dft_configuration                   set_gui_stroke_binding                  set_max_delay                           set_port_fanout_number                  set_scan_skew_group                     set_wire_load_mode                      
-set_clock_gating_check                  set_dft_connect                         set_gui_stroke_preferences              set_max_dynamic_power                   set_port_location                       set_scan_state                          set_wire_load_model                     
-set_clock_gating_enable                 set_dft_drc_configuration               set_host_options                        set_max_fanout                          set_power_clock_scaling                 set_scan_suppress_toggling              set_wire_load_selection_group           
-set_clock_gating_objects                set_dft_drc_rules                       set_ideal_latency                       set_max_leakage_power                   set_power_switch_cell                   set_scope                               set_wrapper_configuration               
-set_clock_gating_registers              set_dft_equivalent_signals              set_ideal_net                           set_max_time_borrow                     set_prefer                              set_serialize_configuration             set_zero_interconnect_delay_mode        
-set_clock_gating_style                  set_dft_insertion_configuration         set_ideal_network                       set_max_transition                      set_preserve_clock_gate                 set_size_only                           setenv                                  
-set_clock_groups                        set_dft_location                        set_ideal_transition                    set_message_info                        set_propagated_clock                    set_streaming_compression_configuration 
-dc_shell> man set_mA[Ka
-set_map_only          set_max_area          set_max_capacitance   set_max_delay         set_max_dynamic_power set_max_fanout        set_max_leakage_power set_max_time_borrow   set_max_transition    
-dc_shell> man set_max
-set_max_area          set_max_capacitance   set_max_delay         set_max_dynamic_power set_max_fanout        set_max_leakage_power set_max_time_borrow   set_max_transition    
-dc_shell> man set_max_[K_d
-set_max_delay         set_max_dynamic_power 
-dc_shell> man set_max_d
-Error: ambiguous command 'set_max_d' matched 2 commands:
-	(set_max_delay, set_max_dynamic_power) (CMD-006)
-Error: No manual entry for 'set_max_d' (CMD-025)
-dc_shell> man set_max_d
-set_max_delay         set_max_dynamic_power 
-dc_shell> man set_max_delay 
-2.  Synopsys Commands                                        Command Reference
-                                 set_max_delay
-
-NAME
-       set_max_delay
-              Specifies  a  maximum  delay  target  for  paths  in the current
-              design.
-
-SYNTAX
-       status set_max_delay
-               delay_value
-               [-rise | -fall]
-               [-from from_list
-                | -rise_from rise_from_list
-                | -fall_from fall_from_list]
-               [-through through_list]
-               [-rise_through rise_through_list]
-               [-fall_through fall_through_list]
-               [-to to_list
-                | -rise_to rise_to_list
-                | -fall_to fall_to_list]
-               [-group_path group_name]
-               [-reset_path]
-               [-comment comment_string]
-               [-ignore_clock_latency]
-
-   Data Types
-       delay_value           float
-       from_list             list
-       rise_from_list        list
-       fall_from_list        list
-       through_list          list
-       rise_through_list     list
-       fall_through_list     list
-       to_list               list
-       rise_to_list          list
-       fall_to_list          list
-       group_name            string
-       comment_string        string
-
-ARGUMENTS
-       delay_value
-              Specifies the value of  the  desired  maximum  delay  for  paths
-              between  start  and end points.  You must express delay_value in
-              the same units as the technology library used  during  optimiza-
-              tion.   If  a  path  startpoint is on a sequential device, clock
-              skew is included in the computed delay.  If  a  path  startpoint
-              has  an  input delay specified, that delay value is added to the
-              path delay.  If a path endpoint is on a sequential device, clock
-              skew  and library setup time are included in the computed delay.
-              If the endpoint has an output delay  specified,  that  delay  is
-              added into the path delay.
-
-       -rise | -fall
-              Specifies  whether  endpoint  rising  or falling delays are con-
-              strained.  If you don't specify either, both rising and  falling
-              delays are constrained.
-
-       -from from_list
-              Specifies  a list of path startpoints (port, pin, clock, or cell
-              names) of the current design.  If you specify a clock, all  path
-              startpoints  related to that clock are affected.  If you specify
-              a cell name, one path startpoint on that cell is affected.   All
-              paths from these startpoints to the endpoints in the to_list are
-              constrained to delay_value.  If you don't specify  to_list,  all
-              paths  from  from_list  are  affected.  This list cannot include
-              output ports.  If you include more than  one  object,  you  must
-              enclose the objects in quotation marks ("") or braces ({}).
-
-       -rise_from rise_from_list
-              Same  as  the  -from option, except that the path must rise from
-              the objects specified. If a  clock  object  is  specified,  this
-              option  selects startpoints clocked by the named clock, but only
-              the paths launched by rising edge of  the  clock  at  the  clock
-              source,  taking  into  account  any logical inversions along the
-              clock path.  You can use only  one  of  -from,  -rise_from,  and
-              -fall_from.
-
-       -fall_from fall_from_list
-              Same  as  the  -from option, except that the path must fall from
-              the objects specified. If a  clock  object  is  specified,  this
-              option  selects startpoints clocked by the named clock, but only
-              the paths launched by falling edge of the  clock  at  the  clock
-              source,  taking  into  account  any logical inversions along the
-              clock path.  You can use only  one  of  -from,  -rise_from,  and
-              -fall_from.
-
-       -through through_list
-              Determines a list of path throughpoints (port, pin, or leaf cell
-              names) of the current design.  The max delay value applies  only
-              to   paths   that   pass  through  one  of  the  points  in  the
-              through_list.  If you include more than  one  object,  you  must
-              enclose the objects in quotation marks ("") or braces ({})..  If
-              you specify the -through option multiple times,  the  max  delay
-              values  apply  to  paths  that  pass  through  a  member of each
-              through_list in the order in which the  lists  were  given.   In
-              other  words,  the  path must first pass through a member of the
-              first through_list, then through a member of  the  second  list,
-              and  so  on,  for  every through list specified.  If you use the
-              -through option in combination with the -from or -to option, max
-              delay  applies only if the -from or -to conditions are satisfied
-              and the -through conditions are satisfied.
-
-       -rise_through rise_through_list
-              Same as the -through option, but applies only to  paths  with  a
-              rising  transition  at  the  specified  objects. You can specify
-              -rise_through more than once in a single command  invocation  as
-              with the -through option.
-
-       -fall_through fall_through_list
-              Same  as  the  -through option, but applies only to paths with a
-              falling transition at the specified  objects.  You  can  specify
-              -fall_through  more  than once in a single command invocation as
-              with the -through option.
-
-       -to to_list
-              Specifies a list of path endpoints (port, clock,  cell,  or  pin
-              names) of the current design.  All paths to the endpoints in the
-              to_list are constrained to delay_value.  If you don't specify  a
-              from_list,  all paths to to_list are affected.  This list cannot
-              include input ports.  If you include more than one  object,  you
-              must enclose the objects in quotation marks ("") or braces ({}).
-              If you specify a  cell,  one  path  endpoint  on  that  cell  is
-              affected.  If you specify a clock, all path endpoints related to
-              that clock are affected.
-
-       -rise_to rise_to_list
-              Same as the -to option, but applies only to paths rising at  the
-              endpoint.  If  a  clock object is specified, this option selects
-              endpoints clocked by the named clock, but only  the  paths  cap-
-              tured  by  rising edge of the clock at clock source, taking into
-              account any logical inversions along the clock  path.   You  can
-              use only one of -to, -rise_to, and -fall_to.
-
-       -fall_to fall_to_list
-              Same as the -to option, but applies only to paths falling at the
-              endpoint. If a clock object is specified,  this  option  selects
-              endpoints  clocked  by  the  named  clock,  but  only  the paths
-              launched by falling edge of the clock at the clock source,  tak-
-              ing  into  account  any logical inversions along the clock path.
-              You can use only one of -to, -rise_to, and -fall_to.
-
-       -group_path group_name
-              Specifies the name of the group to which the  paths  are  to  be
-              added.   If  the  group  does  not already exist, it is created.
-              This is equivalent to separately specifying the  group_path com-
-              mand  with  the  -name  group_name  -from  from_list -to to_list
-              options in addition to specifying the set_max_delay command.  If
-              you  do  not  specify this option, the existing path grouping is
-              not changed.
-
-       -reset_path
-              Removes existing point-to-point  exception  information  on  the
-              specified   paths.   Only  information  of  the  same  rise/fall
-              setup/hold type is reset.   This  is  equivalent  to  using  the
-              reset_path  command  with  similar  options before executing the
-              set_max_delay command.
-
-       -comment comment_string
-              Allows the command to accept a comment string. The  tool  honors
-              the  annotation and preserves it with the SDC object so that the
-              exact string is written out when the constraint is  written  out
-              when  you use the write_sdc or write_script command. The comment
-              remains intact through the synthesis, place-and-route, and  tim-
-              ing-analysis flows.
-
-DESCRIPTION
-       Specifies  the  desired  maximum delay for paths in the current design.
-       This command specifies that the maximum path length for any  startpoint
-       in  from_list to any endpoint in to_list must be less than delay_value.
-
-       Individual maximum delay targets are automatically derived  from  clock
-       waveforms  and  port input or output delays.  For more information, see
-       the create_clock, set_input_delay, and set_output_delay man pages.
-
-       The optimization cost of the design depends on  how  path  groups  have
-       been specified.  For more information, see the group_path man page.
-
-       The set_max_delay command is a point-to-point timing exception command;
-       that is, it overrides the default single-cycle timing relationship  for
-       one  or  more timing paths.  Other point-to-point timing exception com-
-       mands   include    the    set_multicycle_path,    set_min_delay,    and
-       set_false_path commands.
-
-       If a path satisfies multiple timing exceptions, the following rules are
-       applied to determine which exceptions take effect.  Rules referring  to
-       -from apply equally to -rise_from and -fall_from, and similarly for the
-       rise and fall options of -through and -to.
-
-        1. Two group_path commands  can  conflict  with  each  other.   But  a
-         group_path exception by itself does not conflict with another type of
-         exception.  Thus, the remaining rules apply for two group_path excep-
-         tions or two non-group_path exceptions.
-
-        2. If both exceptions are set_false_paths, no conflict occurs.
-
-        3.   If   one  exception  is  a  set_max_delay  and  the  other  is  a
-         set_min_delay, no conflict occurs.
-
-        4. If one exception is a set_multicycle_path -hold and  the  other  is
-         set_multicycle_path -setup, no conflict occurs.
-
-        5.  If  one  exception  is  a set_false_path and the other is not, the
-         set_false_path takes precedence.
-
-        6. If one exception is a set_max_delay  and  the  other  is  not,  the
-         set_max_delay takes precedence.
-
-        7.  If  one  exception  is  a  set_min_delay and the other is not, the
-         set_min_delay takes precedence.
-
-        8. If one exception has a -from pin or -from cell and the  other  does
-         not, the former takes precedence.
-
-        9.  If one exception has a -to pin or -to cell and the other does not,
-         the former takes precedence.
-
-        10. If one exception has any -through points and the other  does  not,
-         the former takes precedence.
-
-        11.  If  one  exception  has a -from clock and the other does not, the
-         former takes precedence.
-
-        12. If one exception has a -to clock and the other does not, the  for-
-         mer takes precedence.
-
-        13.  The  exception  with  the  more restrictive constraint then takes
-         precedence.  For set_max_delay and set_multicycle_path  -setup,  this
-         is  the  constraint  with  the  lower  value.   For set_min_delay and
-         set_multicycle_path -hold, it  is  the  constraint  with  the  higher
-         value.
-
-       The  value  of a max_rise_delay attribute cannot be less than that of a
-       min_rise_delay attribute on the  same  path  (and  similarly  for  fall
-       attributes).  If this occurs, the old attribute is removed.
-
-       Note:  Specifying  a min_delay or max_delay to a pin that is not a path
-       endpoint places an implicit dont_touch attribute on that cell.
-
-       The -group_path option  modifies  the  path  grouping.   Path  grouping
-       affects  the  maximum  delay  cost function.  The worst violator within
-       each group adds to the cost.  For  optimization,  grouping  some  paths
-       separately  can  improve  their  delay cost, but it might also increase
-       design area, and compile time.
-
-       Use the  report_timing_requirements  command  to  list  the  max_delay,
-       min_delay,  multicycle_path, and false_path information for the design.
-       Use report_path_group to list the path groups which are defined.
-
-       To undo set_max_delay, use reset_path.
-
-       To modify paths grouped with the -group_path option, use the group_path
-       command to place the paths in another group or the default group.
-
-   Multicorner-Multimode Support
-       This command applies to the current scenario only.
-
-EXAMPLES
-       The  following  example  shows  how  to optimize the design so that any
-       delay path to a port named Y is less than 10 units.
-
-         prompt> set_max_delay 10.0 -to {Y}
-
-       This example shows how to specify that all paths from cell ff1a or ff1b
-       that  pass  through cell u1 and end at cell ff2e must be less than 15.0
-       units.
-
-         prompt> set_max_delay 15.0 -from {ff1a ff1b} -through {u1} -to {ff2e}
-
-       This example shows how to specify that all paths to  endpoints  clocked
-       by PHI2 must be less than 8.5 units.
-
-         prompt> set_max_delay 8.5 -to [get_clocks PHI2]
-
-       This  example  shows how to set a requirement that all paths leading to
-       ports named busA[*] have a delay of less than 5.0 and are  included  in
-       the path group named busA.
-
-         prompt> set_max_delay 5.0 -to "busA[*]" -group_path "busA"
-
-       This  example  shows  how to set a maximum delay requirement of 3.0 for
-       all paths that first pass through either pin u1/Z  or  u2/Z  then  pass
-       through pin u5/Z or u6/Z.
-
-         prompt> set_max_delay 3.0 -through {u1/Z u2/Z} -through {u5/Z u6/Z}
-
-       This  example  specifies  that  all timing paths from pin ff1/CP to pin
-       ff2/D that rise through at least one of pins U1/Z  and  U2/Z  and  fall
-       through  at  least one of pins U3/Z and U4/C must have delays less than
-       8.0 units.
-
-         prompt> set_max_delay 8.0 -from {ff1/CP} -to {ff2/D} \
-            -rise_through {U1/Z U2/Z} -fall_through {U3/Z U4/C}
-
-SEE ALSO
-       compile(2)
-       create_clock(2)
-       group_path(2)
-       report_constraint(2)
-       report_path_group(2)
-       reset_design(2)
-       reset_path(2)
-       set_false_path(2)
-       set_input_delay(2)
-       set_min_delay(2)
-       set_multicycle_path(2)
-       set_output_delay(2)
-
-                            Version N-2017.09
-            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
-dc_shell> set[K[K[Kman set_do
-set_domain_supply_net  set_dont_retime        set_dont_touch         set_dont_touch_network set_dont_use           
-dc_shell> man set_dont
-set_dont_retime        set_dont_touch         set_dont_touch_network set_dont_use           
-dc_shell> man set_dont_
-Error: ambiguous command 'set_dont_' matched 4 commands:
-	(set_dont_retime, set_dont_touch, set_dont_touch_network ...) (CMD-006)
-Error: No manual entry for 'set_dont_' (CMD-025)
-dc_shell> man set_dont_t
-set_dont_touch         set_dont_touch_network 
-dc_shell> man set_dont_touch
-2.  Synopsys Commands                                        Command Reference
-                                set_dont_touch
-
-NAME
-       set_dont_touch
-              Sets  the  dont_touch  attribute on cells, nets, references, and
-              designs in the current design, and on library cells, to  prevent
-              modification  or  replacement  of these objects during optimiza-
-              tion.
-
-SYNTAX
-       status set_dont_touch
-               object_list
-               [true | false]
-
-   Data Types
-       object_list     list
-
-ARGUMENTS
-       object_list
-              Specifies list of objects (cells, nets, references, designs, and
-              library  cells)  on which the dont_touch attribute is to be set,
-              so that the objects will not be modified or replaced.   If  more
-              than one object name is specified, each name must be enclosed in
-              quotation marks (" ") or braces ({}).
-
-       true | false
-              Specifies the value with which to set the dont_touch  attribute.
-              The default is true.
-
-DESCRIPTION
-       This  command sets the dont_touch attribute on cells, nets, references,
-       designs in the current design, and on library cells, to prevent modifi-
-       cation or replacement of these objects during optimization.
-
-       Setting  the  dont_touch  attribute  on  a  hierarchical  cell  implies
-       "dont_touch" on all cells below it that do not have dont_touch  set  to
-       false.
-
-       Setting the dont_touch attribute on a library cell implies "dont_touch"
-       on all instances of that cell.  Setting the dont_touch attribute  on  a
-       net  implies  "dont_touch" only on mapped combinational cells connected
-       to that net.  All mapped combinational cells connected to the net  must
-       be at the same level of hierarchy.
-
-       Note  that  if the enable_keep_signal_dt_net variable is set to true, a
-       different mechanism is used to preserve  a  dont_touch  net.   See  the
-       enable_keep_signal_dt_net man page for more information.
-
-       Setting the dont_touch attribute on a reference implies "dont_touch" on
-       all cells of that reference  during  subsequent  optimizations  of  the
-       design.
-
-       Setting  the  dont_touch  attribute on a design has an effect only when
-       the design is instantiated within another design as a level of  hierar-
-       chy.   In  this case, "dont_touch" on the design implies that all cells
-       under that level of hierarchy are "dont_touch."  Setting dont_touch  on
-       the  top-level  design  has  no  effect  because it is not instantiated
-       within any other design.
-
-       Note the following information:
-
-        o The dont_touch attribute is ignored on nets that have unmapped cells
-         on them.
-
-        o  The  dont_touch attribute applied by the tool on the cells and nets
-         in the transitive fanout of dont_touch_network objects overrides  the
-         false  dont_touch  attribute  value that is set by the set_dont_touch
-         command.  You can see the dont_touch value on cells or nets by  using
-         the report_cell or report_net command.
-
-        o  Setting  the  dont_touch attribute on unmapped cells in Design Com-
-         piler topographical mode causes the  compile_ultra  command  to  fail
-         during execution.
-
-        o  Setting  the  dont_touch  attribute  on selectops and their control
-         logic is not supported if this logic resides at the top level of  the
-         design.
-
-        o  A dont_touch attribute on a clock gating cell or its parent hierar-
-         chical cell will prevent clock gating optimizations from removing  or
-         modifying it.
-
-        o  The dont_touch attribute should be removed by remove_attribute com-
-         mand. It is not equivalent to set_dont_touch to false which will have
-         its   meaning   depending  on  the  context.   E.g.  its  parent  has
-         set_dont_touch is true.  In the DC Explorer flow,  set_dont_touch  to
-         false  on  a  cell  will  be ignored if none of the cell's parent has
-         dont_touch set to true.  In this case, the cell may be optimized away
-         during  compile.  If the cell does not get optimized away during com-
-         pile, the dont_touch false attribute may still be lost after compile.
-
-       The dont_touch attribute affects DFT insertion as follows:
-
-        o  The  dont_touch  attribute indirectly affects DFT insertion by pre-
-         venting the cell type from being changed.  It  is  ignored  for  scan
-         stitching,  test  signal routing, logic insertion. It is also ignored
-         when an identified shift register is split by the scan architect; the
-         head  scan  flip-flops  of  any new shift register segments are scan-
-         replaced even if they have the dont_touchfP attribute applied.
-
-        o A dont_touch attribute applied to a nonscan  sequential  cell  keeps
-         the  cell as a nonscan cell. It will not be scan-replaced or stitched
-         into scan chains. However, nonscan cells identified as shift register
-         elements can be stitched into scan chains.
-
-        o  A  dont_touch  attribute  applied  to  a test-ready (scan-replaced)
-         sequential cell keeps the cell as a scan-replaced cell. If  the  cell
-         is  a  valid  scan cell, it will be stitched into scan chains. If not
-         (due to DRC violations or other directives such  as  set_scan_element
-         false), it will remain as an unstitched test-ready cell.
-
-       When  an  object  name  is  specified, the set_dont_touch command first
-       looks within the current design for a cell that matches that name.   If
-       it  finds a match, a dont_touch attribute is assigned to that cell.  If
-       no match is found, the command next looks within the current design for
-       a  net  that  matches  the  specified  name.   If  a  match is found, a
-       dont_touch attribute is assigned to that net.  If no  match  is  found,
-       the  command  next  looks for a reference, then a design in the system,
-       and finally for a library cell  in  the  system.  The  tool  assigns  a
-       dont_touch attribute to the first object for which it finds a match.
-
-       To remove the dont_touch attribute, use the remove_attribute command.
-
-   Multicorner-Multimode Support
-       This command has no dependency on scenario-specific information.
-
-EXAMPLES
-       The following example specifies that the cells named block1 and analog1
-       are not to be modified during optimization:
-
-         prompt> set_dont_touch [get_cells {block1 analog1}]
-
-       The following example specifies the removal of the dont_touch attribute
-       from the cell named block1:
-
-         prompt> remove_attribute [get_cells block1] dont_touch
-
-       The following example specifies that the net named N1 is not to be mod-
-       ified during optimization:
-
-         prompt> set_dont_touch [get_nets N1] true
-
-SEE ALSO
-       compile(2)
-       get_dont_touch_cells(2)
-       get_dont_touch_nets(2)
-       list_dont_touch_types(2)
-       report_cell(2)
-       report_dont_touch(2)
-       report_net(2)
-       report_reference(2)
-       set_dont_touch_network(2)
-       remove_attribute(2)
-       enable_keep_signal_dt_net(3)
-
-                            Version N-2017.09
-            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
-dc_shell> man set_dont_touch[11G[Ks[Kman create genera[Kated[K[K[K[K[K[K[K[K[K[Ke_generated_clock 
-2.  Synopsys Commands                                        Command Reference
-                            create_generated_clock
-
-NAME
-       create_generated_clock
-              Creates a generated clock object.
-
-SYNTAX
-       string create_generated_clock
-               [-name clock_name]
-               [-add]
-               source_objects
-               -source master_pin
-               [-master_clock clock]
-               [-divide_by divide_factor
-                | -multiply_by multiply_factor]
-               [-duty_cycle percent]
-               [-invert]
-               [-preinvert]
-               [-edges edge_list]
-               [-edge_shift edge_shift_list]
-               [-combinational]
-               [-comment comment_string]
-
-   Data Types
-       clock_name          string
-       source_objects      list
-       master_pin          list
-       clock               string
-       divide_factor       integer
-       multiply_factor     integer
-       percent             float
-       edge_list           list
-       edge_shift_list     list
-       comment_string      string
-
-ARGUMENTS
-       -name clock_name
-              Specifies  the  name  of the generated clock.  If you do not use
-              this option, the clock receives the same name as the first clock
-              source specified in the -source option.  If you specify the -add
-              option, you must use the -name option and the  clocks  with  the
-              same source must have different names.
-
-       -add   Specifies  whether to add this clock to the existing clock or to
-              overwrite.  Use this option to capture the case  where  multiple
-              generated  clocks  must be specified on the same source, because
-              multiple clocks fan into the master pin.  Ideally, one generated
-              clock must be specified for each clock that fans into the master
-              pin.  If you specify this option, you must also  use  the  -name
-              option.
-
-              Defining  multiple  clocks on the same source pin or port causes
-              longer runtime and higher memory  usage  than  a  single  clock,
-              because the synthesis timing engine explores all possible combi-
-              nations of launch and capture clocks.   Use  the  set_false_path
-              command  to disable unwanted clock combinations.  This option is
-              ignored by default, unless multiple clocks analysis  is  enabled
-              by setting the timing_enable_multiple_clocks_per_reg variable to
-              true.
-
-       source_objects
-              Specifies a list of ports or pins  defined  as  generated  clock
-              source objects.
-
-       -source master_pin
-              Specifies  the  master clock pin, which is either a master clock
-              source pin or a pin in the fanout of the master clock and  driv-
-              ing  the  generated clock definition pin.  The clock waveform at
-              the master pin is used for deriving the  generated  clock  wave-
-              form.
-
-       -master_clock clock
-              Specifies  the  master clock to be used for this generated clock
-              if multiple clocks fan into the master pin.
-
-       -divide_by divide_factor
-              Specifies the frequency division factor.  If  the  divide_factor
-              is  2, the generated clock period is twice as long as the master
-              clock period.
-
-       -multiply_by multiply_factor
-              Specifies the frequency multiplication factor.   If  the  multi-
-              ply_factor  is  3, the period is one third as long as the master
-              clock period.
-
-       -duty_cycle percent
-              Specifies the duty cycle (in percent), if frequency  multiplica-
-              tion  is  used.   This  is a number between 0 and 100.  The duty
-              cycle is the high pulse width.
-
-       -invert
-              Inverts the generated clock signal  regardless  of  whether  the
-              sense  of  the  source  clock on the master pin is unate or non-
-              unate (in case of frequency multiplication and division).
-
-       -preinvert
-              Creates a generated clock based on  the  inverted  clock  signal
-              only  when  the  source  clock on the master pin has a non-unate
-              sense, or the generated clock will not be inverted just as  this
-              option  has  not  been  specified.   The  difference between the
-              -invert option and the -preinvert option  is  that  the  -invert
-              option  first creates the generated clock, then inverts the sig-
-              nal, and the -preinvert option first  inverts  the  signal,  and
-              then creates the generated clock signal.
-
-       -edges edge_list
-              Specifies  a list of positive integers that represents the edges
-              from the source clock that are to form the edges of  the  gener-
-              ated clock.  The edges are interpreted as alternating rising and
-              falling edges and each edge must be not less than  its  previous
-              edge.   The  number  of edges must be an odd number and not less
-              than 3 to make one full clock cycle of the generated clock wave-
-              form.   The  first edge must be greater than or equal to 1.  For
-              example, 1 represents the first source edge,  2  represents  the
-              second source edge, and so on.
-
-       -edge_shift edge_shift_list
-              Specifies  a  list of floating-point numbers that represents the
-              amount of shift, in library time units, that the specified edges
-              are to undergo to yield the final generated clock waveform.  The
-              number of edge shifts specified must be equal to the  number  of
-              edges  specified.   The values can be positive or negative, with
-              positive indicating a shift later in time, and negative a  shift
-              earlier  in time.  For example, 1 indicates that the correspond-
-              ing edge is to be shifted by 1 library time unit.
-
-       -combinational
-              Specifies that the source latency paths for this type of  gener-
-              ated clock only includes the logic where the master clock propa-
-              gates along combinational paths.  The source latency paths  will
-              not  flow  through  sequential  element  clock pins, transparent
-              latch data pins, or the source pins of other generated clocks.
-
-       -comment comment_string
-              Allows the command to accept a comment string. The  tool  honors
-              the  annotation and preserves it with the SDC object so that the
-              exact string is written out when the constraint is  written  out
-              when  you use the write_sdc or write_script command. The comment
-              remains intact through the synthesis, place-and-route, and  tim-
-              ing-analysis flows.
-
-DESCRIPTION
-       The  create_generated_clock command creates a generated clock object in
-       the current design.  This command defines a list of objects  as  gener-
-       ated  clock  sources in the current design.  You can specify a pin or a
-       port as a generated clock object.  The command also specifies the clock
-       source from which it is generated.  The advantage of using this command
-       is that whenever the master clock changes, the generated clock  changes
-       automatically.
-
-       The  generated  clock  can be created as a frequency-divided clock with
-       the -divide_by option, a frequency-multiplied clock with  -multiply_by,
-       or  an  edge-derived  clock  with  -edges.  In addition, the frequency-
-       divided or frequency-multiplied clock can be inverted with the  -invert
-       option.   The  shifting of edges of the edge-derived clock is specified
-       with the -edge_shift option.  The -edge_shift option is used for inten-
-       tional  edge shifts and not for clock latency.  If a generated clock is
-       specified with a divide_factor that is a power of 2 (1, 2, 4, ...), the
-       rising edges of the master clock are used to determine the edges of the
-       generated clock.  If the divide_factor is not a power of 2,  the  edges
-       are scaled from the master clock edges.
-
-       Using  create_generated_clock  on  an  existing  generated_clock object
-       overwrites the attributes of the generated_clock object.
-
-       The generated_clock objects are expanded to real clocks at the time  of
-       analysis.
-
-       The following commands can reference the generated_clock:
-
-         set_clock_latency
-         set_clock_uncertainty
-         set_propagated_clock
-         set_clock_transition
-
-       To  display  information  about  generated clocks, use the report_clock
-       command.
-
-   Multicorner-Multimode Support
-       This command uses information from the current scenario only.
-
-EXAMPLES
-       The following example creates a frequency -divide_by 2 generated clock:
-
-         prompt> create_generated_clock -divide_by 2 \
-                 -source CLK [get_pins test]
-
-       The following example creates a frequency -divide_by 3 generated clock.
-       If the master clock period is 30, and the master waveform is  {24  36},
-       the generated clock period is 90 with waveform {72 108}.
-
-         prompt> create_generated_clock -divide_by 3 \
-                 -source CLK [get_pins div3/Q]
-
-       The  following  example  creates  a  frequency -multiply_by 2 generated
-       clock with a duty cycle of 60%:
-
-         prompt> create_generated_clock -multiply_by 2 \
-                 -duty_cycle 60 -source CLK [get_pins test1]
-
-       The following example creates  a  frequency  -multiply_by  3  generated
-       clock  with  a duty cycle equal to the master clock duty cycle.  If the
-       master clock period is 30, and the master waveform is {24 36}, the gen-
-       erated clock period is 10 with waveform {8 12}.
-
-         prompt> create_generated_clock -multiply_by 3 \
-                 -source CLK [get_pins div3/Q]
-
-       The  following  example creates a generated clock whose edges are edges
-       1, 3, and 5 of the master clock source.  If the master clock period  is
-       30,  and  the master waveform is {24 36}, the generated clock period is
-       60 with waveform {24, 54}.
-
-         prompt> create_generated_clock -edges {1 3 5} \
-                 -source CLK [get_pins test2]
-
-       The following example shows the generated clock in the previous example
-       with  each  derived  edge  shifted by 1 time unit.  If the master clock
-       period is 30, and the master waveform is {24 36}, the  generated  clock
-       period is 60 with waveform {25, 55}.
-
-         prompt> create_generated_clock -edges {1 3 5} \
-                 -edge_shift {1 1 1} -source CLK [get_pins test2]
-
-       The following example creates an inverted clock:
-
-         prompt> create_generated_clock -divide_by 2 -invert
-
-SEE ALSO
-       check_timing(2)
-       create_clock(2)
-       get_generated_clocks(2)
-       remove_generated_clock(2)
-       report_clock(2)
-       set_clock_latency(2)
-       set_clock_transition(2)
-       set_clock_uncertainty(2)
-       set_propagated_clock(2)
-       timing_enable_multiple_clocks_per_reg(3)
-
-                            Version N-2017.09
-            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
-dc_shell> man set_max
-set_max_area          set_max_capacitance   set_max_delay         set_max_dynamic_power set_max_fanout        set_max_leakage_power set_max_time_borrow   set_max_transition    
-dc_shell> man set_max_delay 
-2.  Synopsys Commands                                        Command Reference
-                                 set_max_delay
-
-NAME
-       set_max_delay
-              Specifies  a  maximum  delay  target  for  paths  in the current
-              design.
-
-SYNTAX
-       status set_max_delay
-               delay_value
-               [-rise | -fall]
-               [-from from_list
-                | -rise_from rise_from_list
-                | -fall_from fall_from_list]
-               [-through through_list]
-               [-rise_through rise_through_list]
-               [-fall_through fall_through_list]
-               [-to to_list
-                | -rise_to rise_to_list
-                | -fall_to fall_to_list]
-               [-group_path group_name]
-               [-reset_path]
-               [-comment comment_string]
-               [-ignore_clock_latency]
-
-   Data Types
-       delay_value           float
-       from_list             list
-       rise_from_list        list
-       fall_from_list        list
-       through_list          list
-       rise_through_list     list
-       fall_through_list     list
-       to_list               list
-       rise_to_list          list
-       fall_to_list          list
-       group_name            string
-       comment_string        string
-
-ARGUMENTS
-       delay_value
-              Specifies the value of  the  desired  maximum  delay  for  paths
-              between  start  and end points.  You must express delay_value in
-              the same units as the technology library used  during  optimiza-
-              tion.   If  a  path  startpoint is on a sequential device, clock
-              skew is included in the computed delay.  If  a  path  startpoint
-              has  an  input delay specified, that delay value is added to the
-              path delay.  If a path endpoint is on a sequential device, clock
-              skew  and library setup time are included in the computed delay.
-              If the endpoint has an output delay  specified,  that  delay  is
-              added into the path delay.
-
-       -rise | -fall
-              Specifies  whether  endpoint  rising  or falling delays are con-
-              strained.  If you don't specify either, both rising and  falling
-              delays are constrained.
-
-       -from from_list
-              Specifies  a list of path startpoints (port, pin, clock, or cell
-              names) of the current design.  If you specify a clock, all  path
-              startpoints  related to that clock are affected.  If you specify
-              a cell name, one path startpoint on that cell is affected.   All
-              paths from these startpoints to the endpoints in the to_list are
-              constrained to delay_value.  If you don't specify  to_list,  all
-              paths  from  from_list  are  affected.  This list cannot include
-              output ports.  If you include more than  one  object,  you  must
-              enclose the objects in quotation marks ("") or braces ({}).
-
-       -rise_from rise_from_list
-              Same  as  the  -from option, except that the path must rise from
-              the objects specified. If a  clock  object  is  specified,  this
-              option  selects startpoints clocked by the named clock, but only
-              the paths launched by rising edge of  the  clock  at  the  clock
-              source,  taking  into  account  any logical inversions along the
-              clock path.  You can use only  one  of  -from,  -rise_from,  and
-              -fall_from.
-
-       -fall_from fall_from_list
-              Same  as  the  -from option, except that the path must fall from
-              the objects specified. If a  clock  object  is  specified,  this
-              option  selects startpoints clocked by the named clock, but only
-              the paths launched by falling edge of the  clock  at  the  clock
-              source,  taking  into  account  any logical inversions along the
-              clock path.  You can use only  one  of  -from,  -rise_from,  and
-              -fall_from.
-
-       -through through_list
-              Determines a list of path throughpoints (port, pin, or leaf cell
-              names) of the current design.  The max delay value applies  only
-              to   paths   that   pass  through  one  of  the  points  in  the
-              through_list.  If you include more than  one  object,  you  must
-              enclose the objects in quotation marks ("") or braces ({})..  If
-              you specify the -through option multiple times,  the  max  delay
-              values  apply  to  paths  that  pass  through  a  member of each
-              through_list in the order in which the  lists  were  given.   In
-              other  words,  the  path must first pass through a member of the
-              first through_list, then through a member of  the  second  list,
-              and  so  on,  for  every through list specified.  If you use the
-              -through option in combination with the -from or -to option, max
-              delay  applies only if the -from or -to conditions are satisfied
-              and the -through conditions are satisfied.
-
-       -rise_through rise_through_list
-              Same as the -through option, but applies only to  paths  with  a
-              rising  transition  at  the  specified  objects. You can specify
-              -rise_through more than once in a single command  invocation  as
-              with the -through option.
-
-       -fall_through fall_through_list
-              Same  as  the  -through option, but applies only to paths with a
-              falling transition at the specified  objects.  You  can  specify
-              -fall_through  more  than once in a single command invocation as
-              with the -through option.
-
-       -to to_list
-              Specifies a list of path endpoints (port, clock,  cell,  or  pin
-              names) of the current design.  All paths to the endpoints in the
-              to_list are constrained to delay_value.  If you don't specify  a
-              from_list,  all paths to to_list are affected.  This list cannot
-              include input ports.  If you include more than one  object,  you
-              must enclose the objects in quotation marks ("") or braces ({}).
-              If you specify a  cell,  one  path  endpoint  on  that  cell  is
-              affected.  If you specify a clock, all path endpoints related to
-              that clock are affected.
-
-       -rise_to rise_to_list
-              Same as the -to option, but applies only to paths rising at  the
-              endpoint.  If  a  clock object is specified, this option selects
-              endpoints clocked by the named clock, but only  the  paths  cap-
-              tured  by  rising edge of the clock at clock source, taking into
-              account any logical inversions along the clock  path.   You  can
-              use only one of -to, -rise_to, and -fall_to.
-
-       -fall_to fall_to_list
-              Same as the -to option, but applies only to paths falling at the
-              endpoint. If a clock object is specified,  this  option  selects
-              endpoints  clocked  by  the  named  clock,  but  only  the paths
-              launched by falling edge of the clock at the clock source,  tak-
-              ing  into  account  any logical inversions along the clock path.
-              You can use only one of -to, -rise_to, and -fall_to.
-
-       -group_path group_name
-              Specifies the name of the group to which the  paths  are  to  be
-              added.   If  the  group  does  not already exist, it is created.
-              This is equivalent to separately specifying the  group_path com-
-              mand  with  the  -name  group_name  -from  from_list -to to_list
-              options in addition to specifying the set_max_delay command.  If
-              you  do  not  specify this option, the existing path grouping is
-              not changed.
-
-       -reset_path
-              Removes existing point-to-point  exception  information  on  the
-              specified   paths.   Only  information  of  the  same  rise/fall
-              setup/hold type is reset.   This  is  equivalent  to  using  the
-              reset_path  command  with  similar  options before executing the
-              set_max_delay command.
-
-       -comment comment_string
-              Allows the command to accept a comment string. The  tool  honors
-              the  annotation and preserves it with the SDC object so that the
-              exact string is written out when the constraint is  written  out
-              when  you use the write_sdc or write_script command. The comment
-              remains intact through the synthesis, place-and-route, and  tim-
-              ing-analysis flows.
-
-DESCRIPTION
-       Specifies  the  desired  maximum delay for paths in the current design.
-       This command specifies that the maximum path length for any  startpoint
-       in  from_list to any endpoint in to_list must be less than delay_value.
-
-       Individual maximum delay targets are automatically derived  from  clock
-       waveforms  and  port input or output delays.  For more information, see
-       the create_clock, set_input_delay, and set_output_delay man pages.
-
-       The optimization cost of the design depends on  how  path  groups  have
-       been specified.  For more information, see the group_path man page.
-
-       The set_max_delay command is a point-to-point timing exception command;
-       that is, it overrides the default single-cycle timing relationship  for
-       one  or  more timing paths.  Other point-to-point timing exception com-
-       mands   include    the    set_multicycle_path,    set_min_delay,    and
-       set_false_path commands.
-
-       If a path satisfies multiple timing exceptions, the following rules are
-       applied to determine which exceptions take effect.  Rules referring  to
-       -from apply equally to -rise_from and -fall_from, and similarly for the
-       rise and fall options of -through and -to.
-
-        1. Two group_path commands  can  conflict  with  each  other.   But  a
-         group_path exception by itself does not conflict with another type of
-         exception.  Thus, the remaining rules apply for two group_path excep-
-         tions or two non-group_path exceptions.
-
-        2. If both exceptions are set_false_paths, no conflict occurs.
-
-        3.   If   one  exception  is  a  set_max_delay  and  the  other  is  a
-         set_min_delay, no conflict occurs.
-
-        4. If one exception is a set_multicycle_path -hold and  the  other  is
-         set_multicycle_path -setup, no conflict occurs.
-
-        5.  If  one  exception  is  a set_false_path and the other is not, the
-         set_false_path takes precedence.
-
-        6. If one exception is a set_max_delay  and  the  other  is  not,  the
-         set_max_delay takes precedence.
-
-        7.  If  one  exception  is  a  set_min_delay and the other is not, the
-         set_min_delay takes precedence.
-
-        8. If one exception has a -from pin or -from cell and the  other  does
-         not, the former takes precedence.
-
-        9.  If one exception has a -to pin or -to cell and the other does not,
-         the former takes precedence.
-
-        10. If one exception has any -through points and the other  does  not,
-         the former takes precedence.
-
-        11.  If  one  exception  has a -from clock and the other does not, the
-         former takes precedence.
-
-        12. If one exception has a -to clock and the other does not, the  for-
-         mer takes precedence.
-
-        13.  The  exception  with  the  more restrictive constraint then takes
-         precedence.  For set_max_delay and set_multicycle_path  -setup,  this
-         is  the  constraint  with  the  lower  value.   For set_min_delay and
-         set_multicycle_path -hold, it  is  the  constraint  with  the  higher
-         value.
-
-       The  value  of a max_rise_delay attribute cannot be less than that of a
-       min_rise_delay attribute on the  same  path  (and  similarly  for  fall
-       attributes).  If this occurs, the old attribute is removed.
-
-       Note:  Specifying  a min_delay or max_delay to a pin that is not a path
-       endpoint places an implicit dont_touch attribute on that cell.
-
-       The -group_path option  modifies  the  path  grouping.   Path  grouping
-       affects  the  maximum  delay  cost function.  The worst violator within
-       each group adds to the cost.  For  optimization,  grouping  some  paths
-       separately  can  improve  their  delay cost, but it might also increase
-       design area, and compile time.
-
-       Use the  report_timing_requirements  command  to  list  the  max_delay,
-       min_delay,  multicycle_path, and false_path information for the design.
-       Use report_path_group to list the path groups which are defined.
-
-       To undo set_max_delay, use reset_path.
-
-       To modify paths grouped with the -group_path option, use the group_path
-       command to place the paths in another group or the default group.
-
-   Multicorner-Multimode Support
-       This command applies to the current scenario only.
-
-EXAMPLES
-       The  following  example  shows  how  to optimize the design so that any
-       delay path to a port named Y is less than 10 units.
-
-         prompt> set_max_delay 10.0 -to {Y}
-
-       This example shows how to specify that all paths from cell ff1a or ff1b
-       that  pass  through cell u1 and end at cell ff2e must be less than 15.0
-       units.
-
-         prompt> set_max_delay 15.0 -from {ff1a ff1b} -through {u1} -to {ff2e}
-
-       This example shows how to specify that all paths to  endpoints  clocked
-       by PHI2 must be less than 8.5 units.
-
-         prompt> set_max_delay 8.5 -to [get_clocks PHI2]
-
-       This  example  shows how to set a requirement that all paths leading to
-       ports named busA[*] have a delay of less than 5.0 and are  included  in
-       the path group named busA.
-
-         prompt> set_max_delay 5.0 -to "busA[*]" -group_path "busA"
-
-       This  example  shows  how to set a maximum delay requirement of 3.0 for
-       all paths that first pass through either pin u1/Z  or  u2/Z  then  pass
-       through pin u5/Z or u6/Z.
-
-         prompt> set_max_delay 3.0 -through {u1/Z u2/Z} -through {u5/Z u6/Z}
-
-       This  example  specifies  that  all timing paths from pin ff1/CP to pin
-       ff2/D that rise through at least one of pins U1/Z  and  U2/Z  and  fall
-       through  at  least one of pins U3/Z and U4/C must have delays less than
-       8.0 units.
-
-         prompt> set_max_delay 8.0 -from {ff1/CP} -to {ff2/D} \
-            -rise_through {U1/Z U2/Z} -fall_through {U3/Z U4/C}
-
-SEE ALSO
-       compile(2)
-       create_clock(2)
-       group_path(2)
-       report_constraint(2)
-       report_path_group(2)
-       reset_design(2)
-       reset_path(2)
-       set_false_path(2)
-       set_input_delay(2)
-       set_min_delay(2)
-       set_multicycle_path(2)
-       set_output_delay(2)
-
-                            Version N-2017.09
-            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
-dc_shell>  get_
-get_alternative_lib_cells        get_clocks                       get_dont_touch_cells             get_gui_stroke_bindings          get_license                      get_path_groups                  get_related_supply_net           get_selection                    
-get_always_on_logic              get_clusters                     get_dont_touch_nets              get_latch_loop_groups            get_message_ids                  get_pins                         get_rp_groups                    get_shift_register_chains        
-get_app_var                      get_command_option_values        get_estimated_area               get_lib                          get_message_info                 get_polygon_area                 get_scan_cell_names              get_supply_nets                  
-get_attribute                    get_cross_probing_info           get_flat_cells                   get_lib_attribute                get_multibits                    get_ports                        get_scan_cells_of_chain          get_supply_ports                 
-get_buffers                      get_defined_commands             get_flat_nets                    get_lib_cells                    get_nets                         get_power_domains                get_scan_chain_names             get_timing_paths                 
-get_cells                        get_design_lib_path              get_flat_pins                    get_lib_pins                     get_object_name                  get_power_switches               get_scan_chains                  get_unix_variable                
-get_clock                        get_designs                      get_generated_clocks             get_libs                         get_operand_width                get_references                   get_scan_chains_by_name          get_zero_interconnect_delay_mode 
-dc_shell>  get_pins 
-{genblk1_0__Clock_divider/io_clkB genblk1_0__Clock_divider/clk genblk1_0__Clock_divider/reset Serializer/io_clk[1] Serializer/io_rst Serializer/io_dataIn[1] Serializer/io_dataIn[0] Serializer/io_dataOut dataOut_SP_reg/D dataOut_SP_reg/CK dataOut_SP_reg/R dataOut_SP_reg/Q}
 dc_shell> 

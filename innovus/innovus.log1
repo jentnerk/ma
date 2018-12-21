@@ -4,7 +4,7 @@ Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
 Options:	
-Date:		Thu Dec 20 16:50:46 2018
+Date:		Fri Dec 21 10:00:27 2018
 Host:		badile12.ee.ethz.ch (x86_64 w/Linux 3.10.0-514.26.2.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU W3565 @ 3.20GHz 8192KB)
 OS:		CentOS Linux release 7.3.1611 (Core) 
 
@@ -32,3 +32,833 @@ Updating process node dependent CCOpt properties for the 45nm process node.
 <CMD> getDrawView
 <CMD> loadWorkspace -name Physical
 <CMD> win
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set init_design_settop 0
+<CMD> set init_gnd_net VSS
+<CMD> setImportMode -keepEmptyModule 1 -treatUndefinedCellAsBbox 0 -useLefDef56 1
+<CMD> set init_import_mode { -keepEmptyModule 1 -treatUndefinedCellAsBbox 0 -useLefDef56 1}
+<CMD> set init_lef_file {../technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef ../technology/lef/sc9_soi12s0_base_hvt.lef ../technology/lef/sc9_soi12s0_base_svt.lef ../technology/lef/sc9_soi12s0_base_uvt.lef ../technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef}
+<CMD> set init_mmmc_file ./src/mmmc.view.tcl
+<CMD> set init_pwr_net VDD
+<CMD> set init_top_cell toplevel
+<CMD> set init_verilog ../synopsys/netlists/Serializer.v
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set report_timing_format {instance arc cell slew load delay arrival}
+<CMD> set soft_stack_size_limit 47
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/21 10:01:05, mem=459.4M)
+#% End Load MMMC data ... (date=12/21 10:01:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=459.4M, current mem=458.9M)
+best_rc worst_rc typical_rc
+
+Loading LEF file ../technology/lef/45RFSOI_8LM_3Mx_1Cx_1Ux_2Ox_LD_tech.lef ...
+
+Loading LEF file ../technology/lef/sc9_soi12s0_base_hvt.lef ...
+Set DBUPerIGU to M1 pitch 280.
+
+Loading LEF file ../technology/lef/sc9_soi12s0_base_svt.lef ...
+
+Loading LEF file ../technology/lef/sc9_soi12s0_base_uvt.lef ...
+
+Loading LEF file ../technology/lef/io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_8LM_3Mx_1Cx_1Ux_2Ox_LD.lef ...
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PANALOG_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PANALOG_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PAVDD_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PAVDD_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PAVSS_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PAVSS_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBAREWIRE_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBAREWIRE_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBIDIR_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBIDIR_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRKANALOG_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRKANALOG_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRKOSC_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRKOSC_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRK_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PBRK_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PCORNER_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PCORNER_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PDVDD_18_PL_H' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (IMPLF-63):	The layer 'overlap' referenced in OBS in macro 'PDVDD_18_PL_V' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-63' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-63) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSS_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RTO' in macro 'PVSS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SNS' in macro 'PVSS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSS_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RTO' in macro 'PVSS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SNS' in macro 'PVSS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'RTO' in macro 'PVSENSE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SNS' in macro 'PVSENSE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSE_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'RTO' in macro 'PVSENSE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SNS' in macro 'PVSENSE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSE_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'RTO' in macro 'PVSENSETIE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SNS' in macro 'PVSENSETIE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSETIE_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSETIE_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'RTO' in macro 'PVSENSETIE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SNS' in macro 'PVSENSETIE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSETIE_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSETIE_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSELS_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSELS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RTO' in macro 'PVSENSELS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SNS' in macro 'PVSENSELS_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVSENSELS_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVSENSELS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RTO' in macro 'PVSENSELS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SNS' in macro 'PVSENSELS_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVDD_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVDD_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RTO' in macro 'PVDD_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SNS' in macro 'PVDD_18_PL_V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVDD_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'TRIGGER' in macro 'PVDD_18_PL_H' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVDDI_18_PL_V' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'TRIGGER' in macro 'PVDDI_18_PL_H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Fri Dec 21 10:01:07 2018
+viaInitial ends at Fri Dec 21 10:01:07 2018
+Loading view definition file from ./src/mmmc.view.tcl
+Reading typical_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'A2SDFFQN_X0P5M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'A2SDFFQN_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'A2SDFFQN_X2M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'A2SDFFQN_X3M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'A2SDFFQ_X0P5M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'A2SDFFQ_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'A2SDFFQ_X2M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'A2SDFFQ_X3M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'A2SDFFQ_X4M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFCIN_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'SUM' of cell 'ADDFCIN_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFCIN_X1P4M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'SUM' of cell 'ADDFCIN_X1P4M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFCIN_X2M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'SUM' of cell 'ADDFCIN_X2M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFH_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'SUM' of cell 'ADDFH_X1M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFH_X1P4M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'SUM' of cell 'ADDFH_X1P4M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFH_X2M_A9TH' is not defined in the library. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325275)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325269)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325628)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325622)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325981)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 325975)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 326334)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 326328)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 326687)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 326681)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327040)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327034)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327393)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327387)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327746)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 327740)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 328099)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 328093)
+**ERROR: (TECHLIB-1318):	All the table values in the 'rise_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 1039780)
+**ERROR: (TECHLIB-1318):	All the table values in the 'fall_transition' group are within '0.000010' of each other. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib, Line 1039774)
+Message <TECHLIB-1318> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP8_A9TH'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP64_A9TH'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP32_A9TH'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP16_A9TH'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.lib)
+Read 885 cells in library 'sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns' 
+Reading typical_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP8_A9TS'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP64_A9TS'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP32_A9TS'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP16_A9TS'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.lib)
+Read 885 cells in library 'sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns' 
+Reading typical_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP8_A9TU'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP64_A9TU'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP32_A9TU'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLDGCAP16_A9TU'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.lib)
+Read 885 cells in library 'sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns' 
+Reading typical_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'max_capacitance' has been defined for input pin 'RET_EXT'. 'max_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib, Line 29248)
+**WARN: (TECHLIB-1277):	The attribute 'min_capacitance' has been defined for input pin 'RET_EXT'. 'min_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib, Line 29250)
+**WARN: (TECHLIB-1277):	The attribute 'max_capacitance' has been defined for input pin 'RET_EXT'. 'max_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib, Line 29440)
+**WARN: (TECHLIB-1277):	The attribute 'min_capacitance' has been defined for input pin 'RET_EXT'. 'min_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib, Line 29442)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRKANALOG_18_PL_V'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRKANALOG_18_PL_H'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRKOSC_18_PL_V'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRKOSC_18_PL_H'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRK_18_PL_V'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PBRK_18_PL_H'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PFILL10_18_PL_V'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PFILL10_18_PL_H'. The cell will only be used for analysis. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.lib)
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 46 cells in library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' 
+Reading best_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/lib/sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns.lib' ...
+Read 885 cells in library 'sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns' 
+Reading best_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/lib/sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns.lib' ...
+Read 885 cells in library 'sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns' 
+Reading best_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/lib/sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns.lib' ...
+Read 885 cells in library 'sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns' 
+Reading best_libs timing library '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'max_capacitance' has been defined for input pin 'RET_EXT'. 'max_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib, Line 29247)
+**WARN: (TECHLIB-1277):	The attribute 'min_capacitance' has been defined for input pin 'RET_EXT'. 'min_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib, Line 29249)
+**WARN: (TECHLIB-1277):	The attribute 'max_capacitance' has been defined for input pin 'RET_EXT'. 'max_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib, Line 29439)
+**WARN: (TECHLIB-1277):	The attribute 'min_capacitance' has been defined for input pin 'RET_EXT'. 'min_capacitance' cannot be defined at this level and is being ignored. (File /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/lib/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c.lib, Line 29441)
+Read 46 cells in library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c_3_20_30_00_00_02_LB' 
+*** End library_loading (cpu=0.28min, real=0.30min, mem=142.3M, fe_cpu=0.58min, fe_real=0.97min, fe_mem=676.0M) ***
+#% Begin Load netlist data ... (date=12/21 10:01:25, mem=818.1M)
+*** Begin netlist parsing (mem=676.0M) ***
+Created 2701 new cells from 8 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../synopsys/netlists/Serializer.v'
+
+*** Memory Usage v#1 (Current mem = 676.043M, initial mem = 180.676M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:02.0, mem=676.0M) ***
+#% End Load netlist data ... (date=12/21 10:01:27, total cpu=0:00:00.1, real=0:00:02.0, peak res=818.1M, current mem=631.1M)
+Set top cell to toplevel.
+Hooked 5402 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell toplevel ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite sc9_soi12s0 width 380.
+** info: there are 5443 modules.
+** info: there are 7 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 771.715M, initial mem = 180.676M) ***
+**WARN: (IMPFP-3961):	The techSite 'IOSITE_io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_130_0000' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOCORNERSITE_io_gppr_45rfsoi_t18_mv10_mv18_avt_pl_142_0000' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Adjust ld preferred direction offset from 4.4 to 0.07.
+Generated pitch 6.8 in ld is different from 8.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file 'src/mmmc_test.sdc' ...
+Current (total cpu=0:00:37.0, real=0:01:05, peak res=961.9M, current mem=961.9M)
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=961.9M, current mem=913.7M)
+Current (total cpu=0:00:37.0, real=0:01:05, peak res=961.9M, current mem=913.7M)
+Reading timing constraints file 'src/mmmc_shared.sdc' ...
+Current (total cpu=0:00:37.1, real=0:01:05, peak res=961.9M, current mem=913.7M)
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=914.1M, current mem=914.1M)
+Current (total cpu=0:00:37.1, real=0:01:05, peak res=961.9M, current mem=914.1M)
+Reading timing constraints file 'src/mmmc_functional.sdc' ...
+Current (total cpu=0:00:37.1, real=0:01:05, peak res=961.9M, current mem=914.1M)
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'ScanEn_TI' (File src/mmmc_functional.sdc, Line 36).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'ScanEn_TI' (File src/mmmc_functional.sdc, Line 36).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '' (File src/mmmc_functional.sdc, Line 36).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or pins' that match '' (File src/mmmc_functional.sdc, Line 36).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'RamTest_TI' (File src/mmmc_functional.sdc, Line 37).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'RamTest_TI' (File src/mmmc_functional.sdc, Line 37).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '' (File src/mmmc_functional.sdc, Line 37).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or pins' that match '' (File src/mmmc_functional.sdc, Line 37).
+
+INFO (CTE): Reading of timing constraints file src/mmmc_functional.sdc completed, with 4 Warnings and 4 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=914.4M, current mem=914.4M)
+Current (total cpu=0:00:37.1, real=0:01:05, peak res=961.9M, current mem=914.4M)
+Reading timing constraints file 'src/mmmc_shared.sdc' ...
+Current (total cpu=0:00:37.2, real=0:01:05, peak res=961.9M, current mem=914.4M)
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=914.8M, current mem=914.8M)
+Current (total cpu=0:00:37.2, real=0:01:05, peak res=961.9M, current mem=914.8M)
+Total number of combinational cells: 1974
+Total number of sequential cells: 654
+Total number of tristate cells: 27
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFH_X0P8M_A9TU BUFH_X0P7M_A9TU BUFH_X11M_A9TU BUFH_X13M_A9TU BUFH_X16M_A9TU BUFH_X1M_A9TU BUFH_X1P2M_A9TU BUFH_X1P7M_A9TU BUFH_X1P4M_A9TU BUFH_X2M_A9TU BUFH_X3M_A9TU BUFH_X2P5M_A9TU BUFH_X3P5M_A9TU BUFH_X4M_A9TU BUFH_X5M_A9TU BUFH_X6M_A9TU BUFH_X7P5M_A9TU BUFH_X9M_A9TU BUF_X0P7B_A9TU BUF_X0P7M_A9TU BUF_X0P8M_A9TU BUF_X0P8B_A9TU BUF_X11M_A9TU BUF_X11B_A9TU BUF_X13M_A9TU BUF_X13B_A9TU BUF_X16B_A9TU BUF_X16M_A9TU BUF_X1M_A9TU BUF_X1B_A9TU BUF_X1P2B_A9TU BUF_X1P2M_A9TU BUF_X1P4B_A9TU BUF_X1P4M_A9TU BUF_X1P7B_A9TU BUF_X1P7M_A9TU BUF_X2M_A9TU BUF_X2B_A9TU BUF_X2P5B_A9TU BUF_X2P5M_A9TU BUF_X3M_A9TU BUF_X3B_A9TU BUF_X3P5M_A9TU BUF_X3P5B_A9TU BUF_X4M_A9TU BUF_X4B_A9TU BUF_X5M_A9TU BUF_X5B_A9TU BUF_X6M_A9TU BUF_X6B_A9TU BUF_X7P5M_A9TU BUF_X7P5B_A9TU BUF_X9B_A9TU BUF_X9M_A9TU BUFH_X0P8M_A9TS BUFH_X0P7M_A9TS BUFH_X11M_A9TS BUFH_X13M_A9TS BUFH_X16M_A9TS BUFH_X1M_A9TS BUFH_X1P2M_A9TS BUFH_X1P7M_A9TS BUFH_X1P4M_A9TS BUFH_X2M_A9TS BUFH_X3M_A9TS BUFH_X2P5M_A9TS BUFH_X3P5M_A9TS BUFH_X4M_A9TS BUFH_X5M_A9TS BUFH_X6M_A9TS BUFH_X7P5M_A9TS BUFH_X9M_A9TS BUF_X0P7B_A9TS BUF_X0P7M_A9TS BUF_X0P8M_A9TS BUF_X0P8B_A9TS BUF_X11M_A9TS BUF_X11B_A9TS BUF_X13M_A9TS BUF_X13B_A9TS BUF_X16B_A9TS BUF_X16M_A9TS BUF_X1M_A9TS BUF_X1B_A9TS BUF_X1P2B_A9TS BUF_X1P2M_A9TS BUF_X1P4B_A9TS BUF_X1P4M_A9TS BUF_X1P7B_A9TS BUF_X1P7M_A9TS BUF_X2M_A9TS BUF_X2B_A9TS BUF_X2P5B_A9TS BUF_X2P5M_A9TS BUF_X3M_A9TS BUF_X3B_A9TS BUF_X3P5M_A9TS BUF_X3P5B_A9TS BUF_X4M_A9TS BUF_X4B_A9TS BUF_X5M_A9TS BUF_X5B_A9TS BUF_X6M_A9TS BUF_X6B_A9TS BUF_X7P5M_A9TS BUF_X7P5B_A9TS BUF_X9B_A9TS BUF_X9M_A9TS DLY2S1_X2M_A9TS DLY2_X0P5M_A9TS BUFH_X0P8M_A9TH BUFH_X0P7M_A9TH BUFH_X11M_A9TH BUFH_X13M_A9TH BUFH_X16M_A9TH BUFH_X1M_A9TH BUFH_X1P2M_A9TH BUFH_X1P7M_A9TH BUFH_X1P4M_A9TH BUFH_X2M_A9TH BUFH_X3M_A9TH BUFH_X2P5M_A9TH BUFH_X3P5M_A9TH BUFH_X4M_A9TH BUFH_X5M_A9TH BUFH_X6M_A9TH BUFH_X7P5M_A9TH BUFH_X9M_A9TH BUF_X0P7B_A9TH BUF_X0P7M_A9TH BUF_X0P8M_A9TH BUF_X0P8B_A9TH BUF_X11M_A9TH BUF_X11B_A9TH BUF_X13M_A9TH BUF_X13B_A9TH BUF_X16B_A9TH BUF_X16M_A9TH BUF_X1M_A9TH BUF_X1B_A9TH BUF_X1P2B_A9TH BUF_X1P2M_A9TH BUF_X1P4B_A9TH BUF_X1P4M_A9TH BUF_X1P7B_A9TH BUF_X1P7M_A9TH BUF_X2M_A9TH BUF_X2B_A9TH BUF_X2P5B_A9TH BUF_X2P5M_A9TH BUF_X3M_A9TH BUF_X3B_A9TH BUF_X3P5M_A9TH BUF_X3P5B_A9TH BUF_X4M_A9TH BUF_X4B_A9TH BUF_X5M_A9TH BUF_X5B_A9TH BUF_X6M_A9TH BUF_X6B_A9TH BUF_X7P5M_A9TH BUF_X7P5B_A9TH BUF_X9B_A9TH BUF_X9M_A9TH DLY2S1_X2M_A9TH DLY2S2_X3M_A9TH DLY2S2_X2M_A9TH DLY2_X0P5M_A9TH
+Total number of usable buffers: 168
+List of unusable buffers: FRICG_X0P5B_A9TU FRICG_X0P6B_A9TU FRICG_X0P8B_A9TU FRICG_X0P7B_A9TU FRICG_X11B_A9TU FRICG_X13B_A9TU FRICG_X16B_A9TU FRICG_X1B_A9TU FRICG_X1P2B_A9TU FRICG_X1P4B_A9TU FRICG_X2B_A9TU FRICG_X1P7B_A9TU FRICG_X3B_A9TU FRICG_X2P5B_A9TU FRICG_X3P5B_A9TU FRICG_X4B_A9TU FRICG_X5B_A9TU FRICG_X6B_A9TU FRICG_X7P5B_A9TU FRICG_X9B_A9TU FRICG_X0P5B_A9TS FRICG_X0P6B_A9TS FRICG_X0P8B_A9TS FRICG_X0P7B_A9TS FRICG_X11B_A9TS FRICG_X13B_A9TS FRICG_X16B_A9TS FRICG_X1B_A9TS FRICG_X1P2B_A9TS FRICG_X1P4B_A9TS FRICG_X2B_A9TS FRICG_X1P7B_A9TS FRICG_X3B_A9TS FRICG_X2P5B_A9TS FRICG_X3P5B_A9TS FRICG_X4B_A9TS FRICG_X5B_A9TS FRICG_X6B_A9TS FRICG_X7P5B_A9TS FRICG_X9B_A9TS FRICG_X0P5B_A9TH FRICG_X0P6B_A9TH FRICG_X0P8B_A9TH FRICG_X0P7B_A9TH FRICG_X11B_A9TH FRICG_X13B_A9TH FRICG_X16B_A9TH FRICG_X1B_A9TH FRICG_X1P2B_A9TH FRICG_X1P4B_A9TH FRICG_X2B_A9TH FRICG_X1P7B_A9TH FRICG_X3B_A9TH FRICG_X2P5B_A9TH FRICG_X3P5B_A9TH FRICG_X4B_A9TH FRICG_X5B_A9TH FRICG_X6B_A9TH FRICG_X7P5B_A9TH FRICG_X9B_A9TH
+Total number of unusable buffers: 60
+List of usable inverters: INV_X0P5B_A9TU INV_X0P5M_A9TU INV_X0P6B_A9TU INV_X0P6M_A9TU INV_X0P7B_A9TU INV_X0P7M_A9TU INV_X0P8M_A9TU INV_X0P8B_A9TU INV_X11M_A9TU INV_X11B_A9TU INV_X13M_A9TU INV_X13B_A9TU INV_X16B_A9TU INV_X16M_A9TU INV_X1M_A9TU INV_X1B_A9TU INV_X1P2B_A9TU INV_X1P2M_A9TU INV_X1P4B_A9TU INV_X1P4M_A9TU INV_X1P7B_A9TU INV_X1P7M_A9TU INV_X2M_A9TU INV_X2B_A9TU INV_X2P5B_A9TU INV_X2P5M_A9TU INV_X3M_A9TU INV_X3B_A9TU INV_X3P5B_A9TU INV_X3P5M_A9TU INV_X4M_A9TU INV_X4B_A9TU INV_X5M_A9TU INV_X5B_A9TU INV_X6M_A9TU INV_X6B_A9TU INV_X7P5M_A9TU INV_X7P5B_A9TU INV_X9B_A9TU INV_X9M_A9TU INV_X0P5B_A9TS INV_X0P5M_A9TS INV_X0P6B_A9TS INV_X0P6M_A9TS INV_X0P7B_A9TS INV_X0P7M_A9TS INV_X0P8M_A9TS INV_X0P8B_A9TS INV_X11M_A9TS INV_X11B_A9TS INV_X13M_A9TS INV_X13B_A9TS INV_X16B_A9TS INV_X16M_A9TS INV_X1M_A9TS INV_X1B_A9TS INV_X1P2B_A9TS INV_X1P2M_A9TS INV_X1P4B_A9TS INV_X1P4M_A9TS INV_X1P7B_A9TS INV_X1P7M_A9TS INV_X2M_A9TS INV_X2B_A9TS INV_X2P5B_A9TS INV_X2P5M_A9TS INV_X3M_A9TS INV_X3B_A9TS INV_X3P5B_A9TS INV_X3P5M_A9TS INV_X4M_A9TS INV_X4B_A9TS INV_X5M_A9TS INV_X5B_A9TS INV_X6M_A9TS INV_X6B_A9TS INV_X7P5M_A9TS INV_X7P5B_A9TS INV_X9B_A9TS INV_X9M_A9TS INV_X0P5B_A9TH INV_X0P5M_A9TH INV_X0P6B_A9TH INV_X0P6M_A9TH INV_X0P7B_A9TH INV_X0P7M_A9TH INV_X0P8M_A9TH INV_X0P8B_A9TH INV_X11M_A9TH INV_X11B_A9TH INV_X13M_A9TH INV_X13B_A9TH INV_X16B_A9TH INV_X16M_A9TH INV_X1M_A9TH INV_X1B_A9TH INV_X1P2B_A9TH INV_X1P2M_A9TH INV_X1P4B_A9TH INV_X1P4M_A9TH INV_X1P7B_A9TH INV_X1P7M_A9TH INV_X2M_A9TH INV_X2B_A9TH INV_X2P5B_A9TH INV_X2P5M_A9TH INV_X3M_A9TH INV_X3B_A9TH INV_X3P5B_A9TH INV_X3P5M_A9TH INV_X4M_A9TH INV_X4B_A9TH INV_X5M_A9TH INV_X5B_A9TH INV_X6M_A9TH INV_X6B_A9TH INV_X7P5M_A9TH INV_X7P5B_A9TH INV_X9M_A9TH INV_X9B_A9TH
+Total number of usable inverters: 120
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY2S1_X2M_A9TU DLY2S2_X3M_A9TU DLY2S2_X2M_A9TU DLY2S3_X3M_A9TU DLY2S3_X2M_A9TU DLY2S4_X2M_A9TU DLY2S4_X3M_A9TU DLY2_X0P5M_A9TU DLY4_X0P5M_A9TU DLY2S2_X3M_A9TS DLY2S2_X2M_A9TS DLY2S3_X3M_A9TS DLY2S3_X2M_A9TS DLY2S4_X2M_A9TS DLY2S4_X3M_A9TS DLY4_X0P5M_A9TS DLY2S3_X3M_A9TH DLY2S3_X2M_A9TH DLY2S4_X2M_A9TH DLY2S4_X3M_A9TH DLY4_X0P5M_A9TH
+Total number of identified usable delay cells: 21
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Importing multi-corner technology file(s) for preRoute extraction...
+../technology/qrc/nominal/qrcTechFile
+../technology/qrc/FuncCmin/qrcTechFile
+Completed (cpu: 0:00:05.0 real: 0:00:06.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: func_view
+    RC-Corner Name        : typical_rc
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../technology/qrc/nominal/qrcTechFile'
+ 
+ Analysis View: test_view
+    RC-Corner Name        : typical_rc
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../technology/qrc/nominal/qrcTechFile'
+ 
+ Analysis View: hold_view
+    RC-Corner Name        : best_rc
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../technology/qrc/FuncCmin/qrcTechFile'
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-63            46  The layer '%s' referenced %s is not foun...
+WARNING   IMPLF-200          152  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201           72  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+WARNING   TCLCMD-513           4  The software could not find a matching o...
+ERROR     TCLCMD-917           4  Cannot find '%s' that match '%s'         
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-1277         8  The %s '%s' has been defined for %s %s '...
+ERROR     TECHLIB-1318        20  All the table values in the '%s' group a...
+*** Message Summary: 324 warning(s), 24 error(s)
+
+genblk1_0__Clock_divider/io_clkB genblk1_0__Clock_divider/clk genblk1_0__Clock_divider/reset Serializer/io_clk[1] Serializer/io_rst Serializer/io_dataIn[1] Serializer/io_dataIn[0] Serializer/io_dataOut dataOut_SP_reg/CK dataOut_SP_reg/D dataOut_SP_reg/Q dataOut_SP_reg/R
+data_i[1] data_i[0] data_o Clk_CI reset
+<CMD> set_proto_design_mode -max_category 20 -max_path 1 -max_net 100 -max_iteration 50
+<CMD> proto_design
+################################################
+# INFO: starting proto_design with following settings: 
+# setPlaceMode -reportDensityMap false -biasedPlace false -timingDriven false
+# setPlanDesignMode -effort high -noColorize true 
+# setPlanDesignMode -abSpacingX -1.0  -abSpacingY -1.0 
+# setPlanDesignMode -maxDistToGuide 0.0000 -useFlexModel guide
+# setPlanDesignMode -refineSeed -noOverlapGuide -rectangleOnly
+# setPlanDesignMode -placeBlock -searchAndRepair 1 
+# setPlanDesignMode -timing true 
+# set_proto_mode -place_effort fp 
+# set_proto_mode -timing_net_delay_model best_layer_no_detour 
+################################################
+-keepGuide true                           # bool, default=false, user setting
+**ERROR: (IMPFM-760):	The design has no flexmodel, please specify planDesign seeds in a constraint file and do proto_design -constraints. 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPFM-760            1  The design has no flexmodel, please spec...
+*** Message Summary: 0 warning(s), 1 error(s)
+
+<CMD> setPlaceMode -fp false
+<CMD> placeDesign
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.0) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+Effort level <high> specified for reg2reg_tmp.20007 path_group
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: toplevel
+# Design Mode: 45nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=1102.81)
+AAE DB initialization (MEM=1102.81 CPU=0:00:00.1 REAL=0:00:00.0) 
+Total number of fetched objects 11
+End delay calculation. (MEM=1324.18 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1226.81 CPU=0:00:01.9 REAL=0:00:15.0)
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Deleted 0 physical inst  (cell - / prefix -).
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2106):	There is no track defined on layer M8. This can be due to out of range track value and the need to use 64bit version or a problem with the track in that layer. Check the track input for layer M8. You may need to run 'generateTracks' command before proceeding.
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#10 (mem=1212.7M)" ...
+total jobs 47776
+multi thread init TemplateIndex for each ta. thread num 1
+Wait...
+*** Build Buffered Sizing Timing Model (Used Compact Buffer Set) ...(cpu=0:00:07.0 mem=1359.7M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.2 mem=1444.7M) ***
+No user setting net weight.
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=7 (0 fixed + 7 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=11 #term=29 #term/net=2.64, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=5
+stdCell: 7 single + 0 double + 0 multi
+Total standard cell length = 0.0165 (mm), area = 0.0000 (mm^2)
+Estimated cell power/ground rail width = 0.158 um
+Average module density = 0.702.
+Density for the design = 0.702.
+       = stdcell_area 87 sites (21 um^2) / alloc_area 124 sites (30 um^2).
+Pin Density = 0.2339.
+            = total # of pins 29 / total area 124.
+=== lastAutoLevel = 3 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1537.2M
+Iteration  2: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1537.2M
+Iteration  3: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1537.2M
+Active setup views:
+    func_view
+Iteration  4: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1537.2M
+Active setup views:
+    func_view
+Iteration  5: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1537.2M
+Iteration  6: Total net bbox = 3.582e+01 (2.23e+01 1.35e+01)
+              Est.  stn bbox = 3.664e+01 (2.29e+01 1.38e+01)
+              cpu = 0:00:00.0 real = 0:00:01.0 mem = 1537.2M
+*** cost = 3.582e+01 (2.23e+01 1.35e+01) (cpu for global=0:00:00.0) real=0:00:01.0***
+Info: 0 clock gating cells identified, 0 (on average) moved
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:00.0 real: 0:00:01.0
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+*** Starting refinePlace (0:01:27 mem=1537.2M) ***
+Total net bbox length = 3.582e+01 (2.234e+01 1.348e+01) (ext = 2.572e+01)
+Density distribution unevenness ratio = 0.000%
+Move report: Detail placement moves 7 insts, mean move: 2.56 um, max move: 4.46 um
+	Max move on inst (Serializer/U4): (2.75, 1.89) --> (5.32, 0.00)
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1537.2MB
+Summary Report:
+Instances move: 7 (out of 7 movable)
+Instances flipped: 0
+Mean displacement: 2.56 um
+Max displacement: 4.46 um (Instance: Serializer/U4) (2.755, 1.89) -> (5.32, 0)
+	Length: 2 sites, height: 1 rows, site name: sc9_soi12s0, cell type: INV_X0P8M_A9TS
+Total net bbox length = 3.952e+01 (1.493e+01 2.460e+01) (ext = 1.658e+01)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1537.2MB
+*** Finished refinePlace (0:01:27 mem=1537.2M) ***
+*** End of Placement (cpu=0:00:18.8, real=0:00:20.0, mem=1537.2M) ***
+default core: bins with density >  0.75 =    0 % ( 0 / 1 )
+Density distribution unevenness ratio = 0.000%
+*** Free Virtual Timing Model ...(mem=1537.2M)
+Starting congestion repair ...
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Layer1 has no routable track
+[NR-eGR] Layer2 has single uniform track structure
+[NR-eGR] Layer3 has single uniform track structure
+[NR-eGR] Layer4 has single uniform track structure
+[NR-eGR] Layer5 has single uniform track structure
+[NR-eGR] Layer6 has single uniform track structure
+[NR-eGR] Layer7 has single uniform track structure
+[NR-eGR] Layer8 has single uniform track structure
+[NR-eGR] numRoutingBlks=0 numInstBlks=18 numPGBlocks=0 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
+[NR-eGR] Read numTotalNets=7  numIgnoredNets=0
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id 0. Nets 7 
+[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
+[NR-eGR] Pitch:  L1=280  L2=280  L3=280  L4=380  L5=3200  L6=6000  L7=6000  L8=13600
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 7 net(s) in layer range [2, 8]
+[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 2.268000e+01um
+[NR-eGR] 
+[NR-eGR] Congestion Analysis Layer By layer: (blocked Gcells are excluded) 
+[NR-eGR]                OverCon            
+[NR-eGR]                 #Gcell     %Gcell
+[NR-eGR] Layer              (0)    OverCon 
+[NR-eGR] ------------------------------------
+[NR-eGR] Layer1       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer2       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer3       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer4       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer5       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer6       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer7       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer8       0( 0.00%)   ( 0.00%) 
+[NR-eGR] ------------------------------------
+[NR-eGR] Total        0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Layer1(m1)(F) length: 0.000000e+00um, number of vias: 16
+[NR-eGR] Layer2(m2)(H) length: 9.817000e+00um, number of vias: 24
+[NR-eGR] Layer3(m3)(V) length: 1.540000e+01um, number of vias: 0
+[NR-eGR] Layer4(c1)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer5(ua)(V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer6(oa)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer7(ob)(V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer8(ld)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 2.521700e+01um, number of vias: 40
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total clock nets wire length: 0.000000e+00um 
+[NR-eGR] --------------------------------------------------------------------------
+End of congRepair (cpu=0:00:00.0, real=0:00:00.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0:22, real = 0: 0:37, mem = 1224.2M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+WARNING   IMPTR-2106           1  There is no track defined on layer %s. T...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+<CMD> selectInst Serializer/reg_SP_reg_1_
+<CMD> deselectAll
+<CMD> selectInst genblk1_0__Clock_divider/clkB_reg
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+<CMD> setNanoRouteMode -quiet -timingEngine {}
+<CMD> setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+<CMD> setNanoRouteMode -quiet -drouteStartIteration default
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+<CMD> setNanoRouteMode -quiet -routeTopRoutingLayer default
+<CMD> setNanoRouteMode -quiet -drouteEndIteration default
+**WARN: (IMPTCM-77):	Option "-routeEcoOnlyInLayers" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+<CMD> setNanoRouteMode -quiet -routeWithTimingDriven false
+<CMD> setNanoRouteMode -quiet -routeWithSiDriven false
+Running Native NanoRoute ...
+<CMD> routeDesign -globalDetail
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1170.04 (MB), peak = 1535.50 (MB)
+#WARNING (NRIG-96) Selected single pass global detail route "-globalDetail". Clock eco and post optimizations will not be run. See "man NRIG-96" for more details.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: mulit-cut via swapping is disabled by user.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+#**INFO: auto set of routeReserveSpaceForMultiCut to true
+#**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
+Begin checking placement ... (start mem=1226.2M, init mem=1226.2M)
+*info: Placed = 7             
+*info: Unplaced = 0           
+Placement Density:70.16%(21/30)
+Placement Density (including fixed std cells):70.16%(21/30)
+Finished checkPlace (cpu: total=0:00:00.2, vio checks=0:00:00.0; mem=1226.2M)
+#**INFO: honoring user setting for routeWithTimingDriven set to false
+#**INFO: honoring user setting for routeWithSiDriven set to false
+**WARN: (IMPCK-8086):	The command changeUseClockNetStatus is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1226.2M) ***
+
+globalDetailRoute
+
+#setNanoRouteMode -routeBottomRoutingLayer 2
+#setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+#setNanoRouteMode -routeReserveSpaceForMultiCut true
+#setNanoRouteMode -routeWithSiDriven false
+#setNanoRouteMode -routeWithTimingDriven false
+#Start globalDetailRoute on Fri Dec 21 10:09:35 2018
+#
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSS_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSS_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN SNS in CELL_VIEW PVSENSE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN RTO in CELL_VIEW PVSENSE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN SNS in CELL_VIEW PVSENSE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN RTO in CELL_VIEW PVSENSE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSETIE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN SNS in CELL_VIEW PVSENSETIE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN RTO in CELL_VIEW PVSENSETIE_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSETIE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN SNS in CELL_VIEW PVSENSETIE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN RTO in CELL_VIEW PVSENSETIE_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSELS_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVSENSELS_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVDD_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVDD_18_PL_H does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVDDI_18_PL_V does not have antenna diff area.
+#WARNING (NRDB-728) PIN TRIGGER in CELL_VIEW PVDDI_18_PL_H does not have antenna diff area.
+#WARNING (EMS-27) Message (NRDB-728) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/data_i[1] of net data_i[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/data_i[0] of net data_i[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/Clk_CI of net Clk_CI because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/reset of net reset because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/data_o of net data_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRDB-976) The TRACK STEP 6.8000 for preferred direction tracks is smaller than the PITCH 8.8000 for LAYER ld. This will cause routability problems for NanoRoute.
+#NanoRoute Version 17.11-s080_1 NR170721-2155/17_11-UB
+#Start routing data preparation on Fri Dec 21 10:09:37 2018
+#
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.100.
+#Voltage range [0.000 - 0.000] has 1 net.
+#Voltage range [1.000 - 1.100] has 1 net.
+#Voltage range [0.000 - 1.100] has 12 nets.
+# m1           V   Track-Pitch = 0.1400    Line-2-Via Pitch = 0.1400
+# m2           H   Track-Pitch = 0.1400    Line-2-Via Pitch = 0.1400
+# m3           V   Track-Pitch = 0.1400    Line-2-Via Pitch = 0.1400
+# c1           H   Track-Pitch = 0.1900    Line-2-Via Pitch = 0.1900
+# ua           V   Track-Pitch = 1.6000    Line-2-Via Pitch = 1.6000
+# oa           H   Track-Pitch = 3.0000    Line-2-Via Pitch = 3.0000
+# ob           V   Track-Pitch = 3.0000    Line-2-Via Pitch = 3.0000
+# ld           H   Track-Pitch = 8.8000    Line-2-Via Pitch = 6.8000
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer m3's pitch = 0.1400.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1259.50 (MB), peak = 1535.50 (MB)
+#Merging special wires...
+#
+#Finished routing data preparation on Fri Dec 21 10:09:37 2018
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 21.07 (MB)
+#Total memory = 1259.64 (MB)
+#Peak memory = 1535.50 (MB)
+#
+#
+#Start global routing on Fri Dec 21 10:09:37 2018
+#
+#Number of eco nets is 0
+#
+#Start global routing data preparation on Fri Dec 21 10:09:37 2018
+#
+#WARNING (NRAG-51) There is no right way routing track defined on layer ld!.
+#Start routing resource analysis on Fri Dec 21 10:09:37 2018
+#
+#ERROR (NRGR-6) Metal 8 routing direction is horizontal but there are no horizontal tracks. Cannot do global route.
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:02
+#Increased memory = 23.43 (MB)
+#Total memory = 1198.33 (MB)
+#Peak memory = 1535.50 (MB)
+#WARNING (NRIF-19) Failed to complete globalDetailRoute on Fri Dec 21 10:09:37 2018
+#
+#routeDesign: cpu time = 00:00:03, elapsed time = 00:00:03, memory = 1198.59 (MB), peak = 1535.50 (MB)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+1
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> setDrawView place
+<CMD> setDrawView ameba
+<CMD> deselectAll
+<CMD> selectObject Module Serializer
+<CMD> deselectAll
+<CMD> selectObject Module Serializer
+Loading  (toplevel)
+Traverse HInst (toplevel)
+<CMD> selectObject Module Serializer
+Loading Serializer (Serializer_00000002_00000001_0)
+Traverse HInst Serializer(Serializer_00000002_00000001_0)
+<CMD> selectInst Serializer/U3
+<CMD> deselectInst Serializer/U3
+<CMD> selectInst Serializer/U3
+<CMD> deselectInst Serializer/U3
+<CMD> selectInst Serializer/U3
+<CMD> deselectInst Serializer/U3
+<CMD> selectInst Serializer/U3
+<CMD> deselectInst Serializer/U3
+<CMD> selectInst Serializer/U3
+<CMD> create_ccopt_clock_tree_spec -immediate
+Creating clock tree spec for modes (timing configs): func_mode test_mode
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+Analyzing clock structure...
+Analyzing clock structure done.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Extracting original clock gating for Clk_CI...
+  clock_tree Clk_CI contains 1 sinks and 0 clock gates.
+  Extraction for Clk_CI complete.
+Extracting original clock gating for Clk_CI done.
+Checking clock tree convergence...
+Checking clock tree convergence done.
+<CMD> ctd_win -id ctd_window
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Layer1 has no routable track
+[NR-eGR] Layer2 has single uniform track structure
+[NR-eGR] Layer3 has single uniform track structure
+[NR-eGR] Layer4 has single uniform track structure
+[NR-eGR] Layer5 has single uniform track structure
+[NR-eGR] Layer6 has single uniform track structure
+[NR-eGR] Layer7 has single uniform track structure
+[NR-eGR] Layer8 has single uniform track structure
+[NR-eGR] numRoutingBlks=0 numInstBlks=18 numPGBlocks=0 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] Read numTotalNets=0  numIgnoredNets=0
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id 0. Nets 0 
+[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
+[NR-eGR] Pitch:  L1=280  L2=280  L3=280  L4=380  L5=3200  L6=6000  L7=6000  L8=13600
+[NR-eGR] ========================================
+[NR-eGR] 
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+<CMD> clearGlobalNets
+<CMD> clearGlobalNets
+<CMD> clearGlobalNets
+
+*** Memory Usage v#1 (Current mem = 1350.469M, initial mem = 180.676M) ***
+*** Message Summary: 332 warning(s), 25 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:56, real=0:24:03, mem=1350.5M) ---

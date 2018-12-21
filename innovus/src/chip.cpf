@@ -7,9 +7,9 @@
 #  Company    : Microelectronics Design Center (DZ), ETH Zurich
 ##########################################################################
 #  Description : Sample file to create the power intent of a design, 
-#                withe one default power domain,
-#                The power domain have do be linked to a delay corner withe
-#                'update_delay_corner' don in our case in to "mmmc.view.tcl".
+#                with one default power domain,
+#                The power domain has to be linked to a delay corner withe
+#                'update_delay_corner' done in our case in to "mmmc.view.tcl".
 #
 #                Please note these are just for reference, adapt according
 #                to your design!

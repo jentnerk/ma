@@ -2,7 +2,7 @@
 
 //Serializer from
 
-module shift_serializer #(parameter int unsigned FROM = 100, parameter int unsigned LOG2FROM = 8)
+module shift_serializer #(parameter int unsigned FROM = 16, parameter int unsigned LOG2FROM = 4)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,
@@ -13,8 +13,8 @@ module shift_serializer #(parameter int unsigned FROM = 100, parameter int unsig
 
 	//Signal declarations	
 	logic 									LoadEn_S, shift_S;
-    logic [10:0]							Counter_SP, Counter_SN;
-	logic [LOG2FROM-1:0]					Reg_SP, Reg_SN;
+    logic [LOG2FROM:0]						Counter_SP, Counter_SN;
+	logic [FROM-1:0]					    Reg_SP, Reg_SN;
 	enum logic [1:0] {READ, SHIFT}			State_SP, State_SN;
 
     // -----------------
@@ -28,6 +28,7 @@ module shift_serializer #(parameter int unsigned FROM = 100, parameter int unsig
             ready_o     = 1'b0;
             LoadEn_S 	= 1'b0;
             valid_o     = 1'b0;
+            shift_S     = 1'b0;
 
     		//nondefault transitions and outputs
     		case (State_SP)
@@ -43,8 +44,8 @@ module shift_serializer #(parameter int unsigned FROM = 100, parameter int unsig
     		end
 
     		SHIFT: begin
-    			shift_S = 1'b1;
-                valid_o = 1'b1;
+    			shift_S  = 1'b1;
+                valid_o  = 1'b1;
                 LoadEn_S = 1'b0;
                 if (~(|Counter_SP)) begin
                     State_SN   	= READ;

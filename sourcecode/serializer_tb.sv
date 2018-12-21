@@ -8,7 +8,7 @@ module serializer_tb;
     // constants
     //timeunit 1ns; (activate for RTL simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 16;
+    localparam int unsigned FROM = 2;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
@@ -116,7 +116,7 @@ module serializer_tb;
     // -----------------------------------------------
     // Testbench
     // -----------------------------------------------
-    program test_div;
+    program test_serializer;
 
         // SystemVerilog "clocking block"
         // Clocking outputs are DUT inputs and vice versa

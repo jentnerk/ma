@@ -1,12 +1,12 @@
 ##########################################################################
-#  Title       : finel check of the designe
+#  Title       : final check of the design
 #  Project     : gf 45 dz flow
 ##########################################################################
 #  File        : checkdesign.tcl
 #  Author      : Beat Muheim  <muheim@ee.ethz.ch>
 #  Company     : Microelectronics Design Center (DZ), ETH Zurich
 ##########################################################################
-#  Description : Ter will be do the finel check of the designe and 
+#  Description : will do the final check of the design and 
 #                some reports.
 #  Inputs      : ($DESIGNNAME)
 #                ($wellTap) 

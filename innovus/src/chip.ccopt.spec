@@ -5,12 +5,12 @@ delete_ccopt_clock_tree_spec
 # generated on Tue, Jun 09, 2015 02:29:17 pm CEST
 # by Native Mode version 036
 #-----------------------------------------------------------------------------------------
-if { [dbGet head.routeTypes.name default_route_type_leaf] != "default_route_type_leaf" } {
-create_route_type -name default_route_type_leaf -bottom_preferred_layer 1 -top_preferred_layer 6 
-}
-if { [dbGet head.routeTypes.name default_route_type_nonleaf] != "default_route_type_nonleaf" } {
-create_route_type -name default_route_type_nonleaf -bottom_preferred_layer 5 -top_preferred_layer 6
-}
+#if { [dbGet head.routeTypes.name default_route_type_leaf] != "default_route_type_leaf" } {
+#create_route_type -name default_route_type_leaf -bottom_preferred_layer 1 -top_preferred_layer 6 
+#}
+# if { [dbGet head.routeTypes.name default_route_type_nonleaf] != "default_route_type_nonleaf" } {
+# create_route_type -name default_route_type_nonleaf -bottom_preferred_layer 5 -top_preferred_layer 6
+# }
 
 
 # global constraints

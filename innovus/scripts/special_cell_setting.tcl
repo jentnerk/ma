@@ -6,8 +6,8 @@
 #  Author     : Beat Muheim  <muheim@ee.ethz.ch>
 #  Company    : Microelectronics Design Center (DZ), ETH Zurich
 ##########################################################################
-#  Description : Is doin the seting for well tap, tie cells 
-#                and filler cels. It is not inserting it this have to be don
+#  Description : Creates the setting for the well tap, tie cells 
+#                and filler cells. It does not insert them, this has to be done
 #                in the run script.
 #  Inputs      :
 #  Outputs     : ($wellTap)

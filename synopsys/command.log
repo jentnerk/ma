@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version N-2017.09 for linux64 -- Aug 17, 2017
-#@ # Date:   Thu Dec 20 15:56:48 2018
+#@ # Date:   Fri Dec 21 14:31:51 2018
 #@ # Run by: msc18h28@badile12.ee.ethz.ch
 #@ 
 
@@ -6726,8 +6726,8 @@ source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
 #@ }
 #@ # -- End source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
 
-source scripts/serializer_synth.tcl
-#@ # -- Starting source scripts/serializer_synth.tcl
+source scripts/shift_serializer_synth.tcl
+#@ # -- Starting source scripts/shift_serializer_synth.tcl
 
 #@ 
 #@ 
@@ -6748,9 +6748,9 @@ source scripts/serializer_synth.tcl
 #@ # ------------------------------------------------------------------------------
 #@ # Analyze Design
 #@ # ------------------------------------------------------------------------------
-#@ analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/toplevel.sv /home/msc18h28/ma/sourcecode/serializer.sv /home/msc18h28/ma/sourcecode/Clock_divider.v}
-#@ set TOP_ENTITY {toplevel}
-#@ set ENTITY {Serializer}
+#@ analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+#@ set TOP_ENTITY {shift_serializer}
+#@ set ENTITY {shift_serializer}
 #@ 
 #@ # ------------------------------------------------------------------------------
 #@ # Elaborate Design
@@ -6785,8 +6785,26 @@ source scripts/serializer_synth.tcl
 #@ 
 #@ 
 #@ 
-#@ # -- End source scripts/serializer_synth.tcl
+#@ # -- End source scripts/shift_serializer_synth.tcl
 
+set NAME {}
+remove_design -all
+exec rm -rf WORK/*
+set CLK_PERIOD 0.65
+set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25cdz_set_pvt [list $CELL_LIB $PAD_LIB]
+set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dz_set_pvt [list $CELL_LIB $PAD_LIB]
+analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+set TOP_ENTITY {shift_serializer}
+set ENTITY {shift_serializer}
+elaborate $TOP_ENTITY
+analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+elaborate $TOP_ENTITY
+analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+elaborate $TOP_ENTITY
+create_clock clk -period $CLK_PERIOD
+compile_ultra -no_autoungroup
 gui_start
 #@ # -- Starting source /usr/pack/synopsys-2017.09-kgf/syn/auxx/tcllib/lib/itk4.0.1/itk.tcl
 
@@ -43148,20 +43166,144 @@ gui_start
 #@ 
 #@ # -- End source /usr/pack/synopsys-2017.09-kgf/syn/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-change_selection [get_s Serializer]
-change_selection [get_s toplevel]
-change_selection [get_s toplevel]
-change_selection [get_s Serializer]
-change_selection 
-report_path_group
+change_selection [get_s shift_serializer]
+change_selection [get_s shift_serializer]
+gui_scroll -habs 165886 -vabs -64478 -window [gui_get_current_window -view]
+change_selection [get_s {{Counter_SP_reg[0]}}]
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+report_area
+report_timin
 report_timing
-man report_path_group
-report_names
-report_net
-man set_max_d
-man set_max_delay
-man set_dont_
-man set_dont_touch
-man create_generated_clock
-man set_max_delay
-get_pins
+report_power
+source scripts/shift_serializer_synth.tcl
+#@ # -- Starting source scripts/shift_serializer_synth.tcl
+
+#@ 
+#@ 
+#@ set NAME {}
+#@ 
+#@ remove_design -all
+#@ exec rm -rf WORK/*
+#@ 
+#@ set CLK_PERIOD 0.65
+#@ set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+#@ set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+#@ 
+#@ 
+#@ 
+#@ # set std cell library
+#@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#@ 
+#@ # ------------------------------------------------------------------------------
+#@ # Analyze Design
+#@ # ------------------------------------------------------------------------------
+#@ analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
+#@ set TOP_ENTITY {shift_serializer}
+#@ set ENTITY {shift_serializer}
+#@ 
+#@ # ------------------------------------------------------------------------------
+#@ # Elaborate Design
+#@ # ------------------------------------------------------------------------------
+#@ elaborate $TOP_ENTITY
+#@ 
+#@ # create clocks
+#@ create_clock clk -period $CLK_PERIOD
+#@ #create_generated_clock -name DClkDiv2_clk -divide_by 2 -source $DCLK_SOURCE_PIN [get_pin clkdiv4/area_div0_reg_div2_reg/Q]
+#@ 
+#@ write -f ddc -o DDC/${ENTITY}_${NAME}elab.ddc
+#@ 
+#@ read_ddc DDC/${ENTITY}_${NAME}elab.ddc
+#@ 
+#@ # drivers 
+#@ #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] clk]
+#@ #gives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)
+#@ 
+#@ # loads
+#@ #set_load [load_of ${LIB}/${LOAD_CELL}/${LOAD_PIN}] [all_outputs]
+#@ 
+#@ compile_ultra -no_autoungroup
+#@ 
+#@ # write verilog netlist
+#@ change_names -rule verilog -hierarchy
+#@ write -format verilog -output ./netlists/${ENTITY}${NAME}.v -hierarchy
+#@ 
+#@ # write timing information
+#@ write_sdc -nosplit ./netlists/$ENTITY\_synth.sdc
+#@ exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY\_synth.sdc > netlists/$ENTITY\_synth.be.sdc
+#@ write_sdf ./netlists/$ENTITY\_synth.sdf
+#@ 
+#@ 
+#@ 
+#@ # -- End source scripts/shift_serializer_synth.tcl
+
+report_area
+report_timing
+report_power
+source scripts/serializer_synth.tcl
+#@ # -- Starting source scripts/serializer_synth.tcl
+
+#@ 
+#@ 
+#@ set NAME {}
+#@ 
+#@ remove_design -all
+#@ exec rm -rf WORK/*
+#@ 
+#@ set CLK_PERIOD 0.65
+#@ set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+#@ set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+#@ 
+#@ 
+#@ 
+#@ # set std cell library
+#@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#@ 
+#@ # ------------------------------------------------------------------------------
+#@ # Analyze Design
+#@ # ------------------------------------------------------------------------------
+#@ analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/toplevel.sv /home/msc18h28/ma/sourcecode/serializer.sv /home/msc18h28/ma/sourcecode/Clock_divider.v}
+#@ set TOP_ENTITY {toplevel}
+#@ set ENTITY {Serializer}
+#@ 
+#@ # ------------------------------------------------------------------------------
+#@ # Elaborate Design
+#@ # ------------------------------------------------------------------------------
+#@ elaborate $TOP_ENTITY
+#@ 
+#@ # create clocks
+#@ create_clock clk -period $CLK_PERIOD
+#@ #create_generated_clock -name DClkDiv2_clk -divide_by 2 -source $DCLK_SOURCE_PIN [get_pin clkdiv4/area_div0_reg_div2_reg/Q]
+#@ 
+#@ write -f ddc -o DDC/${ENTITY}_${NAME}elab.ddc
+#@ 
+#@ read_ddc DDC/${ENTITY}_${NAME}elab.ddc
+#@ 
+#@ # drivers 
+#@ #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] clk]
+#@ #gives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)
+#@ 
+#@ # loads
+#@ #set_load [load_of ${LIB}/${LOAD_CELL}/${LOAD_PIN}] [all_outputs]
+#@ 
+#@ compile_ultra -no_autoungroup
+#@ 
+#@ # write verilog netlist
+#@ change_names -rule verilog -hierarchy
+#@ write -format verilog -output ./netlists/${ENTITY}${NAME}.v -hierarchy
+#@ 
+#@ # write timing information
+#@ write_sdc -nosplit ./netlists/$ENTITY\_synth.sdc
+#@ exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY\_synth.sdc > netlists/$ENTITY\_synth.be.sdc
+#@ write_sdf ./netlists/$ENTITY\_synth.sdf
+#@ 
+#@ 
+#@ 
+#@ # -- End source scripts/serializer_synth.tcl
+
+gui_start
+change_selection [get_s toplevel]
+change_selection [get_s toplevel]
+report_timing
+report_area
+report_power
