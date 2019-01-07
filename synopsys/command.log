@@ -7041,3 +7041,5 @@ source scripts/serializer_synth.tcl
 
 report_area
 report_power
+unit
+units

@@ -2038,4 +2038,8 @@ combinational  6.4595e-04        4.9152e-04           11.4284        1.2566e-02 
 --------------------------------------------------------------------------------------------------
 Total              0.1017 mW     2.1465e-03 mW        86.0477 uW         0.1899 mW
 1
+dc_shell> power_un[K[K[K[K[K[K[K[Kunit
+Error: unknown command 'unit' (CMD-005)
+dc_shell> units
+Error: unknown command 'units' (CMD-005)
 dc_shell> 
