@@ -2,7 +2,7 @@
 
 //Serializer from to 
 
-module toplevel #(parameter int unsigned FROM = 16,parameter int unsigned LOGFROM = 4)
+module toplevel #(parameter int unsigned FROM = 256,parameter int unsigned LOGFROM = 8)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,

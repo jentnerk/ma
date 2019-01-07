@@ -2,7 +2,7 @@
 
 //Serializer from
 
-module shift_serializer #(parameter int unsigned FROM = 16, parameter int unsigned LOG2FROM = 4)
+module shift_serializer #(parameter int unsigned FROM = 256, parameter int unsigned LOG2FROM = 8)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,

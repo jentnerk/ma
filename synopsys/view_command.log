@@ -1,4 +1,4 @@
-Detected [rhel7.3i] setup
+Detected [rhel7.4i] setup
 
                            Design Compiler Graphical 
                                  DC Ultra (TM)
@@ -21,7 +21,7 @@ Detected [rhel7.3i] setup
             or distribution of this software is strictly prohibited.
 Initializing...
 Loading Design Compiler Setup
-dc_shell> source shif[K[K[K[Kscripts/shift_serializer_synth.tcl 
+dc_shell> source scripts/shift_serializer_synth.tcl 
 Running PRESTO HDLC
 Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
 Presto compilation completed successfully.
@@ -33,131 +33,6 @@ Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
   Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
   Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
   Loading link library 'gtech'
-Running PRESTO HDLC
-
-Statistics for case statements in always block at line 25 in file
-	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            33            |    auto/auto     |
-===============================================
-Error:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:62: Array index out of bounds Reg_SP[98:0], valid bounds are [7:0]. (ELAB-298)
-*** Presto compilation terminated with 1 errors. ***
-Error: Current design is not defined. (UID-4)
-Error: Can't find object 'clk'. (UID-109)
-Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
-Error: No files or designs were specified. (UID-22)
-Error: Cannot read file 'DDC/shift_serializer_elab.ddc'. (UID-58)
-Error: Current design is not defined. (UID-4)
-Error: Current design is not defined. (UID-4)
-Error: No files or designs were specified. (UID-22)
-Error: Current design is not defined. (UID-4)
-Error: grep: ./netlists/shift_serializer_synth.sdc: No such file or directory
-	Use error_info for more info. (CMD-013)
-Error: Current design is not defined. (UID-4)
-0
-dc_shell> 
-dc_shell> set NAME {}
-dc_shell> 
-dc_shell> remove_design -all
-Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
-Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
-Removing library 'gtech'
-Removing library 'dw_foundation.sldb'
-Removing library 'standard.sldb'
-1
-dc_shell> exec rm -rf WORK/*
-dc_shell> 
-dc_shell> set CLK_PERIOD 0.65
-0.65
-dc_shell> set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
-sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
-dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25cdz_set_pvt [list $CELL_LIB $PAD_LIB]
-Error: wrong # args: should be "set varName ?newValue?"
-	Use error_info for more info. (CMD-013)
-dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25cdz_set_pvt [list $CELL_LIB $PAD_LIB][K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
-dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c[11G[Kdz_set_pvt [list $CELL_LIB $PAD_LIB]
-sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db
-dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
-Running PRESTO HDLC
-Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
-Presto compilation completed successfully.
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
-Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
-Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
-1
-dc_shell> set TOP_ENTITY {shift_serializer}
-shift_serializer
-dc_shell> set ENTITY {shift_serializer}
-shift_serializer
-dc_shell> elaborate $TOP_ENTITY
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
-  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
-  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
-  Loading link library 'gtech'
-Running PRESTO HDLC
-
-Statistics for case statements in always block at line 25 in file
-	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            33            |    auto/auto     |
-===============================================
-Error:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:62: Array index out of bounds Reg_SP[28:0], valid bounds are [5:0]. (ELAB-298)
-*** Presto compilation terminated with 1 errors. ***
-0
-dc_shell> elaborate $TOP_ENTITY[11Gset ENTITY {shift_serializer}[15G[4@TOP_E[44G[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
-Running PRESTO HDLC
-Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
-Presto compilation completed successfully.
-1
-dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11G[Kanalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K
-Running PRESTO HDLC
-
-Statistics for case statements in always block at line 25 in file
-	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            33            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine shift_serializer line 25 in file
-		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
-===========================================================================
-|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
-===========================================================================
-|     shift_S_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
-===========================================================================
-
-Inferred memory devices in process
-	in routine shift_serializer line 74 in file
-		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Reg_SP_reg      | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   Counter_SP_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Warning:  Latch inferred in design shift_serializer read with 'hdlin_check_no_latch' (ELAB-395)
-Warning:  /home/msc18h28/ma/sourcecode/shift_serializer.sv:25: Netlist for always_comb block contains a latch. (ELAB-974)
-Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
-Presto compilation completed successfully.
-Elaborated 1 design.
-Current design is now 'shift_serializer'.
-1
-dc_shell> loadelaborate $TOP_ENTITY[11Ganalyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}
-Running PRESTO HDLC
-Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
-Presto compilation completed successfully.
-1
-dc_shell> analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv}[11Gelaborate $TOP_ENTITY[K
 Running PRESTO HDLC
 
 Statistics for case statements in always block at line 25 in file
@@ -175,17 +50,16 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Reg_SP_reg      | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   Counter_SP_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Warning: Overwriting design file '/home/msc18h28/ma/synopsys/shift_serializer.db'. (DDB-24)
 Elaborated 1 design.
 Current design is now 'shift_serializer'.
-1
-dc_shell> create_clock clk -period $CLK_PERIOD
-1
-dc_shell> compile_ultra -no_autoungroup
+Writing ddc file 'DDC/shift_serializer_elab.ddc'.
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/shift_serializer_elab.ddc'.
+Loaded 1 design.
+Current design is 'shift_serializer'.
 Information: Performing power optimization. (PWR-850)
 Alib files are up-to-date.
 Information: Evaluating DesignWare library utilization. (UISN-27)
@@ -257,7 +131,6 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Beginning Mapping Optimizations  (Ultra High effort)
   -------------------------------
 Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
-Information: The register 'Counter_SP_reg[6]' is a constant and will be removed. (OPT-1206)
 
   Beginning Constant Register Removal
   -----------------------------------
@@ -305,36 +178,48 @@ Information: The register 'Counter_SP_reg[6]' is a constant and will be removed.
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09     259.5      0.00       0.0       0.0                              8.4647
-    0:00:09     259.5      0.00       0.0       0.0                              8.4647
-    0:00:09     259.5      0.00       0.0       0.0                              8.4647
-    0:00:09     259.5      0.00       0.0       0.0                              8.4647
-Information: The register 'Counter_SP_reg[5]' is a constant and will be removed. (OPT-1206)
+    0:00:09     271.5      0.00       0.0       0.0                              8.8205
+    0:00:09     271.5      0.00       0.0       0.0                              8.8205
+    0:00:09     271.5      0.00       0.0       0.0                              8.8205
+    0:00:09     271.0      0.00       0.0       0.0                              8.8027
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:09     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09     270.8      0.00       0.0       0.0                              8.7812
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+    0:00:10     270.8      0.00       0.0       0.0                              8.7874
+    0:00:10     270.8      0.00       0.0       0.0                              8.7874
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -344,10 +229,7 @@ Information: The register 'Counter_SP_reg[5]' is a constant and will be removed.
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     251.4      0.00       0.0       0.0                              8.1768
-  Global Optimization (Phase 29)
-  Global Optimization (Phase 30)
-  Global Optimization (Phase 31)
+    0:00:10     270.8      0.00       0.0       0.0                              8.7874
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
@@ -356,42 +238,45 @@ Information: The register 'Counter_SP_reg[5]' is a constant and will be removed.
   Global Optimization (Phase 37)
   Global Optimization (Phase 38)
   Global Optimization (Phase 39)
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:10     251.1      0.00       0.0       0.0                              8.0424
-    0:00:11     251.1      0.00       0.0       0.0                              8.0424
-    0:00:11     251.1      0.00       0.0       0.0                              8.0424
-    0:00:11     251.1      0.00       0.0       0.0                              8.0424
-    0:00:11     251.1      0.00       0.0       0.0                              8.0424
-    0:00:11     251.1      0.00       0.0       0.0                              8.0424
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:10     270.3      0.00       0.0       0.0                              8.6390
+    0:00:11     270.3      0.00       0.0       0.0                              8.6329
+    0:00:11     270.3      0.00       0.0       0.0                              8.6329
+    0:00:11     270.3      0.00       0.0       0.0                              8.6329
+    0:00:11     270.3      0.00       0.0       0.0                              8.6329
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -404,113 +289,72 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-1
-dc_shell> gui_start
-dc_shell> Current design is 'shift_serializer'.
-4.1
-Current design is 'shift_serializer'.
-dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
-dc_shell> f[Kreport_area
- 
-****************************************
-Report : area
-Design : shift_serializer
-Version: N-2017.09
-Date   : Fri Dec 21 14:42:22 2018
-****************************************
-
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/shift_serializer.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/shift_serializer_synth.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
-Library(s) Used:
-
-    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
-
-Number of ports:                           36
-Number of nets:                           147
-Number of cells:                          114
-Number of combinational cells:             78
-Number of sequential cells:                36
-Number of macros/black boxes:               0
-Number of buf/inv:                         32
-Number of references:                      14
-
-Combinational area:                 87.381000
-Buf/Inv area:                       15.321600
-Noncombinational area:             163.749607
-Macro/Black Box area:                0.000000
-Net Interconnect area:      undefined  (No wire load specified)
-
-Total cell area:                   251.130607
-Total area:                 undefined
 1
-dc_shell> report_tiin[K[Kmin
-Error: ambiguous command 'report_timin' matched 3 commands:
-	(report_timing, report_timing_derate, report_timing_requirements) (CMD-006)
-dc_shell> report_r[Ktimi
-report_timing              report_timing_derate       report_timing_requirements 
-dc_shell> report_timing
- 
-****************************************
-Report : timing
-        -path full
-        -delay max
-        -max_paths 1
-Design : shift_serializer
-Version: N-2017.09
-Date   : Fri Dec 21 14:42:34 2018
-****************************************
-
-Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
-Wire Load Model Mode: top
-
-  Startpoint: State_SP_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: Counter_SP_reg[1]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  State_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)                0.0000     0.0000 r
-  State_SP_reg[0]/Q (DFFRPQ_X0P5M_A9TS)                 0.2105     0.2105 f
-  U153/Y (NOR2XB_X1M_A9TS)                              0.1746     0.3851 r
-  U82/Y (INV_X1M_A9TS)                                  0.0557     0.4408 f
-  U83/Y (NAND2_X0P5M_A9TS)                              0.0508     0.4917 r
-  U152/Y (NOR2_X0P7A_A9TS)                              0.0289     0.5206 f
-  U150/Y (AOI22_X0P7M_A9TS)                             0.0221     0.5426 r
-  U149/Y (NAND2_X0P5M_A9TS)                             0.0186     0.5612 f
-  Counter_SP_reg[1]/D (DFFRPQ_X0P5M_A9TS)               0.0000     0.5612 f
-  data arrival time                                                0.5612
-
-  clock clk (rise edge)                                 0.6500     0.6500
-  clock network delay (ideal)                           0.0000     0.6500
-  Counter_SP_reg[1]/CK (DFFRPQ_X0P5M_A9TS)              0.0000     0.6500 r
-  library setup time                                   -0.0127     0.6373
-  data required time                                               0.6373
-  --------------------------------------------------------------------------
-  data required time                                               0.6373
-  data arrival time                                               -0.5612
-  --------------------------------------------------------------------------
-  slack (MET)                                                      0.0761
-
-
-1
-dc_shell> reppo[K[Kort_power
+dc_shell> rep
+replace_clock_gates                        report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
+replace_synthetic                          report_buffer_tree                         report_datapath_gating                     report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
+report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
+report_annotated_delay                     report_bus                                 report_design                              report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
+report_annotated_transition                report_cache                               report_design_lib                          report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
+report_app_var                             report_case_analysis                       report_dft_clock_controller                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
+report_area                                report_cell                                report_dft_clock_gating_configuration      report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
+report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
+report_attributes                          report_check_library_options               report_dft_configuration                   report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
+report_auto_ungroup                        report_clock                               report_dft_connect                         report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
+report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
+report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
+report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
+report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
+report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
+report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
+report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
+report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
+report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
+report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_mw_lib                              report_qor                                 report_supply_net                          
+report_bsd_instruction                     report_constraints                         report_disable_timing                      report_name_rules                          report_qtm_model                           report_supply_port                         
+report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_names                               report_reference                           report_synlib                              
+report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_net                                 report_resources                           report_synthetic                           
+dc_shell> repor
+report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
+report_annotated_delay                     report_bus                                 report_design                              report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
+report_annotated_transition                report_cache                               report_design_lib                          report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
+report_app_var                             report_case_analysis                       report_dft_clock_controller                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
+report_area                                report_cell                                report_dft_clock_gating_configuration      report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
+report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
+report_attributes                          report_check_library_options               report_dft_configuration                   report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
+report_auto_ungroup                        report_clock                               report_dft_connect                         report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
+report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
+report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
+report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
+report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
+report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
+report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
+report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
+report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
+report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
+report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_mw_lib                              report_qor                                 report_supply_net                          
+report_bsd_instruction                     report_constraints                         report_disable_timing                      report_name_rules                          report_qtm_model                           report_supply_port                         
+report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_names                               report_reference                           report_synlib                              
+report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_net                                 report_resources                           report_synthetic                           
+report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
+report_buffer_tree                         report_datapath_gating                     report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
+dc_shell> report_pow
 report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
 dc_shell> report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : shift_serializer
 Version: N-2017.09
-Date   : Fri Dec 21 14:42:42 2018
+Date   : Mon Jan  7 15:46:56 2019
 ****************************************
 
 
@@ -532,12 +376,12 @@ Power-specific unit information :
     Leakage Power Units = 1uW
 
 
-  Cell Internal Power  = 314.4166 uW   (94%)
-  Net Switching Power  =  19.4011 uW    (6%)
+  Cell Internal Power  = 338.9812 uW   (94%)
+  Net Switching Power  =  20.2743 uW    (6%)
                          ---------
-Total Dynamic Power    = 333.8177 uW  (100%)
+Total Dynamic Power    = 359.2554 uW  (100%)
 
-Cell Leakage Power     =   7.8501 uW
+Cell Leakage Power     =   8.4140 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -547,13 +391,45 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.2970        7.6517e-03            5.5411            0.3102  (  90.78%)
+register           0.3212        7.9334e-03            5.9813            0.3351  (  91.14%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  1.7450e-02        1.1749e-02            2.3091        3.1509e-02  (   9.22%)
+combinational  1.7797e-02        1.2341e-02            2.4327        3.2570e-02  (   8.86%)
 --------------------------------------------------------------------------------------------------
-Total              0.3144 mW     1.9401e-02 mW         7.8501 uW         0.3417 mW
+Total              0.3390 mW     2.0274e-02 mW         8.4140 uW         0.3677 mW
 1
-dc_shell> source scripts/shift_serializer_synth.tcl 
+dc_shell> report)[K_area 
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Mon Jan  7 15:47:06 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           38
+Number of nets:                           159
+Number of cells:                          124
+Number of combinational cells:             85
+Number of sequential cells:                39
+Number of macros/black boxes:               0
+Number of buf/inv:                         36
+Number of references:                      13
+
+Combinational area:                 92.887200
+Buf/Inv area:                       17.236800
+Noncombinational area:             177.395408
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   270.282608
+Total area:                 undefined
+1
+dc_shell> report_areapower[11Gsource scripts/shift_serializer_synth.tcl
+Removing design 'shift_serializer'
 Removing design 'shift_serializer'
 Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
 Removing library 'gtech'
@@ -588,8 +464,8 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Reg_SP_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   Counter_SP_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Elaborated 1 design.
@@ -668,9 +544,6 @@ Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
   ------------------------------
   Numerical Synthesis (Phase 1)
   Numerical Synthesis (Phase 2)
-  Global Optimization (Phase 40)
-  Global Optimization (Phase 41)
-  Global Optimization (Phase 42)
   Global Optimization (Phase 43)
   Global Optimization (Phase 44)
   Global Optimization (Phase 45)
@@ -696,6 +569,10 @@ Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
   Global Optimization (Phase 65)
   Global Optimization (Phase 66)
   Global Optimization (Phase 67)
+  Global Optimization (Phase 68)
+  Global Optimization (Phase 69)
+  Global Optimization (Phase 70)
+  Global Optimization (Phase 71)
 
   Beginning Isolate Ports
   -----------------------
@@ -707,35 +584,35 @@ Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     152.0      0.00       0.0       0.0                              4.9618
-    0:00:10     152.0      0.00       0.0       0.0                              4.9618
-    0:00:10     152.0      0.00       0.0       0.0                              4.9618
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     503.0      0.00       0.0       0.1                             16.3425
+    0:00:10     503.0      0.00       0.0       0.1                             16.3425
+    0:00:10     503.0      0.00       0.0       0.1                             16.3425
+    0:00:10     501.8      0.00       0.0       0.0                             16.1503
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -745,11 +622,7 @@ Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     151.5      0.00       0.0       0.0                              4.9441
-  Global Optimization (Phase 68)
-  Global Optimization (Phase 69)
-  Global Optimization (Phase 70)
-  Global Optimization (Phase 71)
+    0:00:10     499.1      0.00       0.0       0.0                             15.9743
   Global Optimization (Phase 72)
   Global Optimization (Phase 73)
   Global Optimization (Phase 74)
@@ -757,42 +630,46 @@ Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
   Global Optimization (Phase 76)
   Global Optimization (Phase 77)
   Global Optimization (Phase 78)
-    0:00:10     151.5      0.00       0.0       0.0                              4.8792
-    0:00:10     151.5      0.00       0.0       0.0                              4.8792
-    0:00:10     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+  Global Optimization (Phase 79)
+  Global Optimization (Phase 80)
+  Global Optimization (Phase 81)
+  Global Optimization (Phase 82)
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
-    0:00:11     151.5      0.00       0.0       0.0                              4.8792
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:11     498.4      0.00       0.0       0.0                             15.7125
+    0:00:12     498.2      0.00       0.0       0.0                             15.6882
+    0:00:12     498.2      0.00       0.0       0.0                             15.6882
+    0:00:12     498.2      0.00       0.0       0.0                             15.6882
+    0:00:12     498.2      0.00       0.0       0.0                             15.6882
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -810,89 +687,38 @@ Information: Annotated 'cell' delays are assumed to include load delay. (UID-282
 Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/shift_serializer_synth.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 1
-dc_shell> report_area
+dc_shell> report_area 
  
 ****************************************
 Report : area
 Design : shift_serializer
 Version: N-2017.09
-Date   : Fri Dec 21 14:44:20 2018
+Date   : Mon Jan  7 15:47:44 2019
 ****************************************
 
 Library(s) Used:
 
     sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
 
-Number of ports:                           22
-Number of nets:                            90
-Number of cells:                           71
-Number of combinational cells:             49
-Number of sequential cells:                22
+Number of ports:                           70
+Number of nets:                           285
+Number of cells:                          218
+Number of combinational cells:            146
+Number of sequential cells:                72
 Number of macros/black boxes:               0
-Number of buf/inv:                         18
-Number of references:                      11
+Number of buf/inv:                         62
+Number of references:                      15
 
-Combinational area:                 51.471000
-Buf/Inv area:                        8.618400
-Noncombinational area:             100.069204
+Combinational area:                169.255800
+Buf/Inv area:                       29.685600
+Noncombinational area:             328.935614
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                   151.540204
+Total cell area:                   498.191414
 Total area:                 undefined
 1
-dc_shell> report_a[Ktimi
-report_timing              report_timing_derate       report_timing_requirements 
-dc_shell> report_timing
-report_timing              report_timing_derate       report_timing_requirements 
-dc_shell> report_timing
- 
-****************************************
-Report : timing
-        -path full
-        -delay max
-        -max_paths 1
-Design : shift_serializer
-Version: N-2017.09
-Date   : Fri Dec 21 14:44:29 2018
-****************************************
-
-Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
-Wire Load Model Mode: top
-
-  Startpoint: State_SP_reg_0_
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: Reg_SP_reg_1_
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  State_SP_reg_0_/CK (DFFRPQ_X0P5M_A9TS)                0.0000     0.0000 r
-  State_SP_reg_0_/Q (DFFRPQ_X0P5M_A9TS)                 0.1530     0.1530 f
-  U48/Y (NOR2_X0P7A_A9TS)                               0.1209     0.2739 r
-  U85/Y (AOI222_X0P7M_A9TS)                             0.0549     0.3288 f
-  U84/Y (INV_X0P8M_A9TS)                                0.0195     0.3482 r
-  Reg_SP_reg_1_/D (DFFRPQ_X0P5M_A9TS)                   0.0000     0.3482 r
-  data arrival time                                                0.3482
-
-  clock clk (rise edge)                                 0.6500     0.6500
-  clock network delay (ideal)                           0.0000     0.6500
-  Reg_SP_reg_1_/CK (DFFRPQ_X0P5M_A9TS)                  0.0000     0.6500 r
-  library setup time                                   -0.0263     0.6237
-  data required time                                               0.6237
-  --------------------------------------------------------------------------
-  data required time                                               0.6237
-  data arrival time                                               -0.3482
-  --------------------------------------------------------------------------
-  slack (MET)                                                      0.2754
-
-
-1
-dc_shell> report_powr[K
+dc_shell> report_area[11Gsource scripts/shift_serializer_synth.tcl[11Greport_area[K[K[K[K[Kpowe
 report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
 dc_shell> report_power
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
@@ -904,7 +730,7 @@ Report : power
         -analysis_effort low
 Design : shift_serializer
 Version: N-2017.09
-Date   : Fri Dec 21 14:44:50 2018
+Date   : Mon Jan  7 15:47:56 2019
 ****************************************
 
 
@@ -926,12 +752,12 @@ Power-specific unit information :
     Leakage Power Units = 1uW
 
 
-  Cell Internal Power  = 187.4276 uW   (95%)
-  Net Switching Power  =  10.4978 uW    (5%)
+  Cell Internal Power  = 638.8535 uW   (94%)
+  Net Switching Power  =  40.1265 uW    (6%)
                          ---------
-Total Dynamic Power    = 197.9253 uW  (100%)
+Total Dynamic Power    = 678.9800 uW  (100%)
 
-Cell Leakage Power     =   4.7368 uW
+Cell Leakage Power     =  15.2081 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -941,13 +767,786 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.1792        3.8720e-03            3.3644            0.1865  (  92.00%)
+register           0.6011        1.5517e-02           10.9137            0.6276  (  90.40%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  8.2068e-03        6.6258e-03            1.3724        1.6205e-02  (   8.00%)
+combinational  3.7731e-02        2.4609e-02            4.2944        6.6635e-02  (   9.60%)
 --------------------------------------------------------------------------------------------------
-Total              0.1874 mW     1.0498e-02 mW         4.7368 uW         0.2027 mW
+Total              0.6389 mW     4.0126e-02 mW        15.2081 uW         0.6942 mW
 1
-dc_shell> source scr[11Greport_power[18Gtiming[18Garea[K[11Gsource scripts/shift_serializer_synth.tcl[11Greport_area[K[11Gsource scripts/shift_serializer_synth.tcl[11Greport_area[Ktiming[18Gpower[K[11Gsource scr[Kipts/shift_serializer_synth.tcl [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kerializer_synth.tcl 
+dc_shell> report_power[18Garea[K[11Gsource scripts/shift_serializer_synth.tcl
+Removing design 'shift_serializer'
+Removing design 'shift_serializer'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 75 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'shift_serializer'.
+Writing ddc file 'DDC/shift_serializer_elab.ddc'.
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/shift_serializer_elab.ddc'.
+Loaded 1 design.
+Current design is 'shift_serializer'.
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'shift_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design shift_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'shift_serializer'
+Information: The register 'State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'shift_serializer'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     961.0      0.00       0.0       0.0                             31.1814
+    0:00:11     961.0      0.00       0.0       0.0                             31.1814
+    0:00:11     961.0      0.00       0.0       0.0                             31.1814
+    0:00:12     943.7      0.00       0.0       0.5                             28.5671
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:12     939.6      0.00       0.0       0.5                             28.2618
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12     939.6      0.00       0.0       0.5                             28.2611
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:13     940.1      0.00       0.0       0.0                             28.3055
+    0:00:13     940.1      0.00       0.0       0.0                             28.3055
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13     940.1      0.00       0.0       0.0                             28.3055
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9494
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9494
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9494
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13    1002.1      0.00       0.0       0.0                             33.9488
+    0:00:14     941.1      0.00       0.0       0.0                             28.1256
+    0:00:14     941.1      0.00       0.0       0.0                             28.1256
+    0:00:14     941.1      0.00       0.0       0.0                             28.1256
+    0:00:14     941.1      0.00       0.0       0.0                             28.1256
+    0:00:14     937.7      0.00       0.0       0.0                             27.8270
+    0:00:14     937.7      0.00       0.0       0.0                             27.8270
+    0:00:14     937.7      0.00       0.0       0.0                             27.8270
+    0:00:14     937.7      0.00       0.0       0.0                             27.8270
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/shift_serializer.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/shift_serializer_synth.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+dc_shell> repo
+report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
+report_annotated_delay                     report_bus                                 report_design                              report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
+report_annotated_transition                report_cache                               report_design_lib                          report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
+report_app_var                             report_case_analysis                       report_dft_clock_controller                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
+report_area                                report_cell                                report_dft_clock_gating_configuration      report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
+report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
+report_attributes                          report_check_library_options               report_dft_configuration                   report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
+report_auto_ungroup                        report_clock                               report_dft_connect                         report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
+report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
+report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
+report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
+report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
+report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
+report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
+report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
+report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
+report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
+report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_mw_lib                              report_qor                                 report_supply_net                          
+report_bsd_instruction                     report_constraints                         report_disable_timing                      report_name_rules                          report_qtm_model                           report_supply_port                         
+report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_names                               report_reference                           report_synlib                              
+report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_net                                 report_resources                           report_synthetic                           
+report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
+report_buffer_tree                         report_datapath_gating                     report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
+dc_shell> report_area 
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Mon Jan  7 15:48:42 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                          134
+Number of nets:                           482
+Number of cells:                          351
+Number of combinational cells:            214
+Number of sequential cells:               137
+Number of macros/black boxes:               0
+Number of buf/inv:                         64
+Number of references:                      19
+
+Combinational area:                297.334800
+Buf/Inv area:                       32.079600
+Noncombinational area:             640.395020
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   937.729820
+Total area:                 undefined
+1
+dc_shell> report_area[11Gsource scripts/shift_serializer_synth.tcl[11Greport_power[K
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : shift_serializer
+Version: N-2017.09
+Date   : Mon Jan  7 15:48:50 2019
+****************************************
+
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =   1.2411 mW   (94%)
+  Net Switching Power  =  80.1880 uW    (6%)
+                         ---------
+Total Dynamic Power    =   1.3213 mW  (100%)
+
+Cell Leakage Power     =  26.5976 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           1.1761        2.9087e-02           19.3121            1.2245  (  90.85%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  6.5000e-02        5.1101e-02            7.2855            0.1234  (   9.15%)
+--------------------------------------------------------------------------------------------------
+Total              1.2411 mW     8.0188e-02 mW        26.5976 uW         1.3479 mW
+1
+dc_shell> report_power[18Garea[K[11Gsource scripts/shift_serializer_synth.tcl
+Removing design 'shift_serializer'
+Removing design 'shift_serializer'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/shift_serializer.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 25 in file
+	'/home/msc18h28/ma/sourcecode/shift_serializer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer line 75 in file
+		'/home/msc18h28/ma/sourcecode/shift_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'shift_serializer'.
+Writing ddc file 'DDC/shift_serializer_elab.ddc'.
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/shift_serializer_elab.ddc'.
+Loaded 1 design.
+Current design is 'shift_serializer'.
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'shift_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design shift_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'shift_serializer'
+Information: The register 'State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'shift_serializer'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'shift_serializer'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    1880.2      0.00       0.0       0.0                             61.4405
+    0:00:14    1880.2      0.00       0.0       0.0                             61.4405
+    0:00:14    1880.2      0.00       0.0       0.0                             61.4405
+    0:00:15    1832.6      0.00       0.0       2.2                             54.2000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:16    1812.3      0.00       0.0       2.2                             52.7723
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:16    1813.9      0.00       0.0       0.0                             52.9408
+    0:00:16    1813.9      0.00       0.0       0.0                             52.9408
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:16    1813.9      0.00       0.0       0.0                             52.9408
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:17    1808.4      0.00       0.0       0.0                             51.9746
+    0:00:18    1807.9      0.00       0.0       0.0                             51.9672
+    0:00:18    1807.9      0.00       0.0       0.0                             51.9672
+    0:00:18    1807.9      0.00       0.0       0.0                             51.9672
+    0:00:18    1807.9      0.00       0.0       0.0                             51.9672
+    0:00:18    1806.8      0.00       0.0       0.0                             51.8834
+    0:00:18    1806.8      0.00       0.0       0.0                             51.8834
+    0:00:18    1806.8      0.00       0.0       0.0                             51.8834
+    0:00:18    1806.8      0.00       0.0       0.0                             51.8834
+    0:00:19    1806.3      0.00       0.0       0.0                             51.8725
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/shift_serializer.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/shift_serializer_synth.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+dc_shell> report_ti[K[Ka
+report_annotated_check       report_annotated_delay       report_annotated_transition  report_app_var               report_area                  report_attribute             report_attributes            report_auto_ungroup          report_autofix_configuration report_autofix_element       
+dc_shell> report_area 
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Mon Jan  7 15:49:49 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                          262
+Number of nets:                           874
+Number of cells:                          615
+Number of combinational cells:            349
+Number of sequential cells:               266
+Number of macros/black boxes:               0
+Number of buf/inv:                         68
+Number of references:                      18
+
+Combinational area:                547.747199
+Buf/Inv area:                       36.628200
+Noncombinational area:            1258.525834
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1806.273033
+Total area:                 undefined
+1
+dc_shell> report
+report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
+report_annotated_delay                     report_bus                                 report_design                              report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
+report_annotated_transition                report_cache                               report_design_lib                          report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
+report_app_var                             report_case_analysis                       report_dft_clock_controller                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
+report_area                                report_cell                                report_dft_clock_gating_configuration      report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
+report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
+report_attributes                          report_check_library_options               report_dft_configuration                   report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
+report_auto_ungroup                        report_clock                               report_dft_connect                         report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
+report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
+report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
+report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
+report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
+report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
+report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
+report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
+report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
+report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
+report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_mw_lib                              report_qor                                 report_supply_net                          
+report_bsd_instruction                     report_constraints                         report_disable_timing                      report_name_rules                          report_qtm_model                           report_supply_port                         
+report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_names                               report_reference                           report_synlib                              
+report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_net                                 report_resources                           report_synthetic                           
+report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
+report_buffer_tree                         report_datapath_gating                     report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
+dc_shell> report_pw[K[Kpo
+report_port              report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
+dc_shell> report_powe
+report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
+dc_shell> report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : shift_serializer
+Version: N-2017.09
+Date   : Mon Jan  7 15:50:00 2019
+****************************************
+
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =   2.4420 mW   (94%)
+  Net Switching Power  = 155.0831 uW    (6%)
+                         ---------
+Total Dynamic Power    =   2.5971 mW  (100%)
+
+Cell Leakage Power     =  49.1900 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           2.3205        6.1052e-02           36.2756            2.4178  (  91.37%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1216        9.4031e-02           12.9144            0.2285  (   8.63%)
+--------------------------------------------------------------------------------------------------
+Total              2.4420 mW         0.1551 mW        49.1900 uW         2.6463 mW
+1
+dc_shell> source scripts/sh[Kerializer_synth.tcl 
 Removing design 'shift_serializer'
 Removing design 'shift_serializer'
 Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
@@ -994,10 +1593,58 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel' with
-	the parameters "32'h00000010,32'h00000004,0". (HDL-193)
+	the parameters "32'h00000100,32'h00000008,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000010_00000004_0 line 24 in file
+	in routine Serializer_00000100_00000008_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000100_00000008_0' with
+	the parameters "32'h00000080,32'h00000008,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000080_00000008_00000001 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000080_00000008_00000001' with
+	the parameters "32'h00000040,32'h00000008,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000040_00000008_00000002 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000040_00000008_00000002' with
+	the parameters "32'h00000020,32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000020_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000020_00000008_00000003' with
+	the parameters "32'h00000010,32'h00000008,32'h00000004". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000010_00000008_00000004 line 24 in file
 		'/home/msc18h28/ma/sourcecode/serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -1005,11 +1652,11 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000010_00000004_0' with
-	the parameters "32'h00000008,32'h00000004,32'h00000001". (HDL-193)
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000010_00000008_00000004' with
+	the parameters "32'h00000008,32'h00000008,32'h00000005". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000008_00000004_00000001 line 24 in file
+	in routine Serializer_00000008_00000008_00000005 line 24 in file
 		'/home/msc18h28/ma/sourcecode/serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -1017,11 +1664,11 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000004_00000001' with
-	the parameters "32'h00000004,32'h00000004,32'h00000002". (HDL-193)
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000008_00000005' with
+	the parameters "32'h00000004,32'h00000008,32'h00000006". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000004_00000004_00000002 line 24 in file
+	in routine Serializer_00000004_00000008_00000006 line 24 in file
 		'/home/msc18h28/ma/sourcecode/serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -1029,11 +1676,11 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000004_00000002' with
-	the parameters "32'h00000002,32'h00000004,32'h00000003". (HDL-193)
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000008_00000006' with
+	the parameters "32'h00000002,32'h00000008,32'h00000007". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000002_00000004_00000003 line 24 in file
+	in routine Serializer_00000002_00000008_00000007 line 24 in file
 		'/home/msc18h28/ma/sourcecode/serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -1048,7 +1695,7 @@ Current design is 'toplevel'.
 Information: Performing power optimization. (PWR-850)
 Alib files are up-to-date.
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
-Information: Uniquified 4 instances of design 'Clock_divider'. (OPT-1056)
+Information: Uniquified 8 instances of design 'Clock_divider'. (OPT-1056)
   Simplifying Design 'toplevel'
 
 Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
@@ -1062,11 +1709,15 @@ Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'Serializer_00000010_00000004_0'
-  Processing 'Serializer_00000008_00000004_00000001'
+  Processing 'Serializer_00000100_00000008_0'
+  Processing 'Serializer_00000080_00000008_00000001'
+  Processing 'Serializer_00000040_00000008_00000002'
   Processing 'toplevel'
-  Processing 'Serializer_00000004_00000004_00000002'
-  Processing 'Serializer_00000002_00000004_00000003'
+  Processing 'Serializer_00000020_00000008_00000003'
+  Processing 'Serializer_00000010_00000008_00000004'
+  Processing 'Serializer_00000008_00000008_00000005'
+  Processing 'Serializer_00000004_00000008_00000006'
+  Processing 'Serializer_00000002_00000008_00000007'
   Processing 'Clock_divider_0'
 
   Updating timing information
@@ -1145,6 +1796,8 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 27)
   Global Optimization (Phase 28)
   Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
 
   Beginning Isolate Ports
   -----------------------
@@ -1156,48 +1809,48 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09     188.2      0.00       0.0       0.0                              6.5429
-    0:00:09     188.2      0.00       0.0       0.0                              6.5429
-    0:00:09     188.2      0.00       0.0       0.0                              6.5429
-    0:00:09     188.2      0.00       0.0       0.0                              6.5429
+    0:00:10    2818.5      0.00       0.0       0.1                             97.5917
+    0:00:10    2818.5      0.00       0.0       0.1                             97.5917
+    0:00:10    2818.5      0.00       0.0       0.1                             97.5917
+    0:00:11    2818.5      0.00       0.0       0.1                             97.5917
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:09     188.2      0.00       0.0       0.0                              6.5429
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+    0:00:11    2808.9      0.00       0.0       0.1                             97.1674
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
 
 
-  Beginning Design Rule Fixing  (min_capacitance)
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)
   ----------------------------
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-  Global Optimization (Phase 30)
-  Global Optimization (Phase 31)
+    0:00:12    2809.6      0.00       0.0       0.1                             96.3608
   Global Optimization (Phase 32)
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:12    2810.1      0.00       0.0       0.0                             96.4121
+    0:00:12    2810.1      0.00       0.0       0.0                             96.4121
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -1207,9 +1860,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     188.2      0.00       0.0       0.0                              6.4998
-  Global Optimization (Phase 33)
-  Global Optimization (Phase 34)
+    0:00:12    2810.1      0.00       0.0       0.0                             96.4121
   Global Optimization (Phase 35)
   Global Optimization (Phase 36)
   Global Optimization (Phase 37)
@@ -1219,42 +1870,45 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
   Global Optimization (Phase 43)
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:12    2809.6      0.00       0.0       0.0                             96.3880
+    0:00:12    2809.6      0.00       0.0       0.0                             96.3880
+    0:00:12    2809.6      0.00       0.0       0.0                             96.3880
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:10     188.2      0.00       0.0       0.0                              6.4956
-    0:00:11     188.2      0.00       0.0       0.0                              6.4956
-    0:00:11     188.2      0.00       0.0       0.0                              6.4956
-    0:00:11     188.2      0.00       0.0       0.0                              6.4956
-    0:00:11     188.2      0.00       0.0       0.0                              6.4956
-    0:00:11     188.2      0.00       0.0       0.0                              6.4956
+    0:00:12    2809.4      0.00       0.0       0.1                             96.3616
+    0:00:13    2807.4      0.00       0.0       0.1                             96.3976
+    0:00:13    2807.4      0.00       0.0       0.1                             96.3976
+    0:00:13    2807.4      0.00       0.0       0.1                             96.3976
+    0:00:13    2807.9      0.00       0.0       0.2                             96.3512
+    0:00:13    2807.9      0.00       0.0       0.0                             96.4296
+    0:00:13    2807.9      0.00       0.0       0.0                             96.4296
+    0:00:13    2807.9      0.00       0.0       0.0                             96.4296
+    0:00:13    2807.9      0.00       0.0       0.0                             96.4296
+    0:00:13    2807.7      0.00       0.0       0.0                             96.4043
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -1272,109 +1926,65 @@ Information: Annotated 'cell' delays are assumed to include load delay. (UID-282
 Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 1
-dc_shell> gui_start 
-dc_shell> Current design is 'toplevel'.
-Current design is 'toplevel'.
-dc_shell> report_tim
-report_timing              report_timing_derate       report_timing_requirements 
-dc_shell> report_timing
- 
-****************************************
-Report : timing
-        -path full
-        -delay max
-        -max_paths 1
-Design : toplevel
-Version: N-2017.09
-Date   : Fri Dec 21 14:46:25 2018
-****************************************
-
-Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
-Wire Load Model Mode: top
-
-  Startpoint: genblk1_0__Clock_divider/clkB_reg
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: dataOut_SP_reg
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                 0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  genblk1_0__Clock_divider/clkB_reg/CK (DFFRPQ_X0P5M_A9TS)
-                                                        0.0000     0.0000 r
-  genblk1_0__Clock_divider/clkB_reg/Q (DFFRPQ_X0P5M_A9TS)
-                                                        0.1041     0.1041 f
-  genblk1_0__Clock_divider/io_clkB (Clock_divider_3)    0.0000     0.1041 f
-  Serializer/io_clk[1] (Serializer_00000010_00000004_0)
-                                                        0.0000     0.1041 f
-  Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000008_00000004_00000001)
-                                                        0.0000     0.1041 f
-  Serializer/genblk1_Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000004_00000004_00000002)
-                                                        0.0000     0.1041 f
-  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/io_clk[1] (Serializer_00000002_00000004_00000003)
-                                                        0.0000     0.1041 f
-  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/U4/Y (INV_X0P8M_A9TS)
-                                                        0.0162     0.1203 r
-  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/U3/Y (AO22_X0P7M_A9TS)
-                                                        0.0385     0.1588 r
-  Serializer/genblk1_Serializer/genblk1_Serializer/genblk1_Serializer/io_dataOut (Serializer_00000002_00000004_00000003)
-                                                        0.0000     0.1588 r
-  Serializer/genblk1_Serializer/genblk1_Serializer/io_dataOut (Serializer_00000004_00000004_00000002)
-                                                        0.0000     0.1588 r
-  Serializer/genblk1_Serializer/io_dataOut (Serializer_00000008_00000004_00000001)
-                                                        0.0000     0.1588 r
-  Serializer/io_dataOut (Serializer_00000010_00000004_0)
-                                                        0.0000     0.1588 r
-  dataOut_SP_reg/D (DFFRPQ_X0P5M_A9TS)                  0.0000     0.1588 r
-  data arrival time                                                0.1588
-
-  clock clk (rise edge)                                 0.6500     0.6500
-  clock network delay (ideal)                           0.0000     0.6500
-  dataOut_SP_reg/CK (DFFRPQ_X0P5M_A9TS)                 0.0000     0.6500 r
-  library setup time                                   -0.0246     0.6254
-  data required time                                               0.6254
-  --------------------------------------------------------------------------
-  data required time                                               0.6254
-  data arrival time                                               -0.1588
-  --------------------------------------------------------------------------
-  slack (MET)                                                      0.4666
-
-
-1
+dc_shell> report_
+report_annotated_check                     report_buffer_tree_qor                     report_delay_calculation                   report_host_options                        report_opcond_inference                    report_saif                                report_test_model                          
+report_annotated_delay                     report_bus                                 report_design                              report_ideal_network                       report_operating_conditions                report_scaling_lib_group                   report_test_point_configuration            
+report_annotated_transition                report_cache                               report_design_lib                          report_ieee_1500_configuration             report_partitions                          report_scan_cell_set                       report_test_point_element                  
+report_app_var                             report_case_analysis                       report_dft_clock_controller                report_interclock_relation                 report_pass_data                           report_scan_chain                          report_test_power_modes                    
+report_area                                report_cell                                report_dft_clock_gating_configuration      report_internal_loads                      report_path_budget                         report_scan_compression_configuration      report_testability_configuration           
+report_attribute                           report_cell_mode                           report_dft_clock_gating_pin                report_isolate_ports                       report_path_group                          report_scan_configuration                  report_threshold_voltage_group             
+report_attributes                          report_check_library_options               report_dft_configuration                   report_isolation_cell                      report_pin_map                             report_scan_group                          report_timing                              
+report_auto_ungroup                        report_clock                               report_dft_connect                         report_latch_loop_groups                   report_pin_name_synonym                    report_scan_link                           report_timing_derate                       
+report_autofix_configuration               report_clock_constraint                    report_dft_design                          report_level_shifter                       report_pipeline_scan_data_configuration    report_scan_path                           report_timing_requirements                 
+report_autofix_element                     report_clock_fanout                        report_dft_drc_rules                       report_lib                                 report_port                                report_scan_register_type                  report_top_implementation_options          
+report_bist_configuration                  report_clock_gating                        report_dft_drc_violations                  report_link_library_subset                 report_power                               report_scan_replacement                    report_transitive_fanin                    
+report_block_abstraction                   report_clock_gating_check                  report_dft_equivalent_signals              report_logicbist_configuration             report_power_calculation                   report_scan_skew_group                     report_transitive_fanout                   
+report_boundary_cell                       report_clock_timing                        report_dft_insertion_configuration         report_min_pulse_width                     report_power_domain                        report_scan_state                          report_units                               
+report_boundary_cell_io                    report_clock_tree                          report_dft_location                        report_mode                                report_power_gating                        report_scan_suppress_toggling              report_use_test_model                      
+report_bsd_ac_port                         report_clocks                              report_dft_partition                       report_multibit                            report_power_pin_info                      report_serialize_configuration             report_wire_load                           
+report_bsd_buffers                         report_compile_options                     report_dft_power_control                   report_multibit_banking                    report_power_switch                        report_size_only                           report_wrapper_configuration               
+report_bsd_compliance                      report_compile_spg_mode                    report_dft_signal                          report_mv_library_cells                    report_pst                                 report_streaming_compression_configuration report_write_lib_mode                      
+report_bsd_configuration                   report_constraint                          report_direct_power_rail_tie               report_mw_lib                              report_qor                                 report_supply_net                          
+report_bsd_instruction                     report_constraints                         report_disable_timing                      report_name_rules                          report_qtm_model                           report_supply_port                         
+report_bsd_linkage_port                    report_cross_probing                       report_dont_touch                          report_names                               report_reference                           report_synlib                              
+report_bsd_patterns                        report_cross_probing_files                 report_dp_smartgen_options                 report_net                                 report_resources                           report_synthetic                           
+report_bsd_power_up_reset                  report_crpr                                report_fsm                                 report_net_fanout                          report_retention_cell                      report_target_library_subset               
+report_buffer_tree                         report_datapath_gating                     report_hierarchy                           report_ocvm                                report_retention_clamp_cell                report_test_assume                         
 dc_shell> report_area 
  
 ****************************************
 Report : area
 Design : toplevel
 Version: N-2017.09
-Date   : Fri Dec 21 14:46:49 2018
+Date   : Mon Jan  7 15:51:15 2019
 ****************************************
 
 Library(s) Used:
 
     sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
 
-Number of ports:                           79
-Number of nets:                           136
-Number of cells:                           66
-Number of combinational cells:             23
-Number of sequential cells:                35
+Number of ports:                          845
+Number of nets:                          1654
+Number of cells:                          826
+Number of combinational cells:            291
+Number of sequential cells:               519
 Number of macros/black boxes:               0
-Number of buf/inv:                          8
-Number of references:                       6
+Number of buf/inv:                         36
+Number of references:                      10
 
-Combinational area:                 28.967399
-Buf/Inv area:                        3.830400
-Noncombinational area:             159.201007
+Combinational area:                446.720391
+Buf/Inv area:                       19.391400
+Noncombinational area:            2360.962902
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                   188.168406
+Total cell area:                  2807.683293
 Total area:                 undefined
 1
+dc_shell> report_po
+report_port              report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
+dc_shell> report_pow
+report_power             report_power_calculation report_power_domain      report_power_gating      report_power_pin_info    report_power_switch      
 dc_shell> report_power
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
@@ -1385,7 +1995,7 @@ Report : power
         -analysis_effort low
 Design : toplevel
 Version: N-2017.09
-Date   : Fri Dec 21 14:47:12 2018
+Date   : Mon Jan  7 15:51:31 2019
 ****************************************
 
 
@@ -1407,12 +2017,12 @@ Power-specific unit information :
     Leakage Power Units = 1uW
 
 
-  Cell Internal Power  =  29.2948 uW   (93%)
-  Net Switching Power  =   2.1835 uW    (7%)
+  Cell Internal Power  = 101.7292 uW   (98%)
+  Net Switching Power  =   2.1465 uW    (2%)
                          ---------
-Total Dynamic Power    =  31.4782 uW  (100%)
+Total Dynamic Power    = 103.8758 uW  (100%)
 
-Cell Leakage Power     =   5.9616 uW
+Cell Leakage Power     =  86.0477 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -1422,10 +2032,10 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register       1.7554e-02        1.6963e-03            0.3129        1.9563e-02  (  52.25%)
-sequential     1.1076e-02            0.0000            4.8368        1.5913e-02  (  42.50%)
-combinational  6.6502e-04        4.8721e-04            0.8119        1.9641e-03  (   5.25%)
+register       1.7473e-02        1.6550e-03            0.3132        1.9441e-02  (  10.24%)
+sequential     8.3611e-02            0.0000           74.3062            0.1579  (  83.15%)
+combinational  6.4595e-04        4.9152e-04           11.4284        1.2566e-02  (   6.62%)
 --------------------------------------------------------------------------------------------------
-Total          2.9295e-02 mW     2.1835e-03 mW         5.9616 uW     3.7440e-02 mW
+Total              0.1017 mW     2.1465e-03 mW        86.0477 uW         0.1899 mW
 1
 dc_shell> 
