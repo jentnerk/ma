@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Ultra(TM) in wire load mode
 // Version   : N-2017.09
-// Date      : Tue Jan  8 08:37:20 2019
+// Date      : Tue Jan  8 14:48:47 2019
 /////////////////////////////////////////////////////////////
 
 
@@ -24,10 +24,10 @@ module Serializer_00000002_00000001_0 ( io_clk, io_rst, io_dataIn, io_dataOut
   wire   n1;
   wire   [1:0] reg_SP;
 
-  DFFRPQ_X0P5M_A9TS reg_SP_reg_0_ ( .D(io_dataIn[0]), .CK(io_clk[1]), .R(
-        io_rst), .Q(reg_SP[0]) );
   DFFRPQ_X0P5M_A9TS reg_SP_reg_1_ ( .D(io_dataIn[1]), .CK(io_clk[1]), .R(
         io_rst), .Q(reg_SP[1]) );
+  DFFRPQ_X0P5M_A9TS reg_SP_reg_0_ ( .D(io_dataIn[0]), .CK(io_clk[1]), .R(
+        io_rst), .Q(reg_SP[0]) );
   AO22_X0P7M_A9TS U3 ( .A0(io_clk[1]), .A1(reg_SP[1]), .B0(n1), .B1(reg_SP[0]), 
         .Y(io_dataOut) );
   INV_X0P8M_A9TS U4 ( .A(io_clk[1]), .Y(n1) );
