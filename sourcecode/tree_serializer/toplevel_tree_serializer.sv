@@ -2,7 +2,7 @@
 
 //Serializer from to 
 
-module toplevel #(parameter int unsigned FROM = 2,parameter int unsigned LOGFROM = 1)
+module toplevel_tree_serializer #(parameter int unsigned FROM = 64,parameter int unsigned LOGFROM = 6)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,

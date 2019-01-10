@@ -1,9 +1,15 @@
 
 
-
+##########################################
 # start modelsim (taken from modelsim gui)
-vsim-10.6b -lib work -voptargs=+acc serializer_tb;
+##########################################
 
-#do wave2.do;
+# for the combine serializer with shift and tree elements
+#vsim-10.6b -lib work -voptargs=+acc toplevel_tb;
 
-restart -f; run -all;
+# start only the shifter testbench
+vsim-10.6b -lib work -voptargs=+acc shift_serializer_tb;
+
+# start tree serializer testbench
+#vsim-10.6b -lib work -voptargs=+acc tree_serializer_tb;
+

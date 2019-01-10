@@ -693,3 +693,27 @@ Jan 08 11:48:05   move /home/msc18h28/.cockpit_loc.gf45soi to /home/msc18h28/.co
 Jan 08 11:48:05   copy /home/msc18h28/1W7MRhmRqv (generated data dumped to tempfile) to /home/msc18h28/.cockpit_loc.gf45soi
 Jan 08 11:48:05   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii
 Jan 08 11:48:05   load db/config from .cockpitrc
+Jan 09 10:38:58   -------------------------------------------------------------------------------------
+Jan 09 10:38:58   -- gf45soi v0.1
+Jan 09 10:38:58   -- call: gf45soi 
+Jan 09 10:38:58   -------------------------------------------------------------------------------------
+Jan 09 10:38:58   move /home/msc18h28/.cockpit_loc.gf45soi to /home/msc18h28/.cockpit_loc.gf45soi~
+Jan 09 10:38:58   copy /home/msc18h28/gOX8ETQYWN (generated data dumped to tempfile) to /home/msc18h28/.cockpit_loc.gf45soi
+Jan 09 10:38:58   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii
+Jan 09 10:38:58   load db/config from .cockpitrc
+Jan 10 10:33:47   -------------------------------------------------------------------------------------
+Jan 10 10:33:47   -- gf45soi v0.1
+Jan 10 10:33:47   -- call: gf45soi 
+Jan 10 10:33:47   -------------------------------------------------------------------------------------
+Jan 10 10:33:47   move /home/msc18h28/.cockpit_loc.gf45soi to /home/msc18h28/.cockpit_loc.gf45soi~
+Jan 10 10:33:47   copy /home/msc18h28/h9wdeMpApl (generated data dumped to tempfile) to /home/msc18h28/.cockpit_loc.gf45soi
+Jan 10 10:33:47   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii
+Jan 10 10:33:47   load db/config from .cockpitrc
+Jan 10 14:13:38   -------------------------------------------------------------------------------------
+Jan 10 14:13:38   -- gf45soi v0.1
+Jan 10 14:13:38   -- call: gf45soi 
+Jan 10 14:13:38   -------------------------------------------------------------------------------------
+Jan 10 14:13:38   move /home/msc18h28/.cockpit_loc.gf45soi to /home/msc18h28/.cockpit_loc.gf45soi~
+Jan 10 14:13:38   copy /home/msc18h28/JB3JJnMSMY (generated data dumped to tempfile) to /home/msc18h28/.cockpit_loc.gf45soi
+Jan 10 14:13:38   load db/config from /usr/pack/gf-45soi-kgf/dz/cockpit_gf45soi/conf/default.ascii
+Jan 10 14:13:38   load db/config from .cockpitrc

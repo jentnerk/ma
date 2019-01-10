@@ -16,7 +16,7 @@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
 # ------------------------------------------------------------------------------
 # Analyze Design
 # ------------------------------------------------------------------------------
-analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/shift_serializer.sv /home/msc18h28/ma/sourcecode/toplevel.sv /home/msc18h28/ma/sourcecode/serializer.sv /home/msc18h28/ma/sourcecode/Clock_divider.v}
+analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/toplevel.sv /home/msc18h28/ma/sourcecode/shift_serializer_from_to.sv /home/msc18h28/ma/sourcecode/tree_serializer.sv /home/msc18h28/ma/sourcecode/Clock_divider.v}
 set TOP_ENTITY {toplevel}
 set ENTITY {Serializer}
 # ------------------------------------------------------------------------------

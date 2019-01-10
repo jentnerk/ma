@@ -2,17 +2,16 @@
 // Written by Kaja Jentner
 // Dec-2018
 
-`timescale 1 ns / 1 ns //(activate for gate level simulation)
 
-module serializer_tb;
+module tree_serializer_tb;
     // constants
     //timeunit 1ns; (activate for RTL simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 2;
+    localparam int unsigned FROM = 64;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 5;   // # of randomized test
+    localparam longint unsigned RANDOM_ROUNDS = 100;   // # of randomized test
     localparam logic TESTKNOWN = 1'b1; // Enable testing of two specific stimuli
 
     // ---------------------------------
@@ -270,7 +269,7 @@ module serializer_tb;
     // Instance DUT - Device Under Test
     // -----------------------------------
 
-    toplevel toplevel
+    toplevel_tree_serializer toplevel_tree_serializer
     (
         .clk                (clk),   // Clock
         .reset              (reset),   // Asynchronous reset active low
