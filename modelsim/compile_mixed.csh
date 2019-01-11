@@ -16,7 +16,9 @@ vlib-${VER} $LIB
 
 # compile the RTL
 	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv
-	log -work work /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh
 
 # compile the testbench
-	vlog -work work /home/msc18h28/ma/sourcecode/toplevel_tb.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/toplevel_tb.sv

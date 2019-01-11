@@ -1,8 +1,9 @@
 //TOPLEVEL
 
 //Serializer from to 
+`include "parameters.vh"
 
-module toplevel_tree_serializer #(parameter int unsigned FROM = 64,parameter int unsigned LOGFROM = 6)
+module toplevel_tree_serializer #(parameter int unsigned FROM = `TREE_FROM ,parameter int unsigned LOGFROM = `TREE_LOGFROM)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic 			data_o,
 		input logic 			clk,

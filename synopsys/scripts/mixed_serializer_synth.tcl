@@ -1,6 +1,7 @@
 
 
-set NAME {8.1.19-3}
+set NAME {11.1.19-1}
+set PATH {/home/msc18h28/ma/sourcecode/mixed_serializer}
 
 remove_design -all
 exec rm -rf WORK/*
@@ -16,20 +17,23 @@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
 # ------------------------------------------------------------------------------
 # Analyze Design
 # ------------------------------------------------------------------------------
-analyze -library WORK -format sverilog {/home/msc18h28/ma/sourcecode/toplevel.sv /home/msc18h28/ma/sourcecode/serializer.sv /home/msc18h28/ma/sourcecode/Clock_divider.v}
+analyze -library WORK -format sverilog $PATH/toplevel.sv 
+analyze -library WORK -format sverilog $PATH/shift_serializer_from_to.sv
+analyze -library WORK -format sverilog $PATH/tree_serializer.sv
+analyze -library WORK -format sverilog $PATH/Clock_divider.sv
 set TOP_ENTITY {toplevel}
 set ENTITY {Serializer}
-
 # ------------------------------------------------------------------------------
 # Elaborate Design
 # ------------------------------------------------------------------------------
 elaborate $TOP_ENTITY
 write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
 
+
 #-------------------------------------------------------------------------------
 #for different clocks
 #-------------------------------------------------------------------------------
-foreach MAXDELAY {1} {
+foreach MAXDELAY {0.06} {
 
   puts ""
   puts "---------------------------------------------------------"
@@ -41,22 +45,19 @@ foreach MAXDELAY {1} {
 remove_design -design
 read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
 
+
 # create clocks
-create_clock clk -period ${MAXDELAY}
-create_generated_clock -name DClkDiv2_clk -divide_by 2 -source clk [get_pin Serializer/io_clk[1]]
+create_clock clk -period $MAXDELAY
+set_fix_hold clk
+#create_generated_clock -name DClkDiv2_clk -divide_by 2 -source $DCLK_SOURCE_PIN [get_pin clkdiv4/area_div0_reg_div2_reg/Q]
 
 # drivers 
 #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] clk]
 #gives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)
 
-# load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represents the 
-# set load.
-set_load 10 data_o
-# since the output is however not constrained no timing violation will come from this applied load
-# U8 is the buffer that has been inserted by synopsys
-set_max_delay ${MAXDELAY} -to U8/Y 
-# to check the influence of the load you can use
-#report_timing -from dataOut_SP_reg/Q -to data_o
+# loads
+#set_load [load_of ${LIB}/${LOAD_CELL}/${LOAD_PIN}] [all_outputs]
+
 compile_ultra
 
 write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
@@ -65,7 +66,7 @@ write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
   set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
   report_timing       >> reports/$REPNAME
   report_area         >> reports/$REPNAME
-  check_design        >> reports/$REPNAME
+  check_design        >> reports/REPNAME
   report_design       >> reports/$REPNAME
 
 # write verilog netlist
@@ -77,4 +78,7 @@ write_sdc -nosplit ./netlists/$ENTITY\_synth.sdc
 exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY\_synth.sdc > netlists/$ENTITY\_synth.be.sdc
 write_sdf ./netlists/$ENTITY\_synth.sdf
 
+
+#extract one path
+#report_timing -from Serializer/reg_SP[0] -to dataOut_SP_reg/D
 }

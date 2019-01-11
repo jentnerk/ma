@@ -2,13 +2,15 @@
 // Written by Kaja Jentner
 // Dec-2018
 
+`include "parameters.vh"
+
 module toplevel_tb;
     // constants
     //timeunit 1ns; //(activate for RTL simulation)
     //`timescale 1 ns / 1 ns; //(activate for gate level simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 20;
-    localparam int unsigned TO = 4;
+    localparam int unsigned FROM = `SHIFT_FROM;
+    localparam int unsigned TO = `SHIFT_TO;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs

@@ -1,9 +1,9 @@
 //TOPLEVEL
 
 //Serializer from to 
-//`include "params.sv"
+`include "parameters.vh"
 
-module toplevel #(parameter int unsigned SHIFT_FROM = 20,parameter int unsigned SHIFT_TO = 4, parameter int unsigned SHIFT_LOGFROM = 10, parameter int unsigned TREE_FROM = 4, parameter int unsigned TREE_LOGFROM = 2)
+module toplevel #(parameter int unsigned SHIFT_FROM = `SHIFT_FROM,parameter int unsigned SHIFT_TO = `SHIFT_TO, parameter int unsigned SHIFT_LOGFROM = `SHIFT_LOGFROM, parameter int unsigned TREE_FROM = `TREE_FROM, parameter int unsigned TREE_LOGFROM = `TREE_LOGFROM)
 	(	input logic [SHIFT_FROM-1:0] 	data_i,
 		output logic 					data_o,
 		input logic						valid_i,

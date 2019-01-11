@@ -2,7 +2,9 @@
 
 //Serializer from
 
-module shift_serializer #(parameter int unsigned FROM=8, parameter int unsigned LOG2FROM=4, parameter int unsigned TO=1)
+`include "parameters.vh"
+
+module shift_serializer #(parameter int unsigned FROM=`SHIFT_FROM, parameter int unsigned LOG2FROM=`SHIFT_LOGFROM, parameter int unsigned TO=`SHIFT_TO)
 	(	input logic [FROM-1:0] 	data_i,
 		output logic [TO-1:0]	data_o,
 		input logic 			clk,

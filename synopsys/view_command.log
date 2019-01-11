@@ -22,13 +22,14 @@ Detected [rhel7.4i] setup
 Initializing...
 Loading Design Compiler Setup
 Initializing gui preferences from file  /home/msc18h28/.synopsys_dv_prefs.tcl
-dc_shell> s[Ksourc s[K[Ke[Kce scripts/serial
-serializer_synth.tcl     serializer_synthesis.tcl 
-dc_shell> source scripts/serializer_synth.tcl 
+dc_shell> source scripts/
+./                         mixed_serializer_synth.tcl synth_top.tcl              
+../                        shift_serializer_synth.tcl synthesize_from_shell.tcl  
+ATPlot.tcl                 shifter_synth.tcl          tree_serializer_synth.tcl  
+dc_shell> source scripts/tree_serializer_synth.tcl 
 Running PRESTO HDLC
 Compiling source file /home/msc18h28/ma/sourcecode/toplevel.sv
-Compiling source file /home/msc18h28/ma/sourcecode/serializer.sv
-Error:  Unable to open file `/home/msc18h28/ma/sourcecode/serializer.sv': No such file or directory. (VER-41)
+Error:  Unable to open file `/home/msc18h28/ma/sourcecode/toplevel.sv': No such file or directory. (VER-41)
 *** Presto compilation terminated with 1 errors. ***
 Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
@@ -39,42 +40,214 @@ Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
   Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Warning:  File /home/msc18h28/ma/synopsys/WORK/toplevel-verilog.pvl not found, or does not contain a usable description of toplevel. (ELAB-320)
-Error:  Module 'toplevel' cannot be found for elaboration. (ELAB-357)
-*** Presto compilation terminated with 1 errors. ***
-Error: No files or designs were specified. (UID-22)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv:34: signed to unsigned conversion occurs. (VER-318)
 
----------------------------------------------------------
-|              Working on serializer                    |
-|               Max. Delay is ~1~               |
----------------------------------------------------------
+Inferred memory devices in process
+	in routine toplevel line 44 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
 
-Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer_8.1.19-3_elab.ddc'.
-Loaded 1 design.
-Current design is 'toplevel'.
+Inferred memory devices in process
+	in routine toplevel line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  valid2_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  valid1_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel'.
 Information: Building the design 'Clock_divider'. (HDL-193)
 
 Inferred memory devices in process
-	in routine Clock_divider line 12 in file
-		'/home/msc18h28/ma/sourcecode/Clock_divider.v'.
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'toplevel' with
-	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
 
 Inferred memory devices in process
-	in routine Serializer_00000002_00000001_0 line 53 in file
-		'/home/msc18h28/ma/sourcecode/tree_serializer.sv'.
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer_8.1.19-3_elab.ddc'.
+
+---------------------------------------------------------
+|              Working on serializer                    |
+|               Max. Delay is ~1~               |
+---------------------------------------------------------
+
+Removing design 'toplevel'
+Removing design 'Clock_divider'
+Removing design 'shift_serializer_00000018_00000003_00000008'
+Removing design 'tree_serializer_00000008_00000003'
+Removing design 'Serializer_00000008_00000003_0'
+Removing design 'Serializer_00000004_00000003_00000001'
+Removing design 'Serializer_00000002_00000003_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer_8.1.19-3_elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Can't find object 'Serializer/io_clk[1]' in design 'toplevel'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 Warning: Can't find object 'U8/Y' in design 'toplevel'. (UID-95)
 Error: Value for list '-to' must have 1 elements. (CMD-036)
 Information: Performing power optimization. (PWR-850)
@@ -89,6 +262,10 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 3 instances of design 'Clock_divider'. (OPT-1056)
   Simplifying Design 'toplevel'
 
 Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
@@ -100,12 +277,1428 @@ voltage and temperatures parameters than the parameters at which target library
 io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
   Building model 'DW01_NAND2'
 Information: Ungrouping hierarchy genblk1[0].Clock_divider before Pass 1 (OPT-776)
-Information: Ungrouping 1 of 3 hierarchies before Pass 1 (OPT-775)
+Information: Ungrouping hierarchy shift_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping 8 of 9 hierarchies before Pass 1 (OPT-775)
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'toplevel'
+Information: Added key list 'DesignWare' to design 'toplevel'. (DDB-72)
+Information: The register 'shift_serializer/State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'shift_serializer/Counter_SP_reg[3]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: The register 'shift_serializer/Counter_SP_reg[2]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     295.7      0.00       0.0      97.1                             10.3066
+    0:00:10     295.7      0.00       0.0      97.1                             10.3066
+    0:00:10     295.7      0.00       0.0      97.1                             10.3066
+    0:00:10     295.7      0.00       0.0      97.1                             10.3066
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:10     295.7      0.00       0.0      97.1                             10.2882
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+
+
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     295.7      0.00       0.0      97.1                             10.1386
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+    0:00:10     309.3      0.00       0.0      11.7                             11.4468
+    0:00:10     309.3      0.00       0.0      11.7                             11.4468
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     309.3      0.00       0.0      11.7                             11.4468
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing ddc file 'DDC/toplevel_8.1.19-3_1ns.ddc'.
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/Serializer8.1.19-3.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf'. (WT-3)
+dc_shell> source scripts/tree_serializer_synth.tcl
+Removing design 'toplevel'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel.sv
+Error:  Unable to open file `/home/msc18h28/ma/sourcecode/tree_serializer/toplevel.sv': No such file or directory. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/serializer.sv
+Error:  Unable to open file `/home/msc18h28/ma/sourcecode/tree_serializer/serializer.sv': No such file or directory. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv:34: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel line 44 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine toplevel line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  valid2_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  valid1_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+
+---------------------------------------------------------
+|              Working on serializer                    |
+|               Max. Delay is ~1~               |
+---------------------------------------------------------
+
+Removing design 'toplevel'
+Removing design 'Clock_divider'
+Removing design 'shift_serializer_00000018_00000003_00000008'
+Removing design 'tree_serializer_00000008_00000003'
+Removing design 'Serializer_00000008_00000003_0'
+Removing design 'Serializer_00000004_00000003_00000001'
+Removing design 'Serializer_00000002_00000003_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Can't find object 'Serializer/io_clk[1]' in design 'toplevel'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+Warning: Can't find object 'U8/Y' in design 'toplevel'. (UID-95)
+Error: Value for list '-to' must have 1 elements. (CMD-036)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 3 instances of design 'Clock_divider'. (OPT-1056)
+  Simplifying Design 'toplevel'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design toplevel has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: Ungrouping hierarchy genblk1[0].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy shift_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping 8 of 9 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'toplevel'
+Information: Added key list 'DesignWare' to design 'toplevel'. (DDB-72)
+Information: The register 'shift_serializer/State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'shift_serializer/Counter_SP_reg[3]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: The register 'shift_serializer/Counter_SP_reg[2]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+  Global Optimization (Phase 54)
+  Global Optimization (Phase 55)
+  Global Optimization (Phase 56)
+  Global Optimization (Phase 57)
+  Global Optimization (Phase 58)
+  Global Optimization (Phase 59)
+  Global Optimization (Phase 60)
+  Global Optimization (Phase 61)
+  Global Optimization (Phase 62)
+  Global Optimization (Phase 63)
+  Global Optimization (Phase 64)
+  Global Optimization (Phase 65)
+  Global Optimization (Phase 66)
+  Global Optimization (Phase 67)
+  Global Optimization (Phase 68)
+  Global Optimization (Phase 69)
+  Global Optimization (Phase 70)
+  Global Optimization (Phase 71)
+  Global Optimization (Phase 72)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+
+
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     295.7      0.00       0.0      97.1                              9.8866
+  Global Optimization (Phase 73)
+  Global Optimization (Phase 74)
+  Global Optimization (Phase 75)
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+  Global Optimization (Phase 76)
+  Global Optimization (Phase 77)
+  Global Optimization (Phase 78)
+  Global Optimization (Phase 79)
+  Global Optimization (Phase 80)
+  Global Optimization (Phase 81)
+  Global Optimization (Phase 82)
+  Global Optimization (Phase 83)
+  Global Optimization (Phase 84)
+  Global Optimization (Phase 85)
+  Global Optimization (Phase 86)
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Writing ddc file 'DDC/toplevel__1ns.ddc'.
+Writing verilog file '/home/msc18h28/ma/synopsys/netlists/Serializer.v'.
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf'. (WT-3)
+dc_shell> source scripts/tree_serializer_synth.tcl[11G[Kset NAME {}
+dc_shell> set PATH {/home/msc18h28/ma/sourcecode/tree_serializer}
+/home/msc18h28/ma/sourcecode/tree_serializer
+dc_shell> 
+dc_shell> remove_design -all
+Removing design 'toplevel'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+1
+dc_shell> exec rm -rf WORK/*
+dc_shell> 
+dc_shell> set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> # set std cell library
+dc_shell> dz_set_pvt [list $CELL_LIB $PAD_LIB]
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db
+dc_shell> analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv 
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+1
+dc_shell> analyze -library WORK -format sverilog $PATH/serializer.sv
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/serializer.sv
+Error:  Unable to open file `/home/msc18h28/ma/sourcecode/tree_serializer/serializer.sv': No such file or directory. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
+0
+dc_shell> analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+1
+dc_shell> 
+dc_shell> set TOP_ENTITY {toplevel}
+toplevel
+dc_shell> set ENTITY {Serializer}
+Serializer
+dc_shell> 
+dc_shell> # ------------------------------------------------------------------------------
+dc_shell> # Elaborate Design
+dc_shell> # ------------------------------------------------------------------------------
+dc_shell> elaborate $TOP_ENTITY
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv:34: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel line 44 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine toplevel line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  valid2_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  valid1_out_SP_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+dc_shell> write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+1
+dc_shell> set MAXDELAY 0.06[K[K[K[K1
+1
+dc_shell> 
+dc_shell> remove_design -design
+Removing design 'toplevel'
+Removing design 'Clock_divider'
+Removing design 'shift_serializer_00000018_00000003_00000008'
+Removing design 'tree_serializer_00000008_00000003'
+Removing design 'Serializer_00000008_00000003_0'
+Removing design 'Serializer_00000004_00000003_00000001'
+Removing design 'Serializer_00000002_00000003_00000002'
+1
+dc_shell> read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel'.
+toplevel
+dc_shell> 
+dc_shell> # create clocks
+dc_shell> create_clock clk -period ${MAXDELAY}
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000018,32'h00000003,32'h00000008". (HDL-193)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:66: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv:78: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_serializer_00000018_00000003_00000008 line 87 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    State_SP_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Reg_SP_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Counter_SP_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tree_serializer' instantiated from design 'toplevel' with
+	the parameters "32'h00000008,32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine tree_serializer_00000008_00000003 line 24 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'tree_serializer_00000008_00000003' with
+	the parameters "32'h00000008,32'h00000003,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000008_00000003_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000008_00000003_0' with
+	the parameters "32'h00000004,32'h00000003,32'h00000001". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000004_00000003_00000001 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000003_00000001' with
+	the parameters "32'h00000002,32'h00000003,32'h00000002". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000003_00000002 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+dc_shell> create_generated_clock -name DClkDiv2_clk -divide_by 2 -source clk [get_pin Serializer/io_clk[1]]
+Warning: Can't find object 'Serializer/io_clk[1]' in design 'toplevel'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+dc_shell> 
+dc_shell> # drivers 
+dc_shell> #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] c lk]
+dc_shell> #gives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)
+dc_shell> 
+dc_shell> # load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represent s the 
+dc_shell> # set load.
+dc_shell> set_load 10 data_o
+1
+dc_shell> compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 3 instances of design 'Clock_divider'. (OPT-1056)
+  Simplifying Design 'toplevel'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design toplevel has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: Ungrouping hierarchy genblk1[0].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy shift_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer before Pass 1 (OPT-776)
+Information: Ungrouping 8 of 9 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'toplevel'
+Information: Added key list 'DesignWare' to design 'toplevel'. (DDB-72)
+Information: The register 'shift_serializer/State_SP_reg[1]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'shift_serializer/Counter_SP_reg[3]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: The register 'shift_serializer/Counter_SP_reg[2]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 87)
+  Global Optimization (Phase 88)
+  Global Optimization (Phase 89)
+  Global Optimization (Phase 90)
+  Global Optimization (Phase 91)
+  Global Optimization (Phase 92)
+  Global Optimization (Phase 93)
+  Global Optimization (Phase 94)
+  Global Optimization (Phase 95)
+  Global Optimization (Phase 96)
+  Global Optimization (Phase 97)
+  Global Optimization (Phase 98)
+  Global Optimization (Phase 99)
+  Global Optimization (Phase 100)
+  Global Optimization (Phase 101)
+  Global Optimization (Phase 102)
+  Global Optimization (Phase 103)
+  Global Optimization (Phase 104)
+  Global Optimization (Phase 105)
+  Global Optimization (Phase 106)
+  Global Optimization (Phase 107)
+  Global Optimization (Phase 108)
+  Global Optimization (Phase 109)
+  Global Optimization (Phase 110)
+  Global Optimization (Phase 111)
+  Global Optimization (Phase 112)
+  Global Optimization (Phase 113)
+  Global Optimization (Phase 114)
+  Global Optimization (Phase 115)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+    0:00:10     295.7      0.00       0.0      97.1                             10.0362
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:11     295.7      0.00       0.0      97.1                             10.0362
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+
+
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     295.7      0.00       0.0      97.1                              9.8866
+  Global Optimization (Phase 116)
+  Global Optimization (Phase 117)
+  Global Optimization (Phase 118)
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     309.3      0.00       0.0      11.7                             11.1949
+  Global Optimization (Phase 119)
+  Global Optimization (Phase 120)
+  Global Optimization (Phase 121)
+  Global Optimization (Phase 122)
+  Global Optimization (Phase 123)
+  Global Optimization (Phase 124)
+  Global Optimization (Phase 125)
+  Global Optimization (Phase 126)
+  Global Optimization (Phase 127)
+  Global Optimization (Phase 128)
+  Global Optimization (Phase 129)
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+    0:00:12     301.2      0.00       0.0      11.7                             10.4233
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+dc_shell> gui_Sta[K[K[Kst
+gui_start gui_stop  
+dc_shell> gui_st
+Error: ambiguous command 'gui_st' matched 2 commands:
+	(gui_start, gui_stop) (CMD-006)
+dc_shell> gui_start 
+dc_shell> Current design is 'toplevel'.
+4.1
+Current design is 'toplevel'.
+dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
+dc_shell> gui_start[K[11Gcompile_ultra[11Gset_load 10 data_o[11G# set load.[K[13G[4Pload of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represent s the[A[12Ggives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)[K[120G s[K[A[97G[12Gset_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] c lk][A[12G drivers[K[120G l[K[A[20G[11Gcreate_generated_clock -name DClkDiv2_clk -divide_by 2 -source clk [get_pin Serializer/io_clk[1]][18G[10P[24Gclk -period ${MAXDELAY}[K[18G[10@generated_[34G-name DClkDiv2_clk -divide_by 2 -source clk [get_pin Serializer/io_clk[1]][11G# drivers[K[12Gset_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] c lk][A[12Ggives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)[K[120G l[K[A[97G[12G load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represent s the[A[13G[4@set load.[K[120G s[K[A[22G[11Gset_load 10 data_o[11Gcompile_ultra[K[11Ggui_st[Kart[11G[K
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> set NAME {}
+dc_shell> set PATH {/home/msc18h28/ma/sourcecode/tree_serializer}
+/home/msc18h28/ma/sourcecode/tree_serializer
+dc_shell> 
+dc_shell> remove_design -all
+Removing design 'toplevel'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+1
+dc_shell> exec rm -rf WORK/*
+dc_shell> 
+dc_shell> set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+dc_shell> set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> # set std cell library
+dc_shell> dz_set_pvt [list $CELL_LIB $PAD_LIB]
+sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db
+dc_shell> analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv 
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+1
+dc_shell> analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+1
+dc_shell> 
+dc_shell> set TOP_ENTITY {toplevel_tree_serializer}
+toplevel_tree_serializer
+dc_shell> set ENTITY {Serializer}
+Serializer
+dc_shell> 
+dc_shell> # ------------------------------------------------------------------------------
+dc_shell> # Elaborate Design
+dc_shell> # ------------------------------------------------------------------------------
+dc_shell> elaborate $TOP_ENTITY
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv:21: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel_tree_serializer line 28 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+dc_shell> write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+1
+dc_shell> set MAXDELAY 1
+1
+dc_shell> 
+dc_shell> remove_design -design
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+1
+dc_shell> read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel_tree_serializer'.
+toplevel_tree_serializer
+dc_shell> 
+dc_shell> # create clocks
+dc_shell> create_clock clk -period ${MAXDELAY}
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      clkB_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 53 in file
+		'/home/msc18h28/ma/sourcecode/mixed_serializer/tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+dc_shell> create_generated_clock -name DClkDiv2_clk -divide_by 2 -source clk [get_pin Serializer/io_clk[1]]
+1
+dc_shell> 
+dc_shell> # drivers 
+dc_shell> #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] c lk]
+dc_shell> #gives the error: Error: Cannot find the specified driving cell in memory.   (UID-993)
+dc_shell> 
+dc_shell> # load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represent s the 
+dc_shell> # set load.
+dc_shell> set_load 10 data_o
+1
+dc_shell> compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'toplevel_tree_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design toplevel_tree_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: Ungrouping hierarchy genblk1[0].Clock_divider before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 3 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'toplevel_tree_serializer'
   Processing 'Serializer_00000002_00000001_0'
 
   Updating timing information
@@ -195,33 +1788,33 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      20.8      0.00       0.0      97.1                              0.7343
-    0:00:09      20.8      0.00       0.0      97.1                              0.7343
-    0:00:09      20.8      0.00       0.0      97.1                              0.7343
-    0:00:09      20.8      0.00       0.0      97.1                              0.7343
+    0:00:09      20.8      0.00       0.0      97.1                              0.7281
+    0:00:09      20.8      0.00       0.0      97.1                              0.7281
+    0:00:09      20.8      0.00       0.0      97.1                              0.7281
+    0:00:09      20.8      0.00       0.0      97.1                              0.7281
 
   Beginning WLM Backend Optimization
   --------------------------------------
     0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
 
 
   Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
@@ -231,12 +1824,12 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      20.8      0.00       0.0      97.1                              0.7281
+    0:00:10      20.8      0.00       0.0      97.1                              0.7281
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
-    0:00:09      34.2      0.00       0.0      11.7                              2.0121
-    0:00:09      34.2      0.00       0.0      11.7                              2.0121
+    0:00:10      34.2      0.00       0.0      11.7                              2.0121
+    0:00:10      34.2      0.00       0.0      11.7                              2.0121
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -246,7 +1839,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09      34.2      0.00       0.0      11.7                              2.0121
+    0:00:10      34.2      0.00       0.0      11.7                              2.0121
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
@@ -257,9 +1850,9 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 40)
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
-    0:00:09      26.1      0.00       0.0      11.7                              1.2440
-    0:00:09      26.1      0.00       0.0      11.7                              1.2440
-    0:00:09      26.1      0.00       0.0      11.7                              1.2440
+    0:00:10      26.1      0.00       0.0      11.7                              1.2440
+    0:00:10      26.1      0.00       0.0      11.7                              1.2440
+    0:00:10      26.1      0.00       0.0      11.7                              1.2440
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
@@ -288,11 +1881,11 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
     0:00:10      26.1      0.00       0.0      11.7                              1.2440
-    0:00:10      26.1      0.00       0.0      11.7                              1.2440
-    0:00:10      26.1      0.00       0.0      11.7                              1.2440
-    0:00:10      26.1      0.00       0.0      11.7                              1.2440
-    0:00:10      26.1      0.00       0.0      11.7                              1.2440
-    0:00:10      26.1      0.00       0.0      11.7                              1.2440
+    0:00:11      26.1      0.00       0.0      11.7                              1.2440
+    0:00:11      26.1      0.00       0.0      11.7                              1.2440
+    0:00:11      26.1      0.00       0.0      11.7                              1.2440
+    0:00:11      26.1      0.00       0.0      11.7                              1.2440
+    0:00:11      26.1      0.00       0.0      11.7                              1.2440
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -305,8 +1898,20 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Writing ddc file 'DDC/toplevel_8.1.19-3_1ns.ddc'.
-Writing verilog file '/home/msc18h28/ma/synopsys/netlists/Serializer8.1.19-3.v'.
-Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/home/msc18h28/ma/synopsys/netlists/Serializer_synth.sdf'. (WT-3)
+1
+dc_shell> gui_start 
+dc_shell> Current design is 'toplevel_tree_serializer'.
+Current design is 'toplevel_tree_serializer'.
+dc_shell> get_pin genblk1[0].Clock_divider/clkB_reg/Q
+{genblk1[0].Clock_divider/clkB_reg/Q}
+dc_shell> set CLK_DIV2 [get_pin genblk1[0].Clock_divider/clkB_reg/Q]
+{genblk1[0].Clock_divider/clkB_reg/Q}
+dc_shell> CLK_DIV2
+Error: unknown command 'CLK_DIV2' (CMD-005)
+dc_shell> $CLK_DIV2
+Error: unknown command '_sel2104' (CMD-005)
+dc_shell> get_nets clks'
+Warning: Can't find net 'clks'' in design 'toplevel_tree_serializer'. (UID-95)
+dc_shell> get_nets clks[1]
+{clks[1]}
 dc_shell> 

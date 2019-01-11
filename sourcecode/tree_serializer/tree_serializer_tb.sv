@@ -1,13 +1,13 @@
 // testbench serializer
 // Written by Kaja Jentner
 // Dec-2018
-
+`include "parameters.vh"
 
 module tree_serializer_tb;
     // constants
     //timeunit 1ns; (activate for RTL simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = 64;
+    localparam int unsigned FROM = `TREE_FROM;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
