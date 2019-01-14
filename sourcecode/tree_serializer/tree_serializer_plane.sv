@@ -17,33 +17,37 @@ module Serializer #(parameter int unsigned FROM, parameter int unsigned LOGFROM,
 
   assign reg_SN = io_dataIn;
   // MUX to serialize two inputs into one output
-  //clkA is the slow clock and clkB is the fast clock
-  assign dataOut = (io_clk[LOGFROM-COUNTER]) ? reg_SP[FROM-1:FROM/2] : reg_SP[FROM/2-1:0];
+  mux #(FROM) mux (.mux_i(reg_SP), .mux_control_S(io_clk[LOGFROM-COUNTER]), .mux_o(dataOut));
+  // before: assign dataOut = (io_clk[LOGFROM-COUNTER]) ? reg_SP[FROM-1:FROM/2] : reg_SP[FROM/2-1:0];
 
-//registers
-  always @ (posedge io_clk[LOGFROM-COUNTER] or posedge io_rst) begin
-    if (io_rst) begin
-      reg_SP <= '0;
-    end else begin
-      reg_SP <= reg_SN;
+  //registers
+    always @ (posedge io_clk[LOGFROM-COUNTER] or posedge io_rst) begin
+      if (io_rst) begin
+        reg_SP <= '0;
+      end else begin
+        reg_SP <= reg_SN;
+      end
     end
-  end
 
-
-
-  generate
-      //try for loop 
-      if (FROM == 2)
-        begin
-          assign io_dataOut = dataOut;
-        end
-      else 
-        begin
-          Serializer  #(FROM/2,LOGFROM,COUNTER+1) Serializer (.io_clk(io_clk[LOGFROM-(COUNTER+1):1]), .io_rst(io_rst), .io_dataIn(dataOut), .io_dataOut(io_dataOut));
-        end
-
-  endgenerate
-
-
+    // call the serializer module recursively to construct the tree structure
+    // the generated modules name will be <<recursive.serializer>>
+    generate
+        if (FROM == 2) begin
+            assign io_dataOut = dataOut;
+          end
+        else begin:recursive
+            Serializer  #(FROM/2,LOGFROM,COUNTER+1) serializer (.io_clk(io_clk[LOGFROM-(COUNTER+1):1]), .io_rst(io_rst), .io_dataIn(dataOut), .io_dataOut(io_dataOut));
+          end
+    endgenerate
 
 endmodule
+
+
+
+module mux #(parameter int unsigned FROM) (
+  input logic[FROM-1:0] mux_i,
+  input logic mux_control_S,
+  output logic[FROM/2-1:0] mux_o
+  );  
+  assign mux_o = mux_control_S ? mux_i[FROM-1:FROM/2] : mux_i[FROM/2-1:0];
+endmodule // module mux

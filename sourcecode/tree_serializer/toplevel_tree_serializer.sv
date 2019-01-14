@@ -16,9 +16,13 @@ module toplevel_tree_serializer #(parameter int unsigned FROM = `TREE_FROM ,para
 
 	assign clks[0]  = clk;
 	assign data_o = dataOut_SP;
-	generate
-		for (genvar j=0; j<LOGFROM; j++)
-		Clock_divider Clock_divider (.io_clkB(clks[j+1]), .clk(clks[j]), .reset(reset));		
+
+	// build the clock dividers
+	// the clockdivider modules name will be << clock[j].divider >>
+	generate 
+			for (genvar j=0; j<LOGFROM; j++) begin:clock
+				Clock_divider divider (.io_clkB(clks[j+1]), .clk(clks[j]), .reset(reset));
+			end // for (genvar j=0; j<LOGFROM; j++)
 	endgenerate
  	
 
@@ -33,4 +37,4 @@ module toplevel_tree_serializer #(parameter int unsigned FROM = `TREE_FROM ,para
 	    end
 	  end
 
-	endmodule // toplevel_from_to
+endmodule // toplevel_from_to

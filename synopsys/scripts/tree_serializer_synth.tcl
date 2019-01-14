@@ -18,6 +18,7 @@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
 # Analyze Design
 # ------------------------------------------------------------------------------
 analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv 
+analyze -library WORK -format sverilog $PATH/tree_serializer_plane.sv 
 analyze -library WORK -format sverilog $PATH/Clock_divider.sv
 
 set TOP_ENTITY {toplevel_tree_serializer}
@@ -32,7 +33,8 @@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
 #-------------------------------------------------------------------------------
 #for different clocks
 #-------------------------------------------------------------------------------
-foreach MAXDELAY {1} {
+#foreach MAXDELAY {1} {
+set MAXDELAY 1
 
   puts ""
   puts "---------------------------------------------------------"
@@ -44,11 +46,25 @@ foreach MAXDELAY {1} {
 remove_design -design
 read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
 
+# commands found in documentation
+
+#create_clock : for synchronous paths
+
+#set_max_delay, set _min_delay: for asynchronous paths (beruecksichtigt verschiedene clockdomains, 
+# nur most critical path wird verbessert, wird durch group_path beinflusst)
+
+# set-fix-hold auf true setzen, um hold violations zu korrigieren
+
+#set_driving_cell
+#set_load
+
+
 # create clocks
-create_clock clk -period ${MAXDELAY}
-set CLK_DIV2 [get_pin genblk1[0].Clock_divider/clkB_reg/Q]
-set CLK_DIV2 [get_nets clk[1]]
-create_generated_clock -name CLK_DIV2 -divide_by 2 -source CLK_DIV2 [get_pin Serializer/io_clk[1]]
+set HIGH_SPEED_CLK_PIN clk
+create_clock -period ${MAXDELAY} $HIGH_SPEED_CLK_PIN
+# set CLK_DIV2 [get_pin genblk1[0].Clock_divider/clkB_reg/Q]
+# set CLK_DIV2 [get_nets clk[1]]
+create_generated_clock -name CLK_DIV2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clock[0].divider/clkB_reg/Q]
 
 # drivers 
 #set_driving_cell -no_design_rule -lib_cell ${CELL_LIB} -pin ${PAD_LIB} [remove_from_collection [all_inputs] clk]
@@ -56,7 +72,7 @@ create_generated_clock -name CLK_DIV2 -divide_by 2 -source CLK_DIV2 [get_pin Ser
 
 # load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represents the 
 # set load.
-set_load 10 data_o
+set_load 0.01 data_o
 # since the output is however not constrained no timing violation will come from this applied load
 # U8 is the buffer that has been inserted by synopsys
 set_max_delay ${MAXDELAY} -to U8/Y 
@@ -82,4 +98,4 @@ write_sdc -nosplit ./netlists/$ENTITY\_synth.sdc
 exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY\_synth.sdc > netlists/$ENTITY\_synth.be.sdc
 write_sdf ./netlists/$ENTITY\_synth.sdf
 
-}
+#}

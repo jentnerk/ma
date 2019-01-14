@@ -13,27 +13,41 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -lib work -voptargs="+acc" tree_serializer_tb 
-# Start time: 13:56:43 on Jan 11,2019
+# Start time: 11:08:46 on Jan 14,2019
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.tree_serializer_tb(fast)
 # Loading work.toplevel_tree_serializer(fast)
 # Loading work.Clock_divider(fast)
+# Loading work.Serializer(fast__1)
 # Loading work.Serializer(fast)
+# Loading work.mux(fast__1)
+# Loading work.mux(fast)
 do wavetree.do
 do restart_run.csh
 # ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading work.tree_serializer_tb(fast)
 # Loading work.toplevel_tree_serializer(fast)
 # Loading work.Clock_divider(fast)
+# Loading work.Serializer(fast__1)
 # Loading work.Serializer(fast)
+# Loading work.mux(fast__1)
+# Loading work.mux(fast)
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
 # --------------------------------------------------
 # --------------------------------------------------
 # Test Serializer with:
-# data1: 10
+# data1: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -44,15 +58,23 @@ do restart_run.csh
 # 
 # //////////////////////////////////////////////////
 # --------------------------------------------------
-# After                     2 Checks
-#                           2 were successfull!
+# After                     4 Checks
+#                           4 were successfull!
 # --------------------------------------------------
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Randomized with                  100 Stimuli
 # --------------------------------------------------
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 0100
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -62,7 +84,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0001
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -72,7 +102,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1001
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -82,7 +120,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -92,7 +138,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -102,7 +156,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -112,7 +174,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -122,7 +192,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -132,7 +210,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0001
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -142,7 +228,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -152,7 +246,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -162,7 +264,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -172,7 +282,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -182,7 +300,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1100
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -192,7 +318,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1001
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -202,7 +336,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -212,7 +354,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -222,7 +372,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -232,7 +390,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -242,7 +408,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0111
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -252,7 +426,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -262,7 +444,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 1111
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -272,7 +462,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -282,7 +480,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1110
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -292,7 +498,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1000
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -302,7 +516,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -312,7 +534,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1100
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -322,7 +552,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -332,7 +570,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -342,7 +588,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -352,7 +606,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -362,7 +624,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -372,7 +642,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 0000
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -382,7 +660,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 0000
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -392,7 +678,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -402,7 +696,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -412,7 +714,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -422,7 +732,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -432,17 +750,51 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
 # Expected:   0
 # Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
 # 
 # Bit number               0
 # Expected:   1
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 1011
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -450,9 +802,395 @@ do restart_run.csh
 # Bit number               0
 # Expected:   1
 # Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1110
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 1111
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1100
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 0001
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 1000
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1000
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1001
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 1011
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   1
+# Result:     1
+# 
+# --------------------------------------------------
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1110
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1100
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
+# Bit number               1
+# Expected:   0
+# Result:     0
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
+# Bit number               1
+# Expected:   1
+# Result:     1
+# 
+# Bit number               0
+# Expected:   0
+# Result:     0
+# 
+# --------------------------------------------------
+# Applied stimuli: 1011
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -462,7 +1200,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0001
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -472,27 +1218,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
-# Expected:   1
-# Result:     1
-# 
-# Bit number               0
+# Applied stimuli: 0101
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
+# Bit number               2
 # Expected:   1
 # Result:     1
-# 
-# Bit number               0
-# Expected:   0
-# Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 01
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -502,17 +1236,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Applied stimuli: 1111
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -522,37 +1254,33 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
+# Applied stimuli: 1011
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
 # Expected:   1
 # Result:     1
 # 
 # Bit number               0
-# Expected:   0
-# Result:     0
+# Expected:   1
+# Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
-# Bit number               1
-# Expected:   0
-# Result:     0
+# Applied stimuli: 1010
+# Bit number               3
+# Expected:   1
+# Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -562,7 +1290,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1110
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -572,97 +1308,69 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
-# Bit number               1
+# Applied stimuli: 0101
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 00
 # Bit number               1
 # Expected:   0
 # Result:     0
 # 
 # Bit number               0
-# Expected:   0
-# Result:     0
+# Expected:   1
+# Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
-# Bit number               1
+# Applied stimuli: 0001
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 01
 # Bit number               1
 # Expected:   0
 # Result:     0
-# 
-# Bit number               0
-# Expected:   1
-# Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
-# Expected:   1
-# Result:     1
-# 
 # Bit number               0
 # Expected:   1
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
+# Applied stimuli: 1001
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
-# Expected:   1
-# Result:     1
-# 
-# Bit number               0
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
+# Bit number               0
 # Expected:   1
 # Result:     1
-# 
-# Bit number               0
-# Expected:   0
-# Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
-# Bit number               1
+# Applied stimuli: 0010
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -672,37 +1380,33 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Applied stimuli: 1100
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 01
 # Bit number               1
 # Expected:   0
 # Result:     0
 # 
 # Bit number               0
-# Expected:   1
-# Result:     1
-# 
-# --------------------------------------------------
-# Applied stimuli: 01
-# Bit number               1
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# --------------------------------------------------
+# Applied stimuli: 1111
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -712,87 +1416,69 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Applied stimuli: 1111
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
 # Expected:   1
 # Result:     1
 # 
 # Bit number               0
-# Expected:   0
-# Result:     0
+# Expected:   1
+# Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
-# Bit number               1
+# Applied stimuli: 1000
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 01
 # Bit number               1
 # Expected:   0
 # Result:     0
 # 
 # Bit number               0
-# Expected:   1
-# Result:     1
-# 
-# --------------------------------------------------
-# Applied stimuli: 01
-# Bit number               1
 # Expected:   0
 # Result:     0
-# 
-# Bit number               0
-# Expected:   1
-# Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
-# Bit number               1
+# Applied stimuli: 0111
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 10
 # Bit number               1
 # Expected:   1
 # Result:     1
 # 
 # Bit number               0
-# Expected:   0
-# Result:     0
+# Expected:   1
+# Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
-# Bit number               1
-# Expected:   0
-# Result:     0
+# Applied stimuli: 1111
+# Bit number               3
+# Expected:   1
+# Result:     1
 # 
-# Bit number               0
-# Expected:   0
-# Result:     0
+# Bit number               2
+# Expected:   1
+# Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -802,17 +1488,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Applied stimuli: 1100
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# Bit number               2
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 00
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -822,17 +1506,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Applied stimuli: 1011
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
-# Expected:   1
-# Result:     1
+# Bit number               2
+# Expected:   0
+# Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -842,27 +1524,33 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
-# Bit number               1
+# Applied stimuli: 1001
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
+# Bit number               1
 # Expected:   0
 # Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 11
-# Bit number               1
+# Bit number               0
 # Expected:   1
 # Result:     1
 # 
-# Bit number               0
+# --------------------------------------------------
+# Applied stimuli: 1001
+# Bit number               3
 # Expected:   1
 # Result:     1
 # 
-# --------------------------------------------------
-# Applied stimuli: 01
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -872,17 +1560,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
-# Bit number               1
+# Applied stimuli: 0000
+# Bit number               3
 # Expected:   0
 # Result:     0
 # 
-# Bit number               0
-# Expected:   1
-# Result:     1
+# Bit number               2
+# Expected:   0
+# Result:     0
 # 
-# --------------------------------------------------
-# Applied stimuli: 00
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -892,7 +1578,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0111
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -902,7 +1596,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0001
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -912,7 +1614,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0110
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -922,7 +1632,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1100
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -932,7 +1650,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -942,7 +1668,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1000
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -952,7 +1686,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0111
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -962,7 +1704,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -972,7 +1722,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 0010
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -982,7 +1740,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 10
+# Applied stimuli: 1110
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -992,7 +1758,15 @@ do restart_run.csh
 # Result:     0
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1101
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -1002,7 +1776,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 1001
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -1012,7 +1794,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 1111
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -1022,7 +1812,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 11
+# Applied stimuli: 0011
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   1
 # Result:     1
@@ -1032,7 +1830,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 01
+# Applied stimuli: 0101
+# Bit number               3
+# Expected:   0
+# Result:     0
+# 
+# Bit number               2
+# Expected:   1
+# Result:     1
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -1042,7 +1848,15 @@ do restart_run.csh
 # Result:     1
 # 
 # --------------------------------------------------
-# Applied stimuli: 00
+# Applied stimuli: 1000
+# Bit number               3
+# Expected:   1
+# Result:     1
+# 
+# Bit number               2
+# Expected:   0
+# Result:     0
+# 
 # Bit number               1
 # Expected:   0
 # Result:     0
@@ -1053,12 +1867,12 @@ do restart_run.csh
 # 
 # //////////////////////////////////////////////////
 # --------------------------------------------------
-# After                   102 Checks
-#                         102 were successfull!
+# After                   204 Checks
+#                         204 were successfull!
 # --------------------------------------------------
 # ** Note: implicit $finish from program    : /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_tb.sv(106)
-#    Time: 4105 ns  Iteration: 3  Instance: /tree_serializer_tb/test_serializer
+#    Time: 8205 ns  Iteration: 4  Instance: /tree_serializer_tb/test_serializer
 # 1
 # Simulation stop requested.
-# End time: 13:57:41 on Jan 11,2019, Elapsed time: 0:00:58
+# End time: 12:12:30 on Jan 14,2019, Elapsed time: 1:03:44
 # Errors: 0, Warnings: 0
