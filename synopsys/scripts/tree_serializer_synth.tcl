@@ -58,22 +58,29 @@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
   # load of the output is the modulator, worst case it is 10fF. This command will insert a Buffer that represents the 
   # set load.
   set_load 0.01 data_o
-  # since the output is however not constrained no timing violation will come from this applied load
-  # U8 is the buffer that has been inserted by synopsys
-  #set_max_delay ${MAXDELAY} -to U8/Y 
+  # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+  set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+  # constrain the input delay => the delay set here
+  set_input_delay -clock CLK_DIV_4 -max 0.01 [get_ports data_i]
   # to check the influence of the load you can use
   #report_timing -from dataOut_SP_reg/Q -to data_o
+
+  #---------------------------------------------------------------------------------
+  # Compile Design 
+  #---------------------------------------------------------------------------------
   compile_ultra
+
+
 
   #---
   # commands to check timing conditions of all paths (only works for noautoungroup)
   #---
   # path from clockdivider to output FF
-  report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/D
+  report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
   # path from input FF[1] to output FF
-  report_timing -from Serializer/reg_SP_reg[1]_/Q -to dataOut_SP_reg/D
+  report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
   # path from input FF[0] to output FF
-  report_timing -from Serializer/reg_SP_reg[0]_/Q -to dataOut_SP_reg/D
+  report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
   # path from clockdivider to clockdivider (over inverter)
   report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
 

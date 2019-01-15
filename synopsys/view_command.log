@@ -67,25 +67,10 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
-	the parameters "32'h00000004,32'h00000002,0". (HDL-193)
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000004_00000002_0 line 24 in file
-		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000004". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000002,32'h00000002,32'h00000001". (HDL-193)
-
-Inferred memory devices in process
-	in routine Serializer_00000002_00000002_00000001 line 24 in file
+	in routine Serializer_00000002_00000001_0 line 24 in file
 		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -93,15 +78,13 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000002_00000001' with
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
 	the parameters "32'h00000002". (HDL-193)
 Presto compilation completed successfully.
 Writing ddc file 'DDC/Serializer__elab.ddc'.
 Removing design 'toplevel_tree_serializer'
 Removing design 'Clock_divider'
-Removing design 'Serializer_00000004_00000002_0'
-Removing design 'mux_00000004'
-Removing design 'Serializer_00000002_00000002_00000001'
+Removing design 'Serializer_00000002_00000001_0'
 Removing design 'mux_00000002'
 Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
 Loaded 1 design.
@@ -118,25 +101,10 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
-	the parameters "32'h00000004,32'h00000002,0". (HDL-193)
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000004_00000002_0 line 24 in file
-		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000004". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000002,32'h00000002,32'h00000001". (HDL-193)
-
-Inferred memory devices in process
-	in routine Serializer_00000002_00000002_00000001 line 24 in file
+	in routine Serializer_00000002_00000001_0 line 24 in file
 		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -144,24 +112,610 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000002_00000001' with
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
 	the parameters "32'h00000002". (HDL-193)
 Presto compilation completed successfully.
-dc_shell> start_gui 
-dc_shell> Current design is 'toplevel_tree_serializer'.
-4.1
-Current design is 'toplevel_tree_serializer'.
-dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
-Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
-Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
-dc_shell> source scripts/fast_synth_tree.tcl 
+Warning: Can't find clock 'CLK_DIV_4' in design 'toplevel_tree_serializer'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | N-2017.09-DWBB_201709.0 |     *     |
+| Licensed DW Building Blocks        | N-2017.09-DWBB_201709.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'toplevel_tree_serializer'
+
+Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
+Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
+Warning: Operating condition ss_nominal_max_0p90v_125c set on design toplevel_tree_serializer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy Serializer before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy Serializer/mux before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 4 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'toplevel_tree_serializer'
+  Processing 'Clock_divider'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:09      22.5      0.08       0.2       0.0                              0.9296      0.00  
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.1      0.06       0.2       0.0                              1.1931      0.00  
+    0:00:10      27.1      0.06       0.2       0.0                              1.1931      0.00  
+    0:00:11      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:11      27.3      0.06       0.2       0.0                              1.2146      0.00  
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+dc_shell> report_t
+report_target_library_subset      report_test_point_element         report_timing                     report_transitive_fanin           
+report_test_assume                report_test_power_modes           report_timing_derate              report_transitive_fanout          
+report_test_model                 report_testability_configuration  report_timing_requirements        
+report_test_point_configuration   report_threshold_voltage_group    report_top_implementation_options 
+dc_shell> report_t
+Error: ambiguous command 'report_t' matched 14 commands:
+	(report_target_library_subset, report_test_assume, report_test_model ...) (CMD-006)
+dc_shell> report_t
+report_target_library_subset      report_test_point_element         report_timing                     report_transitive_fanin           
+report_test_assume                report_test_power_modes           report_timing_derate              report_transitive_fanout          
+report_test_model                 report_testability_configuration  report_timing_requirements        
+report_test_point_configuration   report_threshold_voltage_group    report_top_implementation_options 
+dc_shell> report_ti
+report_timing              report_timing_derate       report_timing_requirements 
+dc_shell> report_timing
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:04:31 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/reg_SP_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS)        0.0449     0.0449 f
+  U6/Y (INV_X1P7M_A9TS)                                 0.0090     0.0539 r
+  U4/Y (AO22_X1P4M_A9TS)                                0.0362     0.0901 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0901 r
+  data arrival time                                                0.0901
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0233     0.0267
+  data required time                                               0.0267
+  --------------------------------------------------------------------------
+  data required time                                               0.0267
+  data arrival time                                               -0.0901
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0634
+
+
+1
+dc_shell> repo[K[K[K[Kman report_timing
+2.  Synopsys Commands                                        Command Reference
+                                 report_timing
+
+NAME
+       report_timing
+              Displays timing information about a design.
+
+SYNTAX
+       status report_timing
+               [-to to_list
+                | -rise_to rise_to_list
+                | -fall_to fall_to_list]
+               [-from from_list
+                | -rise_from rise_from_list
+                | -fall_from fall_from_list]
+               [-through through_list]
+               [-rise_through rise_through_list]
+               [-fall_through fall_through_list]
+               [-exclude exclude_list
+                | -rise_exclude rise_exclude_list
+                | -fall_exclude fall_exclude_list]
+               [-path_type short | full | full_clock | full_clock_expanded | only | end]
+               [-delay_type min | min_rise | min_fall | max | max_rise | max_fall]
+               [-nworst paths_per_endpoint]
+               [-max_paths max_path_count]
+               [-input_pins]
+               [-nets]
+               [-transition_time]
+               [-crosstalk_delta]
+               [-capacitance]
+               [-effective_capacitance]
+               [-attributes]
+               [-physical]
+               [-slack_greater_than greater_slack_limit]
+               [-slack_lesser_than lesser_slack_limit]
+               [-lesser_path max_path_delay]
+               [-greater_path min_path_delay]
+               [-loops]
+               [-enable_preset_clear_arcs]
+               [-significant_digits digits]
+               [-nosplit]
+               [-sort_by group | slack]
+               [-group group_name]
+               [-trace_latch_borrow]
+               [-derate]
+               [-normalized_slack]
+               [-scenarios scenario_list]
+               [-temperature]
+               [-voltage]
+               [-unique_pins]
+               [-start_end_pair]
+               [-variation]
+               [-ignore_infeasible_paths]
+
+   Data Types
+       to_list                 list
+       rise_to_list            list
+       fall_to_list            list
+       from_list               list
+       rise_from_list          list
+       fall_from_list          list
+       through_list            list
+       rise_through_list       list
+       fall_through_list       list
+       exclude_list            list
+       rise_exclude_list       list
+       fall_exclude_list       list
+       paths_per_endpoint      integer
+       max_path_count          integer
+       greater_slack_limit     float
+       lesser_slack_limit      float
+       max_path_delay          float
+       min_path_delay          float
+       digits                  integer
+       group_name              string
+       scenario_list           list
+
+ARGUMENTS
+       -to to_list
+              Reports  only the paths to the named pins, ports, or clocks.  If
+[7m--More--[0m[A
+[K              you do not specify the -to option, the default is to report  the
+[7m--More--[0m[A
+[K              longest  path to an output port if the design has no timing con-
+[7m--More--[0m[A
+[K              straints.  If the design has timing constraints, the default  is
+[7m--More--[0m[A
+[K              to  report  the path with the worst slack within each path group
+[7m--More--[0m[A
+[K              if the -group option is not present.  If the  -group  option  is
+[7m--More--[0m[A
+[K              given,  the  default  is to report the path with the worst slack
+[7m--More--[0m[A
+[K              within the group specified by the -group option.
+[7m--More--[0m[A
+[K
+[7m--More--[0m[A
+[K       -rise_to rise_to_list
+[7m--More--[0m[A
+[K              Same as the -to option, but applies only to paths rising at  the
+[7m--More--[0m[A
+[K              endpoint.   If  a clock object is specified, this option selects
+[7m--More--[0m[A
+[K              endpoints clocked by the named clock, but only  the  paths  cap-
+[7m--More--[0m[A
+[K              tured  by  the  rising edge of the clock at clock source, taking
+[7m--More--[0m[A
+[K              into account any logical inversions along the clock path.
+[7m--More--[0m[A
+[K
+[7m--More--[0m[A
+[K       -fall_to fall_to_list
+[7m--More--[0m[A
+[K              Same as the -to option, but applies only to paths falling at the
+[7m--More--[0m[A
+[K              endpoint.   If  a clock object is specified, this option selects
+[7m--More--[0m[A
+[K              endpoints clocked by the named clock, but only  the  paths  cap-
+[7m--More--[0m[A
+[K              tured by the falling edge of the clock at the clock source, tak-
+[7m--More--[0m[A
+[K              ing into account any logical inversions along the clock path.
+[7m--More--[0m[A
+[K
+[7m--More--[0m[A
+[K       -from from_list
+[7m--More--[0m[A
+[K              Reports only the paths from the named pins,  ports,  or  clocks.
+[7m--More--[0m[A
+[K              If you do not specify the -from option, the default is to report
+[7m--More--[0m[A
+[K              the longest path to an output port if the design has  no  timing
+[7m--More--[0m[A
+[K              constraints.   If the design has timing constraints, the default
+[7m--More--[0m[A
+[K              is to report the path with the  worst  slack  within  each  path
+[7m--More--[0m[A
+[K              group if the -group option is not present.  If the -group option
+[7m--More--[0m[A
+[K              is given, the default is to report the path with the worst slack
+[7m--More--[0m[A
+[K              within the group specified by the -group option.
+[7m--More--[0m[A
+[K
+[7m--More--[0m[A
+[K       -rise_from rise_from_list
+[7m--More--[0m[A
+[K              Same  as  the  -from option, except that the path must rise from
+[7m--More--[0m[A
+[K              the objects specified.  If a clock  object  is  specified,  this
+[7m--More--[0m[A
+[K              option  selects startpoints clocked by the named clock, but only
+[7m--More--[0m[A
+[K              the paths launched by the rising edge of the clock at the  clock
+[7m--More--[0m[A
+[K              source,  taking  into  account  any logical inversions along the
+[7m--More--[0m[A
+[K              clock path.
+[7m--More--[0m[A
+[K
+[7m--More--[0m[A
+[K       -fall_from fall_from_list
+[7m--More--[0m[A
+[K              Same as the -from option, except that the path  must  fall  from
+[7m--More--[0m[A
+[Kdc_shell> report_timin
+report_timing              report_timing_derate       report_timing_requirements 
+dc_shell> report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:05:23 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/reg_SP_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS)        0.0449     0.0449 f
+  U6/Y (INV_X1P7M_A9TS)                                 0.0090     0.0539 r
+  U4/Y (AO22_X1P4M_A9TS)                                0.0362     0.0901 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0901 r
+  data arrival time                                                0.0901
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0233     0.0267
+  data required time                                               0.0267
+  --------------------------------------------------------------------------
+  data required time                                               0.0267
+  data arrival time                                               -0.0901
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0634
+
+
+1
+dc_shell> report_timing[11G[4@man r[28G[11G[4Pr[24G[19G[K[11Gsource scripts/fast_synth_tree.tcl
 Removing design 'toplevel_tree_serializer'
 Removing design 'Clock_divider'
-Removing design 'Serializer_00000004_00000002_0'
-Removing design 'mux_00000004'
-Removing design 'Serializer_00000002_00000002_00000001'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'gtech'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv:25: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel_tree_serializer line 32 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Warning: Can't find clock 'CLK_DIV_4' in design 'toplevel_tree_serializer'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+dc_shell> source scripts/fast_synth_tree.tcl
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
 Removing design 'mux_00000002'
 Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
 Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
@@ -212,25 +766,10 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
-	the parameters "32'h00000004,32'h00000002,0". (HDL-193)
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000004_00000002_0 line 24 in file
-		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000004". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000002,32'h00000002,32'h00000001". (HDL-193)
-
-Inferred memory devices in process
-	in routine Serializer_00000002_00000002_00000001 line 24 in file
+	in routine Serializer_00000002_00000001_0 line 24 in file
 		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -238,15 +777,13 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000002_00000001' with
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
 	the parameters "32'h00000002". (HDL-193)
 Presto compilation completed successfully.
 Writing ddc file 'DDC/Serializer__elab.ddc'.
 Removing design 'toplevel_tree_serializer'
 Removing design 'Clock_divider'
-Removing design 'Serializer_00000004_00000002_0'
-Removing design 'mux_00000004'
-Removing design 'Serializer_00000002_00000002_00000001'
+Removing design 'Serializer_00000002_00000001_0'
 Removing design 'mux_00000002'
 Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
 Loaded 1 design.
@@ -263,25 +800,10 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
-	the parameters "32'h00000004,32'h00000002,0". (HDL-193)
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
 
 Inferred memory devices in process
-	in routine Serializer_00000004_00000002_0 line 24 in file
-		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     reg_SP_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000004". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'Serializer' instantiated from design 'Serializer_00000004_00000002_0' with
-	the parameters "32'h00000002,32'h00000002,32'h00000001". (HDL-193)
-
-Inferred memory devices in process
-	in routine Serializer_00000002_00000002_00000001 line 24 in file
+	in routine Serializer_00000002_00000001_0 line 24 in file
 		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -289,43 +811,439 @@ Inferred memory devices in process
 |     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000002_00000001' with
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
 	the parameters "32'h00000002". (HDL-193)
 Presto compilation completed successfully.
-dc_shell> set_fix_hold CLK_DIV_4
-1
-dc_shell> set_fix_hold CLK_DIV_4[1@$C
-Error: can't read "CLK_DIV_4": no such variable
-	Use error_info for more info. (CMD-013)
-dc_shell> create_generated_clock -name CLK_DIV_4 -divide_by 4 -source CLK_DIV_2 [get_pin clk_[2].clock_divider/clk_div_o ]
-Warning: Can't find object 'CLK_DIV_2' in design 'toplevel_tree_serializer'. (UID-95)
-Error: Value for list '-source' must have 1 elements. (CMD-036)
+dc_shell> start_gui 
+dc_shell> Current design is 'toplevel_tree_serializer'.
+4.1
+Current design is 'toplevel_tree_serializer'.
+dc_shell> Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb'
+Loading db file '/usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/generic.sdb'
+  report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/D
+Warning: Can't find object 'dataOut_SP_reg/D' in design 'toplevel_tree_serializer'. (UID-95)
+Error: Value for list '-to' must have 1 elements. (CMD-036)
 0
-dc_shell> create_generated_clock -name CLK_DIV_4 -divide_by 4 -source clk_[1].clock_divider/clk_div_o [get_pin clk_[2].c lock_divider/clk_div_o]
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/data_in
+Warning: Main library 'dw_foundation.sldb' has no time units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-107)
+Warning: Main library 'dw_foundation.sldb' has no capacitance units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-108)
+Warning: The trip points for the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs differ from those in the library named dw_foundation.sldb. (TIM-164)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:07:32 2019
+****************************************
+
+Operating Conditions: nom_pvt   Library: dw_foundation.sldb
+Wire Load Model Mode: top
+No paths.
+
 1
-dc_shell> comp
-compare_collections                    compile                                compile_partitions                     compile_ultra                          
-compare_delay_calculation              compile_inplace_changed_list_file_name compile_prefer_runtime                 compute_polygons                       
-compare_lib                            compile_mcl                            compile_test                           
-dc_shell> compil
-compile                                compile_mcl                            compile_prefer_runtime                 compile_ultra                          
-compile_inplace_changed_list_file_name compile_partitions                     compile_test                           
-dc_shell> compile_ultra r[K-no
-no_autoungroup           no_boundary_optimization no_design_rule           no_seq_output_inversion  
-_autdc_shell> compile_ultra -no_autoungroup 
+dc_shell> report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/data_in[86GD[K[11Gstart_gui[K
+dc_shell> start_gui[11Greport_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/data_in[86GD[K[11Gstart_gui[K[12Gource scripts/fast_synth_tree.tcl
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv:25: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel_tree_serializer line 32 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Current design is 'toplevel_tree_serializer'.
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to dataOut_SP_reg/next_state
+Warning: Main library 'dw_foundation.sldb' has no time units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-107)
+Warning: Main library 'dw_foundation.sldb' has no capacitance units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-108)
+Warning: The trip points for the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs differ from those in the library named dw_foundation.sldb. (TIM-164)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:10:00 2019
+****************************************
+
+Operating Conditions: nom_pvt   Library: dw_foundation.sldb
+Wire Load Model Mode: top
+No paths.
+
+1
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_o/Q -to dataOut_SP_reg/next_state
+Warning: Can't find object 'clk_[1].clock_divider/clk_div_o/Q' in design 'toplevel_tree_serializer'. (UID-95)
+Error: Value for list '-from' must have 1 elements. (CMD-036)
+0
+dc_shell> report_timing -from clk_[1].clock_divider/clk_div_o/Q -to dataOut_SP_reg/next_state[61G[2@reg[96G[11Gsource scripts/fast_synth_tree.tcl[K[12Gtart_gui[K[12Gource scripts/fast_synth_tree.tcl
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv:25: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel_tree_serializer line 32 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Current design is 'toplevel_tree_serializer'.
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
+Warning: Main library 'dw_foundation.sldb' has no time units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-107)
+Warning: Main library 'dw_foundation.sldb' has no capacitance units specified, but library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' does. (TIM-108)
+Warning: The trip points for the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs differ from those in the library named dw_foundation.sldb. (TIM-164)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:12:45 2019
+****************************************
+
+Operating Conditions: nom_pvt   Library: dw_foundation.sldb
+Wire Load Model Mode: top
+
+  Startpoint: clk_[1].clock_divider/clk_div_o
+              (clock source 'CLK_DIV_2')
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (fall edge)                           0.0500     0.0500
+  clk_[1].clock_divider/clk_div_o (Clock_divider)       0.0000     0.0500 f
+  Serializer/io_clk[1] (Serializer_00000002_00000001_0)
+                                                        0.0000     0.0500 f
+  Serializer/mux/mux_control_S (mux_00000002)           0.0000     0.0500 f
+  Serializer/mux/I_0/Z (GTECH_NOT)                      0.0000     0.0500 r
+  Serializer/mux/B_1/Z (GTECH_BUF)                      0.0000     0.0500 r
+  Serializer/mux/C11/Z_0 (*SELECT_OP_2.1_2.1_1)         0.0000     0.0500 r
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.0500 r
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.0500 r
+  dataOut_SN (net)                                      0.0000     0.0500 r
+  dataOut_SP_reg/next_state (**SEQGEN**)                0.0000     0.0500 r
+  data arrival time                                                0.0500
+
+  clock clk_i (rise edge)                               0.1000     0.1000
+  clock network delay (ideal)                           0.0000     0.1000
+  dataOut_SP_reg/clocked_on (**SEQGEN**)                0.0000     0.1000 r
+  library setup time                                    0.0000     0.1000
+  data required time                                               0.1000
+  --------------------------------------------------------------------------
+  data required time                                               0.1000
+  data arrival time                                               -0.0500
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0500
+
+
+1
+dc_shell> cl[K[Kcompile_ultra -no[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kreport_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN[11Gsource scripts/fast_synth_tree.tcl[K
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Removing library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+Removing library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Removing library 'dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
+Opening include file /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
+Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
+Presto compilation completed successfully.
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/gtech.db'
+Loading db file '/usr/pack/synopsys-2017.09-kgf/syn/libraries/syn/standard.sldb'
+  Loading link library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs'
+  Loading link library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv:25: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine toplevel_tree_serializer line 32 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dataOut_SP_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
+Writing ddc file 'DDC/Serializer__elab.ddc'.
+Removing design 'toplevel_tree_serializer'
+Removing design 'Clock_divider'
+Removing design 'Serializer_00000002_00000001_0'
+Removing design 'mux_00000002'
+Reading ddc file '/home/msc18h28/ma/synopsys/DDC/Serializer__elab.ddc'.
+Loaded 1 design.
+Current design is 'toplevel_tree_serializer'.
+Information: Building the design 'Clock_divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_divider line 13 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_div_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Serializer' instantiated from design 'toplevel_tree_serializer' with
+	the parameters "32'h00000002,32'h00000001,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Serializer_00000002_00000001_0 line 24 in file
+		'/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_SP_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'Serializer_00000002_00000001_0' with
+	the parameters "32'h00000002". (HDL-193)
+Presto compilation completed successfully.
 Information: Performing power optimization. (PWR-850)
 Alib files are up-to-date.
-Information: Evaluating DesignWare library utilization. (UISN-27)
-
-============================================================================
-| DesignWare Building Block Library  |         Version         | Available |
-============================================================================
-| Basic DW Building Blocks           | N-2017.09-DWBB_201709.0 |     *     |
-| Licensed DW Building Blocks        | N-2017.09-DWBB_201709.0 |     *     |
-============================================================================
-
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
-Information: Uniquified 2 instances of design 'Clock_divider'. (OPT-1056)
   Simplifying Design 'toplevel_tree_serializer'
 
 Warning: The trip points for the library named io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB differ from those in the library named sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs. (TIM-164)
@@ -339,11 +1257,9 @@ Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'Serializer_00000004_00000002_0'
   Processing 'toplevel_tree_serializer'
-  Processing 'Serializer_00000002_00000002_00000001'
-  Processing 'Clock_divider_0'
-  Processing 'mux_00000004'
+  Processing 'Serializer_00000002_00000001_0'
+  Processing 'Clock_divider'
   Processing 'mux_00000002'
 
   Updating timing information
@@ -432,35 +1348,35 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:08      49.6      0.08       0.2       0.0                              1.8800      0.00  
-    0:00:08      55.1      0.07       0.2       0.0                              2.2568      0.00  
-    0:00:08      55.1      0.07       0.2       0.0                              2.2568      0.00  
-    0:00:09      55.1      0.07       0.2       0.0                              2.2568      0.00  
+    0:00:08      22.5      0.08       0.2       0.0                              0.9296      0.00  
+    0:00:08      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:08      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:09      55.1      0.07       0.2       0.0                              2.2568      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      55.5      0.07       0.2       0.0                              2.3018      0.00  
-    0:00:09      63.0      0.07       0.2       0.0                              2.8034      0.00  
-    0:00:09      63.0      0.07       0.2       0.0                              2.8034      0.00  
+    0:00:09      23.9      0.07       0.2       0.0                              1.0095      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      24.2      0.07       0.2       0.0                              1.0320      0.00  
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -470,7 +1386,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:09      63.0      0.07       0.2       0.0                              2.8034      0.00  
+    0:00:09      27.3      0.06       0.2       0.0                              1.2142      0.00  
   Global Optimization (Phase 29)
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
@@ -482,43 +1398,42 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 37)
   Global Optimization (Phase 38)
   Global Optimization (Phase 39)
-    0:00:09      62.2      0.07       0.2       0.0                              2.7287      0.00  
-    0:00:09      62.2      0.07       0.2       0.0                              2.7287      0.00  
-    0:00:09      62.2      0.07       0.2       0.0                              2.7287      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7723      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:09      27.1      0.06       0.2       0.0                              1.1924      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2142      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:10      62.7      0.07       0.2       0.0                              2.7730      0.00  
-    0:00:10      63.0      0.07       0.2       0.0                              2.7948      0.00  
-    0:00:10      63.0      0.07       0.2       0.0                              2.7948      0.00  
-    0:00:10      63.0      0.07       0.2       0.0                              2.7948      0.00  
-    0:00:10      63.0      0.07       0.2       0.0                              2.7951      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7733      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7733      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7733      0.00  
-    0:00:10      62.7      0.07       0.2       0.0                              2.7733      0.00  
-    0:00:11      62.5      0.07       0.2       0.0                              2.7508      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.1      0.06       0.2       0.0                              1.1931      0.00  
+    0:00:10      27.1      0.06       0.2       0.0                              1.1931      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
+    0:00:10      27.3      0.06       0.2       0.0                              1.2146      0.00  
 Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
 Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
 
@@ -532,12 +1447,11 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 1
-dc_shell> start_gui 
+Current design is 'toplevel_tree_serializer'.
+dc_shell> dc_shell> start_gui 
 dc_shell> Current design is 'toplevel_tree_serializer'.
 Current design is 'toplevel_tree_serializer'.
-dc_shell> repot[Krt+t[K[K_tim
-report_timing              report_timing_derate       report_timing_requirements 
-dc_shell> report_timing
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
 Information: Updating design information... (UID-85)
  
 ****************************************
@@ -547,49 +1461,64 @@ Report : timing
         -max_paths 1
 Design : toplevel_tree_serializer
 Version: N-2017.09
-Date   : Tue Jan 15 12:24:52 2019
+Date   : Tue Jan 15 15:15:10 2019
 ****************************************
 
 Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
 Wire Load Model Mode: top
 
-  Startpoint: Serializer/reg_SP_reg[3]
-              (rising edge-triggered flip-flop clocked by CLK_DIV_4)
-  Endpoint: Serializer/recursive.serializer/reg_SP_reg[1]
-            (rising edge-triggered flip-flop clocked by CLK_DIV_2)
-  Path Group: CLK_DIV_2
+  Startpoint: clk_[1].clock_divider/clk_div_o
+              (clock source 'CLK_DIV_2')
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
   Path Type: max
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock CLK_DIV_4 (rise edge)                           0.0000     0.0000
-  clock network delay (ideal)                           0.0000     0.0000
-  Serializer/reg_SP_reg[3]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
-  Serializer/reg_SP_reg[3]/QN (DFFRPQN_X3M_A9TS)        0.0449     0.0449 f
-  Serializer/U6/Y (INV_X1P7M_A9TS)                      0.0090     0.0539 r
-  Serializer/mux/mux_i[3] (mux_00000004)                0.0000     0.0539 r
-  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0361     0.0899 r
-  Serializer/mux/mux_o[1] (mux_00000004)                0.0000     0.0899 r
-  Serializer/recursive.serializer/io_dataIn[1] (Serializer_00000002_00000002_00000001)
-                                                        0.0000     0.0899 r
-  Serializer/recursive.serializer/reg_SP_reg[1]/D (DFFRPQ_X2M_A9TS)
-                                                        0.0000     0.0899 r
-  data arrival time                                                0.0899
+  clock CLK_DIV_2 (fall edge)                           0.0500     0.0500
+  clk_[1].clock_divider/clk_div_o (Clock_divider)       0.0000     0.0500 f
+  Serializer/io_clk[1] (Serializer_00000002_00000001_0)
+                                                        0.0000     0.0500 f
+  Serializer/mux/mux_control_S (mux_00000002)           0.0000     0.0500 f
+  Serializer/mux/U1/Y (INV_X1P7M_A9TS)                  0.0050     0.0550 r
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0297     0.0846 r
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.0846 r
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.0846 r
+  dataOut_SN (net)                                      0.0000     0.0846 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0846 r
+  data arrival time                                                0.0846
 
-  clock CLK_DIV_2 (rise edge)                           0.1000     0.1000
+  clock clk_i (rise edge)                               0.1000     0.1000
   clock network delay (ideal)                           0.0000     0.1000
-  Serializer/recursive.serializer/reg_SP_reg[1]/CK (DFFRPQ_X2M_A9TS)
-                                                        0.0000     0.1000 r
-  library setup time                                   -0.0238     0.0762
-  data required time                                               0.0762
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.1000 r
+  library setup time                                   -0.0233     0.0767
+  data required time                                               0.0767
   --------------------------------------------------------------------------
-  data required time                                               0.0762
-  data arrival time                                               -0.0899
+  data required time                                               0.0767
+  data arrival time                                               -0.0846
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                -0.0138
+  slack (VIOLATED)                                                -0.0079
 
 
-  Startpoint: Serializer/recursive.serializer/reg_SP_reg[1]
+1
+dc_shell>   report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:16:43 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/reg_SP_reg[1]
               (rising edge-triggered flip-flop clocked by CLK_DIV_2)
   Endpoint: dataOut_SP_reg
             (rising edge-triggered flip-flop clocked by clk_i)
@@ -600,248 +1529,348 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
   clock network delay (ideal)                           0.0000     0.0000
-  Serializer/recursive.serializer/reg_SP_reg[1]/CK (DFFRPQ_X2M_A9TS)
-                                                        0.0000     0.0000 r
-  Serializer/recursive.serializer/reg_SP_reg[1]/Q (DFFRPQ_X2M_A9TS)
-                                                        0.0785     0.0785 f
-  Serializer/recursive.serializer/mux/mux_i[1] (mux_00000002)
-                                                        0.0000     0.0785 f
-  Serializer/recursive.serializer/mux/U2/Y (AO22_X1P4M_A9TS)
-                                                        0.0366     0.1151 f
-  Serializer/recursive.serializer/mux/mux_o[0] (mux_00000002)
-                                                        0.0000     0.1151 f
-  Serializer/recursive.serializer/io_dataOut (Serializer_00000002_00000002_00000001)
-                                                        0.0000     0.1151 f
-  Serializer/io_dataOut (Serializer_00000004_00000002_0)
-                                                        0.0000     0.1151 f
-  dataOut_SP_reg/D (DFFRPQ_X4M_A9TS)                    0.0000     0.1151 f
-  data arrival time                                                0.1151
+  Serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS) <-     0.0449     0.0449 f
+  Serializer/U4/Y (INV_X1P7M_A9TS)                      0.0090     0.0539 r
+  Serializer/mux/mux_i[1] (mux_00000002)                0.0000     0.0539 r
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0362     0.0901 r
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.0901 r
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.0901 r
+  dataOut_SN (net)                                      0.0000     0.0901 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0901 r
+  data arrival time                                                0.0901
 
   clock clk_i (rise edge)                               0.0500     0.0500
   clock network delay (ideal)                           0.0000     0.0500
-  dataOut_SP_reg/CK (DFFRPQ_X4M_A9TS)                   0.0000     0.0500 r
-  library setup time                                   -0.0070     0.0430
-  data required time                                               0.0430
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0233     0.0267
+  data required time                                               0.0267
   --------------------------------------------------------------------------
-  data required time                                               0.0430
-  data arrival time                                               -0.1151
+  data required time                                               0.0267
+  data arrival time                                               -0.0901
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                -0.0721
+  slack (VIOLATED)                                                -0.0634
 
 
 1
-dc_shell> compile_ultra 
-Information: Performing power optimization. (PWR-850)
-Alib files are up-to-date.
-Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
-  Simplifying Design 'toplevel_tree_serializer'
+dc_shell>   report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:17:18 2019
+****************************************
 
-  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
-Loaded alib file './alib/alib-52/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db.alib'
-Loaded alib file './alib/alib-52/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db.alib' (placeholder)
-Warning: Operating condition ss_nominal_max_0p90v_125c set on design toplevel_tree_serializer has different process,
-voltage and temperatures parameters than the parameters at which target library 
-io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB is characterized. Delays may be inaccurate as a result. (OPT-998)
-  Building model 'DW01_NAND2'
-Information: Ungrouping hierarchy Serializer before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy Serializer/mux before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy Serializer/recursive.serializer before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy Serializer/recursive.serializer/mux before Pass 1 (OPT-776)
-Information: Ungrouping 4 of 7 hierarchies before Pass 1 (OPT-775)
-Information: State dependent leakage is now switched from on to off.
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
 
-  Beginning Pass 1 Mapping
-  ------------------------
-  Processing 'toplevel_tree_serializer'
-  Processing 'Clock_divider_0'
-  Processing 'Clock_divider_1'
+  Startpoint: Serializer/reg_SP_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
 
-  Updating timing information
-Information: Updating design information... (UID-85)
-Information: The library cell 'TIELO_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
-Information: The library cell 'TIEHI_X1M_A9TS' in the library 'sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRKANALOG_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRKANALOG_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRKOSC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRKOSC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRK_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PBRK_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL10_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL10_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL5_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL5_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL2_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL2_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL1NC_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PFILL1NC_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PCORNER_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PCORNER_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVDDI_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PVDDI_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PDVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PDVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PDVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PDVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PAVSS_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PAVSS_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PAVDD_18_PL_V' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The library cell 'PAVDD_18_PL_H' in the library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB' is not characterized for internal power. (PWR-536)
-Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[0]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[0]/QN (DFFRPQN_X3M_A9TS) <-     0.0557     0.0557 r
+  Serializer/U3/Y (INV_X1M_A9TS)                        0.0137     0.0695 f
+  Serializer/mux/mux_i[0] (mux_00000002)                0.0000     0.0695 f
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0333     0.1027 f
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.1027 f
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.1027 f
+  dataOut_SN (net)                                      0.0000     0.1027 f
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.1027 f
+  data arrival time                                                0.1027
 
-  Beginning Mapping Optimizations  (Ultra High effort)
-  -------------------------------
-  Mapping Optimization (Phase 1)
-
-  Beginning Constant Register Removal
-  -----------------------------------
-
-  Beginning Global Optimizations
-  ------------------------------
-  Numerical Synthesis (Phase 1)
-  Numerical Synthesis (Phase 2)
-  Global Optimization (Phase 1)
-  Global Optimization (Phase 2)
-  Global Optimization (Phase 3)
-  Global Optimization (Phase 4)
-  Global Optimization (Phase 5)
-  Global Optimization (Phase 6)
-  Global Optimization (Phase 7)
-  Global Optimization (Phase 8)
-  Global Optimization (Phase 9)
-  Global Optimization (Phase 10)
-  Global Optimization (Phase 11)
-  Global Optimization (Phase 12)
-  Global Optimization (Phase 13)
-  Global Optimization (Phase 14)
-  Global Optimization (Phase 15)
-  Global Optimization (Phase 16)
-  Global Optimization (Phase 17)
-  Global Optimization (Phase 18)
-  Global Optimization (Phase 19)
-  Global Optimization (Phase 20)
-  Global Optimization (Phase 21)
-  Global Optimization (Phase 22)
-  Global Optimization (Phase 23)
-  Global Optimization (Phase 24)
-  Global Optimization (Phase 25)
-  Global Optimization (Phase 26)
-  Global Optimization (Phase 27)
-  Global Optimization (Phase 28)
-  Global Optimization (Phase 29)
-
-  Beginning Isolate Ports
-  -----------------------
-
-  Beginning Delay Optimization
-  ----------------------------
-
-                                  TOTAL                                                            
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
-  --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:08      56.5      0.08       0.2       0.0                              2.3574      0.00  
-    0:00:08      62.0      0.07       0.2       0.0                              2.7168      0.00  
-    0:00:08      62.0      0.07       0.2       0.0                              2.7168      0.00  
-    0:00:08      62.0      0.07       0.2       0.0                              2.7168      0.00  
-
-  Beginning WLM Backend Optimization
-  --------------------------------------
-    0:00:08      62.0      0.07       0.2       0.0                              2.7168      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7611      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:08      62.5      0.07       0.2       0.0                              2.7614      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0081     0.0419
+  data required time                                               0.0419
+  --------------------------------------------------------------------------
+  data required time                                               0.0419
+  data arrival time                                               -0.1027
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0609
 
 
-  Beginning Leakage Power Optimization  (max_leakage_power 0)
-  ------------------------------------
-
-                                  TOTAL                                                            
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
-  --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-  Global Optimization (Phase 30)
-  Global Optimization (Phase 31)
-  Global Optimization (Phase 32)
-  Global Optimization (Phase 33)
-  Global Optimization (Phase 34)
-  Global Optimization (Phase 35)
-  Global Optimization (Phase 36)
-  Global Optimization (Phase 37)
-  Global Optimization (Phase 38)
-  Global Optimization (Phase 39)
-  Global Optimization (Phase 40)
-    0:00:09      63.4      0.07       0.2       0.0                              2.7629      0.00  
-    0:00:09      63.4      0.07       0.2       0.0                              2.7629      0.00  
-    0:00:09      63.4      0.07       0.2       0.0                              2.7629      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-    0:00:09      63.9      0.07       0.2       0.0                              2.8066      0.00  
-    0:00:09      65.1      0.06       0.2       0.0                              2.8999      0.00  
-    0:00:09      65.1      0.06       0.2       0.0                              2.8999      0.00  
-    0:00:09      65.1      0.06       0.2       0.0                              2.8999      0.00  
-    0:00:09      65.1      0.06       0.2       0.0                              2.8999      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-
-                                  TOTAL                                                            
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
-  --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:09      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:10      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:10      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:10      64.4      0.06       0.2       0.0                              2.8165      0.00  
-    0:00:10      64.6      0.06       0.2       0.0                              2.8379      0.00  
-    0:00:10      64.6      0.06       0.2       0.0                              2.8379      0.00  
-    0:00:10      64.4      0.06       0.2       0.0                              2.8155      0.00  
-Loading db file '/home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db'
-Loading db file '/home/msc18h28/ma/technology/db/io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db'
-
-
-Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
-
-
-  Optimization Complete
-  ---------------------
-  Loading target library 'io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c_3_20_30_00_00_02_LB'
-Information: State dependent leakage is now switched from off to on.
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 1
-Current design is 'toplevel_tree_serializer'.
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_o -to clk_[1].clock_divider/clk_div_reg/D
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:17:58 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+No paths.
+
+1
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:18:22 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: clk_[1].clock_divider/clk_div_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: clk_[1].clock_divider/clk_div_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clk_[1].clock_divider/clk_div_reg/CK (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0000 r
+  clk_[1].clock_divider/clk_div_reg/Q (DFFRPQ_X4M_A9TS) <-
+                                                        0.0840     0.0840 f
+  clk_[1].clock_divider/U3/Y (INV_X2M_A9TS)             0.0040     0.0880 r
+  clk_[1].clock_divider/clk_div_reg/D (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0880 r
+  data arrival time                                                0.0880
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  clk_[1].clock_divider/clk_div_reg/CK (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0500 r
+  library setup time                                   -0.0204     0.0296
+  data required time                                               0.0296
+  --------------------------------------------------------------------------
+  data required time                                               0.0296
+  data arrival time                                               -0.0880
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0584
+
+
+1
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:21:08 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: clk_[1].clock_divider/clk_div_o
+              (clock source 'CLK_DIV_2')
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (fall edge)                           0.0500     0.0500
+  clk_[1].clock_divider/clk_div_o (Clock_divider)       0.0000     0.0500 f
+  Serializer/io_clk[1] (Serializer_00000002_00000001_0)
+                                                        0.0000     0.0500 f
+  Serializer/mux/mux_control_S (mux_00000002)           0.0000     0.0500 f
+  Serializer/mux/U1/Y (INV_X1P7M_A9TS)                  0.0050     0.0550 r
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0297     0.0846 r
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.0846 r
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.0846 r
+  dataOut_SN (net)                                      0.0000     0.0846 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0846 r
+  data arrival time                                                0.0846
+
+  clock clk_i (rise edge)                               0.1000     0.1000
+  clock network delay (ideal)                           0.0000     0.1000
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.1000 r
+  library setup time                                   -0.0233     0.0767
+  data required time                                               0.0767
+  --------------------------------------------------------------------------
+  data required time                                               0.0767
+  data arrival time                                               -0.0846
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0079
+
+
+1
+dc_shell>   report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:22:20 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/reg_SP_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS) <-     0.0449     0.0449 f
+  Serializer/U4/Y (INV_X1P7M_A9TS)                      0.0090     0.0539 r
+  Serializer/mux/mux_i[1] (mux_00000002)                0.0000     0.0539 r
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0362     0.0901 r
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.0901 r
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.0901 r
+  dataOut_SN (net)                                      0.0000     0.0901 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0901 r
+  data arrival time                                                0.0901
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0233     0.0267
+  data required time                                               0.0267
+  --------------------------------------------------------------------------
+  data required time                                               0.0267
+  data arrival time                                               -0.0901
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0634
+
+
+1
+dc_shell>   report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:22:51 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/reg_SP_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[0]/CK (DFFRPQN_X3M_A9TS)        0.0000     0.0000 r
+  Serializer/reg_SP_reg[0]/QN (DFFRPQN_X3M_A9TS) <-     0.0557     0.0557 r
+  Serializer/U3/Y (INV_X1M_A9TS)                        0.0137     0.0695 f
+  Serializer/mux/mux_i[0] (mux_00000002)                0.0000     0.0695 f
+  Serializer/mux/U2/Y (AO22_X1P4M_A9TS)                 0.0333     0.1027 f
+  Serializer/mux/mux_o[0] (mux_00000002)                0.0000     0.1027 f
+  Serializer/io_dataOut (Serializer_00000002_00000001_0) <-
+                                                        0.0000     0.1027 f
+  dataOut_SN (net)                                      0.0000     0.1027 f
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.1027 f
+  data arrival time                                                0.1027
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0081     0.0419
+  data required time                                               0.0419
+  --------------------------------------------------------------------------
+  data required time                                               0.0419
+  data arrival time                                               -0.1027
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0609
+
+
+1
+dc_shell>   report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Tue Jan 15 15:25:00 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: clk_[1].clock_divider/clk_div_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: clk_[1].clock_divider/clk_div_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clk_[1].clock_divider/clk_div_reg/CK (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0000 r
+  clk_[1].clock_divider/clk_div_reg/Q (DFFRPQ_X4M_A9TS) <-
+                                                        0.0840     0.0840 f
+  clk_[1].clock_divider/U3/Y (INV_X2M_A9TS)             0.0040     0.0880 r
+  clk_[1].clock_divider/clk_div_reg/D (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0880 r
+  data arrival time                                                0.0880
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  clk_[1].clock_divider/clk_div_reg/CK (DFFRPQ_X4M_A9TS)
+                                                        0.0000     0.0500 r
+  library setup time                                   -0.0204     0.0296
+  data required time                                               0.0296
+  --------------------------------------------------------------------------
+  data required time                                               0.0296
+  data arrival time                                               -0.0880
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0584
+
+
+1
 dc_shell> 

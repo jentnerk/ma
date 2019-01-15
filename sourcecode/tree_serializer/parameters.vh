@@ -17,7 +17,7 @@
 `ifndef parameters_vh
 `define parameters_vh
 
-`define TREE_FROM 		4
-`define TREE_LOGFROM 	2
+`define TREE_FROM 		2
+`define TREE_LOGFROM 	1
 
 `endif 
