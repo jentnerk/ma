@@ -32,7 +32,7 @@ module Serializer #(parameter int unsigned FROM, parameter int unsigned LOGFROM,
     // call the serializer module recursively to construct the tree structure
     // the generated modules name will be <<recursive.serializer>>
     generate
-        if (FROM == 2) begin
+        if (FROM == 2) begin:recursive_last
             assign io_dataOut = dataOut;
           end
         else begin:recursive
@@ -51,3 +51,4 @@ module mux #(parameter int unsigned FROM) (
   );  
   assign mux_o = mux_control_S ? mux_i[FROM-1:FROM/2] : mux_i[FROM/2-1:0];
 endmodule // module mux
+

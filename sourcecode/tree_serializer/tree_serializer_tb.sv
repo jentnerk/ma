@@ -271,8 +271,8 @@ module tree_serializer_tb;
 
     toplevel_tree_serializer toplevel_tree_serializer
     (
-        .clk                (clk),   // Clock
-        .reset              (reset),   // Asynchronous reset active low
+        .clk_i              (clk),   // Clock
+        .reset_ni           (reset),   // Asynchronous reset active low
         .data_i             (data_i),   // operand a in (rs1)
         .data_o             (data_o)   // result out
     );

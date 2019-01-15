@@ -17,7 +17,7 @@ vlib-${VER} $LIB
 # compile the RTL
 	#test only the tree serializer
 		vlog -work work /home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
-		vlog -work work /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_plane.sv
+		vlog -work work /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
 		vlog -work work /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
 		vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh
 

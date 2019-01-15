@@ -13,16 +13,16 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -lib work -voptargs="+acc" tree_serializer_tb 
-# Start time: 11:08:46 on Jan 14,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 12:15:29 on Jan 15,2019
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading sv_std.std
 # Loading work.tree_serializer_tb(fast)
 # Loading work.toplevel_tree_serializer(fast)
 # Loading work.Clock_divider(fast)
 # Loading work.Serializer(fast__1)
+# Loading work.mux(fast)
 # Loading work.Serializer(fast)
 # Loading work.mux(fast__1)
-# Loading work.mux(fast)
 do wavetree.do
 do restart_run.csh
 # ** Note: (vsim-8009) Loading existing optimized design _opt2
@@ -30,9 +30,9 @@ do restart_run.csh
 # Loading work.toplevel_tree_serializer(fast)
 # Loading work.Clock_divider(fast)
 # Loading work.Serializer(fast__1)
+# Loading work.mux(fast)
 # Loading work.Serializer(fast)
 # Loading work.mux(fast__1)
-# Loading work.mux(fast)
 # //////////////////////////////////////////////////
 # --------------------------------------------------
 # Testing Serializer
@@ -1874,5 +1874,5 @@ do restart_run.csh
 #    Time: 8205 ns  Iteration: 4  Instance: /tree_serializer_tb/test_serializer
 # 1
 # Simulation stop requested.
-# End time: 12:12:30 on Jan 14,2019, Elapsed time: 1:03:44
+# End time: 12:15:57 on Jan 15,2019, Elapsed time: 0:00:28
 # Errors: 0, Warnings: 0
