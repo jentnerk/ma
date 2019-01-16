@@ -1,0 +1,168 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Wed Jan 16 16:50:05 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: data_i[0] (input port clocked by CLK_DIV_2)
+  Endpoint: Serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Path Group: CLK_DIV_2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  0.0100     0.0100 r
+  data_i[0] (in)                                        0.0000     0.0100 r
+  Serializer/io_dataIn[0] (Serializer_00000002_00000001_0)
+                                                        0.0000     0.0100 r
+  Serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)        0.0000     0.0100 r
+  data arrival time                                                0.0100
+
+  clock CLK_DIV_2 (rise edge)                           0.4000     0.4000
+  clock network delay (ideal)                           0.0000     0.4000
+  Serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)       0.0000     0.4000 r
+  library setup time                                   -0.0191     0.3809
+  data required time                                               0.3809
+  --------------------------------------------------------------------------
+  data required time                                               0.3809
+  data arrival time                                               -0.0100
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.3709
+
+
+  Startpoint: dataOut_SP_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: data_o (output port clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  dataOut_SP_reg/CK (DFFRPQ_X0P5M_A9TS)                 0.0000     0.0000 r
+  dataOut_SP_reg/Q (DFFRPQ_X0P5M_A9TS)                  0.1269     0.1269 f
+  data_o (out)                                          0.0000     0.1269 f
+  data arrival time                                                0.1269
+
+  clock clk_i (rise edge)                               0.2000     0.2000
+  clock network delay (ideal)                           0.0000     0.2000
+  output external delay                                -0.0100     0.1900
+  data required time                                               0.1900
+  --------------------------------------------------------------------------
+  data required time                                               0.1900
+  data arrival time                                               -0.1269
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0631
+
+
+1
+ 
+****************************************
+Report : area
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Wed Jan 16 16:50:05 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           17
+Number of nets:                            23
+Number of cells:                           10
+Number of combinational cells:              3
+Number of sequential cells:                 4
+Number of macros/black boxes:               0
+Number of buf/inv:                          2
+Number of references:                       3
+
+Combinational area:                  2.633400
+Buf/Inv area:                        0.957600
+Noncombinational area:              18.194401
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                    20.827801
+Total area:                 undefined
+1
+1
+ 
+****************************************
+Report : design
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Wed Jan 16 16:50:05 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Local Link Library:
+
+    {sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db, io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : ss_nominal_max_0p90v_125c
+    Library : sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.90
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

@@ -1,11 +1,3 @@
-########################################################
-###
-### Constraints for the tree-structured Serializer.
-###
-### Written by: Kaja Jentner
-### January 2019
-### IEF ETH Zurich
-########################################################
 
 #--------------
 # Create Clocks
@@ -13,15 +5,14 @@
 set HIGH_SPEED_CLK_PIN clk_i
 create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
 
+#Create the generated clocks
 create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
-#create_generated_clock -name CLK_DIV_4 -divide_by 4 -source clk_[1].clock_divider/clk_div_o [get_pin clk_[2].clock_divider/clk_div_o]
 
 #--------------------------------------
 # fix hold violations for a given clock
 #--------------------------------------
 set_fix_hold clk_i
-set_fix_hold CLK_DIV_2
-#set_fix_hold CLK_DIV_4
+set_fix_hold CLK_DIV_1
 
 #-----------------------------------
 # Input and Output Delay Constraints

@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version N-2017.09 for linux64 -- Aug 17, 2017
-#@ # Date:   Wed Jan 16 08:31:10 2019
+#@ # Date:   Wed Jan 16 16:49:46 2019
 #@ # Run by: msc18h28@badile12.ee.ethz.ch
 #@ 
 
@@ -6589,4 +6589,240 @@ source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
 #@ set dz_lib_p_list [list ff ff ff ff ff ff ff ff fff fff ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss tt tt ff ff ff ff ff ff ff ff fff fff ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss tt tt ff ff ff ff ff ff ff ff fff fff ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss tt tt ff ff ff ff ff ff ff ff fff fff ss ss ss ss ss ss ss ss ss ss ss ss tt tt ]
 #@ set dz_lib_v_list [list 0p99v 0p99v 0p99v 0p99v 1p10v 1p10v 1p10v 1p10v 1p10v 1p10v 0p72v 0p72v 0p72v 0p72v 0p72v 0p72v 0p81v 0p81v 0p81v 0p81v 0p81v 0p81v 0p90v 0p90v 0p90v 0p90v 0p90v 0p90v 1p00v 1p00v 0p99v 0p99v 0p99v 0p99v 1p10v 1p10v 1p10v 1p10v 1p10v 1p10v 0p72v 0p72v 0p72v 0p72v 0p72v 0p72v 0p81v 0p81v 0p81v 0p81v 0p81v 0p81v 0p90v 0p90v 0p90v 0p90v 0p90v 0p90v 1p00v 1p00v 0p99v 0p99v 0p99v 0p99v 1p10v 1p10v 1p10v 1p10v 1p10v 1p10v 0p72v 0p72v 0p72v 0p72v 0p72v 0p72v 0p81v 0p81v 0p81v 0p81v 0p81v 0p81v 0p90v 0p90v 0p90v 0p90v 0p90v 0p90v 1p00v 1p00v 1p60v 1p60v 1p95v 1p95v 1p60v 1p60v 1p95v 1p95v 1p60v 1p95v 1p40v 1p40v 1p65v 1p65v 1p40v 1p40v 1p65v 1p65v 1p40v 1p40v 1p65v 1p65v 1p50v 1p80v ]
 #@ set dz_lib_t_list [list m40 m40 m55 m55 m40 m40 m55 m55 125 125 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 25 25 m40 m40 m55 m55 m40 m40 m55 m55 125 125 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 25 25 m40 m40 m55 m55 m40 m40 m55 m55 125 125 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 125 125 m40 m40 m55 m55 25 25 m40 m55 m40 m55 m40 m55 m40 m55 125 125 125 m40 125 m40 125 m40 125 m40 125 m40 125 m40 25 25 ]
-#@ set dz_lib_name_list [list sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_
+#@ set dz_lib_name_list [list sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_hvt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_hvt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_hvt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p81v_m55c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_125c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m40c_mxs sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mns sc9_soi12s0_base_hvt_ss_nominal_max_0p90v_m55c_mxs sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mxs sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_svt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_svt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_svt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p81v_m55c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m40c_mxs sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mns sc9_soi12s0_base_svt_ss_nominal_max_0p90v_m55c_mxs sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mns sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m40c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mns sc9_soi12s0_base_uvt_ff_nominal_min_0p99v_m55c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mns sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m40c_mxs sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mns sc9_soi12s0_base_uvt_ff_nominal_min_1p10v_m55c_mxs sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mns sc9_soi12s0_base_uvt_fff_nominal_min_1p10v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m40c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p72v_m55c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m40c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p81v_m55c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_125c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m40c_mxs sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mns sc9_soi12s0_base_uvt_ss_nominal_max_0p90v_m55c_mxs sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mxs io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p60v_m55c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_0p99v_1p95v_m55c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p60v_m55c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ff_cnom_1p10v_1p95v_m55c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p60v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_fff_cnom_1p10v_1p95v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p40v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p72v_1p65v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p40v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p81v_1p65v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p40v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_125c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_ss_cnom_0p90v_1p65v_m40c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p50v_25c io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c ]
+#@ 
+#@ 
+#@ 
+#@ #****** search path ******
+#@ set search_path [concat ../technology/db $search_path]
+#@ 
+#@ 
+#@ #****** link library ******
+#@ set link_library   [list "*" sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db]
+#@ 
+#@ 
+#@ #****** define command aliases ******
+#@ alias h   "history"
+#@ alias cud "current_design"
+#@ alias rad "remove_design -all"
+#@ 
+#@ #***** reports with more accuracy ***********************
+#@ set report_default_significant_digits  4
+#@ 
+#@ 
+#@ if {$synopsys_program_name =="dc_shell"} {
+#@   puts "Loading Design Compiler Setup"
+#@ 
+#@ 
+#@   #****** std.cells/pads, macro cell: symbol, target and link library ******
+#@   set target_library [list sc9_soi12s0_base_hvt_tt_nominal_max_1p00v_25c_mns.db sc9_soi12s0_base_svt_tt_nominal_max_1p00v_25c_mns.db sc9_soi12s0_base_uvt_tt_nominal_max_1p00v_25c_mns.db]
+#@   set symbol_library [list /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_hvt/r0p0/sdb/sc9_soi12s0_base_hvt.sdb /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_svt/r0p0/sdb/sc9_soi12s0_base_svt.sdb /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/sc9_base_uvt/r0p0/sdb/sc9_soi12s0_base_uvt.sdb /usr/pack/gf-45soi-kgf/arm/gf/45rfsoi/io_gppr_t18_mv10_mv18_avt_pl/r0p0/sdb/io_gppr_soi12s0_t18_mv10_mv18_avt_pl.sdb]
+#@   set alib_library_analysis_path "./alib"
+#@ 
+#@   #****** libraries for DesignWare components synthesis ******
+#@   set synthetic_library [concat  $synthetic_library dw_foundation.sldb]
+#@   set link_library      [concat  $link_library      dw_foundation.sldb]
+#@ 
+#@ 
+#@   #****** work, std.cells/pads, macro cell: design libraries ******
+#@   define_design_lib work -path ./WORK
+#@ 
+#@   
+#@ 
+#@   #****** report inferred latches after elaborate ******
+#@   set hdlin_check_no_latch true
+#@   set hdlin_latch_always_async_set_reset true                
+#@ 
+#@ 
+#@   #****** variable for saif export (power estimation) ******
+#@   set power_preserve_rtl_hier_names true
+#@ 
+#@ 
+#@   #****** vhdl/verilog export variables ******
+#@   set vhdlout_dont_write_types true
+#@   set vhdlout_write_components false
+#@   set verilogout_no_tri true
+#@ 
+#@   #***** This should make sure nets are named consistently ********               
+#@   set hdlin_presto_net_name_prefix n   
+#@ 
+#@ 
+#@   #***** Scan ports with better names ********************
+#@   set test_scan_in_port_naming_style "SynopsysScanIn%s%s_TI"
+#@   set test_scan_out_port_naming_style "SynopsysScanOut%s%s_TO"
+#@   set test_scan_enable_port_naming_style "SynopsysScanEn%s_TI"
+#@ 
+#@   #***** User customization *******************************
+#@   #**
+#@   #** if the file .synopsys_user.setup exists it will be sourced
+#@ 
+#@   if {[file readable .synopsys_user.setup]} {
+#@     source .synopsys_user.setup
+#@   }
+#@ 
+#@ } elseif {$synopsys_program_name =="pt_shell"} {
+#@   puts "Loading Primetime Setup"
+#@ } else {
+#@   puts "WARNING: running undetermined Synopsys tool"
+#@ }
+#@ 
+#@ 
+#@ #****** dz pvt setting and list procedure's ******
+#@ 
+#@ proc dz_list_pvt {} {
+#@   global dz_lib_l_list 
+#@   global dz_lib_p_list
+#@   global dz_lib_v_list
+#@   global dz_lib_t_list
+#@   global dz_lib_name_list
+#@         
+#@   # Set up the column widths
+#@   set w0 2
+#@   set w1 32
+#@   set w2 8
+#@   set w3 8
+#@   set w4 8
+#@ 
+#@   set sep [string repeat - [expr  $w1 + $w2 + $w3 + $w4 + 4]]
+#@   puts ""
+#@   puts [format "%-*s%-*s%-*s%-*s%-*s%s" $w0 "" $w1 "lib" $w2 "proces" $w3 "voltage" $w4 "temp." "name"]
+#@   puts [format "%-*s$sep" $w0 ""]
+#@ 
+#@   set i 0
+#@   foreach n $dz_lib_name_list {
+#@     puts [format "%-*s%-*s%-*s%-*s%-*s%s" $w0 "" $w1 [lindex $dz_lib_l_list $i]                                                  $w2 [lindex $dz_lib_p_list $i]                                                  $w3 [lindex $dz_lib_v_list $i]                                                  $w4 [lindex $dz_lib_t_list $i]                                                  $n]
+#@     incr i
+#@   }
+#@   puts ""
+#@ }
+#@ 
+#@ proc dz_set_pvt {lib_name_list} {
+#@   global dz_lib_name_list
+#@   global link_library
+#@   global target_library
+#@   set dz_target_link_library {}
+#@ 
+#@   # remove the db from the target and link library
+#@   set link_library   [lsearch -not -all -inline $link_library *.db]
+#@   set target_library [lsearch -not -all -inline $target_library *.db]
+#@   
+#@   foreach n $lib_name_list {
+#@     if { [lsearch -exact $dz_lib_name_list $n] >= 0 } {
+#@       lappend dz_target_link_library $n.db
+#@     } else {
+#@       puts "Error library $n not available"
+#@     }
+#@   }
+#@   # puts "set : $dz_target_link_library"
+#@   # puts ""
+#@  
+#@   # add the library to the target and link library
+#@   set link_library   [concat $link_library   $dz_target_link_library]
+#@   set target_library [concat $target_library $dz_target_link_library]
+#@ 
+#@   #puts "\$link_library: $link_library"
+#@   #puts "\$target_library: $target_library"
+#@ 
+#@ }
+#@ # -- End source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
+
+source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
+#@ # -- Starting source /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
+
+#@ ########################################################
+#@ ###
+#@ ### Synthesis Script for Serializer with Tree Structure
+#@ ###
+#@ ### Written by: Kaja Jentner
+#@ ### January 2019
+#@ ### IEF ETH Zurich
+#@ ########################################################
+#@ 
+#@ #-------------------
+#@ # Set Constants
+#@ #-------------------
+#@ set NAME {}
+#@ set PATH {/home/msc18h28/ma/sourcecode/tree_serializer}
+#@ 
+#@ remove_design -all
+#@ exec rm -rf WORK/*
+#@ 
+#@ #-------------------
+#@ # Set Libraries
+#@ #-------------------
+#@ set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+#@ set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+#@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#@ 
+#@ #==============================================================================
+#@ # Analyze Design
+#@ #==============================================================================
+#@ analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/tree_serializer_recursive.sv 
+#@ analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+#@ 
+#@ # Set Entity To Elaborate
+#@ set TOP_ENTITY {toplevel_tree_serializer}
+#@ set ENTITY {Serializer}
+#@ 
+#@ #==============================================================================
+#@ # Elaborate Design
+#@ #==============================================================================
+#@ elaborate $TOP_ENTITY
+#@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@ set MAXDELAY 0.2
+#@ 
+#@ remove_design -design
+#@ read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@ #------------------
+#@ # Load Constraints
+#@ #------------------
+#@ source scripts/constraints_generated.tcl
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_1
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ 
+#@ #==============================================================================
+#@ # Compile Design 
+#@ #==============================================================================
+#@ compile_ultra -no_autoungroup
+#@ 
+#@ #==============================================================================
+#@ # Get Reports
+#@ #==============================================================================
+#@ 
+#@ set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
+#@ report_timing       >> reports/$REPNAME
+#@ report_area         >> reports/$REPNAME
+#@ check_design        >> reports/$REPNAME
+#@ report_design       >> reports/$REPNAME
+#@ # -- End source /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
+
