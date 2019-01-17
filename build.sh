@@ -23,14 +23,12 @@ PATH_TREE="/home/ma/sourcecode/tree_serializer/"
 PATH_SHIFT="/home/ma/sourcecode/shift_serializer/"
 DCSHELL="synopsys-2017.09 dc_shell -64bit"
 
-NUM_INPUTS=$1
-
 #-------------------------------
 # print information for the user
 #-------------------------------
 echo -e "\nMake sure you are in the /home/ma/ folder.\n"
 echo -e "Building a Serializer with n inputs ...\n"
-echo -e "Do you want a serializer that is tree-structered 1, shift-structures 2 or a mix of the two 3? \n"
+echo -e "Do you want a serializer that is tree-structered 1, shift-structured 2 or a mix of the two 3? \n"
 read number
 
 if [ $number -eq 1 ]; then
@@ -48,23 +46,23 @@ fi
 
 
 
-#==========================
+#===================================
 # Write constraint file 
 # (for designs with tree-structures)
-#==========================
+#===================================
 if [ $number -eq 1 -o $number -eq 3 ]; then
 python generate_constraints.py --tree_inputs 2
 fi
 
-#==========
+#===========
 # Synthesis
-#==========
+#===========
 cd synopsys
 echo -e "Currently working on synthesizing your design...\n\n"
 
 # synthesize either mixed_serializer
 if [ $number -eq 1 ]; then
-$DCSHELL -f scripts/fast_synth_tree.tcl
+$DCSHELL -f scripts/tree_serializer_synth.tcl
 fi
 
 # or synthesize only tree structure
@@ -77,8 +75,8 @@ if [ $number -eq 3 ]; then
 $DCSHELL -f scripts/mixed_serializer_synth.tcl -x exit
 fi
 
-#==============
+#===============
 # Place & Route
-#==============
-cd ../innovus
-echo -e "\nCurrently working on placing and routing your design...\n"
+#===============
+#cd ../innovus
+#echo -e "\nCurrently working on placing and routing your design...\n"

@@ -32,7 +32,7 @@ analyze -library WORK -format sverilog $PATH/Clock_divider.sv
 
 # Set Entity To Elaborate
 set TOP_ENTITY {toplevel_tree_serializer}
-set ENTITY {Serializer}
+set ENTITY {Tree_Serializer}
 
 #==============================================================================
 # Elaborate Design
@@ -40,7 +40,6 @@ set ENTITY {Serializer}
 elaborate $TOP_ENTITY
 write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
 
-set MAXDELAY 0.05
 
 remove_design -design
 read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
@@ -89,11 +88,11 @@ foreach MAXDELAY {0.05} {
 
   # write verilog netlist
   change_names -rule verilog -hierarchy
-  write -format verilog -output ./netlists/${ENTITY}${NAME}.v -hierarchy
+  write -format verilog -output ./netlists/${ENTITY}${NAME}_${MAXDELAY}ns.v -hierarchy
 
   # write timing information
-  write_sdc -nosplit ./netlists/$ENTITY\_synth.sdc
-  exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY\_synth.sdc > netlists/$ENTITY\_synth.be.sdc
-  write_sdf ./netlists/$ENTITY\_synth.sdf
+  write_sdc -nosplit ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc
+  exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc > netlists/$ENTITY_${MAXDELAY}ns\_synth.be.sdc
+  write_sdf ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdf
 
 }

@@ -1,10 +1,15 @@
-// testbench serializer
-// Written by Kaja Jentner
-// Dec-2018
+// ########################################################
+// ###
+// ### Testbench: Shift-Register Serializer without FSM
+// ###
+// ### Written by: Kaja Jentner
+// ### January 2019
+// ### IEF ETH Zurich
+// ########################################################
 
 `include "parameters.vh"
 
-module toplevel_tb;
+module shift_serializer_tb;
     // constants
     //timeunit 1ns; //(activate for RTL simulation)
     //`timescale 1 ns / 1 ns; //(activate for gate level simulation)
@@ -14,7 +19,7 @@ module toplevel_tb;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 10;   // # of randomized test
+    localparam longint unsigned RANDOM_ROUNDS = 50;   // # of randomized test
     localparam logic TESTKNOWN = 1'b0; // Enable testing of two specific stimuli
 
     // ---------------------------------
@@ -23,12 +28,11 @@ module toplevel_tb;
     logic clk = 0;
     logic reset;
     logic[FROM-1:0] data_i;
-    logic valid_i;
 
     // -------------------------------------
     // outputs from the DUT
     // -------------------------------------
-    logic data_o;
+    logic[TO-1:0] data_o;
     logic ready_o;
     logic valid_o;
 
@@ -132,7 +136,7 @@ module toplevel_tb;
             // the data_o will be read 1ns before the active clock edge of the next cycle
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
             output  negedge reset;
-            output data_i, valid_i;
+            output data_i;
             input data_o, ready_o, valid_o;
         endclocking
 
@@ -145,15 +149,15 @@ module toplevel_tb;
 
             // Declare the Stimulus Objects
             Stimulus #(FROM) stim;
+            Stimulus #(FROM) stim1;
             Stimulus #(FROM) stim2;
             stim = new;
+            stim1 = new;
             stim2 = new;
-
 
             //Set all inputs to the DUT at the beginning
             reset   = '0;
             data_i  = '0;
-            valid_i = '0;
 
             // --------------------------
             // Test Reset
@@ -162,9 +166,9 @@ module toplevel_tb;
             cb.reset <= 1;
             repeat(FROM) @(cb);
 
-            //then reset is set to zero and simulatin can start
+            //then reset is set to zero and simulation can start
             cb.reset <= 0;
-            @(cb);
+            // @(cb);
 
             //then the actual testing starts
             // ------------------------------
@@ -177,9 +181,8 @@ module toplevel_tb;
                          "Testing Serializer\n",
                          "--------------------------------------------------");
                 //here you can insert your specified stimuli
-                TestSerializer(stim, 20'b10000000001101001101);
+                TestSerializer(stim, 10'b1101001101);
 
-                //00000 00000 11010 01101
             //print how many tests have passed
             stim.pass_statistic();
             end
@@ -190,19 +193,33 @@ module toplevel_tb;
                          "--------------------------------------------------\n",
                          "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
                          "--------------------------------------------------");
-
-                for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
-                    //apply first stimulus
-                    stim.stimulus=$random;
-                    @(cb iff cb.ready_o == 1);
-                    ApplyStimuli(stim);
-                    repeat(4) @(cb); //wait FROM cycles to imitate the slow clock
-                end
-
+                stim2.stimulus=$random;
+                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin                
+                        stim1.stimulus=stim2.stimulus;
+                        // Apply new stimulus only if the 
+                        ApplyStimuli(stim1);
+                        $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim1.stimulus); 
+                        @(cb iff cb.valid_o == 1);
+                        for (int i = 0; i < FROM/TO-1; i++) begin
+                                for(int k=1; k < TO+1; k++) begin
+                                stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-i);
+                                end
+                            @(cb);    
+                        end
+                        stim2.stimulus=$random;
+                        ApplyStimuli(stim2);
+                        for(int k=1; k < TO+1; k++) begin
+                            stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-FROM/TO+1);
+                        end
+                    
+                 end
             end
+
+
             
             //print how many tests have passed
-            stim.pass_statistic();
+            stim1.pass_statistic();
 
         end
 
@@ -214,15 +231,15 @@ module toplevel_tb;
                      "Test Serializer with:\ndata1: %b", a);
             // initialize the stimulus with the bitvector a
             st.set_stimulus(a);
+            @(cb iff cb.ready_o == 1);
             ApplyStimuli(st);
-            repeat(4) @(cb); //wait 4 cycles to imitate the slow clock
-            ClearStimuli();
-            repeat(9) @(cb);
             //check all the set stimuli individually
+            @(cb iff cb.valid_o == 1);
             for (int i = FROM; !(i==0); i--) begin
                 st.check_serializer(cb.data_o,i-1);
                 @(cb);           
             end
+
         endtask : TestSerializer
 
         // -----------------------------------------------
@@ -230,7 +247,6 @@ module toplevel_tb;
         // -----------------------------------------------
         // Applies stimuli to the DUT except reset
         task ApplyStimuli(Stimulus #(FROM) st);
-            cb.valid_i <= 1;
             cb.data_i   <= st.stimulus;
         endtask : ApplyStimuli
 
@@ -247,15 +263,14 @@ module toplevel_tb;
     // Instance DUT - Device Under Test
     // -----------------------------------
 
-    toplevel dut
+    shift_serializer shift_serializer
     (
-        .clk                (clk),   // Clock
-        .reset              (reset),   // Asynchronous reset active low
-        .data_i             (data_i),   // operand a in (rs1)
-        .data_o             (data_o),   // result out
-        .valid_i            (valid_i),
-        .valid_o            (valid_o),
-        .ready_o            (ready_o)
+        .clk                (clk),   
+        .reset              (reset),   
+        .data_i             (data_i),   
+        .data_o             (data_o),   
+        .ready_o            (ready_o),
+        .valid_o            (valid_o)
     );
 
 

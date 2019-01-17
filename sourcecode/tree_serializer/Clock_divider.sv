@@ -1,9 +1,11 @@
-
-// Generator : SpinalHDL v1.2.2    git head : 3159d9865a8de00378e0b0405c338a97c2f5a601
-// Date      : 05/12/2018, 16:29:22
-// Component : Clock_divider
-
-
+// ########################################################
+// ###
+// ### Clockdivider
+// ###
+// ### Written by: Kaja Jentner
+// ### January 2019
+// ### IEF ETH Zurich
+// ########################################################
 module Clock_divider (
       output  clk_div_o,
       input   clk_fast_i,

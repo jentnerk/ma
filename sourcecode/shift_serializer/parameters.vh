@@ -17,6 +17,6 @@
 // Fill in the constants here:
 `define SHIFT_FROM 		20
 `define SHIFT_LOGFROM 	5
-`define SHIFT_TO 		4
+`define SHIFT_TO 		1
 
 `endif 

@@ -1,6 +1,11 @@
-// testbench serializer
-// Written by Kaja Jentner
-// Dec-2018
+// ########################################################
+// ###
+// ### Testbench: Shift-Register Serializer with FSM
+// ###
+// ### Written by: Kaja Jentner
+// ### January 2019
+// ### IEF ETH Zurich
+// ########################################################
 
 `include "parameters.vh"
 

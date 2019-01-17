@@ -1,6 +1,6 @@
 // ########################################################
 // ###
-// ### Testbench Tree-Structured Serializer
+// ### Toplevel of the Mixed-Structured Serializer
 // ###
 // ### Written by: Kaja Jentner
 // ### January 2019
@@ -9,16 +9,18 @@
 
 `include "parameters.vh"
 
-module tree_serializer_tb;
+module mixed_serializer_tb;
     // constants
-    //timeunit 1ns; (activate for RTL simulation)
+    //timeunit 1ns; //(activate for RTL simulation)
+    //`timescale 1 ns / 1 ns; //(activate for gate level simulation)
     localparam int unsigned CLOCK_PERIOD = 10ns;  // Clock period
-    localparam int unsigned FROM = `TREE_FROM;
+    localparam int unsigned FROM = `SHIFT_FROM;
+    localparam int unsigned TO = `SHIFT_TO;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 100;   // # of randomized test
-    localparam logic TESTKNOWN = 1'b1; // Enable testing of two specific stimuli
+    localparam longint unsigned RANDOM_ROUNDS = 3;   // # of randomized test
+    localparam logic TESTKNOWN = 1'b0; // Enable testing of two specific stimuli
 
     // ---------------------------------
     // inputs to the DUT
@@ -31,6 +33,8 @@ module tree_serializer_tb;
     // outputs from the DUT
     // -------------------------------------
     logic data_o;
+    logic ready_o;
+    logic valid_o;
 
     // ------------------
     // Clock generator
@@ -133,7 +137,7 @@ module tree_serializer_tb;
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
             output  negedge reset;
             output data_i;
-            input data_o;
+            input data_o, ready_o, valid_o;
         endclocking
 
         // ---------------------
@@ -145,12 +149,15 @@ module tree_serializer_tb;
 
             // Declare the Stimulus Objects
             Stimulus #(FROM) stim;
+            Stimulus #(FROM) stim1;
             Stimulus #(FROM) stim2;
             stim = new;
+            stim1 = new;
             stim2 = new;
 
+
             //Set all inputs to the DUT at the beginning
-            reset    = '0;
+            reset   = '0;
             data_i  = '0;
 
             // --------------------------
@@ -162,7 +169,7 @@ module tree_serializer_tb;
 
             //then reset is set to zero and simulatin can start
             cb.reset <= 0;
-            @(cb);
+            // @(cb);
 
             //then the actual testing starts
             // ------------------------------
@@ -174,57 +181,84 @@ module tree_serializer_tb;
                          "--------------------------------------------------\n",
                          "Testing Serializer\n",
                          "--------------------------------------------------");
-
                 //here you can insert your specified stimuli
-                TestSerializer(stim, 16'b11111010);
+                TestSerializer(stim, 20'b10000000001101001101);
 
+                //00000 00000 11010 01101
             //print how many tests have passed
             stim.pass_statistic();
             end
 
+            // // Randomized Testing only to apply stimuli and not to check result
+            // if(TESTRAND) begin
+            //     $display("//////////////////////////////////////////////////\n",
+            //              "--------------------------------------------------\n",
+            //              "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
+            //              "--------------------------------------------------");
+
+            //     for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
+            //         //apply first stimulus
+            //         stim.stimulus=$random;
+            //         @(cb iff cb.ready_o == 1);
+            //         ApplyStimuli(stim);
+            //         repeat(4) @(cb); //wait FROM cycles to imitate the slow clock
+            //     end
+
+            // end
+            
             // Randomized Testing
             if(TESTRAND) begin
                 $display("//////////////////////////////////////////////////\n",
                          "--------------------------------------------------\n",
                          "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
                          "--------------------------------------------------");
-                    //apply first stimulus
-                    stim.stimulus=$random;
-                    ApplyStimuli(stim);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
+                stim1.stimulus=$random;
+                stim2.stimulus=$random;
+
+
+                        // Apply new stimulus only if the 
+                        ApplyStimuli(stim1);
+                        $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim1.stimulus);                        
+                        @(cb iff cb.valid_o == 1);
+                        for (int i = 0; i < FROM-1; i++) begin
+                                    stim1.check_serializer(cb.data_o,(FROM-1)-i);
+                            @(cb);    
+                        end
+                        ApplyStimuli(stim2);
+                        $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim1.stimulus); 
+                        for (int i = 0; i < FROM-1; i++) begin
+                                    stim1.check_serializer(cb.data_o,(FROM-1)-i);
+                            @(cb);    
+                        end
 
 
 
-                for (longint j = 0; j < RANDOM_ROUNDS/2; j++) begin
-             
-                    //apply stimulus 2
-                    stim2.stimulus = $random;
-                    ApplyStimuli(stim2);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
 
-                    //check first stimulus
-                    $display("--------------------------------------------------\n",
-                                            "Applied stimuli: %b", stim.stimulus);
-                    for (int i = FROM; !(i==0); i--) begin
-                        stim.check_serializer(cb.data_o,i-1);
-                        @(cb);           
-                    end
-
-                    //apply stimulus 3
-                    stim.stimulus = $random;
-                    ApplyStimuli(stim);
-                    repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
-
-                    //check second stimulus
-                    $display("--------------------------------------------------\n",
-                                            "Applied stimuli: %b", stim2.stimulus);                    
-                    for (int i = FROM; !(i==0); i--) begin
-                        stim2.check_serializer(cb.data_o,i-1);
-                        @(cb);           
-                    end
-                end
+                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin                
+                        stim1.stimulus=$random;
+                        ApplyStimuli(stim1);
+                        $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim2.stimulus); 
+                        @(cb iff cb.valid_o == 1);
+                        for (int i = 0; i < FROM-1; i++) begin
+                                    stim2.check_serializer(cb.data_o,(FROM-1)-i);
+                            @(cb);    
+                        end
+                        stim2.stimulus=$random;
+                        ApplyStimuli(stim2);
+                        $display("--------------------------------------------------\n",
+                                    "Applied stimuli: %b", stim1.stimulus);                         
+                        for (int i = 0; i < FROM-1; i++) begin
+                                    stim1.check_serializer(cb.data_o,(FROM-1)-i);
+                            @(cb);    
+                        end                        
+                    
+                 end
             end
-            
+
+
             //print how many tests have passed
             stim.pass_statistic();
 
@@ -238,18 +272,15 @@ module tree_serializer_tb;
                      "Test Serializer with:\ndata1: %b", a);
             // initialize the stimulus with the bitvector a
             st.set_stimulus(a);
-
             ApplyStimuli(st);
-            //@(cb iff cb.div_ready_o == 0); // Clear them in next cycle if they have been eaten
-            repeat(FROM) @(cb); //wait FROM cycles to imitate the slow clock
+            repeat(4) @(cb); //wait 4 cycles to imitate the slow clock
             ClearStimuli();
-            repeat(FROM) @(cb);
+            repeat(9) @(cb);
             //check all the set stimuli individually
             for (int i = FROM; !(i==0); i--) begin
                 st.check_serializer(cb.data_o,i-1);
                 @(cb);           
             end
-
         endtask : TestSerializer
 
         // -----------------------------------------------
@@ -257,8 +288,6 @@ module tree_serializer_tb;
         // -----------------------------------------------
         // Applies stimuli to the DUT except reset
         task ApplyStimuli(Stimulus #(FROM) st);
-//            $display("--------------------------------------------------\n",
-  //          "Applied stimulus: %b", st.stimulus);
             cb.data_i   <= st.stimulus;
         endtask : ApplyStimuli
 
@@ -275,13 +304,17 @@ module tree_serializer_tb;
     // Instance DUT - Device Under Test
     // -----------------------------------
 
-    toplevel_tree_serializer toplevel_tree_serializer
+    toplevel_mixed_serializer toplevel_mixed_serializer
     (
-        .clk_i              (clk),   // Clock
-        .reset_ni           (reset),   // Asynchronous reset active low
-        .data_i             (data_i),   // operand a in (rs1)
-        .data_o             (data_o)   // result out
+        .clk_i              (clk),  
+        .reset_ni           (reset), 
+        .data_i             (data_i),   
+        .data_o             (data_o),  
+        // .valid_i            (valid_i),
+        .valid_o            (valid_o),
+        .ready_o            (ready_o)
     );
+
 
 
 endmodule

@@ -1,6 +1,11 @@
-// Generator : SpinalHDL v1.2.2    git head : 3159d9865a8de00378e0b0405c338a97c2f5a601
-// Date      : 11/12/2018, 13:32:13
-// Component : Serializer
+// ########################################################
+// ###
+// ### Plain Tree-Structured Serializer to Use Recursively
+// ###
+// ### Written by: Kaja Jentner
+// ### January 2019
+// ### IEF ETH Zurich
+// ########################################################
 
 
 module Serializer #(parameter int unsigned FROM, parameter int unsigned LOGFROM, parameter int unsigned COUNTER)(

@@ -32,7 +32,7 @@ analyze -library WORK -format sverilog $PATH/Clock_divider.sv
 
 # Set Entity To Elaborate
 set TOP_ENTITY {toplevel_tree_serializer}
-set ENTITY {Serializer}
+set ENTITY {Tree_Serializer}
 
 #==============================================================================
 # Elaborate Design
@@ -56,7 +56,7 @@ source scripts/constraints_generated.tcl
 compile_ultra -no_autoungroup
 
 #==============================================================================
-# Get Reports
+# Create Reports
 #==============================================================================
 
 set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep

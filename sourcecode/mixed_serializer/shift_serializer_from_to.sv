@@ -1,6 +1,11 @@
-//Shift Register Serializer
-
-//Serializer from
+// ########################################################
+// ###
+// ### Shift-Register Serializer with FSM
+// ###
+// ### Written by: Kaja Jentner
+// ### January 2019
+// ### IEF ETH Zurich
+// ########################################################
 
 module shift_serializer #(parameter int unsigned FROM, parameter int unsigned LOG2FROM, parameter int unsigned TO)
 	(	input logic [FROM-1:0] 	data_i,
@@ -16,7 +21,8 @@ module shift_serializer #(parameter int unsigned FROM, parameter int unsigned LO
     logic [FROM-1:0]                        data_in_temp;
     logic [LOG2FROM:0]						Counter_SP, Counter_SN;
 	logic [FROM-1:0]					    Reg_SP, Reg_SN;
-	enum logic [1:0] {READ, SHIFT}			State_SP, State_SN;
+    enum logic [1:0] {READ, SHIFT}          State_SP, State_SN;
+
 
     // -----------------
     // FSM

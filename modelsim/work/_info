@@ -9,145 +9,145 @@ z2
 cModel Technology
 Z0 d/home/msc18h28/ma/modelsim
 T_opt
-!s110 1547202692
-V:87VQ8gXB7cillOU:T1G[3
+!s110 1547734149
+Ve>LLPjgZMlH7NH;bL0=?I0
 04 11 4 work toplevel_tb fast 0
-=1-6c626d24a094-5c387084-4c5a0-358
+=1-6c626d24a094-5c408c85-f599-6bf1
 Z1 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;10.6b;65
 R0
 T_opt1
-!s110 1547136998
-VnzPza8l]GNdi_8AMC?_5o2
+!s110 1547723665
+VLN[gEBEIojXZ_P6QU>=of0
 04 19 4 work shift_serializer_tb fast 0
-=1-6c626d24a094-5c376fe6-3ce78-1f8a
+=6-6c626d24a094-5c406391-92f1d-2484
 R1
 R2
 n@_opt1
 R3
 R0
 T_opt2
-!s110 1547550891
-VQG64^^@L[Q>kD@HKMiP6P1
-04 18 4 work tree_serializer_tb fast 0
-=1-6c626d24a094-5c3dc0ab-21df7-5c5b
+!s110 1547739535
+VDm@7O^_<8K8c6]X44@fPR1
+04 19 4 work mixed_serializer_tb fast 0
+=6-6c626d24a094-5c40a18f-a2b87-789
 R1
 R2
 n@_opt2
 R3
 vClock_divider
 Z4 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
-Z5 !s110 1547550853
+Z5 !s110 1547737683
 !i10b 1
-!s100 gOBV]]9]aZHaiRgCdzSKC3
-I>V6G?Yh1>><Qd2`IHTHC91
+!s100 Wz;LfPK[Ci_[:d8eT=hzG2
+IeI`fEc>JaHU2Y?TG8Tj>^1
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 !s105 Clock_divider_sv_unit
 S1
 R0
-w1547481360
-8/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
-F/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv
-L0 7
-Z7 OL;L;10.7b_1;67
+w1547733213
+8/home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv
+F/home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv
+Z7 L0 10
+Z8 OL;L;10.7b_1;67
 r1
 !s85 0
 31
-Z8 !s108 1547550853.000000
-!s107 /home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv|
-!s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer/Clock_divider.sv|
+Z9 !s108 1547737683.000000
+!s107 /home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv|
+!s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv|
 !i113 0
-Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 n@clock_divider
 vClock_divider_0
-Z10 !s110 1544793522
+Z11 !s110 1544793522
 !i10b 1
 !s100 VH@gM`LZPdf6Jc<0z[VFe0
 I[Y`=XMQ<]]ik2J8RMBo:=2
 R6
 R0
-Z11 w1544793349
-Z12 8/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
-Z13 F/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
+Z12 w1544793349
+Z13 8/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
+Z14 F/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v
 L0 38
-Z14 OL;L;10.6b;65
+Z15 OL;L;10.6b;65
 r1
 !s85 0
 31
-Z15 !s108 1544793522.000000
-Z16 !s107 /home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
-Z17 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
+Z16 !s108 1544793522.000000
+Z17 !s107 /home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
+Z18 !s90 -reportprogress|300|-work|work|/home/msc18h28/ma/modelsim/synopsys_files/synopsys_gatelist.v|
 !i113 0
-R9
+R10
 R2
 n@clock_divider_0
 vClock_divider_1
-R10
+R11
 !i10b 1
 !s100 00z57ciNl@T?b[6S=C0M]2
 IU^CO>Ml5_AX`fg0mIN<dC1
 R6
 R0
-R11
 R12
 R13
-L0 28
 R14
+L0 28
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@clock_divider_1
 vClock_divider_2
-R10
+R11
 !i10b 1
 !s100 Q3mG<>Y0Og<<zPKk2HeO`3
 IfbKDoT>b^Xj_anSKPU_N21
 R6
 R0
-R11
 R12
 R13
-L0 18
 R14
+L0 18
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@clock_divider_2
 vClock_divider_3
-R10
+R11
 !i10b 1
 !s100 zb:5=3K`_WTBQ^?>GR@Xm3
 Ik89iZUGKM]mfOlL5ToXGU1
 R6
 R0
-R11
 R12
 R13
-L0 8
 R14
+L0 8
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@clock_divider_3
 vdata_reg
@@ -157,158 +157,182 @@ R4
 !s100 QKeh99FYLFXa]F^ZK5HM]2
 I`SM:_;Eo]a9[^4FjBB1GD0
 R6
-Z18 !s105 tree_serializer_recursive_sv_unit
+Z19 !s105 tree_serializer_recursive_sv_unit
 S1
 R0
 w1547548663
-Z19 8/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
-Z20 F/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
-Z21 L0 47
-R7
+Z20 8/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Z21 F/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv
+Z22 L0 47
+R8
 r1
 !s85 0
 31
 !s108 1547548665.000000
-Z22 !s107 /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv|
-Z23 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv|
+Z23 !s107 /home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv|
+Z24 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_recursive.sv|
 !i113 0
-R9
+R10
+R2
+vmixed_serializer_tb
+Z25 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1547739534
+!i10b 1
+!s100 @6g:jcEk[S66H0:EcBiTF2
+Ifj;ejkzn8l^T4fN8EBBLa0
+R6
+!s105 mixed_serializer_tb_sv_unit
+S1
+R0
+w1547739530
+8/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer_tb.sv
+F/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer_tb.sv
+Z26 L0 12
+R15
+r1
+!s85 0
+31
+!s108 1547739534.000000
+!s107 /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer_tb.sv|
+!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer_tb.sv|
+!i113 0
+R10
 R2
 vmux
 R4
-R5
+Z27 !s110 1547550853
 !i10b 1
 !s100 H_0kkWHMZ?kGEbG3gnPMh0
 IgjmKZlo`9kceOA?zoQ6?=1
 R6
-R18
+R19
 S1
 R0
-Z24 w1547549305
-R19
+Z28 w1547549305
 R20
 R21
-R7
+R22
+R8
 r1
 !s85 0
 31
-R8
-R22
+Z29 !s108 1547550853.000000
 R23
+R24
 !i113 0
-R9
+R10
 R2
 vSerializer
 R4
-R5
+R27
 !i10b 1
 !s100 =d?BRC9?QfQ3UJ6]@CK881
 I4XL71nDBzNWG^[DR35Ze>1
 R6
-R18
+R19
 S1
 R0
-R24
-R19
+R28
 R20
+R21
 L0 6
-R7
+R8
 r1
 !s85 0
 31
-R8
-R22
+R29
 R23
+R24
 !i113 0
-R9
+R10
 R2
 n@serializer
 vSerializer_FROM_00000002_00000004_00000003
-R10
+R11
 !i10b 1
 !s100 54VbPiTNE0?Ea:18SV1gJ0
 I[bO=lZXJLUCh6C6FiJJhc1
 R6
 R0
-R11
 R12
 R13
-L0 48
 R14
+L0 48
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@serializer_@f@r@o@m_00000002_00000004_00000003
 vSerializer_FROM_00000004_00000004_00000002
-R10
+R11
 !i10b 1
 !s100 ZQ>G0kW3Lj7ocXB^ETC:G3
 INN6][<iN5n@c4h2?FKVNZ2
 R6
 R0
-R11
 R12
 R13
-L0 67
 R14
+L0 67
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@serializer_@f@r@o@m_00000004_00000004_00000002
 vSerializer_FROM_00000008_00000004_00000001
-R10
+R11
 !i10b 1
 !s100 VEKJ7ah9V6>fZFonT9geb0
 IRO7<4QRnd0hgJRnOHaWhF1
 R6
 R0
-R11
 R12
 R13
-L0 96
 R14
+L0 96
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@serializer_@f@r@o@m_00000008_00000004_00000001
 vSerializer_FROM_00000010_00000004_0
-R10
+R11
 !i10b 1
 !s100 WG0l>RM`m2IR:aXFGPQ;W0
 I?Dk7>;@[IdMjX8azHmD3`3
 R6
 R0
-R11
 R12
 R13
-L0 137
 R14
+L0 137
+R15
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 0
-R9
+R10
 R2
 n@serializer_@f@r@o@m_00000010_00000004_0
 vserializer_tb
@@ -318,14 +342,14 @@ R4
 !s100 AUAT7TUM[J4]JiWGP0KSj1
 IZLaVPn?Rf1bJoNhDTc0ZC3
 R6
-Z25 !s105 tree_serializer_tb_sv_unit
+Z30 !s105 tree_serializer_tb_sv_unit
 S1
 R0
 w1547132322
 8/home/msc18h28/ma/sourcecode/tree_serializer_tb.sv
 F/home/msc18h28/ma/sourcecode/tree_serializer_tb.sv
 L0 6
-R7
+R8
 r1
 !s85 0
 31
@@ -333,107 +357,156 @@ r1
 !s107 /home/msc18h28/ma/sourcecode/tree_serializer_tb.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer_tb.sv|
 !i113 0
-R9
+R10
 R2
 vshift_serializer
 R4
-Z26 !s110 1547202683
+R5
 !i10b 1
-!s100 CN05:h70eC5=CKB[jWNz03
-I46?G`J==8V[05OVokSiQK1
+!s100 nh_1CNPg]eSGoh7]>ndSN3
+Ie4idHl2NP]^kU@ZZV1KaZ0
 R6
 !s105 shift_serializer_from_to_sv_unit
 S1
 R0
-w1547196089
+w1547737671
 8/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv
 F/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv
-L0 5
 R7
+R8
 r1
 !s85 0
 31
-Z27 !s108 1547202683.000000
+R9
 !s107 /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv|
 !i113 0
-R9
+R10
 R2
 vshift_serializer_tb
-R4
-!s110 1547136981
+R25
+!s110 1547723658
 !i10b 1
-!s100 :@`[75DM=:I^WX:hkzfVR2
-I2Unf?;60mlj3VEQPCK;:U2
+!s100 L9TTXD=FkTI;_B@UjTQib1
+IM?_Wk=JbM9GD`C[VZH3Rj1
 R6
-!s105 shift_serializer_from_to_tb_sv_unit
+!s105 shift_serializer_no_wait_tb_sv_unit
 S1
 R0
-w1547136958
-8/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_from_to_tb.sv
-F/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_from_to_tb.sv
-L0 5
-R7
+w1547723207
+8/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_no_wait_tb.sv
+F/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_no_wait_tb.sv
+L0 7
+R15
 r1
 !s85 0
 31
-!s108 1547136981.000000
-!s107 /home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_from_to_tb.sv|
-!s90 -work|work|/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_from_to_tb.sv|
+!s108 1547723658.000000
+!s107 /home/msc18h28/ma/sourcecode/shift_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_no_wait_tb.sv|
+!s90 -reportprogress|300|-work|work|/home/msc18h28/ma/sourcecode/shift_serializer/shift_serializer_no_wait_tb.sv|
 !i113 0
-R9
+R10
 R2
+vshift_serializer_wo_FSM
+R4
+R5
+!i10b 1
+!s100 ^dl4Ke^1UHgI=dl0j1mj73
+I1HQn<A]^4ncafk94n:g=91
+R6
+!s105 shift_serializer_without_FSM_sv_unit
+S1
+R0
+w1547734112
+8/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_without_FSM.sv
+F/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_without_FSM.sv
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_without_FSM.sv|
+!s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_without_FSM.sv|
+!i113 0
+R10
+R2
+nshift_serializer_wo_@f@s@m
 vtoplevel
 R4
-R26
+!s110 1547732992
 !i10b 1
-!s100 24YWBnzXR7F8Hni^?aScI1
-IYdhbd2>j6=LgL?`S?R_Ql1
+!s100 MajnTK0@3kUza<Uo?YC883
+IWC:oOfSfAe8J=9ZJ1;d?g2
 R6
 !s105 toplevel_sv_unit
 S1
 R0
-w1547202506
+w1547732985
 8/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv
 F/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv
-L0 6
-R7
+Z31 L0 13
+R8
 r1
 !s85 0
 31
-R27
+!s108 1547732992.000000
 !s107 /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel.sv|
 !i113 0
-R9
+R10
+R2
+vtoplevel_mixed_serializer
+R4
+R5
+!i10b 1
+!s100 GnUhaT^QJC9zLb>XNX33R1
+Ike_B2;;c]:aXmo@BM^W<d3
+R6
+!s105 mixed_serializer_sv_unit
+S1
+R0
+w1547736511
+8/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer.sv
+F/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer.sv
+R31
+R8
+r1
+!s85 0
+31
+!s108 1547737682.000000
+!s107 /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer.sv|
+!s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer.sv|
+!i113 0
+R10
 R2
 vtoplevel_tb
 R4
-!s110 1547202684
+!s110 1547734126
 !i10b 1
-!s100 bo02AdNWgHI=B<201kWGE1
-IC@4P_zPDi@`:U?9gz]`220
+!s100 SUABZcB_Zoij_PiVL=BQz2
+ICU6;SCSzFileLb775ClBm2
 R6
 !s105 toplevel_tb_sv_unit
 S1
 R0
-w1547202659
+w1547734033
 8/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel_tb.sv
 F/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel_tb.sv
-L0 7
-R7
+R26
+R8
 r1
 !s85 0
 31
-R27
+!s108 1547734126.000000
 !s107 /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel_tb.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/mixed_serializer/toplevel_tb.sv|
 !i113 0
-R9
+R10
 R2
 vtoplevel_tree_serializer
 R4
-R5
+R27
 !i10b 1
 !s100 n<nj=:Vb99?efGSPYUOK]0
 I7heL2RhllLDQJId<K=GAN1
@@ -445,15 +518,15 @@ w1547549637
 8/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
 F/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv
 L0 6
-R7
+R8
 r1
 !s85 0
 31
-R8
+R29
 !s107 /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer/toplevel_tree_serializer.sv|
 !i113 0
-R9
+R10
 R2
 vtree_serializer
 R4
@@ -469,7 +542,7 @@ w1547132358
 8/home/msc18h28/ma/sourcecode/tree_serializer.sv
 F/home/msc18h28/ma/sourcecode/tree_serializer.sv
 L0 9
-R7
+R8
 r1
 !s85 0
 31
@@ -477,7 +550,7 @@ r1
 !s107 /home/msc18h28/ma/sourcecode/tree_serializer.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer.sv|
 !i113 0
-R9
+R10
 R2
 vtree_serializer_tb
 R4
@@ -486,14 +559,14 @@ R4
 !s100 MaLb1O7=inZWE`7G9RacY1
 IBi4F09hDiTQ7il_CBJ6eg2
 R6
-R25
+R30
 S1
 R0
 w1547481509
 8/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_tb.sv
 F/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_tb.sv
 L0 6
-R7
+R8
 r1
 !s85 0
 31
@@ -501,5 +574,5 @@ r1
 !s107 /home/msc18h28/ma/sourcecode/tree_serializer/parameters.vh|/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_tb.sv|
 !s90 -work|work|/home/msc18h28/ma/sourcecode/tree_serializer/tree_serializer_tb.sv|
 !i113 0
-R9
+R10
 R2
