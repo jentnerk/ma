@@ -19,8 +19,7 @@ module shift_serializer_tb;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 50;   // # of randomized test
-    localparam logic TESTKNOWN = 1'b0; // Enable testing of two specific stimuli
+    localparam longint unsigned RANDOM_ROUNDS = 3;   // # of randomized test
 
     // ---------------------------------
     // inputs to the DUT
@@ -175,42 +174,43 @@ module shift_serializer_tb;
             // Test 
             // ------------------------------
 
-            if(TESTKNOWN) begin
-                $display("//////////////////////////////////////////////////\n",
-                         "--------------------------------------------------\n",
-                         "Testing Serializer\n",
-                         "--------------------------------------------------");
-                //here you can insert your specified stimuli
-                TestSerializer(stim, 10'b1101001101);
-
-            //print how many tests have passed
-            stim.pass_statistic();
-            end
-
             // Randomized Testing
             if(TESTRAND) begin
                 $display("//////////////////////////////////////////////////\n",
                          "--------------------------------------------------\n",
                          "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
                          "--------------------------------------------------");
+                // Create first stimulus
                 stim2.stimulus=$random;
+                // Apply stimulus
+                ApplyStimuli(stim2);
+                // Wait one cycle for it to appear at the output
+                @(cb);@(cb);
                  for (longint j = 0; j < RANDOM_ROUNDS; j++) begin                
                         stim1.stimulus=stim2.stimulus;
-                        // Apply new stimulus only if the 
-                        ApplyStimuli(stim1);
+                        // check the stimulus applied before
                         $display("--------------------------------------------------\n",
                                     "Applied stimuli: %b", stim1.stimulus); 
-                        @(cb iff cb.valid_o == 1);
-                        for (int i = 0; i < FROM/TO-1; i++) begin
+
+                        for (int i = 0; i < FROM/TO-2; i++) begin
                                 for(int k=1; k < TO+1; k++) begin
                                 stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-i);
                                 end
                             @(cb);    
                         end
+                        // create second stimulus while checking the second last bit of 
+                        // the first stimulus
                         stim2.stimulus=$random;
+                        // apply it
                         ApplyStimuli(stim2);
+                        // and then check the last bit of the first stimulus
+                        for(int k=1; k < TO+1; k++) begin
+                            stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-FROM/TO+2);
+                            @(cb);
+                        end                        
                         for(int k=1; k < TO+1; k++) begin
                             stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-FROM/TO+1);
+                            @(cb);
                         end
                     
                  end
@@ -223,24 +223,6 @@ module shift_serializer_tb;
 
         end
 
-        // --------------------------------------------------
-        // Tests for specified inputs
-        // --------------------------------------------------
-        task automatic TestSerializer(Stimulus #(FROM) st, logic [FROM-1:0] a);
-            $display("--------------------------------------------------\n",
-                     "Test Serializer with:\ndata1: %b", a);
-            // initialize the stimulus with the bitvector a
-            st.set_stimulus(a);
-            @(cb iff cb.ready_o == 1);
-            ApplyStimuli(st);
-            //check all the set stimuli individually
-            @(cb iff cb.valid_o == 1);
-            for (int i = FROM; !(i==0); i--) begin
-                st.check_serializer(cb.data_o,i-1);
-                @(cb);           
-            end
-
-        endtask : TestSerializer
 
         // -----------------------------------------------
         // Apply and Clear Stimuli Methods
@@ -269,8 +251,7 @@ module shift_serializer_tb;
         .reset              (reset),   
         .data_i             (data_i),   
         .data_o             (data_o),   
-        .ready_o            (ready_o),
-        .valid_o            (valid_o)
+        .ready_o            (ready_o)
     );
 
 

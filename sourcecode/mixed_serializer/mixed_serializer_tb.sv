@@ -236,7 +236,7 @@ module mixed_serializer_tb;
 
 
 
-                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin                
+                 for (longint j = 0; j < 2; j++) begin                
                         stim1.stimulus=$random;
                         ApplyStimuli(stim1);
                         $display("--------------------------------------------------\n",

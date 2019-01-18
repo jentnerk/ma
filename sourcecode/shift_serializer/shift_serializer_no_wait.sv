@@ -11,20 +11,19 @@
 `include "parameters.vh"
 
 module shift_serializer #(parameter int unsigned FROM=`SHIFT_FROM, parameter int unsigned LOG2FROM=`SHIFT_LOGFROM, parameter int unsigned TO=`SHIFT_TO)
-	(	input logic [FROM-1:0] 	data_i,
-		output logic [TO-1:0]	data_o,
-		input logic 			clk,
-		input logic 			reset,
-        output logic            ready_o,
-        output logic            valid_o
+    (   input logic [FROM-1:0]  data_i,
+        output logic [TO-1:0]   data_o,
+        input logic             clk,
+        input logic             reset,
+        output logic            ready_o
         );
 
     //=====================
-    // Signal declarations	
+    // Signal declarations  
     //=====================
     logic [FROM-1:0]                        data_in_temp;
-    logic [LOG2FROM:0]						Counter_SP, Counter_SN;
-    logic [FROM-1:0]					    Reg_SP, Reg_SN;
+    logic [LOG2FROM:0]                      Counter_SP, Counter_SN;
+    logic [FROM-1:0]                        Reg_SP, Reg_SN;
     logic                                   valid_SN, valid_SP;
 
     //===================
@@ -47,17 +46,13 @@ module shift_serializer #(parameter int unsigned FROM=`SHIFT_FROM, parameter int
     //------------------
     // Counter
     // -----------------
-    assign Counter_SN = ~(|Counter_SP) ? FROM/TO : (Counter_SP - 1);
+    assign Counter_SN = ~(|Counter_SP) ? FROM/TO - 1 : (Counter_SP - 1);
 
     // Shifting
     assign Reg_SN = ~(|Counter_SP) ? data_in_temp : {Reg_SP[FROM-2:0],1'b0};
 
     // Handle Output
     assign ready_o = ~(|Counter_SP) ? 1'b1 : 1'b0;
-    // assign ready_o = ~valid_SP;
-    assign valid_SN = ~(|Counter_SP) ? 1'b0 : 1'b1;
-    assign valid_o = ~(|Counter_SP) ? 1'b0 : 1'b1;
-    // assign valid_o = valid_SP;
     //==================
     //  Registers
     //==================
@@ -65,11 +60,9 @@ module shift_serializer #(parameter int unsigned FROM=`SHIFT_FROM, parameter int
         if (reset) begin
           Reg_SP           <= '0;
           Counter_SP       <= '0;
-          valid_SP         <= '0;
         end else begin
           Reg_SP           <= Reg_SN;
           Counter_SP       <= Counter_SN;
-          valid_SP         <= valid_SN;
         end
     end
 

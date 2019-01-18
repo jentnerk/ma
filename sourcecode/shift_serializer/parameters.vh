@@ -15,8 +15,8 @@
 `define parameters_vh
 
 // Fill in the constants here:
-`define SHIFT_FROM 		20
-`define SHIFT_LOGFROM 	5
-`define SHIFT_TO 		1
+`define SHIFT_FROM 		6
+`define SHIFT_LOGFROM 	3
+`define SHIFT_TO 		2
 
 `endif 
