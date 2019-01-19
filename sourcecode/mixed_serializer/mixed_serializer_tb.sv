@@ -19,8 +19,7 @@ module mixed_serializer_tb;
 
     // activate and deactive different tests
     localparam logic TESTRAND  = 1'b1; // Enable testing of random inputs
-    localparam longint unsigned RANDOM_ROUNDS = 3;   // # of randomized test
-    localparam logic TESTKNOWN = 1'b0; // Enable testing of two specific stimuli
+    localparam longint unsigned RANDOM_ROUNDS = 6;   // # of randomized test
 
     // ---------------------------------
     // inputs to the DUT
@@ -34,7 +33,6 @@ module mixed_serializer_tb;
     // -------------------------------------
     logic data_o;
     logic ready_o;
-    logic valid_o;
 
     // ------------------
     // Clock generator
@@ -137,7 +135,7 @@ module mixed_serializer_tb;
             default input #1step output #2; // #1step indicates value read is signal immediately before clock edge
             output  negedge reset;
             output data_i;
-            input data_o, ready_o, valid_o;
+            input data_o, ready_o;
         endclocking
 
         // ---------------------
@@ -175,113 +173,99 @@ module mixed_serializer_tb;
             // ------------------------------
             // Test 
             // ------------------------------
-
-            if(TESTKNOWN) begin
-                $display("//////////////////////////////////////////////////\n",
-                         "--------------------------------------------------\n",
-                         "Testing Serializer\n",
-                         "--------------------------------------------------");
-                //here you can insert your specified stimuli
-                TestSerializer(stim, 20'b10000000001101001101);
-
-                //00000 00000 11010 01101
-            //print how many tests have passed
-            stim.pass_statistic();
-            end
-
-            // // Randomized Testing only to apply stimuli and not to check result
-            // if(TESTRAND) begin
-            //     $display("//////////////////////////////////////////////////\n",
-            //              "--------------------------------------------------\n",
-            //              "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
-            //              "--------------------------------------------------");
-
-            //     for (longint j = 0; j < RANDOM_ROUNDS; j++) begin
-            //         //apply first stimulus
-            //         stim.stimulus=$random;
-            //         @(cb iff cb.ready_o == 1);
-            //         ApplyStimuli(stim);
-            //         repeat(4) @(cb); //wait FROM cycles to imitate the slow clock
-            //     end
-
-            // end
             
-            // Randomized Testing
-            if(TESTRAND) begin
+
+            // Special case from 4 to 2 shift and from 2 to one tree 
+            // does not work yet
+            if(FROM == 4) begin
                 $display("//////////////////////////////////////////////////\n",
                          "--------------------------------------------------\n",
                          "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
                          "--------------------------------------------------");
-                stim1.stimulus=$random;
+                    //apply first stimulus
+                    stim.stimulus=$random;
+                    ApplyStimuli(stim);
+                    @(cb); //wait FROM cycles to imitate the slow clock
+                    stim2.stimulus=$random;
+                    ApplyStimuli(stim2);
+                    // repeat(TO) @(cb); //wait FROM cycles to imitate the slow clock
+                    // @(cb);@(cb);
+
+                for (longint j = 0; j < RANDOM_ROUNDS/2; j++) begin
+
+                    //check first stimulus
+                    $display("--------------------------------------------------\n",
+                                            "Applied stimuli: %b", stim.stimulus);
+                    for (int i = FROM; !(i==0); i--) begin
+                        stim.check_serializer(cb.data_o,i-1);
+                        @(cb);           
+                    end
+
+                    //apply stimulus 3
+                    stim.stimulus = $random;
+                    ApplyStimuli(stim);
+
+                    //check second stimulus
+                    $display("--------------------------------------------------\n",
+                                            "Applied stimuli: %b", stim2.stimulus);                    
+                    for (int i = FROM; !(i==0); i--) begin
+                        stim2.check_serializer(cb.data_o,i-1);
+                        @(cb);           
+                    end
+
+                    stim.stimulus=$random;
+                    ApplyStimuli(stim2);
+                end
+                //print how many tests have passed
+                stim2.pass_statistic();
+            end
+
+
+
+
+
+            // Randomized Testing
+            if(TESTRAND && FROM > 4) begin
+                $display("//////////////////////////////////////////////////\n",
+                         "--------------------------------------------------\n",
+                         "Testing Randomized with %d Stimuli\n", (RANDOM_ROUNDS),
+                         "--------------------------------------------------");
+                // Create first stimulus
                 stim2.stimulus=$random;
-
-
-                        // Apply new stimulus only if the 
-                        ApplyStimuli(stim1);
-                        $display("--------------------------------------------------\n",
-                                    "Applied stimuli: %b", stim1.stimulus);                        
-                        @(cb iff cb.valid_o == 1);
-                        for (int i = 0; i < FROM-1; i++) begin
-                                    stim1.check_serializer(cb.data_o,(FROM-1)-i);
-                            @(cb);    
-                        end
-                        ApplyStimuli(stim2);
+                // Apply stimulus
+                ApplyStimuli(stim2);
+                repeat(TO) @(cb); 
+                repeat(TO) @(cb); // wait TO = TREE_FROM cycles until the result appears at the output ready to be checked
+                @(cb); @(cb);
+                // Checking and Appying more Stimuli
+                 for (longint j = 0; j < RANDOM_ROUNDS; j++) begin     
+                        stim1.stimulus=stim2.stimulus;
+                        // check the stimulus applied before
                         $display("--------------------------------------------------\n",
                                     "Applied stimuli: %b", stim1.stimulus); 
-                        for (int i = 0; i < FROM-1; i++) begin
+
+                        for (int i = 0; i < FROM; i++) begin
                                     stim1.check_serializer(cb.data_o,(FROM-1)-i);
+
+                            if(i==0) begin
+                                // create second stimulus while checking the second last bit of 
+                                // the first stimulus
+                                stim2.stimulus=$random;
+                                // apply it
+                                ApplyStimuli(stim2);
+                            end
+                          
                             @(cb);    
+
                         end
-
-
-
-
-                 for (longint j = 0; j < 2; j++) begin                
-                        stim1.stimulus=$random;
-                        ApplyStimuli(stim1);
-                        $display("--------------------------------------------------\n",
-                                    "Applied stimuli: %b", stim2.stimulus); 
-                        @(cb iff cb.valid_o == 1);
-                        for (int i = 0; i < FROM-1; i++) begin
-                                    stim2.check_serializer(cb.data_o,(FROM-1)-i);
-                            @(cb);    
-                        end
-                        stim2.stimulus=$random;
-                        ApplyStimuli(stim2);
-                        $display("--------------------------------------------------\n",
-                                    "Applied stimuli: %b", stim1.stimulus);                         
-                        for (int i = 0; i < FROM-1; i++) begin
-                                    stim1.check_serializer(cb.data_o,(FROM-1)-i);
-                            @(cb);    
-                        end                        
                     
                  end
+
+                //print how many tests have passed
+                 stim1.pass_statistic();
             end
-
-
-            //print how many tests have passed
-            stim.pass_statistic();
 
         end
-
-        // --------------------------------------------------
-        // Tests for specified inputs
-        // --------------------------------------------------
-        task automatic TestSerializer(Stimulus #(FROM) st, logic [FROM-1:0] a);
-            $display("--------------------------------------------------\n",
-                     "Test Serializer with:\ndata1: %b", a);
-            // initialize the stimulus with the bitvector a
-            st.set_stimulus(a);
-            ApplyStimuli(st);
-            repeat(4) @(cb); //wait 4 cycles to imitate the slow clock
-            ClearStimuli();
-            repeat(9) @(cb);
-            //check all the set stimuli individually
-            for (int i = FROM; !(i==0); i--) begin
-                st.check_serializer(cb.data_o,i-1);
-                @(cb);           
-            end
-        endtask : TestSerializer
 
         // -----------------------------------------------
         // Apply and Clear Stimuli Methods
@@ -310,8 +294,6 @@ module mixed_serializer_tb;
         .reset_ni           (reset), 
         .data_i             (data_i),   
         .data_o             (data_o),  
-        // .valid_i            (valid_i),
-        .valid_o            (valid_o),
         .ready_o            (ready_o)
     );
 

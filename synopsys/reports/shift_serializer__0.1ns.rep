@@ -1,0 +1,146 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : shift_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:08:39 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Counter_SP_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Reg_SP_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Counter_SP_reg[2]/CK (DFFRPQN_X3M_A9TS)               0.0000     0.0000 r
+  Counter_SP_reg[2]/QN (DFFRPQN_X3M_A9TS)               0.0643     0.0643 r
+  U80/Y (NAND2_X4A_A9TS)                                0.0201     0.0844 f
+  U81/Y (NOR2_X6M_A9TS)                                 0.0181     0.1024 r
+  U83/Y (NAND2_X8A_A9TS)                                0.0197     0.1222 f
+  U82/Y (INV_X13M_A9TS)                                 0.0216     0.1437 r
+  U151/Y (MXIT2_X1P4M_A9TS)                             0.0246     0.1683 r
+  Reg_SP_reg[1]/D (DFFRPQN_X2M_A9TS)                    0.0000     0.1683 r
+  data arrival time                                                0.1683
+
+  clock clk (rise edge)                                 0.1000     0.1000
+  clock network delay (ideal)                           0.0000     0.1000
+  Reg_SP_reg[1]/CK (DFFRPQN_X2M_A9TS)                   0.0000     0.1000 r
+  library setup time                                   -0.0246     0.0754
+  data required time                                               0.0754
+  --------------------------------------------------------------------------
+  data required time                                               0.0754
+  data arrival time                                               -0.1683
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0929
+
+
+1
+ 
+****************************************
+Report : area
+Design : shift_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:08:39 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                           54
+Number of nets:                           242
+Number of cells:                          190
+Number of combinational cells:            134
+Number of sequential cells:                56
+Number of macros/black boxes:               0
+Number of buf/inv:                         63
+Number of references:                      28
+
+Combinational area:                186.492603
+Buf/Inv area:                       34.234200
+Noncombinational area:             270.761408
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   457.254010
+Total area:                 undefined
+1
+1
+ 
+****************************************
+Report : design
+Design : shift_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:08:39 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Local Link Library:
+
+    {sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db, io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : ss_nominal_max_0p90v_125c
+    Library : sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.90
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1

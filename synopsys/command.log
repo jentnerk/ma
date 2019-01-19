@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version N-2017.09 for linux64 -- Aug 17, 2017
-#@ # Date:   Wed Jan 16 16:49:46 2019
+#@ # Date:   Sat Jan 19 13:15:26 2019
 #@ # Run by: msc18h28@badile12.ee.ethz.ch
 #@ 
 
@@ -6726,8 +6726,167 @@ source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
 #@ }
 #@ # -- End source /home/msc18h28/ma/synopsys/.synopsys_dc.setup
 
-source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
-#@ # -- Starting source /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
+###
+### Written by: Kaja Jentner
+### January 2019
+### IEF ETH Zurich
+########################################################
+#-------------------
+# Set Constants
+#-------------------
+set NAME {}
+set PATH {/home/msc18h28/ma/sourcecode/tree_serializer}
+remove_design -all
+exec rm -rf WORK/*
+#-------------------
+# Set Libraries
+#-------------------
+set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#==============================================================================
+# Analyze Design
+#==============================================================================
+analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv
+analyze -library WORK -format sverilog $PATH/tree_serializer_recursive.sv
+analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+# Set Entity To Elaborate
+set TOP_ENTITY {toplevel_tree_serializer}
+set ENTITY {Tree_Serializer}
+#==============================================================================
+# Elaborate Design
+#==============================================================================
+elaborate $TOP_ENTITY
+write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+set MAXDELAY 1
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#------------------
+# Load Constraints
+#------------------
+source scripts/constraints_generated.tcl
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_32 -divide_by 32 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[5].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_5
+#@ set_fix_hold CLK_DIV_10
+#@ set_fix_hold CLK_DIV_20
+#@ set_fix_hold CLK_DIV_40
+#@ set_fix_hold CLK_DIV_80
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+########################################################
+###
+### Synthesis Script for Serializer with Tree Structure
+###
+### Written by: Kaja Jentner
+### January 2019
+### IEF ETH Zurich
+########################################################
+#-------------------
+# Set Constants
+#-------------------
+set NAME {}
+set PATH {/home/msc18h28/ma/sourcecode/tree_serializer}
+remove_design -all
+exec rm -rf WORK/*
+#-------------------
+# Set Libraries
+#-------------------
+set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#==============================================================================
+# Analyze Design
+#==============================================================================
+analyze -library WORK -format sverilog $PATH/toplevel_tree_serializer.sv
+analyze -library WORK -format sverilog $PATH/tree_serializer_recursive.sv
+analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+# Set Entity To Elaborate
+set TOP_ENTITY {toplevel_tree_serializer}
+set ENTITY {Tree_Serializer}
+#==============================================================================
+# Elaborate Design
+#==============================================================================
+elaborate $TOP_ENTITY
+write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+set MAXDELAY 1
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#------------------
+# Load Constraints
+#------------------
+source scripts/constraints_generated.tcl
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_32 -divide_by 32 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[5].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ set_fix_hold CLK_DIV_32
+#@ set_fix_hold CLK_DIV_64
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+source scripts/tree_serializer_synth.tcl
+#@ # -- Starting source scripts/tree_serializer_synth.tcl
 
 #@ ########################################################
 #@ ###
@@ -6763,7 +6922,7 @@ source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
 #@ 
 #@ # Set Entity To Elaborate
 #@ set TOP_ENTITY {toplevel_tree_serializer}
-#@ set ENTITY {Serializer}
+#@ set ENTITY {Tree_Serializer}
 #@ 
 #@ #==============================================================================
 #@ # Elaborate Design
@@ -6771,15 +6930,62 @@ source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
 #@ elaborate $TOP_ENTITY
 #@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
 #@ 
-#@ set MAXDELAY 0.2
 #@ 
 #@ remove_design -design
 #@ read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
 #@ 
-#@ #------------------
-#@ # Load Constraints
-#@ #------------------
-#@ source scripts/constraints_generated.tcl
+#@ 
+#@ 
+#@ #-------------------------------------------------------------------------------
+#@ #for different clocks
+#@ #-------------------------------------------------------------------------------
+#@ foreach MAXDELAY {1 0.5 0.05} {
+#@ 
+#@   remove_design -design
+#@   read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@   #------------------
+#@   # Load Constraints
+#@   #------------------
+#@   source scripts/constraints_generated.tcl
+#@ 
+#@   #==============================================================================
+#@   # Compile Design 
+#@   #==============================================================================
+#@   compile_ultra -no_autoungroup
+#@ 
+#@   # #---
+#@   # # commands to check timing conditions of all paths (only works for noautoungroup)
+#@   # #---
+#@   # # path from clockdivider to output FF
+#@   # report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
+#@   # # path from input FF[1] to output FF
+#@   # report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
+#@   # # path from input FF[0] to output FF
+#@   # report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
+#@   # # path from clockdivider to clockdivider (over inverter)
+#@   # report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
+#@ 
+#@ 
+#@   write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
+#@ 
+#@     # get some useful reports
+#@     set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
+#@     report_timing       >> reports/$REPNAME
+#@     report_area         >> reports/$REPNAME
+#@     check_design        >> reports/$REPNAME
+#@     report_design       >> reports/$REPNAME
+#@ 
+#@   # write verilog netlist
+#@   change_names -rule verilog -hierarchy
+#@   write -format verilog -output ./netlists/${ENTITY}${NAME}_${MAXDELAY}ns.v -hierarchy
+#@ 
+#@   # write timing information
+#@   write_sdc -nosplit ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc
+#@   exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc > netlists/${ENTITY}_${MAXDELAY}ns\_synth.be.sdc
+#@   write_sdf ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdf
+#@ 
+#@ }
 #@ # -- Starting source scripts/constraints_generated.tcl
 
 #@ 
@@ -6791,12 +6997,20 @@ source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
 #@ 
 #@ #Create the generated clocks
 #@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_32 -divide_by 32 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[5].clock_divider/clk_div_reg/Q]
 #@ 
 #@ #--------------------------------------
 #@ # fix hold violations for a given clock
 #@ #--------------------------------------
 #@ set_fix_hold clk_i
-#@ set_fix_hold CLK_DIV_1
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ set_fix_hold CLK_DIV_32
 #@ 
 #@ #-----------------------------------
 #@ # Input and Output Delay Constraints
@@ -6809,20 +7023,477 @@ source -echo -verbose /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
 #@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
 #@ # -- End source scripts/constraints_generated.tcl
 
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_32 -divide_by 32 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[5].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ set_fix_hold CLK_DIV_32
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_32 -divide_by 32 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[5].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ set_fix_hold CLK_DIV_32
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- End source scripts/tree_serializer_synth.tcl
+
+#-------------------
+# Set Constants
+#-------------------
+set NAME {}
+set PATH {/home/msc18h28/ma/sourcecode/mixed_serializer}
+remove_design -all
+exec rm -rf WORK/*
+#-------------------
+# Set Libraries
+#-------------------
+set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#==============================================================================
+# Analyze Design
+#==============================================================================
+analyze -library WORK -format sverilog $PATH/mixed_serializer.sv
+analyze -library WORK -format sverilog $PATH/shift_serializer.sv
+analyze -library WORK -format sverilog $PATH/tree_serializer.sv
+analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+# Set Entity To Elaborate
+set TOP_ENTITY {toplevel_mixed_serializer}
+set ENTITY {Mixed_Serializer}
+#==============================================================================
+# Elaborate Design
+#==============================================================================
+elaborate $TOP_ENTITY
+write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#-------------------------------------------------------------------------------
+#for different clocks
+#-------------------------------------------------------------------------------
+# foreach MAXDELAY {0.05} {
+set MAXDELAY 0.05
+remove_design -design
+read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#------------------
+# Load Constraints
+#------------------
+source scripts/constraints_generated.tcl
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+source scripts/mixed_serializer_synth.tcl
+#@ # -- Starting source scripts/mixed_serializer_synth.tcl
+
+#@ ########################################################
+#@ ###
+#@ ### Synthesis Script for Serializer with Tree Structure
+#@ ###
+#@ ### Written by: Kaja Jentner
+#@ ### January 2019
+#@ ### IEF ETH Zurich
+#@ ########################################################
+#@ 
+#@ #-------------------
+#@ # Set Constants
+#@ #-------------------
+#@ set NAME {}
+#@ set PATH {/home/msc18h28/ma/sourcecode/mixed_serializer}
+#@ 
+#@ remove_design -all
+#@ exec rm -rf WORK/*
+#@ 
+#@ #-------------------
+#@ # Set Libraries
+#@ #-------------------
+#@ set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+#@ set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+#@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
 #@ 
 #@ #==============================================================================
-#@ # Compile Design 
+#@ # Analyze Design
 #@ #==============================================================================
-#@ compile_ultra -no_autoungroup
+#@ analyze -library WORK -format sverilog $PATH/mixed_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/shift_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/tree_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+#@ 
+#@ # Set Entity To Elaborate
+#@ set TOP_ENTITY {toplevel_mixed_serializer}
+#@ set ENTITY {Mixed_Serializer}
 #@ 
 #@ #==============================================================================
-#@ # Get Reports
+#@ # Elaborate Design
 #@ #==============================================================================
+#@ elaborate $TOP_ENTITY
+#@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
 #@ 
-#@ set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
-#@ report_timing       >> reports/$REPNAME
-#@ report_area         >> reports/$REPNAME
-#@ check_design        >> reports/$REPNAME
-#@ report_design       >> reports/$REPNAME
-#@ # -- End source /home/msc18h28/ma/synopsys/scripts/fast_synth_tree.tcl
+#@ 
+#@ remove_design -design
+#@ read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@ 
+#@ 
+#@ #-------------------------------------------------------------------------------
+#@ #for different clocks
+#@ #-------------------------------------------------------------------------------
+#@ foreach MAXDELAY {1 0.5 0.1} {
+#@ # set MAXDELAY 0.05
+#@   remove_design -design
+#@   read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@   #------------------
+#@   # Load Constraints
+#@   #------------------
+#@   source scripts/constraints_generated.tcl
+#@ 
+#@   #==============================================================================
+#@   # Compile Design 
+#@   #==============================================================================
+#@   compile_ultra -no_autoungroup
+#@ 
+#@   write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
+#@ 
+#@     # get some useful reports
+#@     set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
+#@     report_timing       >> reports/$REPNAME
+#@     report_area         >> reports/$REPNAME
+#@     check_design        >> reports/$REPNAME
+#@     report_design       >> reports/$REPNAME
+#@ 
+#@   # write verilog netlist
+#@   change_names -rule verilog -hierarchy
+#@   write -format verilog -output ./netlists/${ENTITY}${NAME}_${MAXDELAY}ns.v -hierarchy
+#@ 
+#@   # write timing information
+#@   write_sdc -nosplit ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc
+#@   exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc > netlists/$ENTITY_${MAXDELAY}ns\_synth.be.sdc
+#@   write_sdf ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdf
+#@ 
+#@ }
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- End source scripts/mixed_serializer_synth.tcl
+
+source scripts/mixed_serializer_synth.tcl
+#@ # -- Starting source scripts/mixed_serializer_synth.tcl
+
+#@ ########################################################
+#@ ###
+#@ ### Synthesis Script for Serializer with Tree Structure
+#@ ###
+#@ ### Written by: Kaja Jentner
+#@ ### January 2019
+#@ ### IEF ETH Zurich
+#@ ########################################################
+#@ 
+#@ #-------------------
+#@ # Set Constants
+#@ #-------------------
+#@ set NAME {}
+#@ set PATH {/home/msc18h28/ma/sourcecode/mixed_serializer}
+#@ 
+#@ remove_design -all
+#@ exec rm -rf WORK/*
+#@ 
+#@ #-------------------
+#@ # Set Libraries
+#@ #-------------------
+#@ set CELL_LIB sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+#@ set PAD_LIB io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c
+#@ dz_set_pvt [list $CELL_LIB $PAD_LIB]
+#@ 
+#@ #==============================================================================
+#@ # Analyze Design
+#@ #==============================================================================
+#@ analyze -library WORK -format sverilog $PATH/mixed_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/shift_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/tree_serializer.sv 
+#@ analyze -library WORK -format sverilog $PATH/Clock_divider.sv
+#@ 
+#@ # Set Entity To Elaborate
+#@ set TOP_ENTITY {toplevel_mixed_serializer}
+#@ set ENTITY {Mixed_Serializer}
+#@ 
+#@ #==============================================================================
+#@ # Elaborate Design
+#@ #==============================================================================
+#@ elaborate $TOP_ENTITY
+#@ write -f ddc -o DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@ 
+#@ remove_design -design
+#@ read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@ 
+#@ 
+#@ #-------------------------------------------------------------------------------
+#@ #for different clocks
+#@ #-------------------------------------------------------------------------------
+#@ foreach MAXDELAY {1 0.5 0.1} {
+#@ # set MAXDELAY 0.05
+#@   remove_design -design
+#@   read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
+#@ 
+#@   #------------------
+#@   # Load Constraints
+#@   #------------------
+#@   source scripts/constraints_generated.tcl
+#@ 
+#@   #==============================================================================
+#@   # Compile Design 
+#@   #==============================================================================
+#@   compile_ultra -no_autoungroup
+#@ 
+#@   write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
+#@ 
+#@     # get some useful reports
+#@     set REPNAME ${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.rep
+#@     report_timing       >> reports/$REPNAME
+#@     report_area         >> reports/$REPNAME
+#@     check_design        >> reports/$REPNAME
+#@     report_design       >> reports/$REPNAME
+#@ 
+#@   # write verilog netlist
+#@   change_names -rule verilog -hierarchy
+#@   write -format verilog -output ./netlists/${ENTITY}${NAME}_${MAXDELAY}ns.v -hierarchy
+#@ 
+#@   # write timing information
+#@   write_sdc -nosplit ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc
+#@   exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc > netlists/${ENTITY}_${MAXDELAY}ns\_synth.be.sdc
+#@   write_sdf ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdf
+#@ 
+#@ }
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- Starting source scripts/constraints_generated.tcl
+
+#@ 
+#@ #--------------
+#@ # Create Clocks
+#@ #--------------
+#@ set HIGH_SPEED_CLK_PIN clk_i
+#@ create_clock -period $MAXDELAY $HIGH_SPEED_CLK_PIN
+#@ 
+#@ #Create the generated clocks
+#@ create_generated_clock -name CLK_DIV_2 -divide_by 2 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[1].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_4 -divide_by 4 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[2].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_8 -divide_by 8 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[3].clock_divider/clk_div_reg/Q]
+#@ create_generated_clock -name CLK_DIV_16 -divide_by 16 -source $HIGH_SPEED_CLK_PIN [get_pin clk_[4].clock_divider/clk_div_reg/Q]
+#@ 
+#@ #--------------------------------------
+#@ # fix hold violations for a given clock
+#@ #--------------------------------------
+#@ set_fix_hold clk_i
+#@ set_fix_hold CLK_DIV_2
+#@ set_fix_hold CLK_DIV_4
+#@ set_fix_hold CLK_DIV_8
+#@ set_fix_hold CLK_DIV_16
+#@ 
+#@ #-----------------------------------
+#@ # Input and Output Delay Constraints
+#@ #-----------------------------------
+#@ # load of the output is the modulator, worst case it is 10fF
+#@ set_load 0.01 data_o
+#@ # constrain the output delay => the delay set here is the additional delay that might come after the dataOut register
+#@ set_output_delay -clock clk_i -max 0.01 [get_ports data_o]
+#@ # constrain the input delay => the delay set here
+#@ set_input_delay -clock CLK_DIV_2 -max 0.01 [get_ports data_i]
+#@ # -- End source scripts/constraints_generated.tcl
+
+#@ # -- End source scripts/mixed_serializer_synth.tcl
 

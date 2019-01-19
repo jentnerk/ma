@@ -16,8 +16,7 @@ vlib-${VER} $LIB
 
 # compile the RTL
 	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/mixed_serializer.sv
-	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_from_to.sv
-	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer_without_FSM.sv
+	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/shift_serializer.sv
 	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/Clock_divider.sv
 	vlog -work work /home/msc18h28/ma/sourcecode/mixed_serializer/parameters.vh
 

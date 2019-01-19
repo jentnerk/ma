@@ -60,7 +60,7 @@ with open("synopsys/scripts/constraints_generated.tcl", 'w+') as file:
 	# Fix Holdviolations for All Clocks
 	#----------------------------------
 	file.write("\n#--------------------------------------\n# fix hold violations for a given clock\n#--------------------------------------\n")
-	var2 = log_n
+	var2 = 2
 	file.write("set_fix_hold clk_i\n")
 	for x in xrange(1,log_n+1):
 		file.write("set_fix_hold CLK_DIV_{}\n".format(var2,var2,x))

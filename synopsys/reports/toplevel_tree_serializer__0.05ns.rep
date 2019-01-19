@@ -1,0 +1,347 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:21:14 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_4)
+  Endpoint: Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Path Group: CLK_DIV_2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_4 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[2]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.0000 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[2]/QN (DFFRPQN_X3M_A9TS)
+                                                        0.0449     0.0449 f
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/U5/Y (INV_X1P7M_A9TS)
+                                                        0.0090     0.0539 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/mux_i[2] (mux_00000004)
+                                                        0.0000     0.0539 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/U3/Y (AO22_X1P4M_A9TS)
+                                                        0.0376     0.0915 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/mux_o[0] (mux_00000004)
+                                                        0.0000     0.0915 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/io_dataIn[0] (Serializer_00000002_00000005_00000004)
+                                                        0.0000     0.0915 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/D (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.0915 r
+  data arrival time                                                0.0915
+
+  clock CLK_DIV_2 (rise edge)                           0.1000     0.1000
+  clock network delay (ideal)                           0.0000     0.1000
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.1000 r
+  library setup time                                   -0.0223     0.0777
+  data required time                                               0.0777
+  --------------------------------------------------------------------------
+  data required time                                               0.0777
+  data arrival time                                               -0.0915
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0138
+
+
+  Startpoint: Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_8)
+  Endpoint: Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_4)
+  Path Group: CLK_DIV_4
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_8 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[4]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0000 r
+  Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[4]/Q (DFFRPQ_X0P5M_A9TS)
+                                                        0.0822     0.0822 f
+  Serializer/recursive.serializer/recursive.serializer/mux/mux_i[4] (mux_00000008)
+                                                        0.0000     0.0822 f
+  Serializer/recursive.serializer/recursive.serializer/mux/U5/Y (AO22_X1M_A9TS)
+                                                        0.0450     0.1271 f
+  Serializer/recursive.serializer/recursive.serializer/mux/mux_o[0] (mux_00000008)
+                                                        0.0000     0.1271 f
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/io_dataIn[0] (Serializer_00000004_00000005_00000003)
+                                                        0.0000     0.1271 f
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/D (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.1271 f
+  data arrival time                                                0.1271
+
+  clock CLK_DIV_4 (rise edge)                           0.2000     0.2000
+  clock network delay (ideal)                           0.0000     0.2000
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.2000 r
+  library setup time                                   -0.0087     0.1913
+  data required time                                               0.1913
+  --------------------------------------------------------------------------
+  data required time                                               0.1913
+  data arrival time                                               -0.1271
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0642
+
+
+  Startpoint: Serializer/recursive.serializer/reg_SP_reg[8]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_16)
+  Endpoint: Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_8)
+  Path Group: CLK_DIV_8
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_16 (rise edge)                          0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/recursive.serializer/reg_SP_reg[8]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0000 r
+  Serializer/recursive.serializer/reg_SP_reg[8]/Q (DFFRPQ_X0P5M_A9TS)
+                                                        0.0822     0.0822 f
+  Serializer/recursive.serializer/mux/mux_i[8] (mux_00000010)
+                                                        0.0000     0.0822 f
+  Serializer/recursive.serializer/mux/U9/Y (AO22_X1M_A9TS)
+                                                        0.0428     0.1250 f
+  Serializer/recursive.serializer/mux/mux_o[0] (mux_00000010)
+                                                        0.0000     0.1250 f
+  Serializer/recursive.serializer/recursive.serializer/io_dataIn[0] (Serializer_00000008_00000005_00000002)
+                                                        0.0000     0.1250 f
+  Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.1250 f
+  data arrival time                                                0.1250
+
+  clock CLK_DIV_8 (rise edge)                           0.4000     0.4000
+  clock network delay (ideal)                           0.0000     0.4000
+  Serializer/recursive.serializer/recursive.serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.4000 r
+  library setup time                                   -0.0096     0.3904
+  data required time                                               0.3904
+  --------------------------------------------------------------------------
+  data required time                                               0.3904
+  data arrival time                                               -0.1250
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.2654
+
+
+  Startpoint: Serializer/reg_SP_reg[16]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_32)
+  Endpoint: Serializer/recursive.serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_16)
+  Path Group: CLK_DIV_16
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_32 (rise edge)                          0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/reg_SP_reg[16]/CK (DFFRPQ_X0P5M_A9TS)      0.0000     0.0000 r
+  Serializer/reg_SP_reg[16]/Q (DFFRPQ_X0P5M_A9TS)       0.0818     0.0818 f
+  Serializer/mux/mux_i[16] (mux_00000020)               0.0000     0.0818 f
+  Serializer/mux/U17/Y (AO22_X0P7M_A9TS)                0.0443     0.1261 f
+  Serializer/mux/mux_o[0] (mux_00000020)                0.0000     0.1261 f
+  Serializer/recursive.serializer/io_dataIn[0] (Serializer_00000010_00000005_00000001)
+                                                        0.0000     0.1261 f
+  Serializer/recursive.serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.1261 f
+  data arrival time                                                0.1261
+
+  clock CLK_DIV_16 (rise edge)                          0.8000     0.8000
+  clock network delay (ideal)                           0.0000     0.8000
+  Serializer/recursive.serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.8000 r
+  library setup time                                   -0.0102     0.7898
+  data required time                                               0.7898
+  --------------------------------------------------------------------------
+  data required time                                               0.7898
+  data arrival time                                               -0.1261
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.6637
+
+
+  Startpoint: data_i[0] (input port clocked by CLK_DIV_2)
+  Endpoint: Serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_32)
+  Path Group: CLK_DIV_32
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           1.5000     1.5000
+  clock network delay (ideal)                           0.0000     1.5000
+  input external delay                                  0.0100     1.5100 r
+  data_i[0] (in)                                        0.0000     1.5100 r
+  Serializer/io_dataIn[0] (Serializer_00000020_00000005_0)
+                                                        0.0000     1.5100 r
+  Serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)        0.0000     1.5100 r
+  data arrival time                                                1.5100
+
+  clock CLK_DIV_32 (rise edge)                          1.6000     1.6000
+  clock network delay (ideal)                           0.0000     1.6000
+  Serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)       0.0000     1.6000 r
+  library setup time                                   -0.0191     1.5809
+  data required time                                               1.5809
+  --------------------------------------------------------------------------
+  data required time                                               1.5809
+  data arrival time                                               -1.5100
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0709
+
+
+  Startpoint: Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.0000 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS)
+                                                        0.0449     0.0449 f
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/U4/Y (INV_X1P7M_A9TS)
+                                                        0.0090     0.0539 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/mux_i[1] (mux_00000002)
+                                                        0.0000     0.0539 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/U2/Y (AO22_X1P4M_A9TS)
+                                                        0.0362     0.0901 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/mux/mux_o[0] (mux_00000002)
+                                                        0.0000     0.0901 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/recursive.serializer/io_dataOut (Serializer_00000002_00000005_00000004)
+                                                        0.0000     0.0901 r
+  Serializer/recursive.serializer/recursive.serializer/recursive.serializer/io_dataOut (Serializer_00000004_00000005_00000003)
+                                                        0.0000     0.0901 r
+  Serializer/recursive.serializer/recursive.serializer/io_dataOut (Serializer_00000008_00000005_00000002)
+                                                        0.0000     0.0901 r
+  Serializer/recursive.serializer/io_dataOut (Serializer_00000010_00000005_00000001)
+                                                        0.0000     0.0901 r
+  Serializer/io_dataOut (Serializer_00000020_00000005_0)
+                                                        0.0000     0.0901 r
+  dataOut_SP_reg/D (DFFRPQ_X3M_A9TS)                    0.0000     0.0901 r
+  data arrival time                                                0.0901
+
+  clock clk_i (rise edge)                               0.0500     0.0500
+  clock network delay (ideal)                           0.0000     0.0500
+  dataOut_SP_reg/CK (DFFRPQ_X3M_A9TS)                   0.0000     0.0500 r
+  library setup time                                   -0.0233     0.0267
+  data required time                                               0.0267
+  --------------------------------------------------------------------------
+  data required time                                               0.0267
+  data arrival time                                               -0.0901
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0634
+
+
+1
+ 
+****************************************
+Report : area
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:21:14 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                          235
+Number of nets:                           349
+Number of cells:                          130
+Number of combinational cells:             47
+Number of sequential cells:                68
+Number of macros/black boxes:               0
+Number of buf/inv:                         16
+Number of references:                       7
+
+Combinational area:                 63.919799
+Buf/Inv area:                        8.379000
+Noncombinational area:             316.965613
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   380.885413
+Total area:                 undefined
+1
+1
+ 
+****************************************
+Report : design
+Design : toplevel_tree_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:21:14 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Local Link Library:
+
+    {sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db, io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : ss_nominal_max_0p90v_125c
+    Library : sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.90
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

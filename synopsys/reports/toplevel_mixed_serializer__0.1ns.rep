@@ -1,0 +1,296 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : toplevel_mixed_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:28:26 2019
+****************************************
+
+Operating Conditions: ss_nominal_max_0p90v_125c   Library: sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+Wire Load Model Mode: top
+
+  Startpoint: tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_4)
+  Endpoint: tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Path Group: CLK_DIV_2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_4 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[2]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0000 r
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[2]/Q (DFFRPQ_X0P5M_A9TS)
+                                                        0.0822     0.0822 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/U5/Y (AO22_X1M_A9TS)
+                                                        0.0450     0.1271 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/io_dataIn[0] (Serializer_00000002_00000004_00000003)
+                                                        0.0000     0.1271 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]/D (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.1271 f
+  data arrival time                                                0.1271
+
+  clock CLK_DIV_2 (rise edge)                           0.2000     0.2000
+  clock network delay (ideal)                           0.0000     0.2000
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.2000 r
+  library setup time                                   -0.0087     0.1913
+  data required time                                               0.1913
+  --------------------------------------------------------------------------
+  data required time                                               0.1913
+  data arrival time                                               -0.1271
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0642
+
+
+  Startpoint: tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_8)
+  Endpoint: tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_4)
+  Path Group: CLK_DIV_4
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_8 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[4]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0000 r
+  tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[4]/Q (DFFRPQ_X0P5M_A9TS)
+                                                        0.0818     0.0818 f
+  tree_serializer/Serializer/genblk1.Serializer/U7/Y (AO22_X0P7M_A9TS)
+                                                        0.0443     0.1261 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/io_dataIn[0] (Serializer_00000004_00000004_00000002)
+                                                        0.0000     0.1261 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.1261 f
+  data arrival time                                                0.1261
+
+  clock CLK_DIV_4 (rise edge)                           0.4000     0.4000
+  clock network delay (ideal)                           0.0000     0.4000
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.4000 r
+  library setup time                                   -0.0100     0.3900
+  data required time                                               0.3900
+  --------------------------------------------------------------------------
+  data required time                                               0.3900
+  data arrival time                                               -0.1261
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.2639
+
+
+  Startpoint: tree_serializer/Serializer/reg_SP_reg[8]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_16)
+  Endpoint: tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_8)
+  Path Group: CLK_DIV_8
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_16 (rise edge)                          0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  tree_serializer/Serializer/reg_SP_reg[8]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0000 r
+  tree_serializer/Serializer/reg_SP_reg[8]/Q (DFFRPQ_X0P5M_A9TS)
+                                                        0.0818     0.0818 f
+  tree_serializer/Serializer/U11/Y (AO22_X0P7M_A9TS)    0.0443     0.1261 f
+  tree_serializer/Serializer/genblk1.Serializer/io_dataIn[0] (Serializer_00000008_00000004_00000001)
+                                                        0.0000     0.1261 f
+  tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[0]/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.1261 f
+  data arrival time                                                0.1261
+
+  clock CLK_DIV_8 (rise edge)                           0.8000     0.8000
+  clock network delay (ideal)                           0.0000     0.8000
+  tree_serializer/Serializer/genblk1.Serializer/reg_SP_reg[0]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.8000 r
+  library setup time                                   -0.0100     0.7900
+  data required time                                               0.7900
+  --------------------------------------------------------------------------
+  data required time                                               0.7900
+  data arrival time                                               -0.1261
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.6639
+
+
+  Startpoint: data_i[16] (input port clocked by CLK_DIV_2)
+  Endpoint: shift_serializer/Reg_SP_reg[1]
+            (rising edge-triggered flip-flop clocked by CLK_DIV_16)
+  Path Group: CLK_DIV_16
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           1.4000     1.4000
+  clock network delay (ideal)                           0.0000     1.4000
+  input external delay                                  0.0100     1.4100 r
+  data_i[16] (in)                                       0.0000     1.4100 r
+  shift_serializer/data_i[16] (shift_serializer_00000020_00000005_00000010)
+                                                        0.0000     1.4100 r
+  shift_serializer/U34/Y (AO22_X0P7M_A9TS)              0.0344     1.4444 r
+  shift_serializer/Reg_SP_reg[1]/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     1.4444 r
+  data arrival time                                                1.4444
+
+  clock CLK_DIV_16 (rise edge)                          1.6000     1.6000
+  clock network delay (ideal)                           0.0000     1.6000
+  shift_serializer/Reg_SP_reg[1]/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     1.6000 r
+  library setup time                                   -0.0264     1.5736
+  data required time                                               1.5736
+  --------------------------------------------------------------------------
+  data required time                                               1.5736
+  data arrival time                                               -1.4444
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.1292
+
+
+  Startpoint: tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK_DIV_2)
+  Endpoint: tree_serializer/dataOut_SP_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK_DIV_2 (rise edge)                           0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[1]/CK (DFFRPQN_X3M_A9TS)
+                                                        0.0000     0.0000 r
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/reg_SP_reg[1]/QN (DFFRPQN_X3M_A9TS)
+                                                        0.0449     0.0449 f
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/U6/Y (INV_X1P7M_A9TS)
+                                                        0.0090     0.0539 r
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/U4/Y (AO22_X1P4M_A9TS)
+                                                        0.0361     0.0900 r
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/genblk1.Serializer/io_dataOut (Serializer_00000002_00000004_00000003)
+                                                        0.0000     0.0900 r
+  tree_serializer/Serializer/genblk1.Serializer/genblk1.Serializer/io_dataOut (Serializer_00000004_00000004_00000002)
+                                                        0.0000     0.0900 r
+  tree_serializer/Serializer/genblk1.Serializer/io_dataOut (Serializer_00000008_00000004_00000001)
+                                                        0.0000     0.0900 r
+  tree_serializer/Serializer/io_dataOut (Serializer_00000010_00000004_0)
+                                                        0.0000     0.0900 r
+  tree_serializer/dataOut_SP_reg/D (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.0900 r
+  data arrival time                                                0.0900
+
+  clock clk_i (rise edge)                               0.1000     0.1000
+  clock network delay (ideal)                           0.0000     0.1000
+  tree_serializer/dataOut_SP_reg/CK (DFFRPQ_X0P5M_A9TS)
+                                                        0.0000     0.1000 r
+  library setup time                                   -0.0232     0.0768
+  data required time                                               0.0768
+  --------------------------------------------------------------------------
+  data required time                                               0.0768
+  data arrival time                                               -0.0900
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0132
+
+
+1
+ 
+****************************************
+Report : area
+Design : toplevel_mixed_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:28:26 2019
+****************************************
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Number of ports:                          170
+Number of nets:                           295
+Number of cells:                          137
+Number of combinational cells:             58
+Number of sequential cells:                69
+Number of macros/black boxes:               0
+Number of buf/inv:                         11
+Number of references:                       7
+
+Combinational area:                 84.747599
+Buf/Inv area:                        5.506200
+Noncombinational area:             316.726213
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   401.473812
+Total area:                 undefined
+1
+1
+ 
+****************************************
+Report : design
+Design : toplevel_mixed_serializer
+Version: N-2017.09
+Date   : Sat Jan 19 13:28:26 2019
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs (File: /home/msc18h28/ma/technology/db/sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db)
+
+Local Link Library:
+
+    {sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs.db, io_gppr_soi12s0_t18_mv10_mv18_avt_pl_tt_cnom_1p00v_1p80v_25c.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : ss_nominal_max_0p90v_125c
+    Library : sc9_soi12s0_base_svt_ss_nominal_max_0p90v_125c_mxs
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.90
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

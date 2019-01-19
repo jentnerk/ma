@@ -9,9 +9,11 @@
 // TREE_LOGFROM is the logarithm to the base 2 of TREE_FROM.
 //			(e.g. TREE_FROM = 4 --> TREE_LOGFROM = 2)
 // Make sure that
+// 				- SHIFT_FROM > SHIFT_TO
 //				- SHIFT_TO is a divider of SHIFT_FROM. 
 // 				- SHIFT_TO is a power of 2
 //				- SHIFT_TO is equal to TREE_FROM
+// 				- SHIFT_TO > 1
 
 
 // If we have not included file before,
@@ -20,11 +22,11 @@
 `define parameters_vh
 
 // Fill in the constants here:
-`define SHIFT_FROM 		20
+`define SHIFT_FROM 		32
 `define SHIFT_LOGFROM 	5
-`define SHIFT_TO 		4
+`define SHIFT_TO 		16
 
-`define TREE_FROM 		4
-`define TREE_LOGFROM 	2
+`define TREE_FROM 		16
+`define TREE_LOGFROM 	4
 
 `endif 

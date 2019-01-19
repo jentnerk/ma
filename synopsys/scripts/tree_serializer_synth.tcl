@@ -49,7 +49,7 @@ read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
 #-------------------------------------------------------------------------------
 #for different clocks
 #-------------------------------------------------------------------------------
-foreach MAXDELAY {0.05} {
+foreach MAXDELAY {1 0.5 0.05} {
 
   remove_design -design
   read_ddc DDC/${ENTITY}_${NAME}_elab.ddc
@@ -57,24 +57,24 @@ foreach MAXDELAY {0.05} {
   #------------------
   # Load Constraints
   #------------------
-  source scripts/constraints.tcl
+  source scripts/constraints_generated.tcl
 
   #==============================================================================
   # Compile Design 
   #==============================================================================
   compile_ultra -no_autoungroup
 
-  #---
-  # commands to check timing conditions of all paths (only works for noautoungroup)
-  #---
-  # path from clockdivider to output FF
-  report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
-  # path from input FF[1] to output FF
-  report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
-  # path from input FF[0] to output FF
-  report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
-  # path from clockdivider to clockdivider (over inverter)
-  report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
+  # #---
+  # # commands to check timing conditions of all paths (only works for noautoungroup)
+  # #---
+  # # path from clockdivider to output FF
+  # report_timing -from clk_[1].clock_divider/clk_div_o -to dataOut_SN
+  # # path from input FF[1] to output FF
+  # report_timing -from Serializer/reg_SP_reg[1]/QN -to dataOut_SN
+  # # path from input FF[0] to output FF
+  # report_timing -from Serializer/reg_SP_reg[0]/QN -to dataOut_SN
+  # # path from clockdivider to clockdivider (over inverter)
+  # report_timing -from clk_[1].clock_divider/clk_div_reg/Q -to clk_[1].clock_divider/clk_div_reg/D
 
 
   write -f ddc -h -o DDC/${TOP_ENTITY}_${NAME}_${MAXDELAY}ns.ddc
@@ -91,8 +91,8 @@ foreach MAXDELAY {0.05} {
   write -format verilog -output ./netlists/${ENTITY}${NAME}_${MAXDELAY}ns.v -hierarchy
 
   # write timing information
-  write_sdc -nosplit ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc
-  exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdc > netlists/$ENTITY_${MAXDELAY}ns\_synth.be.sdc
-  write_sdf ./netlists/$ENTITY_${MAXDELAY}ns\_synth.sdf
+  write_sdc -nosplit ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc
+  exec grep -v -E "set_clock_|set_ideal_|create_clock" ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdc > netlists/${ENTITY}_${MAXDELAY}ns\_synth.be.sdc
+  write_sdf ./netlists/${ENTITY}_${MAXDELAY}ns\_synth.sdf
 
 }

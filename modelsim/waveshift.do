@@ -1,16 +1,15 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /shift_serializer_tb/shift_serializer/clk
-add wave -noupdate /shift_serializer_tb/shift_serializer/data_i
-add wave -noupdate /shift_serializer_tb/shift_serializer/data_o
+add wave -noupdate -expand /shift_serializer_tb/shift_serializer/data_i
+add wave -noupdate -expand /shift_serializer_tb/shift_serializer/data_o
 add wave -noupdate /shift_serializer_tb/shift_serializer/Reg_SP
 add wave -noupdate /shift_serializer_tb/ready_o
-add wave -noupdate /shift_serializer_tb/valid_o
 add wave -noupdate -radix decimal /shift_serializer_tb/shift_serializer/Counter_SP
 add wave -noupdate -radix decimal /shift_serializer_tb/shift_serializer/Counter_SN
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
-quietly wave cursor active 0
+WaveRestoreCursors {{Cursor 1} {78 ns} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 247
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -25,4 +24,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {456 ns}
+WaveRestoreZoom {219 ns} {373 ns}

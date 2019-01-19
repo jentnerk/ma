@@ -85,7 +85,7 @@ module shift_serializer_tb;
         // Functions for checking the outputs of the DUT
         // -----------------------------------------------
 
-        function void check_serializer(logic result, int i);
+        function void check_serializer(logic result, int i, int k, int j);
             logic expected;
             expected = {stimulus[i]};
 
@@ -93,6 +93,7 @@ module shift_serializer_tb;
 
             Check_serializer: assert (expected == result)
                     begin 
+                    $display("Check the signal data_o[%d] in cycle number %d\n",k, j+1);
                     $display("Bit number     %d\nExpected:   %d\nResult:     %d\n",
                                             i, expected, result);
                     passed++;
@@ -192,25 +193,22 @@ module shift_serializer_tb;
                         $display("--------------------------------------------------\n",
                                     "Applied stimuli: %b", stim1.stimulus); 
 
-                        for (int i = 0; i < FROM/TO-2; i++) begin
-                                for(int k=1; k < TO+1; k++) begin
-                                stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-i);
+                        for (int i = 0; i < FROM/TO; i++) begin
+                                for(int k=0; k < TO; k++) begin
+                                stim1.check_serializer(cb.data_o[TO-1-k],FROM-1-k-i*TO, TO-1-k, i);
                                 end
+                            
+
+                            if(i==0) begin
+                                // create second stimulus while checking the second last bit of 
+                                // the first stimulus
+                                stim2.stimulus=$random;
+                                // apply it
+                                ApplyStimuli(stim2);
+                            end
+                          
                             @(cb);    
-                        end
-                        // create second stimulus while checking the second last bit of 
-                        // the first stimulus
-                        stim2.stimulus=$random;
-                        // apply it
-                        ApplyStimuli(stim2);
-                        // and then check the last bit of the first stimulus
-                        for(int k=1; k < TO+1; k++) begin
-                            stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-FROM/TO+2);
-                            @(cb);
-                        end                        
-                        for(int k=1; k < TO+1; k++) begin
-                            stim1.check_serializer(cb.data_o[k-1],(k*FROM/TO-1)-FROM/TO+1);
-                            @(cb);
+
                         end
                     
                  end

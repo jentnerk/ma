@@ -1,0 +1,214 @@
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-100.el7_4.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Attaching to process 524
+Reading symbols from /usr/pack/synopsys-2017.09-kgf/syn/linux64/syn/bin/common_shell_exec...(no debugging symbols found)...done.
+Reading symbols from /lib64/libpthread.so.0...(no debugging symbols found)...done.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+Loaded symbols for /lib64/libpthread.so.0
+Reading symbols from /lib64/libncurses.so.5...Reading symbols from /lib64/libncurses.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libncurses.so.5
+Reading symbols from /lib64/librt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/librt.so.1
+Reading symbols from /lib64/libX11.so.6...Reading symbols from /lib64/libX11.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libX11.so.6
+Reading symbols from /lib64/libXext.so.6...Reading symbols from /lib64/libXext.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXext.so.6
+Reading symbols from /lib64/libXi.so.6...Reading symbols from /lib64/libXi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXi.so.6
+Reading symbols from /lib64/libXrender.so.1...Reading symbols from /lib64/libXrender.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXrender.so.1
+Reading symbols from /lib64/libXrandr.so.2...Reading symbols from /lib64/libXrandr.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXrandr.so.2
+Reading symbols from /lib64/libXss.so.1...Reading symbols from /lib64/libXss.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXss.so.1
+Reading symbols from /lib64/libfontconfig.so.1...Reading symbols from /lib64/libfontconfig.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfontconfig.so.1
+Reading symbols from /lib64/libfreetype.so.6...Reading symbols from /lib64/libfreetype.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfreetype.so.6
+Reading symbols from /lib64/libSM.so.6...Reading symbols from /lib64/libSM.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libSM.so.6
+Reading symbols from /lib64/libICE.so.6...Reading symbols from /lib64/libICE.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libICE.so.6
+Reading symbols from /lib64/libXft.so.2...Reading symbols from /lib64/libXft.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXft.so.2
+Reading symbols from /lib64/libtiff.so.3...Reading symbols from /lib64/libtiff.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libtiff.so.3
+Reading symbols from /lib64/libmng.so.1...Reading symbols from /lib64/libmng.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libmng.so.1
+Reading symbols from /lib64/libpng12.so.0...Reading symbols from /lib64/libpng12.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpng12.so.0
+Reading symbols from /lib64/libm.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libm.so.6
+Reading symbols from /lib64/libdl.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdl.so.2
+Reading symbols from /lib64/libc.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libc.so.6
+Reading symbols from /lib64/ld-linux-x86-64.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/ld-linux-x86-64.so.2
+Reading symbols from /lib64/libtinfo.so.5...Reading symbols from /lib64/libtinfo.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libtinfo.so.5
+Reading symbols from /lib64/libxcb.so.1...Reading symbols from /lib64/libxcb.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libxcb.so.1
+Reading symbols from /lib64/libexpat.so.1...Reading symbols from /lib64/libexpat.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libexpat.so.1
+Reading symbols from /lib64/libuuid.so.1...Reading symbols from /lib64/libuuid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libuuid.so.1
+Reading symbols from /lib64/libjpeg.so.62...Reading symbols from /lib64/libjpeg.so.62...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libjpeg.so.62
+Reading symbols from /lib64/libz.so.1...Reading symbols from /lib64/libz.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libz.so.1
+Reading symbols from /lib64/libXau.so.6...Reading symbols from /lib64/libXau.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXau.so.6
+Reading symbols from /lib64/libnss_files.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_files.so.2
+Reading symbols from /lib64/libnss_compat.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_compat.so.2
+Reading symbols from /lib64/libnsl.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnsl.so.1
+Reading symbols from /lib64/libnss_nis.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_nis.so.2
+Reading symbols from /lib64/libnss_sss.so.2...Reading symbols from /lib64/libnss_sss.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_sss.so.2
+Reading symbols from /lib64/libnss_dns.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_dns.so.2
+Reading symbols from /lib64/libresolv.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libresolv.so.2
+Reading symbols from /lib64/libnss_myhostname.so.2...Reading symbols from /lib64/libnss_myhostname.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_myhostname.so.2
+Reading symbols from /lib64/libcap.so.2...Reading symbols from /lib64/libcap.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcap.so.2
+Reading symbols from /lib64/libdw.so.1...Reading symbols from /lib64/libdw.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdw.so.1
+Reading symbols from /lib64/libgcc_s.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgcc_s.so.1
+Reading symbols from /lib64/libattr.so.1...Reading symbols from /lib64/libattr.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libattr.so.1
+Reading symbols from /lib64/libelf.so.1...Reading symbols from /lib64/libelf.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libelf.so.1
+Reading symbols from /lib64/liblzma.so.5...Reading symbols from /lib64/liblzma.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/liblzma.so.5
+Reading symbols from /lib64/libbz2.so.1...Reading symbols from /lib64/libbz2.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libbz2.so.1
+Reading symbols from /lib64/libudev.so.0...Reading symbols from /lib64/libudev.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libudev.so.0
+Reading symbols from /lib64/libdbus-glib-1.so.2...Reading symbols from /lib64/libdbus-glib-1.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-glib-1.so.2
+Reading symbols from /lib64/libdbus-1.so.3...Reading symbols from /lib64/libdbus-1.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-1.so.3
+Reading symbols from /lib64/libgio-2.0.so.0...Reading symbols from /lib64/libgio-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgio-2.0.so.0
+Reading symbols from /lib64/libgobject-2.0.so.0...Reading symbols from /lib64/libgobject-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgobject-2.0.so.0
+Reading symbols from /lib64/libglib-2.0.so.0...Reading symbols from /lib64/libglib-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libglib-2.0.so.0
+Reading symbols from /lib64/libffi.so.6...Reading symbols from /lib64/libffi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libffi.so.6
+Reading symbols from /lib64/libgmodule-2.0.so.0...Reading symbols from /lib64/libgmodule-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgmodule-2.0.so.0
+Reading symbols from /lib64/libpcre.so.1...Reading symbols from /lib64/libpcre.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpcre.so.1
+Reading symbols from /lib64/libselinux.so.1...Reading symbols from /lib64/libselinux.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libselinux.so.1
+Reading symbols from /lib64/libmount.so.1...Reading symbols from /lib64/libmount.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libmount.so.1
+Reading symbols from /lib64/libblkid.so.1...Reading symbols from /lib64/libblkid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libblkid.so.1
+0x00007f8992f17dbc in waitpid () from /lib64/libc.so.6
+Missing separate debuginfos, use: debuginfo-install bzip2-libs-1.0.6-13.el7.x86_64 compat-libtiff3-3.9.4-11.el7.x86_64 dbus-glib-0.100-7.el7.x86_64 dbus-libs-1.6.12-17.el7.x86_64 elfutils-libelf-0.168-8.el7.x86_64 elfutils-libs-0.168-8.el7.x86_64 expat-2.1.0-10.el7_3.x86_64 fontconfig-2.10.95-11.el7.x86_64 freetype-2.4.11-15.el7.x86_64 glib2-2.50.3-3.el7.x86_64 glibc-2.17-196.el7_4.2.x86_64 libICE-1.0.9-9.el7.x86_64 libSM-1.2.2-2.el7.x86_64 libX11-1.6.5-1.el7.x86_64 libXScrnSaver-1.2.2-6.1.el7.x86_64 libXau-1.0.8-2.1.el7.x86_64 libXext-1.3.3-3.el7.x86_64 libXft-2.3.2-2.el7.x86_64 libXi-1.7.9-1.el7.x86_64 libXrandr-1.5.1-2.el7.x86_64 libXrender-0.9.10-1.el7.x86_64 libattr-2.4.46-12.el7.x86_64 libblkid-2.23.2-43.el7_4.2.x86_64 libcap-2.22-9.el7.x86_64 libffi-3.0.13-18.el7.x86_64 libgcc-4.8.5-16.el7_4.1.x86_64 libjpeg-turbo-1.2.90-5.el7.x86_64 libmng-1.0.10-14.el7.x86_64 libmount-2.23.2-43.el7_4.2.x86_64 libpng12-1.2.50-10.el7.x86_64 libselinux-2.5-11.el7.x86_64 libuuid-2.23.2-43.el7_4.2.x86_64 libxcb-1.12-1.el7.x86_64 ncurses-libs-5.9-14.20130511.el7_4.x86_64 pcre-8.32-17.el7.x86_64 sssd-client-1.15.2-50.el7_4.8.x86_64 systemd-libs-219-42.el7_4.6.x86_64 xz-libs-5.2.2-1.el7.x86_64 zlib-1.2.7-17.el7.x86_64
+(gdb) (gdb) #0  0x00007f8992f17dbc in waitpid () at /lib64/libc.so.6
+#1  0x00007f8992e9acc2 in do_system () at /lib64/libc.so.6
+#2  0x000000000b9285cd in SNPSee_4f1eca636f186904 ()
+#3  0x000000000b8abddf in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c73531748e1eb9162e9fd7182 ()
+#4  0x000000000052211e in SNPSee_f1ee00d2049be34bc9fa2aabd0709c661b77ea09a2cd7785 ()
+#5  0x000000000b74d7d1 in SNPSee_b0111077a1564ec2f03c23d0bb102089295fca3df69878e1 ()
+#6  0x000000000b74e31a in SNPSee_616b6e047c741ff1baf571efe85d3536eac68d027a1be0e0030a066449e92897 ()
+#7  0x000000000b74d8ec in SNPSee_b5b74bb29e23928e271a046254d5c62e ()
+#8  0x00007f8995af55e0 in <signal handler called> () at /lib64/libpthread.so.0
+#9  0x000000000289eeca in SNPSee_4fffb2b936d482df626b33bceeb26c12bca429d5e7a76765 ()
+#10 0x000000000362293d in SNPSee_cc29ad2003461e5e1f010938734fb082d3f82174d72c22168066a995ac956458 ()
+#11 0x0000000002311563 in SNPSee_01348a4afad7ff93ca55e73c7765ac2968f9a9b7dd28afe2c7b3de98286fc137 ()
+#12 0x00000000021c73ab in SNPSee_9ad694e704a87c14571327c119aa0c5c047b22e7d6fc7268 ()
+#13 0x00000000023ae051 in SNPSee_c330831c9ba47c526c742232f8ebb11967c8928714dcf15d903233bb4ca7a2cd ()
+#14 0x00000000023b64f4 in SNPSee_c330831c9ba47c526c742232f8ebb119321b436bc7e1e723 ()
+#15 0x00000000023b7600 in SNPSee_1eaa922d28a29934f4138043617d5259759cfa0e803d9131 ()
+#16 0x0000000001c8f22d in SNPSee_491529b53ce409253333d38c1284bc7c02bed1d340622c72280c34dc4b711545 ()
+#17 0x0000000001c90965 in SNPSee_491529b53ce4092515211491aa51eeaa46b71dc67acaee2c ()
+#18 0x0000000001b5bf37 in SNPSee_800cfa09c4312a2a658022cd459e34616900e8f99890a5ed ()
+#19 0x000000000b64b6dd in SNPSee_7ea007f17721baa8c52712154029f5e48c5b42d17487296853bec6f509fb5cd7fb8e3aecaf9a59df5ceaf3227abcdf276664c5bfd5ca6b006d34e6f6d0022bb5aa6a0546020548c042f868058edbb564 ()
+#20 0x000000000b66b031 in SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67 ()
+#21 0x000000000bab1bed in SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d ()
+#22 0x000000000bab67a6 in SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790 ()
+#23 0x000000000bab8747 in SNPSee_a00aeeb47fd325df3eff4946e57739a1 ()
+#24 0x000000000b68934f in SNPSee_5b9e0c983f97901fa4e0af164abe7efeb24c5f4c6136879c869b2b88ca4e2632196f4df311f74be6 ()
+#25 0x000000000b6558c3 in SNPSee_59511b0144537c36c6614840eb25b067 ()
+#26 0x000000000b65c2cf in SNPSee_dfcfd18c870f576645dec230cc55940481eea9a4962927b3b2419a5f9f3803d6e6d6151e8a6657b75c63db485ae230e97b8a0dd27c2cdfedd6e7ab8b3504080f ()
+#27 0x000000000b66b031 in SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67 ()
+#28 0x000000000bab1bed in SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d ()
+#29 0x000000000bab67a6 in SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790 ()
+#30 0x000000000bb580a3 in SNPSee_e90acbbdf8c656c898db7186881c4c18f0a07e70af506669 ()
+#31 0x000000000b66c30c in SNPSee_6ae86177041da83a610a3a212ab220be0edc080948966a62 ()
+#32 0x00000000012a93b9 in SNPSee_bf47f8c354012225294e8116109cb5d025f4ccb7f287ad59c2366d27ef082a7abe934ab21f6bb090d48f7368a4129526962b5f385b08867de66d0440d3888337d8208e9ee5c4c9cb ()
+#33 0x00000000012a3bb7 in SNPSee_848f53926cc7d21a0b1a0e3cec9d3ef03d79fae4f741b2beb1d9e61bc8469679467712e699595aba26463d97eba60e22e02b598c8b482ec2d9046bfa95f0f185 ()
+#34 0x00000000013d2013 in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d09b1487aa013d26f835ff7ccd94ffb63758abf28604ccf68 ()
+#35 0x00000000013d3e26 in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24ddc44ac444ffd24dab81817742939461558b86efc9882e060f5cf6799b4197ba760a948a9120b34f41acf4fa4287f35e8 ()
+#36 0x00000000013d41cb in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d198741dbd99eb01272a55ba76ee2abd7563348609c8b2952ab7d3e71c5dc81c718aa12a98dfae9b5630d0c2fda34916be6c498847f4129e9a5f1fbcdd8c6a901 ()
+#37 0x00000000013d488c in SNPSee_3734c75b6df15445263e41e202c21d357530f1002cf0b24d0b90ac4a4483f6665465d7c37ec4ce71313cfc0a471575a79ba413633ac1537032eb8775f5ebb55f6021eb7118e1e33a66a40a742570a303b3cdb1e9fad8ae33 ()
+#38 0x0000000001396321 in SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf ()
+#39 0x0000000001217c7f in SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c ()
+#40 0x000000000174444f in SNPSee_76d6cca1ef29382ca84b036280d53dca ()
+#41 0x0000000000525afb in SNPSee_a8c67c391924da59bb0a6e836c77e2d8 ()
+#42 0x0000000000502039 in SNPSee_5a24f30b88271223 ()
+#43 0x00007f8992e7ac05 in __libc_start_main () at /lib64/libc.so.6
+#44 0x0000000000520191 in SNPSee_d06eed713327be76 ()
+(gdb) Detaching from program: /usr/pack/synopsys-2017.09-kgf/syn/linux64/syn/bin/common_shell_exec, process 524
+(gdb) 
